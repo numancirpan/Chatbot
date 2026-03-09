@@ -1,0 +1,15 @@
+{
+    "merkezi_mevzuat": [
+        "https://ogrenciisleri.duzce.edu.tr/sayfa/b149/mevzuat",
+        "https://w3.api.duzce.edu.tr/df48/yonetmelik-ve-yonergeler",
+        "https://duzce.edu.tr/akademik-takvim"
+    ],
+    "fakulte_bolum": [
+        "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj",
+        "https://ogrenciisleri.duzce.edu.tr/S%C4%B1k%C3%A7a-Sorulan-Sorular",
+        "https://bm.mf.duzce.edu.tr/"
+    ],
+    "duyurular": [
+        "https://ogrenciisleri.duzce.edu.tr/Duyurular"
+    ]
+}

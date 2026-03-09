@@ -1,0 +1,11 @@
+streamlit
+requests
+beautifulsoup4
+rank-bm25
+sentence-transformers
+langchain-chroma
+langchain-huggingface
+chromadb
+PyMuPDF
+python-docx
+urllib3
