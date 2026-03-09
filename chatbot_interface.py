@@ -17,7 +17,7 @@ st.set_page_config(
 @st.cache_resource(show_spinner=False)
 def sistemi_yukle():
     return RAGChatbot()
-
+#ceren
 
 if "chatbot_hazir" not in st.session_state:
     with st.spinner("⏳ Yapay Zeka Modelleri Yükleniyor... (Sonraki açılışlarda bu adım atlanır)"):
