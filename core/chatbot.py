@@ -13,6 +13,7 @@ MODEL_ADI  = "qwen2.5:7b"
 ROOT_DIR    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHUNKS_FILE = os.path.join(ROOT_DIR, "data", "chunks.json")
 DB_DIR      = os.path.join(ROOT_DIR, "db", "chroma_db")
+MAX_MEMORY_TURNS = 5
 
 
 class BM25Search:
@@ -51,10 +52,11 @@ class RAGChatbot:
             persist_directory=DB_DIR,
             embedding_function=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
         )
+        self.memory: List[Dict[str, str]] = []
 
         self._ollama_kontrol()
         print(f"✅ {len(self.chunks)} chunk yüklendi")
-        print("✅ BM25 + Reranker + ChromaDB hazır")
+        print("✅ BM25 + Reranker + ChromaDB + Sohbet Hafızası hazır")
 
     def _ollama_kontrol(self):
         try:
@@ -82,8 +84,29 @@ class RAGChatbot:
 
         return self.reranker.rerank(query, unique, k=k)
 
+    def _memory_as_text(self) -> str:
+        if not self.memory:
+            return "Yok"
+
+        lines = []
+        for message in self.memory[-MAX_MEMORY_TURNS * 2:]:
+            prefix = "Öğrenci" if message["role"] == "user" else "Asistan"
+            lines.append(f"{prefix}: {message['content']}")
+        return "\n".join(lines)
+
+    def _save_to_memory(self, query: str, answer: str) -> None:
+        self.memory.append({"role": "user", "content": query})
+        self.memory.append({"role": "assistant", "content": answer})
+        max_messages = MAX_MEMORY_TURNS * 2
+        if len(self.memory) > max_messages:
+            self.memory = self.memory[-max_messages:]
+
+    def clear_memory(self) -> None:
+        self.memory.clear()
+
     def generate_response(self, query: str, context: List[Dict]) -> str:
         context_text = "\n\n---\n\n".join(c['content'] for c in context)
+        memory_text = self._memory_as_text()
 
         prompt = f"""Sen Düzce Üniversitesi Öğrenci İşleri Daire Başkanlığı'nın resmi Türkçe yapay zeka asistanısın.
 
@@ -93,6 +116,10 @@ ZORUNLU KURALLAR:
 3. Belgede olmayan hiçbir bilgiyi uydurma, tahmin etme veya ekleme.
 4. Eğer soru belgelerde geçmiyorsa SADECE şunu yaz: "Bu konuda resmi belgelerde bilgiye ulaşamadım. Lütfen Öğrenci İşleri birimi ile iletişime geçiniz."
 5. Cevabın sonunda aynı bilgiyi tekrar etme.
+6. "Sohbet Geçmişi" bölümünü sadece öğrencinin önceki sorularındaki bağlamı anlamak için kullan; bilgi kaynağı olarak kullanma.
+
+Sohbet Geçmişi:
+{memory_text}
 
 Resmi Belgeler:
 {context_text}
@@ -131,6 +158,7 @@ Cevap (Türkçe, "Sayın öğrencimiz," ile başla):"""
     def chat(self, query: str) -> Dict:
         results = self.hybrid_search(query, k=3)
         cevap   = self.generate_response(query, results)
+        self._save_to_memory(query, cevap)
         return {
             'query': query,
             'cevap': cevap,

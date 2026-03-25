@@ -43,6 +43,7 @@ with st.sidebar:
 
     if st.button("🗑️ Sohbeti Temizle"):
         st.session_state.messages = []
+        chatbot.clear_memory()
         st.rerun()
 
 # ── Ana ekran ─────────────────────────────────────────────────────────────────
