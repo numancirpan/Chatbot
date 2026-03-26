@@ -5,8 +5,7 @@ import requests
 
 # core/ klasörünü Python path'e ekle
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "core"))
-from chatbot import RAGChatbot
-
+from core.chatbot import RAGChatbot
 st.set_page_config(
     page_title="Düzce Üni Asistan",
     page_icon="🎓",
@@ -39,7 +38,7 @@ with st.sidebar:
     st.markdown("- **Arama:** Hibrit (BM25 + Vektör)")
     st.markdown("- **Sıralama:** Cross-Encoder Reranker")
     st.divider()
-    st.caption("Düzce Üniversitesi Bilgisayar Mühendisliği")
+    st.caption("Düzce Üniversitesi")
 
     if st.button("🗑️ Sohbeti Temizle"):
         st.session_state.messages = []

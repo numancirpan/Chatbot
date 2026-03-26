@@ -1,0 +1,11 @@
+{
+  "exclude_exact_urls": [],
+  "exclude_url_contains": [
+    "tum-duyurular"
+  ],
+  "exclude_host_path_contains": {
+    "duzce.edu.tr": [
+      "/duyuru/"
+    ]
+  }
+}

@@ -59,6 +59,11 @@ python pipeline/create_vector_db.py
 streamlit run chatbot_interface.py
 ```
 
+### 5. Dataset Audit Çalıştır
+```bash
+python pipeline/dataset_audit.py
+```
+
 ## 🔄 Veriyi Güncellemek
 
 ```bash
@@ -66,6 +71,10 @@ python pipeline/crawler.py          # Yeni veriyi çek
 python pipeline/smart_chunker.py    # Yeniden chunk'la
 python pipeline/create_vector_db.py --rebuild  # DB'yi yenile
 ```
+
+Kaynak kurallari `source_rules.json` dosyasindan yonetilir.
+Bu dosyada yalnizca acikca gurultulu veya alakasiz URL oruntulerini dislayin;
+veriyi gereksiz yere daraltmayin.
 
 ## 🧪 Chunk Kalitesini Test Et
 
