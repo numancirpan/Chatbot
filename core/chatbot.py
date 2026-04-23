@@ -1,5 +1,5 @@
-import hashlib
 import json
+import hashlib
 import os
 import re
 import unicodedata
@@ -79,6 +79,41 @@ OTHER_UNIT_HINTS = [
     "santiye",
     "buro staji",
 ]
+TOPIC_HINTS = {
+    "staj": ["staj", "sbs", "bm399", "bm499", "staj rapor", "staj defter"],
+    "yaz_okulu": ["yaz okulu", "yaz okulu kayit", "yaz okulunun"],
+    "akademik_takvim": ["akademik takvim", "ders kayit", "derslerin baslamasi", "final"],
+    "cap_yandal": ["cift anadal", "cap", "yandal"],
+    "tek_cift_sinav": ["tek cift", "tek ders", "cift ders"],
+    "burs": ["burs", "bursu", "bursunu"],
+    "disiplin": ["disiplin", "uzaklastirma", "kinama"],
+    "harc": ["harc", "katki payi", "ogrenim ucreti"],
+}
+SOURCE_STOPWORDS = {
+    "sayin",
+    "ogrencimiz",
+    "gore",
+    "icin",
+    "olan",
+    "olarak",
+    "ancak",
+    "veya",
+    "dair",
+    "ilgili",
+    "resmi",
+    "belge",
+    "belgelerde",
+    "kaynak",
+    "kaynakta",
+    "bilgi",
+    "bulunmaktadir",
+    "belirtilmektedir",
+    "lütfen",
+    "lutfen",
+    "birimi",
+    "iletisim",
+    "geciniz",
+}
 SCOPE_CLARIFICATION_TEXT = (
     "Bu bilgi bölüm veya fakülteye göre değişebilmektedir. "
     "Lütfen bölüm/program belirterek tekrar sorunuz."
@@ -100,6 +135,10 @@ DATE_RANGE_PATTERN = re.compile(r"(\d{1,2}\.\d{1,2}\.\d{4})\s*/\s*(\d{1,2}\.\d{1
 SUMMER_SCHOOL_START_PATTERN = re.compile(
     r"YAZ OKULU\s*[\r\n ].{0,30}?(\d{1,2}\.\d{1,2}\.\d{4})",
     re.IGNORECASE,
+)
+SUMMER_SCHOOL_EXPLICIT_START_PATTERN = re.compile(
+    r"YAZ\s+OKULU.{0,80}?Başlangıç\s+(\d{1,2}\.\d{1,2}\.\d{4})",
+    re.IGNORECASE | re.DOTALL,
 )
 SUMMER_SCHOOL_RANGE_PATTERN = re.compile(
     r"(\d{1,2}\.\d{1,2}\.\d{4})\s*/\s*(\d{1,2}\.\d{1,2}\.\d{4}).{0,80}?YAZ OKULU",
@@ -193,6 +232,57 @@ def asks_staj_missed_period(query: str) -> bool:
         marker in normalized
         for marker in ["yapamazsam", "yapamaz isem", "doneminde", "ertelersem", "yapamazsak", "ne olur"]
     )
+
+
+def asks_staj_duration(query: str) -> bool:
+    normalized = normalize_text(query)
+    if "staj" not in normalized:
+        return False
+    return any(
+        re.search(pattern, normalized)
+        for pattern in [
+            r"\bkac gun\b",
+            r"\bkac is gunu\b",
+            r"\bsure\b",
+            r"\bsuresi\b",
+            r"\bne kadar\b",
+        ]
+    )
+
+
+def asks_staj_report_submission(query: str) -> bool:
+    normalized = normalize_text(query)
+    if "staj" not in normalized:
+        return False
+    report_markers = [
+        "rapor",
+        "defter",
+        "dosya",
+        "sbs",
+        "teslim",
+        "yukle",
+        "degerlendiril",
+    ]
+    process_markers = [
+        "zamaninda",
+        "gec",
+        "surec",
+        "nasil",
+        "ne olur",
+        "ne zaman",
+        "teslim etmeyen",
+        "teslim etmez",
+        "yuklemez",
+        "yuklemedim",
+    ]
+    return any(marker in normalized for marker in report_markers) and any(
+        marker in normalized for marker in process_markers
+    )
+
+
+def asks_disciplinary_scholarship_loss(query: str) -> bool:
+    normalized = normalize_text(query)
+    return "burs" in normalized and any(marker in normalized for marker in ["disiplin", "ceza", "uzaklastirma"])
 
 
 def asks_makeup_exam_with_missing_internship(query: str) -> bool:
@@ -302,6 +392,60 @@ def infer_query_scope(query: str) -> str:
     return ""
 
 
+def infer_topic(chunk: Dict) -> str:
+    normalized_content = normalize_text(chunk.get("content", ""))
+    normalized_url = chunk.get("source_url", "").lower()
+    kategori = normalize_text(chunk.get("kategori", ""))
+    haystack = f"{normalized_content} {normalized_url} {kategori}"
+
+    for topic, hints in TOPIC_HINTS.items():
+        if any(hint in haystack for hint in hints):
+            return topic
+
+    if kategori:
+        return kategori
+    return "genel"
+
+
+def infer_source_title(chunk: Dict) -> str:
+    url = chunk.get("source_url", "")
+    kategori = chunk.get("kategori", "Genel")
+    normalized_url = url.lower()
+    if "bm.mf.duzce.edu.tr/sayfa/878b" in normalized_url:
+        return "Bilgisayar Mühendisliği - Staj SSS"
+    if "bm.mf.duzce.edu.tr/sayfa/4a82" in normalized_url:
+        return "Bilgisayar Mühendisliği - Staj"
+    if "bm.mf.duzce.edu.tr/sayfa/17ac" in normalized_url:
+        return "Bilgisayar Mühendisliği - Yaz Okulu"
+    if "mf.duzce.edu.tr/sayfa/967a" in normalized_url:
+        return "Mühendislik Fakültesi - Yaz Stajı"
+    if "akademik-takvim" in normalized_url or chunk.get("kategori") == "akademik_takvim":
+        return "Akademik Takvim"
+    if "ogrenciisleri.duzce.edu.tr" in normalized_url:
+        return "Öğrenci İşleri"
+    return kategori.replace("_", " ").title()
+
+
+def extract_metadata_years(text: str) -> str:
+    years = sorted(set(re.findall(r"\b20\d{2}(?:\s*-\s*20\d{2})?\b", text)))
+    return ",".join(year.replace(" ", "") for year in years[:5])
+
+
+def enrich_chunk_metadata(chunk: Dict) -> Dict:
+    enriched = dict(chunk)
+    enriched["program_scope"] = enriched.get("program_scope") or infer_chunk_scope(enriched)
+    enriched["topic"] = enriched.get("topic") or infer_topic(enriched)
+    enriched["source_title"] = enriched.get("source_title") or infer_source_title(enriched)
+    enriched["years"] = enriched.get("years") or extract_metadata_years(
+        f"{enriched.get('content', '')} {enriched.get('source_url', '')}"
+    )
+    if "chunk_id" not in enriched:
+        content = enriched.get("content", "")
+        source_url = enriched.get("source_url", "")
+        enriched["chunk_id"] = hashlib.md5(f"{source_url}\n{content}".encode("utf-8")).hexdigest()
+    return enriched
+
+
 def is_scope_clarification_query(query: str) -> bool:
     normalized = normalize_text(query)
     if not infer_query_scope(query):
@@ -368,6 +512,17 @@ def build_query_variants(query: str) -> List[str]:
                     "ilk staj döneminde staj yapma hakkı kazanamayan 6. yarıyıldan sonra",
                 ]
             )
+        if asks_staj_report_submission(query):
+            variants.extend(
+                [
+                    "staj raporu teslimi nasil ve ne zaman olmali",
+                    "staj raporunuzu sbs ye yuklemeniz gerekmektedir",
+                    "sistemde yuklemek icin son bir tarih bulunmamaktadir",
+                    "guz donemi basladiktan yaklasik 30 gun sonra",
+                    "staj defterleri staj bitim tarihinden itibaren en gec 1 ay icinde teslim",
+                    "duzeltme yapmasi istenen ogrenci en cok 1 ay icinde duzeltme yapmakla yukumludur",
+                ]
+            )
 
         if asks_makeup_exam_with_missing_internship(query):
             variants.extend(
@@ -379,6 +534,16 @@ def build_query_variants(query: str) -> List[str]:
                     "tek dersi ve bahar yariyilindan staji kalan ogrenci tek cift sinavina sadece dersten girebilir",
                 ]
             )
+
+    if asks_disciplinary_scholarship_loss(query):
+        variants.extend(
+            [
+                "disiplin cezasi burs kesilmesi",
+                "disiplin cezasi burs kaybi",
+                "burs disiplin cezasi",
+                "uzaklastirma cezasi burs",
+            ]
+        )
 
     if "yaz okulu" in normalized:
         variants.extend(
@@ -462,8 +627,7 @@ class RAGChatbot:
             self.chunks = [self.chunks]
         if isinstance(self.knowledge_base, dict):
             self.knowledge_base = [self.knowledge_base]
-        for chunk in self.chunks:
-            chunk["program_scope"] = infer_chunk_scope(chunk)
+        self.chunks = [enrich_chunk_metadata(chunk) for chunk in self.chunks]
         self.raw_records = []
         for record in self.knowledge_base:
             content = record.get("icerik", "")
@@ -475,8 +639,7 @@ class RAGChatbot:
                 "kategori": record.get("kategori", ""),
                 "icerik_tipi": record.get("icerik_tipi", ""),
             }
-            mapped["program_scope"] = infer_chunk_scope(mapped)
-            self.raw_records.append(mapped)
+            self.raw_records.append(enrich_chunk_metadata(mapped))
 
         self.bm25_search = BM25Search(self.chunks)
         self.reranker = Reranker()
@@ -484,10 +647,17 @@ class RAGChatbot:
             persist_directory=DB_DIR,
             embedding_function=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2"),
         )
+        self.vector_count = self._vector_store_count()
         self.memory: List[Dict[str, str]] = []
+        self.last_answer_context: List[Dict] = []
 
         self._ollama_kontrol()
         print(f"{len(self.chunks)} chunk yuklendi")
+        if self.vector_count:
+            print(f"ChromaDB hazir ({self.vector_count} kayit)")
+        else:
+            print("UYARI: ChromaDB bos veya okunamiyor. Arama BM25 uzerinden devam edecek.")
+            print("DB'yi yenilemek icin: python pipeline/create_vector_db.py --rebuild")
         print("BM25 + Reranker + ChromaDB + sohbet hafizasi hazir")
 
     def _resolve_program_scope(self, query: str) -> str:
@@ -499,6 +669,12 @@ class RAGChatbot:
             print("Ollama calisiyor")
         except requests.exceptions.ConnectionError:
             print("Ollama bulunamadi! 'ollama serve' komutunu calistirin.")
+
+    def _vector_store_count(self) -> int:
+        try:
+            return int(self.vector_store._collection.count())
+        except Exception:
+            return 0
 
     def _specialized_candidates(self, query: str) -> List[Dict]:
         normalized_query = normalize_text(query)
@@ -533,6 +709,24 @@ class RAGChatbot:
                 elif DATE_RANGE_PATTERN.search(content) and "staj" in normalized_content:
                     candidates.append(chunk)
 
+        if asks_staj_report_submission(query):
+            for chunk in self.chunks + self.raw_records:
+                normalized_content = normalize_text(chunk.get("content", ""))
+                if "staj" not in normalized_content:
+                    continue
+                if any(
+                    marker in normalized_content
+                    for marker in [
+                        "staj raporunuzu yazdiktan sonra",
+                        "sistemde yuklemek icin son bir tarih bulunmamaktadir",
+                        "yaklasik 30 gun sonrasina kadar yukleyebilirsiniz",
+                        "staj raporu icin okula imzalatmam gerekiyor mu",
+                        "staj bitim tarihinden itibaren en gec 1 bir ay icinde",
+                        "duzeltme yapmasi istenen ogrenci en cok 1 bir ay icinde",
+                    ]
+                ):
+                    candidates.append(chunk)
+
         if asks_makeup_exam_with_missing_internship(query):
             for chunk in self.chunks + self.raw_records:
                 normalized_content = normalize_text(chunk.get("content", ""))
@@ -546,6 +740,14 @@ class RAGChatbot:
                         "tek dersi ve staji kalan ogrenci",
                         "tek dersi ve bahar yariyilindan staji kalan ogrenci",
                     ]
+                ):
+                    candidates.append(chunk)
+
+        if asks_disciplinary_scholarship_loss(query):
+            for chunk in self.chunks + self.raw_records:
+                normalized_content = normalize_text(chunk.get("content", ""))
+                if "burs" in normalized_content and any(
+                    marker in normalized_content for marker in ["disiplin", "ceza", "uzaklastirma"]
                 ):
                     candidates.append(chunk)
 
@@ -568,23 +770,28 @@ class RAGChatbot:
 
         for variant in build_query_variants(query):
             bm25_results.extend(self.bm25_search.search(variant, k=candidate_k))
-            vector_docs = self.vector_store.similarity_search(variant, k=candidate_k)
-            vector_results.extend(
-                [
-                    {
-                        "content": doc.page_content,
-                        "source_url": doc.metadata.get("source_url", ""),
-                        "kategori": doc.metadata.get("kategori", ""),
-                        "program_scope": infer_chunk_scope(
+            if self.vector_count > 0:
+                try:
+                    vector_docs = self.vector_store.similarity_search(variant, k=candidate_k)
+                except Exception:
+                    vector_docs = []
+                vector_results.extend(
+                    [
+                        enrich_chunk_metadata(
                             {
                                 "content": doc.page_content,
                                 "source_url": doc.metadata.get("source_url", ""),
+                                "kategori": doc.metadata.get("kategori", ""),
+                                "program_scope": doc.metadata.get("program_scope", ""),
+                                "topic": doc.metadata.get("topic", ""),
+                                "source_title": doc.metadata.get("source_title", ""),
+                                "years": doc.metadata.get("years", ""),
+                                "chunk_id": doc.metadata.get("chunk_id", ""),
                             }
-                        ),
-                    }
-                    for doc in vector_docs
-                ]
-            )
+                        )
+                        for doc in vector_docs
+                    ]
+                )
 
         bm25_results.extend(specialized_candidates)
 
@@ -603,7 +810,7 @@ class RAGChatbot:
         scored = sorted(unique, key=lambda item: self._candidate_score(query, item), reverse=True)
         top_candidates = scored[: max(candidate_k, 16)]
 
-        if asks_makeup_exam_with_missing_internship(query):
+        if asks_makeup_exam_with_missing_internship(query) or asks_staj_report_submission(query):
             prioritized = []
             prioritized_seen = set()
             for candidate in specialized_candidates + top_candidates:
@@ -622,6 +829,7 @@ class RAGChatbot:
             or asks_staj_timing(query)
             or asks_staj_course_registration(query)
             or asks_staj_missed_period(query)
+            or asks_staj_report_submission(query)
             or asks_yaz_okulu_duration(query)
             or asks_yaz_okulu_start(query)
             or asks_yaz_staji_schedule(query)
@@ -705,6 +913,21 @@ class RAGChatbot:
                 score += 8
             if "rapor" in normalized_content or "sbs" in normalized_content:
                 score -= 6
+        if asks_staj_report_submission(query):
+            if "staj rapor" in normalized_content or "staj defter" in normalized_content:
+                score += 10
+            if "sbs" in normalized_content or "teslim" in normalized_content or "yukle" in normalized_content:
+                score += 8
+            if "sistemde yuklemek icin son bir tarih bulunmamaktadir" in normalized_content:
+                score += 20
+            if "yaklasik 30 gun" in normalized_content:
+                score += 18
+            if "staj bitim tarihinden itibaren en gec 1 bir ay" in normalized_content:
+                score += 14
+            if "duzeltme yapmasi istenen ogrenci" in normalized_content:
+                score += 10
+            if "is gunu" in normalized_content and not any(marker in normalized_content for marker in ["rapor", "defter", "teslim", "yukle"]):
+                score -= 12
         if asks_makeup_exam_with_missing_internship(query):
             if "tek cift" in normalized_content:
                 score += 14
@@ -718,6 +941,13 @@ class RAGChatbot:
                 score += 10
             if "sadece dersten girebilir" in normalized_content:
                 score += 12
+        if asks_disciplinary_scholarship_loss(query):
+            if "burs" in normalized_content:
+                score += 8
+            if "disiplin" in normalized_content or "ceza" in normalized_content:
+                score += 8
+            if any(marker in normalized_content for marker in ["kayb", "kesil", "iptal", "devam"]):
+                score += 10
 
         if is_short_factual_query(query):
             if NUMERIC_UNIT_PATTERN.search(candidate.get("content", "")):
@@ -863,12 +1093,152 @@ class RAGChatbot:
         cleaned = repair_text_encoding(cleaned)
         return cleaned
 
+    def _answer_should_show_sources(self, answer: str) -> bool:
+        normalized_answer = normalize_text(answer)
+        no_source_markers = [
+            normalize_text(NO_ANSWER_TEXT),
+            normalize_text(SCOPE_CLARIFICATION_TEXT),
+            "resmi belgelerde acik bir bilgi bulunmamaktadir",
+            "resmi belgelerde bilgiye ulasilamadi",
+            "resmi belgelerde bilgiye ulasilamadim",
+            "dogrudan resmi bir kaynak bulamadim",
+            "net cevap veremiyorum",
+            "kesin cevap veremiyorum",
+        ]
+        return not any(marker and marker in normalized_answer for marker in no_source_markers)
+
+    def _source_title(self, result: Dict) -> str:
+        url = result.get("source_url", "")
+        kategori = result.get("kategori", "Genel")
+        normalized_url = url.lower()
+        if "bm.mf.duzce.edu.tr/sayfa/878b" in normalized_url:
+            return "Bilgisayar Mühendisliği - Staj SSS"
+        if "bm.mf.duzce.edu.tr/sayfa/4a82" in normalized_url:
+            return "Bilgisayar Mühendisliği - Staj"
+        if "bm.mf.duzce.edu.tr/sayfa/17ac" in normalized_url:
+            return "Bilgisayar Mühendisliği - Yaz Okulu"
+        if "mf.duzce.edu.tr/sayfa/967a" in normalized_url:
+            return "Mühendislik Fakültesi - Yaz Stajı"
+        if "akademik-takvim" in normalized_url or result.get("kategori") == "akademik_takvim":
+            return "Akademik Takvim"
+        if "ogrenciisleri.duzce.edu.tr" in normalized_url:
+            return "Öğrenci İşleri"
+        return kategori.replace("_", " ").title()
+
+    def _important_terms(self, text: str) -> set:
+        return {
+            token
+            for token in tokenize(text)
+            if len(token) >= 3 and token not in SOURCE_STOPWORDS and not token.isdigit()
+        }
+
+    def _source_support_score(self, query: str, answer: str, result: Dict) -> float:
+        content = result.get("content", "")
+        normalized_content = normalize_text(content)
+        content_terms = set(normalized_content.split())
+        query_terms = self._important_terms(query)
+        answer_terms = self._important_terms(answer)
+        score = 0.0
+
+        score += 3.0 * len(query_terms & content_terms)
+        score += 2.0 * len(answer_terms & content_terms)
+
+        for value in re.findall(r"\b\d+(?:[./-]\d+)*(?:\s*-\s*\d+(?:[./-]\d+)*)?\b", answer):
+            if value and value in content:
+                score += 8.0
+
+        effective_scope = self._resolve_program_scope(query)
+        candidate_scope = result.get("program_scope", infer_chunk_scope(result))
+        if effective_scope and candidate_scope == effective_scope:
+            score += 10.0
+        elif candidate_scope == GENERAL_SCOPE:
+            score += 2.0
+
+        if asks_staj_report_submission(query) and any(
+            marker in normalized_content
+            for marker in [
+                "staj raporunuzu",
+                "sbs ye yukle",
+                "yaklasik 30 gun",
+                "staj defter",
+                "duzeltme yapmasi istenen ogrenci",
+            ]
+        ):
+            score += 25.0
+        if asks_disciplinary_scholarship_loss(query) and "burs" in normalized_content:
+            score += 8.0
+        if asks_yaz_okulu_start(query) and "yaz okulu" in normalized_content and DATE_PATTERN.search(content):
+            score += 18.0
+        if asks_yaz_staji_schedule(query) and "staj" in normalized_content and DATE_RANGE_PATTERN.search(content):
+            score += 18.0
+        if asks_staj_duration(query) and "staj" in normalized_content and "is gunu" in normalized_content:
+            score += 18.0
+
+        return score
+
+    def _format_sources(self, results: List[Dict], answer: str, query: str = "", limit: int = 3) -> List[Dict]:
+        if not self._answer_should_show_sources(answer):
+            return []
+        best_by_url = {}
+        query = query or self._last_user_query() or ""
+        for result in results:
+            url = result.get("source_url", "").strip()
+            if not url:
+                continue
+            source_key = url.lower().rstrip("/")
+            score = self._source_support_score(query, answer, result)
+            current = best_by_url.get(source_key)
+            if current and current["score"] >= score:
+                continue
+            normalized_result = dict(result)
+            normalized_result["source_url"] = url
+            best_by_url[source_key] = {"result": normalized_result, "score": score}
+
+        ranked = sorted(best_by_url.values(), key=lambda item: item["score"], reverse=True)
+        answer_dates = DATE_PATTERN.findall(answer)
+        has_date_support = bool(answer_dates) and any(
+            any(date in item["result"].get("content", "") for date in answer_dates) for item in ranked
+        )
+        effective_scope = self._resolve_program_scope(query)
+        scoped_source_count = sum(
+            1
+            for item in ranked
+            if effective_scope and item["result"].get("program_scope", infer_chunk_scope(item["result"])) == effective_scope
+        )
+        answer_mentions_general_rule = "genel" in normalize_text(answer)
+        sources = []
+        for item in ranked:
+            if item["score"] <= 0:
+                continue
+            result = item["result"]
+            if has_date_support and not any(date in result.get("content", "") for date in answer_dates):
+                continue
+            candidate_scope = result.get("program_scope", infer_chunk_scope(result))
+            if (
+                effective_scope
+                and scoped_source_count >= 2
+                and candidate_scope != effective_scope
+                and not answer_mentions_general_rule
+            ):
+                continue
+            sources.append(
+                {
+                    "kategori": result.get("kategori", "Genel"),
+                    "baslik": result.get("source_title") or self._source_title(result),
+                    "url": result.get("source_url", ""),
+                }
+            )
+            if len(sources) >= limit:
+                break
+        return sources
+
     def _extract_staj_timing_answer(self, query: str, context: List[Dict]) -> Optional[str]:
         if not asks_staj_timing(query):
             return None
 
         has_course_semesters = False
         has_summer_timing = False
+        has_preparation_semesters = False
 
         for chunk in context:
             content = chunk.get("content", "")
@@ -883,6 +1253,22 @@ class RAGChatbot:
                 and any(marker in normalized_content for marker in ["izleyen yaz", "yaz tatilinde", "yaz aylarinda"])
             ) or "bahar yariyilinin bitimi ve guz yariyilinin baslangici arasinda" in normalized_content:
                 has_summer_timing = True
+            if "yaz doneminde stajini yapan" in normalized_content or "yaz staji" in normalized_content:
+                has_summer_timing = True
+            if (
+                "4 yariyilin bahar doneminde" in normalized_content
+                and "6 yariyilin bahar doneminde" in normalized_content
+                and "staj yeri aramaya" in normalized_content
+            ):
+                has_preparation_semesters = True
+
+        if has_summer_timing and has_course_semesters and has_preparation_semesters:
+            return (
+                "Sayın öğrencimiz,\n"
+                "Bilgisayar Mühendisliği için zorunlu stajlar yaz döneminde yapılır. "
+                "Kaynakta staj yeri aramaya en geç 4. yarıyılın ve 6. yarıyılın Bahar döneminde başlanabileceği belirtilmektedir. "
+                "Staj dersleri ise takip eden 5. ve 7. yarıyıllarda BM399 ve BM499 olarak alınır."
+            )
 
         if has_summer_timing and has_course_semesters:
             return (
@@ -1005,7 +1391,82 @@ class RAGChatbot:
         if has_course_only_rule:
             parts.append("Tek dersi ve bahar yariyilindan staji kalan ogrenci tek/cift sinavina sadece dersten girebilir.")
 
-        return "Sayin ogrencimiz,\n" + " ".join(parts)
+        return "Sayın öğrencimiz,\n" + " ".join(parts)
+
+    def _extract_staj_report_submission_answer(self, query: str, context: List[Dict]) -> Optional[str]:
+        if not asks_staj_report_submission(query):
+            return None
+
+        has_bm_submission_rule = False
+        has_bm_no_fixed_deadline = False
+        has_bm_approx_30_days = False
+        has_bm_graduation_note = False
+        has_general_one_month_rule = False
+        has_general_correction_rule = False
+
+        for chunk in context:
+            normalized_content = normalize_text(chunk.get("content", ""))
+            if "staj" not in normalized_content:
+                continue
+            if "staj raporunuzu yazdiktan sonra" in normalized_content and "sbs ye yuklemeniz gerekmektedir" in normalized_content:
+                has_bm_submission_rule = True
+            if "sistemde yuklemek icin son bir tarih bulunmamaktadir" in normalized_content:
+                has_bm_no_fixed_deadline = True
+            if "yaklasik 30 gun sonrasina kadar yukleyebilirsiniz" in normalized_content or "yaklasik 30 gun sonra" in normalized_content:
+                has_bm_approx_30_days = True
+            if "mezun durumundaysaniz" in normalized_content and "staj komisyonuna mail" in normalized_content:
+                has_bm_graduation_note = True
+            if "staj bitim tarihinden itibaren en gec 1 bir ay icinde" in normalized_content:
+                has_general_one_month_rule = True
+            if "duzeltme yapmasi istenen ogrenci" in normalized_content and "aksi takdirde staj reddedilmis sayilir" in normalized_content:
+                has_general_correction_rule = True
+
+        if has_bm_submission_rule or has_bm_no_fixed_deadline or has_bm_approx_30_days:
+            parts = [
+                "Bilgisayar Mühendisliği SSS kaynağına göre staj raporu imza/kaşe onayından sonra taranıp SBS'ye yüklenir."
+            ]
+            if has_bm_no_fixed_deadline:
+                parts.append("Aynı kaynakta sistemde yüklemek için sabit bir son tarih bulunmadığı belirtilmektedir.")
+            if has_bm_approx_30_days:
+                parts.append("Yaz stajı için raporun yeni güz dönemi başlangıcından itibaren yaklaşık 30 gün sonrasına kadar yüklenebileceği; değerlendirmenin staj komisyonu toplandıktan sonra yapılacağı yazmaktadır.")
+            if has_bm_graduation_note:
+                parts.append("Mezun durumundaysanız ve stajlar dışında dersiniz yoksa raporu yükledikten sonra bölüm staj komisyonuna e-posta ile değerlendirme talep etmeniz gerektiği belirtilmiştir.")
+            if has_general_correction_rule:
+                parts.append("Genel staj yönergesinde, komisyon düzeltme isterse istenen düzeltmenin en çok 1 ay içinde yapılması gerektiği; aksi durumda stajın reddedilmiş sayılacağı yer almaktadır.")
+            parts.append("Kaynaklarda geç teslim için otomatik burs/ceza gibi ayrı bir yaptırım açıkça belirtilmiyor.")
+            return "Sayın öğrencimiz,\n" + " ".join(parts)
+
+        if has_general_one_month_rule or has_general_correction_rule:
+            parts = []
+            if has_general_one_month_rule:
+                parts.append("Genel staj yönergesine göre staj defterleri staj bitim tarihinden itibaren en geç 1 ay içinde ilgili Bölüm Başkanlığına teslim edilmelidir; bu sürenin uzatılması komisyon kararına bağlıdır.")
+            if has_general_correction_rule:
+                parts.append("Komisyon düzeltme isterse öğrenci en çok 1 ay içinde düzeltmeyi yapmakla yükümlüdür; aksi halde staj reddedilmiş sayılır.")
+            return "Sayın öğrencimiz,\n" + " ".join(parts)
+
+        return None
+
+    def _extract_disciplinary_scholarship_answer(self, query: str, context: List[Dict]) -> Optional[str]:
+        if not asks_disciplinary_scholarship_loss(query):
+            return None
+
+        has_direct_rule = False
+        for chunk in context:
+            normalized_content = normalize_text(chunk.get("content", ""))
+            if not ("burs" in normalized_content and any(marker in normalized_content for marker in ["disiplin", "ceza", "uzaklastirma"])):
+                continue
+            if any(marker in normalized_content for marker in ["bursunu kaybeder", "burs kesilir", "bursu kesilir", "burs iptal", "burs devam"]):
+                has_direct_rule = True
+                break
+
+        if has_direct_rule:
+            return None
+
+        return (
+            "Sayın öğrencimiz,\n"
+            "Resmi belgelerde disiplin cezası alan öğrencinin bursunu kaybedip kaybetmeyeceğine dair açık bir hüküm bulamadım. "
+            "Bu nedenle kesin cevap veremiyorum; burs türüne göre ilgili birimden doğrulama alınmalıdır."
+        )
 
     def _extract_staj_duration_confirmation_answer(self, query: str, context: List[Dict]) -> Optional[str]:
         confirmed_days = get_confirmed_day_count(query)
@@ -1109,12 +1570,12 @@ class RAGChatbot:
 
         ordered_preview = sorted(durations_preview)
         if ordered_preview == [5, 7]:
-            answer = "Sayin ogrencimiz,\nAkademik takvime gore yaz okulu 5 hafta veya 7 hafta olarak uygulanabilmektedir."
+            answer = "Sayın öğrencimiz,\nAkademik takvime göre yaz okulu 5 hafta veya 7 hafta olarak uygulanabilmektedir."
             if 5 in ending_preview and 7 in ending_preview:
-                answer += f" 5 haftalik yaz okulu {ending_preview[5]}, 7 haftalik yaz okulu ise {ending_preview[7]} tarihinde sona ermektedir."
+                answer += f" 5 haftalık yaz okulu {ending_preview[5]}, 7 haftalık yaz okulu ise {ending_preview[7]} tarihinde sona ermektedir."
             return answer
         if len(ordered_preview) == 1:
-            return f"Sayin ogrencimiz,\nAkademik takvime gore yaz okulu {ordered_preview[0]} hafta surmektedir."
+            return f"Sayın öğrencimiz,\nAkademik takvime göre yaz okulu {ordered_preview[0]} hafta sürmektedir."
 
         durations = set()
         ending_dates = {}
@@ -1143,21 +1604,21 @@ class RAGChatbot:
         ordered = sorted(durations)
         if ordered == [5, 7]:
             answer = (
-                "SayÄ±n Ã¶ÄŸrencimiz,\n"
-                "Akademik takvime gÃ¶re yaz okulu 5 hafta veya 7 hafta olarak uygulanabilmektedir."
+                "Sayın öğrencimiz,\n"
+                "Akademik takvime göre yaz okulu 5 hafta veya 7 hafta olarak uygulanabilmektedir."
             )
             if 5 in ending_dates and 7 in ending_dates:
                 answer += (
-                    f" 5 haftalÄ±k yaz okulu {ending_dates[5]}, "
-                    f"7 haftalÄ±k yaz okulu ise {ending_dates[7]} tarihinde sona ermektedir."
+                    f" 5 haftalık yaz okulu {ending_dates[5]}, "
+                    f"7 haftalık yaz okulu ise {ending_dates[7]} tarihinde sona ermektedir."
                 )
             return answer
 
         if len(ordered) == 1:
-            return f"SayÄ±n Ã¶ÄŸrencimiz,\nAkademik takvime gÃ¶re yaz okulu {ordered[0]} hafta sÃ¼rmektedir."
+            return f"Sayın öğrencimiz,\nAkademik takvime göre yaz okulu {ordered[0]} hafta sürmektedir."
 
         joined = " ve ".join(f"{week} hafta" for week in ordered)
-        return f"SayÄ±n Ã¶ÄŸrencimiz,\nAkademik takvime gÃ¶re yaz okulu {joined} olarak uygulanabilmektedir."
+        return f"Sayın öğrencimiz,\nAkademik takvime göre yaz okulu {joined} olarak uygulanabilmektedir."
 
     def _extract_yaz_okulu_start_answer(self, query: str, context: List[Dict]) -> Optional[str]:
         if not asks_yaz_okulu_start(query):
@@ -1174,19 +1635,20 @@ class RAGChatbot:
             normalized_content = normalize_text(content)
             if requested_years and not any(str(year) in content for year in requested_years):
                 continue
+            explicit_start_match = SUMMER_SCHOOL_EXPLICIT_START_PATTERN.search(content)
+            if chunk.get("kategori") == "akademik_takvim" and "yaz okulu" in normalized_content and explicit_start_match:
+                return (
+                    "Sayın öğrencimiz,\n"
+                    f"Akademik takvimde yaz okulunun başlangıcı {explicit_start_match.group(1)} olarak görünmektedir."
+                )
             if "muhendislik" in normalized_query and "yaz okulu final haftasi dahil" in normalized_content:
                 range_match = DATE_RANGE_PATTERN.search(content)
                 if range_match:
                     return (
-                        "Sayin ogrencimiz,\n"
-                        f"Muhendislik Fakultesi takvimine gore yaz okulu (final haftasi dahil) "
-                        f"{range_match.group(1)} tarihinde baslayip {range_match.group(2)} tarihinde sona ermektedir."
+                        "Sayın öğrencimiz,\n"
+                        f"Mühendislik Fakültesi takvimine göre yaz okulu (final haftası dahil) "
+                        f"{range_match.group(1)} tarihinde başlayıp {range_match.group(2)} tarihinde sona ermektedir."
                     )
-            if chunk.get("kategori") == "akademik_takvim" and "yaz okulu" in normalized_content and "6.07.2026" in content:
-                return (
-                    "Sayin ogrencimiz,\n"
-                    "Akademik takvimde yaz okulunun baslangici 6.07.2026 olarak gorunmektedir."
-                )
 
         if "muhendislik" in normalized_query:
             for chunk in self.raw_records:
@@ -1197,18 +1659,19 @@ class RAGChatbot:
                 range_match = DATE_RANGE_PATTERN.search(content)
                 if range_match:
                     return (
-                        "SayÄ±n Ã¶ÄŸrencimiz,\n"
-                        f"MÃ¼hendislik FakÃ¼ltesi takvimine gÃ¶re yaz okulu (final haftasÄ± dahil) "
-                        f"{range_match.group(1)} tarihinde baÅŸlayÄ±p {range_match.group(2)} tarihinde sona ermektedir."
+                        "Sayın öğrencimiz,\n"
+                        f"Mühendislik Fakültesi takvimine göre yaz okulu (final haftası dahil) "
+                        f"{range_match.group(1)} tarihinde başlayıp {range_match.group(2)} tarihinde sona ermektedir."
                     )
 
         for chunk in self.raw_records:
             content = chunk.get("content", "")
             normalized_content = normalize_text(content)
-            if chunk.get("kategori") == "akademik_takvim" and "yaz okulu" in normalized_content and "6.07.2026" in content:
+            explicit_start_match = SUMMER_SCHOOL_EXPLICIT_START_PATTERN.search(content)
+            if chunk.get("kategori") == "akademik_takvim" and "yaz okulu" in normalized_content and explicit_start_match:
                 return (
-                    "SayÄ±n Ã¶ÄŸrencimiz,\n"
-                    "Akademik takvimde yaz okulunun baÅŸlangÄ±cÄ± 6.07.2026 olarak gÃ¶rÃ¼nmektedir."
+                    "Sayın öğrencimiz,\n"
+                    f"Akademik takvimde yaz okulunun başlangıcı {explicit_start_match.group(1)} olarak görünmektedir."
                 )
 
         for chunk in self.raw_records + context:
@@ -1227,7 +1690,7 @@ class RAGChatbot:
             if requested_years and any(str(year) in content for year in requested_years):
                 score += 8
 
-            start_match = SUMMER_SCHOOL_START_PATTERN.search(content)
+            start_match = SUMMER_SCHOOL_EXPLICIT_START_PATTERN.search(content) or SUMMER_SCHOOL_START_PATTERN.search(content)
             range_match = SUMMER_SCHOOL_RANGE_PATTERN.search(content) or DATE_RANGE_PATTERN.search(content)
             if start_match:
                 score += 16
@@ -1247,21 +1710,21 @@ class RAGChatbot:
 
         if best_match["range_start"] and best_match["range_end"] and "muhendislik" in normalized_query:
             return (
-                "SayÄ±n Ã¶ÄŸrencimiz,\n"
-                f"MÃ¼hendislik FakÃ¼ltesi takvimine gÃ¶re yaz okulu (final haftasÄ± dahil) "
-                f"{best_match['range_start']} tarihinde baÅŸlayÄ±p {best_match['range_end']} tarihinde sona ermektedir."
+                "Sayın öğrencimiz,\n"
+                f"Mühendislik Fakültesi takvimine göre yaz okulu (final haftası dahil) "
+                f"{best_match['range_start']} tarihinde başlayıp {best_match['range_end']} tarihinde sona ermektedir."
             )
 
         if best_match["start"]:
             return (
-                "SayÄ±n Ã¶ÄŸrencimiz,\n"
-                f"Akademik takvimde yaz okulunun baÅŸlangÄ±cÄ± {best_match['start']} olarak gÃ¶rÃ¼nmektedir."
+                "Sayın öğrencimiz,\n"
+                f"Akademik takvimde yaz okulunun başlangıcı {best_match['start']} olarak görünmektedir."
             )
 
         if best_match["range_start"] and best_match["range_end"]:
             return (
-                "SayÄ±n Ã¶ÄŸrencimiz,\n"
-                f"KaynaÄŸa gÃ¶re yaz okulu {best_match['range_start']} tarihinde baÅŸlayÄ±p "
+                "Sayın öğrencimiz,\n"
+                f"Kaynağa göre yaz okulu {best_match['range_start']} tarihinde başlayıp "
                 f"{best_match['range_end']} tarihinde sona ermektedir."
             )
 
@@ -1289,22 +1752,26 @@ class RAGChatbot:
                 continue
 
             period_count = len(period_numbers)
+            range_match = DATE_RANGE_PATTERN.search(content)
             if asks_period_count(query):
                 answer = (
-                    "Sayin ogrencimiz,\n"
-                    f"Muhendislik Fakultesi takviminde yaz okulu sonrasi staj icin {period_count} donem gorunmektedir."
+                    "Sayın öğrencimiz,\n"
+                    f"Mühendislik Fakültesi takviminde yaz okulu sonrası staj için {period_count} dönem görünmektedir."
                 )
-                if "13.07.2026 / 21.08.2026" in content:
-                    answer += " Ayni kayitta yaz okulu (final haftasi dahil) 13.07.2026 - 21.08.2026 araliginda gosterilmektedir."
-                answer += " Ancak kayit duz metne donustugu icin her staj doneminin tek tek baslangic tarihi guvenli bicimde ayrisamiyor."
+                if range_match:
+                    answer += (
+                        f" Aynı kayıtta yaz okulu (final haftası dahil) "
+                        f"{range_match.group(1)} - {range_match.group(2)} aralığında gösterilmektedir."
+                    )
+                answer += " Ancak kayıt düz metne dönüştüğü için her staj döneminin tek tek başlangıç tarihi güvenli biçimde ayrışamıyor."
                 return answer
 
-            if "13.07.2026 / 21.08.2026" in content:
+            if range_match:
                 return (
-                    "Sayin ogrencimiz,\n"
-                    "Muhendislik Fakultesi takviminde yaz staji donemleri 'Yaz Okulu Sonrasi Staj Donemi' olarak ayri gosterilmektedir. "
-                    "Ayni kayitta yaz okulu (final haftasi dahil) 13.07.2026 - 21.08.2026 araliginda yer almaktadir. "
-                    "Duz metne donusen kayitta staj donemlerinin tek tek baslangic tarihi net ayrismadigi icin ilk staj doneminin kesin baslangic gununu guvenle soyleyemiyorum."
+                    "Sayın öğrencimiz,\n"
+                    "Mühendislik Fakültesi takviminde yaz stajı dönemleri 'Yaz Okulu Sonrası Staj Dönemi' olarak ayrı gösterilmektedir. "
+                    f"Aynı kayıtta yaz okulu (final haftası dahil) {range_match.group(1)} - {range_match.group(2)} aralığında yer almaktadır. "
+                    "Düz metne dönüşen kayıtta staj dönemlerinin tek tek başlangıç tarihi net ayrışmadığı için ilk staj döneminin kesin başlangıç gününü güvenle söyleyemiyorum."
                 )
 
         best_match = None
@@ -1344,14 +1811,14 @@ class RAGChatbot:
 
         if best_match["range_start"] and best_match["range_end"]:
             return (
-                "SayÄ±n Ã¶ÄŸrencimiz,\n"
-                f"KaynaÄŸa gÃ¶re ilgili yaz dÃ¶nemi {best_match['range_start']} - {best_match['range_end']} aralÄ±ÄŸÄ±nda planlanmÄ±ÅŸtÄ±r."
+                "Sayın öğrencimiz,\n"
+                f"Kaynağa göre ilgili yaz dönemi {best_match['range_start']} - {best_match['range_end']} aralığında planlanmıştır."
             )
 
         if len(best_match["dates"]) >= 2:
             return (
-                "SayÄ±n Ã¶ÄŸrencimiz,\n"
-                f"KaynaÄŸa gÃ¶re ilgili yaz stajÄ±/staj dÃ¶nemi iÃ§in Ã¶ne Ã§Ä±kan tarihler {best_match['dates'][0]} ve {best_match['dates'][1]} olarak gÃ¶rÃ¼nmektedir."
+                "Sayın öğrencimiz,\n"
+                f"Kaynağa göre ilgili yaz stajı/staj dönemi için öne çıkan tarihler {best_match['dates'][0]} ve {best_match['dates'][1]} olarak görünmektedir."
             )
 
         return None
@@ -1369,7 +1836,15 @@ class RAGChatbot:
         if direct_answer:
             return direct_answer
 
+        direct_answer = self._extract_disciplinary_scholarship_answer(query, context)
+        if direct_answer:
+            return direct_answer
+
         direct_answer = self._extract_makeup_exam_with_missing_internship_answer(query, context)
+        if direct_answer:
+            return direct_answer
+
+        direct_answer = self._extract_staj_report_submission_answer(query, context)
         if direct_answer:
             return direct_answer
 
@@ -1393,9 +1868,7 @@ class RAGChatbot:
             return None
 
         normalized_query = normalize_text(query)
-        wants_staj_duration = "staj" in normalized_query and any(
-            marker in normalized_query for marker in ["kac gun", "sure", "suresi", "ne kadar"]
-        )
+        wants_staj_duration = asks_staj_duration(query)
         if not wants_staj_duration:
             return None
 
@@ -1497,7 +1970,111 @@ class RAGChatbot:
             return f"Sayın öğrencimiz,\n{SCOPE_CLARIFICATION_TEXT}"
         return f"Sayın öğrencimiz,\n{SCOPE_CLARIFICATION_TEXT}"
 
+    def _evidence_score(self, query: str, snippet: str, source: Dict) -> float:
+        normalized_snippet = normalize_text(snippet)
+        snippet_terms = set(normalized_snippet.split())
+        query_terms = self._important_terms(query)
+        score = 0.0
+
+        score += 4.0 * len(query_terms & snippet_terms)
+        if len(query_terms) >= 3 and len(query_terms & snippet_terms) >= 2:
+            score += 6.0
+
+        effective_scope = self._resolve_program_scope(query)
+        candidate_scope = source.get("program_scope", infer_chunk_scope(source))
+        if effective_scope and candidate_scope == effective_scope:
+            score += 10.0
+        elif effective_scope and candidate_scope not in {GENERAL_SCOPE, ""}:
+            score -= 12.0
+
+        query_topic = infer_topic({"content": query, "source_url": "", "kategori": ""})
+        if query_topic != "genel" and source.get("topic") == query_topic:
+            score += 8.0
+
+        requested_years = extract_years(query)
+        if requested_years and any(str(year) in snippet for year in requested_years):
+            score += 10.0
+
+        if is_short_factual_query(query):
+            if NUMERIC_UNIT_PATTERN.search(snippet):
+                score += 8.0
+            if DATE_PATTERN.search(snippet):
+                score += 6.0
+
+        if asks_yaz_okulu_start(query) and "yaz okulu" in normalized_snippet and DATE_PATTERN.search(snippet):
+            score += 18.0
+        if asks_yaz_okulu_duration(query) and "yaz okulu" in normalized_snippet and "hafta" in normalized_snippet:
+            score += 18.0
+        if asks_staj_duration(query) and "staj" in normalized_snippet and "is gunu" in normalized_snippet:
+            score += 18.0
+        if asks_staj_report_submission(query) and any(
+            marker in normalized_snippet for marker in ["sbs", "teslim", "yukle", "yaklasik 30 gun"]
+        ):
+            score += 16.0
+        if asks_makeup_exam_with_missing_internship(query) and "tek cift" in normalized_snippet:
+            score += 18.0
+
+        if normalized_snippet.startswith("baskanligimiz hakkimizda") or "kalite komisyon" in normalized_snippet:
+            score -= 20.0
+
+        return score
+
+    def _select_evidence_context(self, query: str, context: List[Dict], limit: int = 6) -> List[Dict]:
+        candidates = []
+        seen = set()
+
+        for source in context:
+            content = source.get("content", "")
+            if not content.strip():
+                continue
+
+            snippets = []
+            if len(content) <= 700:
+                snippets.append(content.strip())
+            else:
+                for sentence in SENTENCE_SPLIT_PATTERN.split(content):
+                    sentence = sentence.strip(" -\t")
+                    if len(sentence) >= 60:
+                        snippets.append(sentence)
+
+            for snippet in snippets:
+                fingerprint = hashlib.md5(
+                    f"{source.get('source_url', '')}\n{snippet}".encode("utf-8")
+                ).hexdigest()
+                if fingerprint in seen:
+                    continue
+                seen.add(fingerprint)
+                score = self._evidence_score(query, snippet, source)
+                if score <= 0:
+                    continue
+                evidence = dict(source)
+                evidence["content"] = snippet
+                evidence["evidence_score"] = score
+                evidence["source_title"] = source.get("source_title") or infer_source_title(source)
+                candidates.append(evidence)
+
+        if not candidates:
+            return []
+
+        ranked = sorted(candidates, key=lambda item: item["evidence_score"], reverse=True)
+        top_score = ranked[0]["evidence_score"]
+        if top_score < 6:
+            return []
+
+        threshold = max(5.0, top_score * 0.35)
+        selected = [item for item in ranked if item["evidence_score"] >= threshold]
+        return selected[:limit]
+
+    def _format_evidence_text(self, evidence_context: List[Dict]) -> str:
+        parts = []
+        for index, item in enumerate(evidence_context, start=1):
+            title = item.get("source_title") or infer_source_title(item)
+            url = item.get("source_url", "")
+            parts.append(f"[Kanit {index}] {title}\nURL: {url}\n{item.get('content', '')}")
+        return "\n\n---\n\n".join(parts)
+
     def generate_response(self, query: str, context: List[Dict]) -> str:
+        self.last_answer_context = []
         if not context:
             return f"Sayın öğrencimiz,\n{NO_ANSWER_TEXT}"
 
@@ -1507,9 +2084,16 @@ class RAGChatbot:
 
         direct_answer = self._extract_direct_answer(query, context)
         if direct_answer:
+            self.last_answer_context = context
             return direct_answer
 
-        context_text = "\n\n---\n\n".join(chunk["content"] for chunk in context)
+        evidence_context = self._select_evidence_context(query, context)
+        if not evidence_context:
+            return f"Sayın öğrencimiz,\n{NO_ANSWER_TEXT}"
+            return f"SayÄ±n Ã¶ÄŸrencimiz,\n{NO_ANSWER_TEXT}"
+
+        self.last_answer_context = evidence_context
+        context_text = self._format_evidence_text(evidence_context)
         memory_text = self._memory_as_text()
 
         prompt = f"""Sen Düzce Üniversitesi Öğrenci İşleri Daire Başkanlığı'nın resmi Türkçe yapay zeka asistanısın.
@@ -1527,7 +2111,7 @@ ZORUNLU KURALLAR:
 Sohbet Geçmişi:
 {memory_text}
 
-Resmi Belgeler:
+Kanitlar:
 {context_text}
 
 Öğrenci Sorusu: {query}
@@ -1576,17 +2160,13 @@ Cevap (Türkçe, "Sayın öğrencimiz," ile başla):"""
         search_query = self._build_search_query(query)
         results = self.hybrid_search(search_query, k=7)
         answer = self._finalize_answer(self.generate_response(search_query, results))
+        source_context = self.last_answer_context or results
+        sources = self._format_sources(source_context, answer, search_query)
         self._save_to_memory(query, answer)
         return {
             "query": query,
             "cevap": answer,
-            "kaynaklar": [
-                {
-                    "kategori": result.get("kategori", "Genel"),
-                    "url": result.get("source_url", ""),
-                }
-                for result in results[:3]
-            ],
+            "kaynaklar": sources,
         }
 
 

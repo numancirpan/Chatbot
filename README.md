@@ -54,6 +54,13 @@ python pipeline/smart_chunker.py
 python pipeline/create_vector_db.py
 ```
 
+Not: `db/chroma_db/` Git'e eklenmez. Yeni makinede, DB silindiyse veya ChromaDB kayıt sayısı
+`0` görünüyorsa aşağıdaki komutla yerelde yeniden üretin:
+
+```bash
+python pipeline/create_vector_db.py --rebuild
+```
+
 ### 4. Uygulamayı Başlat
 ```bash
 streamlit run chatbot_interface.py
@@ -63,6 +70,29 @@ streamlit run chatbot_interface.py
 ```bash
 python pipeline/dataset_audit.py
 ```
+
+Bu komut ham kayıt, chunk ve ChromaDB kayıt sayılarını birlikte gösterir. ChromaDB sayısı
+`chunks.json` sayısından farklıysa vektör veritabanını yeniden oluşturun.
+
+### 6. Golden Evaluation Çalıştır
+```bash
+python pipeline/evaluate_golden.py
+```
+
+`data/golden_questions.json` gerçek kullanıcı sorularından oluşan küçük bir regresyon setidir.
+Bu test modeli eğitmez; cevapların beklenen bilgi, yasaklı ifade ve kaynak şartlarını sağlayıp
+sağlamadığını kontrol eder. Hızlı kontrol için:
+
+```bash
+python pipeline/rag_smoke_test.py
+```
+
+## Cevaplama Mimarisi
+
+Sistem model ağırlıklarına mevzuat ezberletmez. Bilgi `data/chunks.json` ve ChromaDB/BM25
+arama katmanından gelir. Chatbot cevap üretmeden önce ilgili kaynaklardan kanıt cümlelerini
+seçer; LLM yalnızca bu kanıtları resmi ve okunabilir Türkçe cevaba dönüştürmek için kullanılır.
+Kanıt bulunamazsa cevap vermek yerine resmi belgelerde bilgiye ulaşılamadığını belirtmelidir.
 
 ## 🔄 Veriyi Güncellemek
 

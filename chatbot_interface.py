@@ -71,7 +71,8 @@ if prompt := st.chat_input("Örn: Yaz okulu kayıtları ne zaman başlıyor?"):
                 kaynaklar_md = "\n\n---\n**📚 Yararlanılan Kaynaklar:**\n"
                 eklenen = set()
                 for k in sonuc['kaynaklar']:
-                    url, kat = k['url'], k['kategori']
+                    url = k.get('url', '')
+                    kat = k.get('baslik') or k.get('kategori', 'Kaynak')
                     if url and url not in eklenen:
                         eklenen.add(url)
                         kaynaklar_md += (f"- 🔗 [{kat}]({url})\n"
