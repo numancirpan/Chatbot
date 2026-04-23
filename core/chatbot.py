@@ -115,13 +115,41 @@ OTHER_UNIT_HINTS = [
 ]
 TOPIC_HINTS = {
     "staj": ["staj", "sbs", "bm399", "bm499", "staj rapor", "staj defter"],
-    "yaz_okulu": ["yaz okulu", "yaz okulu kayit", "yaz okulunun"],
-    "akademik_takvim": ["akademik takvim", "ders kayit", "derslerin baslamasi", "final"],
+    "ders_kaydi": ["ders kaydi", "kayit yenile", "ders sec", "obs", "kayitlarini yenilemek"],
+    "add_drop": ["add drop", "ekle sil", "ders ekle", "ders birak", "ders sil"],
+    "devamsizlik": ["devamsizlik", "devam zorunlulugu", "yoklama"],
+    "sinavlar": ["vize", "final", "but", "mazeret", "sinav"],
+    "not_sistemi": ["ortalama", "gano", "agno", "not sistemi", "harf notu", "akts"],
+    "mezuniyet": ["mezuniyet", "mezun", "diploma", "mezun durumda"],
     "cap_yandal": ["cift anadal", "cap", "yandal"],
-    "tek_cift_sinav": ["tek cift", "tek ders", "cift ders"],
+    "yatay_gecis": ["yatay gecis", "kurumlararasi gecis", "merkezi yatay gecis"],
+    "harc_ucret": ["harc", "katki payi", "ogrenim ucreti", "ucret"],
     "burs": ["burs", "bursu", "bursunu"],
+    "askerlik_tecili": ["askerlik", "tecil", "askerlik tecili"],
+    "ogrenci_belgesi_transkript": ["ogrenci belgesi", "transkript", "belge", "not dokumu"],
     "disiplin": ["disiplin", "uzaklastirma", "kinama"],
-    "harc": ["harc", "katki payi", "ogrenim ucreti"],
+    "akademik_takvim_duyurular": ["akademik takvim", "duyuru", "onemli basvuru", "derslerin baslamasi"],
+    "yaz_okulu": ["yaz okulu", "yaz okulu kayit", "yaz okulunun"],
+    "muafiyet_intibak": ["muafiyet", "intibak", "esdegerlik", "ders saydirma"],
+}
+TOPIC_LABELS = {
+    "staj": "Staj",
+    "ders_kaydi": "Ders Kaydi / Kayit Yenileme",
+    "add_drop": "Add-Drop",
+    "devamsizlik": "Devamsizlik",
+    "sinavlar": "Sinavlar",
+    "not_sistemi": "Not Sistemi / Ortalama",
+    "mezuniyet": "Mezuniyet",
+    "cap_yandal": "CAP / Yandal",
+    "yatay_gecis": "Yatay Gecis",
+    "harc_ucret": "Harc / Ucret",
+    "burs": "Burs",
+    "ogrenci_belgesi_transkript": "Ogrenci Belgesi / Transkript",
+    "askerlik_tecili": "Askerlik Tecili",
+    "disiplin": "Disiplin Islemleri",
+    "akademik_takvim_duyurular": "Akademik Takvim / Duyurular",
+    "yaz_okulu": "Yaz Okulu",
+    "muafiyet_intibak": "Muafiyet / Intibak",
 }
 SOURCE_STOPWORDS = {
     "sayin",
@@ -528,6 +556,32 @@ def is_scope_clarification_query(query: str) -> bool:
     return not any(marker in normalized for marker in topic_markers)
 
 
+def is_follow_up_query(query: str) -> bool:
+    normalized = normalize_text(query)
+    follow_up_markers = [
+        "peki",
+        "tamam",
+        "o zaman",
+        "bu durumda",
+        "buna gore",
+        "bunun icin",
+        "bunlar",
+        "bunlardan",
+        "bu ders",
+        "bu staj",
+        "bu belge",
+        "o ders",
+        "o staj",
+        "o belge",
+        "ya",
+    ]
+    if any(normalized.startswith(marker) for marker in follow_up_markers):
+        return True
+    if len(tokenize(query)) <= 5 and any(marker in normalized for marker in ["kac kere", "hangi donemde", "ne zaman", "nasil"]):
+        return True
+    return False
+
+
 def build_query_variants(query: str) -> List[str]:
     normalized = normalize_text(query)
     variants = [query]
@@ -757,17 +811,7 @@ class RAGChatbot:
         return PROGRAM_SCOPE_LABELS.get(scope, scope.replace("_", " ").title()).strip()
 
     def _topic_label(self, topic: str) -> str:
-        labels = {
-            "staj": "staj",
-            "yaz_okulu": "yaz okulu",
-            "akademik_takvim": "akademik takvim",
-            "cap_yandal": "çift anadal ve yandal",
-            "tek_cift_sinav": "tek çift sınav",
-            "burs": "burs",
-            "disiplin": "disiplin",
-            "harc": "harç",
-        }
-        return labels.get(topic, topic.replace("_", " ")).strip()
+        return TOPIC_LABELS.get(topic, topic.replace("_", " ")).strip()
 
     def _dominant_scope(self, context: List[Dict]) -> str:
         scopes = [
@@ -813,6 +857,16 @@ class RAGChatbot:
             self.conversation_state["program_scope"] = next_scope
         if next_topic:
             self.conversation_state["topic"] = next_topic
+
+    def _should_carry_context(self, query: str) -> bool:
+        if is_scope_clarification_query(query) or is_follow_up_query(query):
+            return True
+
+        query_topic = infer_topic({"content": query, "source_url": "", "kategori": ""})
+        previous_topic = self.conversation_state.get("topic", "")
+        if query_topic != "genel":
+            return query_topic == previous_topic and bool(previous_topic)
+        return False
 
     def _resolve_model_name(self) -> str:
         try:
@@ -991,6 +1045,7 @@ class RAGChatbot:
             unique.append(result)
 
         unique = self._filter_candidates_by_scope(query, unique)
+        unique = self._filter_candidates_by_topic(query, unique)
         scored = sorted(unique, key=lambda item: self._candidate_score(query, item), reverse=True)
         top_candidates = scored[: max(candidate_k, 16)]
 
@@ -1049,6 +1104,26 @@ class RAGChatbot:
         ]
         return general_only or scoped_candidates
 
+    def _filter_candidates_by_topic(self, query: str, candidates: List[Dict]) -> List[Dict]:
+        effective_topic = self._resolve_topic(query)
+        if not effective_topic:
+            return candidates
+
+        topical_candidates = [
+            candidate
+            for candidate in candidates
+            if candidate.get("topic", infer_topic(candidate)) in {effective_topic, "genel", ""}
+        ]
+        if not topical_candidates:
+            return candidates
+
+        has_specific_topic = any(
+            candidate.get("topic", infer_topic(candidate)) == effective_topic for candidate in topical_candidates
+        )
+        if has_specific_topic:
+            return topical_candidates
+        return candidates
+
     def _candidate_score(self, query: str, candidate: Dict) -> float:
         normalized_query = normalize_text(query)
         query_tokens = set(tokenize(query))
@@ -1058,6 +1133,8 @@ class RAGChatbot:
         kategori = normalize_text(candidate.get("kategori", ""))
         candidate_scope = candidate.get("program_scope", GENERAL_SCOPE)
         effective_scope = self._resolve_program_scope(query)
+        candidate_topic = candidate.get("topic", infer_topic(candidate))
+        effective_topic = self._resolve_topic(query)
         requested_years = extract_years(query)
 
         score = float(len(query_tokens & content_tokens))
@@ -1075,6 +1152,11 @@ class RAGChatbot:
                 score += 3
             else:
                 score -= 20
+        if effective_topic:
+            if candidate_topic == effective_topic:
+                score += 12
+            elif candidate_topic not in {"", "genel"}:
+                score -= 10
         if asks_staj_timing(query):
             if "yariyil" in normalized_content:
                 score += 6
@@ -1209,7 +1291,10 @@ class RAGChatbot:
 
         return score
 
-    def _memory_as_text(self) -> str:
+    def _memory_as_text(self, query: Optional[str] = None) -> str:
+        if query and not self._should_carry_context(query):
+            return "Yok"
+
         messages = self.message_history.messages[-MAX_MEMORY_TURNS * 2 :]
         if not messages:
             return "Yok"
@@ -1231,6 +1316,9 @@ class RAGChatbot:
 
     def _build_search_query(self, query: str) -> str:
         previous_user_query = self._last_user_query()
+        if not self._should_carry_context(query):
+            return query
+
         scope = self._resolve_program_scope(query)
         topic = self._resolve_topic(query)
         additions = []
@@ -2378,7 +2466,7 @@ class RAGChatbot:
 
         self.last_answer_context = evidence_context
         context_text = self._format_evidence_text(evidence_context)
-        memory_text = self._memory_as_text()
+        memory_text = self._memory_as_text(query)
 
         goals_text = "\n".join(f"- {goal}" for goal in ASSISTANT_GOALS)
         personality_text = ", ".join(ASSISTANT_PERSONALITY)
