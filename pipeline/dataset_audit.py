@@ -8,15 +8,27 @@ Amac, veri kalitesini tartisilabilir olmaktan cikarip olculebilir hale getirmekt
 import argparse
 import json
 import os
+import sys
 from collections import Counter
 from statistics import mean
 from urllib.parse import urlparse
 
+try:
+    import chromadb
+except ImportError:
+    chromadb = None
+
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT_DIR, "data")
+DB_DIR = os.path.join(ROOT_DIR, "db", "chroma_db")
 KB_FILE = os.path.join(DATA_DIR, "knowledge_base.json")
 CHUNKS_FILE = os.path.join(DATA_DIR, "chunks.json")
+
+if ROOT_DIR not in sys.path:
+    sys.path.insert(0, ROOT_DIR)
+
+from core.chatbot import enrich_chunk_metadata
 
 NOISE_MARKERS = [
     "anasayfa",
@@ -73,6 +85,18 @@ def print_counter(title: str, counter: Counter, limit: int = 10):
         print(f"{key or 'bos'}: {value}")
 
 
+def chroma_counts(db_dir: str = DB_DIR):
+    if chromadb is None:
+        return None
+    if not os.path.exists(db_dir) or not os.listdir(db_dir):
+        return {}
+    try:
+        client = chromadb.PersistentClient(path=db_dir)
+        return {collection.name: collection.count() for collection in client.list_collections()}
+    except Exception as exc:
+        return {"ERROR": str(exc)}
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--kb", default=KB_FILE)
@@ -81,14 +105,26 @@ def main():
 
     kb = load_json(args.kb)
     chunks = load_json(args.chunks)
+    enriched_chunks = [enrich_chunk_metadata(chunk) for chunk in chunks]
 
-    lengths = chunk_lengths(chunks)
+    lengths = chunk_lengths(enriched_chunks)
 
     print("DATASET AUDIT")
     print("=============")
     print(f"Ham kayit sayisi: {len(kb)}")
     print(f"Chunk sayisi: {len(chunks)}")
-    print(f"Benzersiz kaynak sayisi: {len({item.get('source_url', '') for item in chunks})}")
+    print(f"Benzersiz kaynak sayisi: {len({item.get('source_url', '') for item in enriched_chunks})}")
+
+    counts = chroma_counts()
+    if counts is None:
+        print("ChromaDB kayit sayisi: kontrol edilemedi (chromadb kurulu degil)")
+    elif "ERROR" in counts:
+        print(f"ChromaDB kayit sayisi: kontrol hatasi ({counts['ERROR']})")
+    else:
+        total_chroma = sum(counts.values())
+        print(f"ChromaDB kayit sayisi: {total_chroma}")
+        if total_chroma != len(chunks):
+            print(f"UYARI: ChromaDB ({total_chroma}) ve chunks.json ({len(chunks)}) sayilari esit degil.")
 
     if lengths:
         print(f"Ortalama chunk uzunlugu: {round(mean(lengths), 1)}")
@@ -107,12 +143,20 @@ def main():
     )
     print_counter(
         "Chunk kategorileri",
-        Counter(item.get("kategori", "bos") for item in chunks)
+        Counter(item.get("kategori", "bos") for item in enriched_chunks)
+    )
+    print_counter(
+        "Chunk konulari",
+        Counter(item.get("topic", "bos") for item in enriched_chunks)
+    )
+    print_counter(
+        "Chunk kapsam/birim tahmini",
+        Counter(item.get("program_scope", "bos") for item in enriched_chunks)
     )
 
     print("\nSupheli chunk ornekleri")
     print("-----------------------")
-    for score, item in suspicious_chunks(chunks):
+    for score, item in suspicious_chunks(enriched_chunks):
         snippet = item.get("content", "").replace("\n", " ")[:220]
         print(f"Skor={score} | Kategori={item.get('kategori', 'bos')} | URL={item.get('source_url', '')}")
         print(f"  {snippet}")

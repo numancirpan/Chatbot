@@ -1,0 +1,73 @@
+[
+  {
+    "id": "staj_bm_sure",
+    "turns": ["Bilgisayar muhendisligi staj kac gun suruyor"],
+    "expected_answer_terms": ["25 is gunu"],
+    "expected_source_terms": ["bm.mf.duzce.edu.tr/sayfa/4a82"],
+    "forbidden_answer_terms": ["20 is gunu"]
+  },
+  {
+    "id": "staj_bm_20_gun_mu",
+    "turns": ["Bilgisayar muhendisligi staj suresi 20 gun mu"],
+    "expected_answer_terms": ["hayir", "25 is gunu"],
+    "expected_source_terms": ["bm.mf.duzce.edu.tr/sayfa/4a82"],
+    "forbidden_answer_terms": ["evet"]
+  },
+  {
+    "id": "staj_teslim_bolum_ister",
+    "turns": ["Stajini zamaninda teslim etmeyen ogrenci icin surec nasil isler"],
+    "expected_answer_terms": ["bolum veya fakulteye gore degisebilmektedir"],
+    "expected_source_terms": [],
+    "expect_no_sources": true
+  },
+  {
+    "id": "staj_teslim_bm_takip",
+    "turns": [
+      "Stajini zamaninda teslim etmeyen ogrenci icin surec nasil isler",
+      "Bilgisayar muhendisligi"
+    ],
+    "expected_answer_terms": ["sbs", "yaklasik 30 gun", "sabit bir son tarih"],
+    "expected_source_terms": ["bm.mf.duzce.edu.tr/sayfa/878b"]
+  },
+  {
+    "id": "yaz_okulu_sure",
+    "turns": ["Yaz okulu kac hafta suruyor"],
+    "expected_answer_terms": ["5 hafta", "7 hafta"],
+    "expected_source_terms": ["a44682bb-4437-4908-aaf0-c6020e1fc991"]
+  },
+  {
+    "id": "yaz_okulu_2026_baslangic",
+    "turns": ["Bilgisayar muhendisligi 2026 yili icin yaz okulu ne zaman basliyor"],
+    "expected_answer_terms": ["6 07 2026"],
+    "expected_source_terms": ["a44682bb-4437-4908-aaf0-c6020e1fc991"]
+  },
+  {
+    "id": "disiplin_burs_belirsiz",
+    "turns": ["Disiplin cezasi alan ogrenci bursunu kaybeder mi"],
+    "expected_answer_terms": ["kesin cevap veremiyorum"],
+    "expected_source_terms": [],
+    "expect_no_sources": true,
+    "forbidden_answer_terms": ["bursunu kaybetmez", "bursunu kaybeder"]
+  },
+  {
+    "id": "staj_donem_bm",
+    "turns": ["Bilgisayar muhendisligi zorunlu staji hangi donemlerde yapmam gerekiyor"],
+    "expected_answer_terms": ["4", "6", "yaz"],
+    "expected_source_terms": ["bm.mf.duzce.edu.tr/sayfa/4a82"]
+  },
+  {
+    "id": "tek_cift_staj_bm",
+    "turns": [
+      "Stajimi yapmamissam ve 1 dersim kalmissa tek cift sinavina girebilir miyim",
+      "Bilgisayar muhendisligi"
+    ],
+    "expected_answer_terms": ["staj dersine hic kayitlanmadiysaniz", "hakkiniz yoktur"],
+    "expected_source_terms": ["bm.mf.duzce.edu.tr/sayfa/878b"]
+  },
+  {
+    "id": "cift_anadal_genel",
+    "turns": ["Cift anadal basvuru sartlari nelerdir"],
+    "expected_answer_terms": ["cift anadal"],
+    "expected_source_terms": []
+  }
+]
