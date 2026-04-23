@@ -1,0 +1,13 @@
+.venv/
+nvenv/
+.vs/
+
+__pycache__/
+*/__pycache__/
+*.py[cod]
+
+logs/
+*.log
+
+data/chroma_db/
+db/chroma_db/
