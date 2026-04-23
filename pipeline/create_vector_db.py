@@ -11,10 +11,10 @@ olusturulur. Zorla yenilemek icin --rebuild kullanin.
 import json
 import os
 import shutil
+import sqlite3
 import sys
 from typing import Dict
 
-import chromadb
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
@@ -23,6 +23,8 @@ ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT_DIR, "data")
 DB_DIR = os.path.join(ROOT_DIR, "db", "chroma_db")
 CHUNKS_FILE = os.path.join(DATA_DIR, "chunks.json")
+COLLECTION_NAME = "langchain"
+EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
 
 if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
@@ -30,12 +32,24 @@ if ROOT_DIR not in sys.path:
 from core.chatbot import enrich_chunk_metadata
 
 
+def build_embedding_function() -> HuggingFaceEmbeddings:
+    return HuggingFaceEmbeddings(
+        model_name=EMBEDDING_MODEL_NAME,
+        model_kwargs={"local_files_only": True},
+    )
+
+
 def chroma_counts() -> Dict[str, int]:
-    if not os.path.exists(DB_DIR) or not os.listdir(DB_DIR):
+    sqlite_path = os.path.join(DB_DIR, "chroma.sqlite3")
+    if not os.path.exists(sqlite_path):
         return {}
+
     try:
-        client = chromadb.PersistentClient(path=DB_DIR)
-        return {collection.name: collection.count() for collection in client.list_collections()}
+        with sqlite3.connect(sqlite_path) as conn:
+            cur = conn.cursor()
+            cur.execute("SELECT COUNT(*) FROM embeddings")
+            embedding_count = int(cur.fetchone()[0])
+        return {COLLECTION_NAME: embedding_count}
     except Exception as exc:
         print(f"ChromaDB okunamadi: {exc}")
         return {}
@@ -75,12 +89,13 @@ def build(rebuild: bool = False):
         print("ChromaDB koleksiyonu var ama kayit sayisi 0. Yeniden olusturulacak.")
 
     print("Embedding modeli yukleniyor...")
-    embedding_fn = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    embedding_fn = build_embedding_function()
 
     reset_db_dir()
 
     print("ChromaDB olusturuluyor...")
     vector_store = Chroma(
+        collection_name=COLLECTION_NAME,
         persist_directory=DB_DIR,
         embedding_function=embedding_fn,
     )
@@ -104,10 +119,11 @@ def build(rebuild: bool = False):
             }
             for chunk in batch
         ]
-        vector_store.add_texts(texts=texts, metadatas=metas)
+        ids = [chunk["chunk_id"] for chunk in batch]
+        vector_store.add_texts(texts=texts, metadatas=metas, ids=ids)
         print(f"  {min(i + batch_size, len(chunks))}/{len(chunks)} eklendi...")
 
-    final_count = total_chroma_count()
+    final_count = int(vector_store._collection.count())
     print(f"ChromaDB hazir: {final_count} kayit -> {DB_DIR}")
     if final_count != len(chunks):
         print(f"UYARI: Chunk sayisi ({len(chunks)}) ile ChromaDB kayit sayisi ({final_count}) esit degil.")

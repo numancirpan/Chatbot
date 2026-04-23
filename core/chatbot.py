@@ -3,13 +3,16 @@ import hashlib
 import os
 import re
 import unicodedata
+from collections import Counter
 from typing import Dict, List, Optional
 
 import requests
+from langchain_chroma import Chroma
+from langchain_core.chat_history import InMemoryChatMessageHistory
+from langchain_core.messages import AIMessage, HumanMessage
+from langchain_huggingface import HuggingFaceEmbeddings
 from rank_bm25 import BM25Okapi
 from sentence_transformers import CrossEncoder
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_chroma import Chroma
 
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
@@ -24,6 +27,8 @@ CHUNKS_FILE = os.path.join(ROOT_DIR, "data", "chunks.json")
 KNOWLEDGE_BASE_FILE = os.path.join(ROOT_DIR, "data", "knowledge_base.json")
 DB_DIR = os.path.join(ROOT_DIR, "db", "chroma_db")
 MAX_MEMORY_TURNS = 5
+COLLECTION_NAME = "langchain"
+EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
 DEFAULT_PROGRAM_SCOPE = ""
 GENERAL_SCOPE = "genel"
 OTHER_SCOPE = "diger_birim"
@@ -62,6 +67,17 @@ PROGRAM_SCOPE_HINTS = {
         "on lisans",
         "onlisans",
     ],
+}
+PROGRAM_SCOPE_LABELS = {
+    "bilgisayar_muhendisligi": "Bilgisayar Mühendisliği",
+    "orman_muhendisligi": "Orman Mühendisliği",
+    "orman_endustri_muhendisligi": "Orman Endüstri Mühendisliği",
+    "peyzaj_mimarligi": "Peyzaj Mimarlığı",
+    "agac_isleri_endustri_muhendisligi": "Ağaç İşleri Endüstri Mühendisliği",
+    "insaat_muhendisligi": "İnşaat Mühendisliği",
+    "mimarlik": "Mimarlık",
+    "isletme": "İşletme",
+    "meslek_yuksekokulu": "Meslek Yüksekokulu",
 }
 OTHER_UNIT_HINTS = [
     "orman muhendisligi",
@@ -145,6 +161,7 @@ SUMMER_SCHOOL_RANGE_PATTERN = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 SENTENCE_SPLIT_PATTERN = re.compile(r"(?<=[.!?])\s+|\n+")
+SOURCE_REF_PATTERN = re.compile(r"\[Kaynak\s+\d+\]")
 SEMESTER_PAIR_PATTERN = re.compile(r"\b(\d+)\s+ve\s+(\d+)\s+yariyillarda\b", re.IGNORECASE)
 SUMMER_AFTER_PATTERN = re.compile(
     r"\b(\d+)\s+yariyil\w*\s+ve\s+(\d+)\s+yariyil\w*\s+izleyen\s+yaz",
@@ -248,6 +265,27 @@ def asks_staj_duration(query: str) -> bool:
             r"\bne kadar\b",
         ]
     )
+
+
+def asks_staj_count(query: str) -> bool:
+    normalized = normalize_text(query)
+    if "staj" not in normalized:
+        return False
+    count_markers = [
+        "kac kere",
+        "kac staj",
+        "kac tane staj",
+        "kac zorunlu staj",
+        "kac kez",
+        "staj sayisi",
+        "staj yapmaliyim",
+        "staj yapmali",
+        "staj i",
+        "staj ii",
+        "bm399",
+        "bm499",
+    ]
+    return any(marker in normalized for marker in count_markers)
 
 
 def asks_staj_report_submission(query: str) -> bool:
@@ -512,6 +550,17 @@ def build_query_variants(query: str) -> List[str]:
                     "ilk staj döneminde staj yapma hakkı kazanamayan 6. yarıyıldan sonra",
                 ]
             )
+
+        if asks_staj_count(query):
+            variants.extend(
+                [
+                    "zorunlu staj sayisi",
+                    "kac zorunlu staj var",
+                    "staj i staj ii",
+                    "bm399 bm499",
+                    "5 ve 7 yariyillarda 25 is gunu staj",
+                ]
+            )
         if asks_staj_report_submission(query):
             variants.extend(
                 [
@@ -606,7 +655,11 @@ class BM25Search:
 
 class Reranker:
     def __init__(self):
-        self.model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2", max_length=512)
+        self.model = CrossEncoder(
+            "cross-encoder/ms-marco-MiniLM-L-6-v2",
+            max_length=512,
+            local_files_only=True,
+        )
 
     def rerank(self, query: str, chunks: List[Dict], k: int = 5) -> List[Dict]:
         if not chunks:
@@ -644,11 +697,19 @@ class RAGChatbot:
         self.bm25_search = BM25Search(self.chunks)
         self.reranker = Reranker()
         self.vector_store = Chroma(
+            collection_name=COLLECTION_NAME,
             persist_directory=DB_DIR,
-            embedding_function=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2"),
+            embedding_function=HuggingFaceEmbeddings(
+                model_name=EMBEDDING_MODEL_NAME,
+                model_kwargs={"local_files_only": True},
+            ),
         )
         self.vector_count = self._vector_store_count()
-        self.memory: List[Dict[str, str]] = []
+        self.message_history = InMemoryChatMessageHistory()
+        self.conversation_state = {
+            "program_scope": self.program_scope or "",
+            "topic": "",
+        }
         self.last_answer_context: List[Dict] = []
 
         self._ollama_kontrol()
@@ -661,7 +722,78 @@ class RAGChatbot:
         print("BM25 + Reranker + ChromaDB + sohbet hafizasi hazir")
 
     def _resolve_program_scope(self, query: str) -> str:
-        return self.program_scope or infer_query_scope(query)
+        return (
+            infer_query_scope(query)
+            or self.program_scope
+            or self.conversation_state.get("program_scope", "")
+        )
+
+    def _resolve_topic(self, query: str) -> str:
+        query_topic = infer_topic({"content": query, "source_url": "", "kategori": ""})
+        if query_topic != "genel":
+            return query_topic
+        return self.conversation_state.get("topic", "")
+
+    def _scope_label(self, scope: str) -> str:
+        return PROGRAM_SCOPE_LABELS.get(scope, scope.replace("_", " ").title()).strip()
+
+    def _topic_label(self, topic: str) -> str:
+        labels = {
+            "staj": "staj",
+            "yaz_okulu": "yaz okulu",
+            "akademik_takvim": "akademik takvim",
+            "cap_yandal": "çift anadal ve yandal",
+            "tek_cift_sinav": "tek çift sınav",
+            "burs": "burs",
+            "disiplin": "disiplin",
+            "harc": "harç",
+        }
+        return labels.get(topic, topic.replace("_", " ")).strip()
+
+    def _dominant_scope(self, context: List[Dict]) -> str:
+        scopes = [
+            chunk.get("program_scope", infer_chunk_scope(chunk))
+            for chunk in context
+            if chunk.get("program_scope", infer_chunk_scope(chunk)) not in {GENERAL_SCOPE, OTHER_SCOPE, ""}
+        ]
+        if not scopes:
+            return ""
+        return Counter(scopes).most_common(1)[0][0]
+
+    def _dominant_topic(self, context: List[Dict]) -> str:
+        topics = [
+            chunk.get("topic", infer_topic(chunk))
+            for chunk in context
+            if chunk.get("topic", infer_topic(chunk)) not in {"", "genel"}
+        ]
+        if not topics:
+            return ""
+        return Counter(topics).most_common(1)[0][0]
+
+    def _update_conversation_state(
+        self,
+        query: str,
+        answer: str = "",
+        context: Optional[List[Dict]] = None,
+    ) -> None:
+        inferred_scope = infer_query_scope(query)
+        inferred_topic = infer_topic({"content": query, "source_url": "", "kategori": ""})
+
+        context = context or []
+        dominant_scope = self._dominant_scope(context)
+        dominant_topic = self._dominant_topic(context)
+
+        next_scope = inferred_scope or dominant_scope or self.conversation_state.get("program_scope", "")
+        next_topic = (
+            inferred_topic
+            if inferred_topic != "genel"
+            else dominant_topic or self.conversation_state.get("topic", "")
+        )
+
+        if next_scope:
+            self.conversation_state["program_scope"] = next_scope
+        if next_topic:
+            self.conversation_state["topic"] = next_topic
 
     def _ollama_kontrol(self):
         try:
@@ -707,6 +839,26 @@ class RAGChatbot:
                 ):
                     candidates.append(chunk)
                 elif DATE_RANGE_PATTERN.search(content) and "staj" in normalized_content:
+                    candidates.append(chunk)
+
+        if asks_staj_count(query):
+            for chunk in self.chunks + self.raw_records:
+                normalized_content = normalize_text(chunk.get("content", ""))
+                if "staj" not in normalized_content:
+                    continue
+                if any(
+                    marker in normalized_content
+                    for marker in [
+                        "bm399",
+                        "bm499",
+                        "staj i",
+                        "staj ii",
+                        "5 ve 7 yariyillarda",
+                        "5. ve 7. yariyillarda",
+                        "iki staj",
+                        "25 is gunu staj yapma zorunlulugu",
+                    ]
+                ):
                     candidates.append(chunk)
 
         if asks_staj_report_submission(query):
@@ -828,6 +980,7 @@ class RAGChatbot:
             is_short_factual_query(query)
             or asks_staj_timing(query)
             or asks_staj_course_registration(query)
+            or asks_staj_count(query)
             or asks_staj_missed_period(query)
             or asks_staj_report_submission(query)
             or asks_yaz_okulu_duration(query)
@@ -897,6 +1050,17 @@ class RAGChatbot:
                 score += 8
             if "yaz" in normalized_content:
                 score += 4
+        if asks_staj_count(query):
+            if "bm399" in normalized_content or "bm499" in normalized_content:
+                score += 12
+            if "staj i" in normalized_content or "staj ii" in normalized_content:
+                score += 10
+            if "5 yariyil" in normalized_content or "7 yariyil" in normalized_content:
+                score += 8
+            if "25 is gunu" in normalized_content:
+                score += 8
+            if "tek cift" in normalized_content or "rapor" in normalized_content:
+                score -= 8
         if asks_staj_course_registration(query):
             if "obs" in normalized_content:
                 score += 8
@@ -1014,38 +1178,62 @@ class RAGChatbot:
         return score
 
     def _memory_as_text(self) -> str:
-        if not self.memory:
+        messages = self.message_history.messages[-MAX_MEMORY_TURNS * 2 :]
+        if not messages:
             return "Yok"
 
         lines = []
-        for message in self.memory[-MAX_MEMORY_TURNS * 2 :]:
-            prefix = "Öğrenci" if message["role"] == "user" else "Asistan"
-            lines.append(f"{prefix}: {message['content']}")
+        for message in messages:
+            if isinstance(message, HumanMessage):
+                prefix = "Öğrenci"
+            else:
+                prefix = "Asistan"
+            lines.append(f"{prefix}: {message.content}")
         return "\n".join(lines)
 
     def _last_user_query(self) -> Optional[str]:
-        for message in reversed(self.memory):
-            if message.get("role") == "user" and message.get("content", "").strip():
-                return message["content"].strip()
+        for message in reversed(self.message_history.messages):
+            if isinstance(message, HumanMessage) and message.content.strip():
+                return message.content.strip()
         return None
 
     def _build_search_query(self, query: str) -> str:
         previous_user_query = self._last_user_query()
-        if not previous_user_query:
-            return query
+        scope = self._resolve_program_scope(query)
+        topic = self._resolve_topic(query)
+        additions = []
+        normalized_query = normalize_text(query)
+
+        if is_program_specific_query(query) and scope and not infer_query_scope(query):
+            additions.append(self._scope_label(scope))
+        topic_label = self._topic_label(topic)
+        if topic and topic != "genel" and normalize_text(topic_label) not in normalized_query:
+            additions.append(topic_label)
+
+        rewritten_query = query
         if is_scope_clarification_query(query):
-            return f"{query.strip()} {previous_user_query}"
-        return query
+            if previous_user_query:
+                additions.append(previous_user_query)
+            rewritten_query = query.strip()
+
+        if additions:
+            rewritten_query = f"{rewritten_query.strip()} {' '.join(additions)}".strip()
+        return rewritten_query
 
     def _save_to_memory(self, query: str, answer: str) -> None:
-        self.memory.append({"role": "user", "content": query})
-        self.memory.append({"role": "assistant", "content": answer})
+        self.message_history.add_message(HumanMessage(content=query))
+        self.message_history.add_message(AIMessage(content=answer))
         max_messages = MAX_MEMORY_TURNS * 2
-        if len(self.memory) > max_messages:
-            self.memory = self.memory[-max_messages:]
+        if len(self.message_history.messages) > max_messages:
+            self.message_history.messages = self.message_history.messages[-max_messages:]
+        self._update_conversation_state(query, answer, self.last_answer_context)
 
     def clear_memory(self) -> None:
-        self.memory.clear()
+        self.message_history.clear()
+        self.conversation_state = {
+            "program_scope": self.program_scope or "",
+            "topic": "",
+        }
 
     def _cleanup_response(self, text: str) -> str:
         text = repair_text_encoding(text)
@@ -1232,6 +1420,18 @@ class RAGChatbot:
                 break
         return sources
 
+    def _attach_source_summary(self, answer: str, sources: List[Dict]) -> str:
+        if not sources:
+            return answer
+        if "Dayanak:" in answer:
+            return answer
+
+        refs = []
+        for index, source in enumerate(sources, start=1):
+            title = source.get("baslik", "Kaynak")
+            refs.append(f"[Kaynak {index}] {title}")
+        return f"{answer}\n\nDayanak: " + "; ".join(refs)
+
     def _extract_staj_timing_answer(self, query: str, context: List[Dict]) -> Optional[str]:
         if not asks_staj_timing(query):
             return None
@@ -1290,6 +1490,54 @@ class RAGChatbot:
             )
 
         return None
+
+    def _extract_staj_count_answer(self, query: str, context: List[Dict]) -> Optional[str]:
+        if not asks_staj_count(query):
+            return None
+
+        has_first_internship = False
+        has_second_internship = False
+        has_both_courses = False
+        internship_days = None
+
+        for chunk in context:
+            content = chunk.get("content", "")
+            normalized_content = normalize_text(content)
+            if "staj" not in normalized_content:
+                continue
+
+            if "bm399" in normalized_content or "staj i" in normalized_content or "staj 1" in normalized_content:
+                has_first_internship = True
+            if "bm499" in normalized_content or "staj ii" in normalized_content or "staj 2" in normalized_content:
+                has_second_internship = True
+            if "bm399" in normalized_content and "bm499" in normalized_content:
+                has_both_courses = True
+
+            day_match = WORKDAY_NUMBER_PATTERN.search(content)
+            if day_match and internship_days is None:
+                internship_days = int(day_match.group(1))
+
+        if has_first_internship and has_second_internship:
+            has_both_courses = True
+
+        if not has_both_courses:
+            return None
+
+        scope = self._resolve_program_scope(query)
+        scope_label = self._scope_label(scope) if scope else "ilgili bölüm"
+        if internship_days:
+            return (
+                "Sayın öğrencimiz,\n"
+                f"{scope_label} bölümünde 2 zorunlu staj bulunmaktadır. "
+                f"Bunlar Staj I (BM399) ve Staj II'dir (BM499). "
+                f"Her biri {internship_days} iş günüdür."
+            )
+
+        return (
+            "Sayın öğrencimiz,\n"
+            f"{scope_label} bölümünde 2 zorunlu staj bulunmaktadır. "
+            "Bunlar Staj I (BM399) ve Staj II'dir (BM499)."
+        )
 
     def _extract_staj_course_registration_answer(self, query: str, context: List[Dict]) -> Optional[str]:
         if not asks_staj_course_registration(query):
@@ -1856,6 +2104,10 @@ class RAGChatbot:
         if direct_answer:
             return direct_answer
 
+        direct_answer = self._extract_staj_count_answer(query, context)
+        if direct_answer:
+            return direct_answer
+
         direct_answer = self._extract_staj_timing_answer(query, context)
         if direct_answer:
             return direct_answer
@@ -2070,7 +2322,7 @@ class RAGChatbot:
         for index, item in enumerate(evidence_context, start=1):
             title = item.get("source_title") or infer_source_title(item)
             url = item.get("source_url", "")
-            parts.append(f"[Kanit {index}] {title}\nURL: {url}\n{item.get('content', '')}")
+            parts.append(f"[Kaynak {index}] {title}\nURL: {url}\n{item.get('content', '')}")
         return "\n\n---\n\n".join(parts)
 
     def generate_response(self, query: str, context: List[Dict]) -> str:
@@ -2107,6 +2359,8 @@ ZORUNLU KURALLAR:
 6. Cevap bulunuyorsa asla "{NO_ANSWER_TEXT}" cümlesini ekleme.
 7. "Saygılarımla" gibi kapanış ifadeleri ekleme.
 8. "Sohbet Geçmişi" bölümünü sadece bağlamı anlamak için kullan; bilgi kaynağı olarak kullanma.
+9. Dayandığın her ana iddia için mümkün olduğunda köşeli parantez içinde kaynak etiketi kullan: [Kaynak 1], [Kaynak 2].
+10. İç muhakemeni veya adım adım düşünceni açıklama; sadece sonuç ve kısa gerekçe ver.
 
 Sohbet Geçmişi:
 {memory_text}
@@ -2162,6 +2416,7 @@ Cevap (Türkçe, "Sayın öğrencimiz," ile başla):"""
         answer = self._finalize_answer(self.generate_response(search_query, results))
         source_context = self.last_answer_context or results
         sources = self._format_sources(source_context, answer, search_query)
+        answer = self._attach_source_summary(answer, sources)
         self._save_to_memory(query, answer)
         return {
             "query": query,

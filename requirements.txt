@@ -9,3 +9,5 @@ chromadb
 PyMuPDF
 python-docx
 urllib3
+fastapi
+uvicorn

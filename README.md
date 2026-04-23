@@ -4,6 +4,7 @@
 
 ```
 TEZ4/
+├── api.py                  ← FastAPI servis katmanı
 ├── config.json              ← Taranacak URL'ler
 ├── chatbot_interface.py     ← Streamlit arayüzü (ANA UYGULAMA)
 │
@@ -33,7 +34,7 @@ TEZ4/
 ```bash
 pip install streamlit langchain-chroma langchain-huggingface
 pip install sentence-transformers rank-bm25 chromadb
-pip install requests beautifulsoup4 PyMuPDF python-docx
+pip install requests beautifulsoup4 PyMuPDF python-docx fastapi uvicorn
 ```
 
 ### 2. Ollama'yı Başlat (ayrı terminal)
@@ -64,6 +65,12 @@ python pipeline/create_vector_db.py --rebuild
 ### 4. Uygulamayı Başlat
 ```bash
 streamlit run chatbot_interface.py
+```
+
+Alternatif olarak HTTP API servisini başlatmak için:
+
+```bash
+uvicorn api:app --reload
 ```
 
 ### 5. Dataset Audit Çalıştır

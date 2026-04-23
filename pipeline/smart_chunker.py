@@ -209,11 +209,13 @@ def isle(entry: Dict) -> List[Dict]:
 def tekrar_kaldir(chunks: List[Dict]) -> List[Dict]:
     goruldu, temiz = set(), []
     for c in chunks:
-        h = hashlib.md5(f"{c.get('source_url', '')}\n{c['content']}".encode("utf-8")).hexdigest()
+        normalized_source = c.get("source_url", "").strip().rstrip("/").lower()
+        normalized_content = " ".join(c["content"].split())
+        h = hashlib.md5(f"{normalized_source}\n{normalized_content}".encode("utf-8")).hexdigest()
         if h not in goruldu:
             goruldu.add(h)
             c["chunk_id"] = h
-            c["source_hash"] = hashlib.md5(c.get("source_url", "").encode("utf-8")).hexdigest()
+            c["source_hash"] = hashlib.md5(normalized_source.encode("utf-8")).hexdigest()
             temiz.append(c)
     return temiz
 
