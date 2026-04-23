@@ -26,7 +26,54 @@ def normalized_contains(text: str, expected: str) -> bool:
     return normalize_text(expected) in normalize_text(text)
 
 
+def case_turns(case: dict) -> list[str]:
+    if isinstance(case.get("turns"), list) and case["turns"]:
+        return [str(turn).strip() for turn in case["turns"] if str(turn).strip()]
+
+    if isinstance(case.get("messages"), list):
+        turns = [
+            str(message.get("content", "")).strip()
+            for message in case["messages"]
+            if isinstance(message, dict) and message.get("role") == "user" and str(message.get("content", "")).strip()
+        ]
+        if turns:
+            return turns
+
+    turns = []
+    query = str(case.get("query", "")).strip()
+    if query:
+        turns.append(query)
+
+    followups = case.get("followups", [])
+    if isinstance(followups, list):
+        turns.extend(str(item).strip() for item in followups if str(item).strip())
+
+    return turns
+
+
+def case_expected_source_terms(case: dict) -> list[str]:
+    terms = case.get("expected_source_terms")
+    if isinstance(terms, list) and terms:
+        return [str(term).strip() for term in terms if str(term).strip()]
+
+    if str(case.get("source_url", "")).strip():
+        return [str(case["source_url"]).strip()]
+
+    if str(case.get("suggested_source_url", "")).strip():
+        return [str(case["suggested_source_url"]).strip()]
+
+    return []
+
+
+def normalized_case(case: dict) -> dict:
+    clone = dict(case)
+    clone["turns"] = case_turns(case)
+    clone["expected_source_terms"] = case_expected_source_terms(case)
+    return clone
+
+
 def run_case(bot: RAGChatbot, case: dict) -> dict:
+    case = normalized_case(case)
     bot.clear_memory()
     result = None
     for turn in case["turns"]:

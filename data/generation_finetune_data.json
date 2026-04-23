@@ -1,225 +1,1663 @@
 [
   {
-    "id": "staj_bm_sure",
+    "id": "staj_001",
+    "topic": "staj",
     "messages": [
       {
         "role": "user",
-        "content": "Bilgisayar muhendisligi staj kac gun suruyor"
+        "content": "Zorunlu staj kaç gün?"
       }
     ],
-    "assistant": "Sayın öğrencimiz,\nStaj süresi 25 iş günüdür.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj; [Kaynak 2] Bilgisayar Mühendisliği - Staj SSS",
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Staj Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle staj süresi, iş günü bilgisi ve bölüm bazlı açıklama bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
     "sources": [
       {
-        "kategori": "staj",
-        "baslik": "Bilgisayar Mühendisliği - Staj",
-        "url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj"
-      },
-      {
-        "kategori": "staj",
-        "baslik": "Bilgisayar Mühendisliği - Staj SSS",
-        "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
-      }
-    ],
-    "expected_answer_terms": [
-      "25 is gunu"
-    ]
-  },
-  {
-    "id": "staj_bm_20_gun_mu",
-    "messages": [
-      {
-        "role": "user",
-        "content": "Bilgisayar muhendisligi staj suresi 20 gun mu"
-      }
-    ],
-    "assistant": "Sayın öğrencimiz,\nHayır. Staj süresi 25 iş günüdür.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj; [Kaynak 2] Bilgisayar Mühendisliği - Staj SSS",
-    "sources": [
-      {
-        "kategori": "staj",
-        "baslik": "Bilgisayar Mühendisliği - Staj",
-        "url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj"
-      },
-      {
-        "kategori": "staj",
-        "baslik": "Bilgisayar Mühendisliği - Staj SSS",
-        "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
-      }
-    ],
-    "expected_answer_terms": [
-      "hayir",
-      "25 is gunu"
-    ]
-  },
-  {
-    "id": "staj_teslim_bolum_ister",
-    "messages": [
-      {
-        "role": "user",
-        "content": "Stajini zamaninda teslim etmeyen ogrenci icin surec nasil isler"
-      }
-    ],
-    "assistant": "Sayın öğrencimiz,\nBu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.",
-    "sources": [],
-    "expected_answer_terms": [
-      "bolum veya fakulteye gore degisebilmektedir"
-    ]
-  },
-  {
-    "id": "staj_teslim_bm_takip",
-    "messages": [
-      {
-        "role": "user",
-        "content": "Stajini zamaninda teslim etmeyen ogrenci icin surec nasil isler"
-      },
-      {
-        "role": "user",
-        "content": "Bilgisayar muhendisligi"
-      }
-    ],
-    "assistant": "Sayın öğrencimiz,\nBilgisayar Mühendisliği SSS kaynağına göre staj raporu imza/kaşe onayından sonra taranıp SBS'ye yüklenir. Aynı kaynakta sistemde yüklemek için sabit bir son tarih bulunmadığı belirtilmektedir. Yaz stajı için raporun yeni güz dönemi başlangıcından itibaren yaklaşık 30 gün sonrasına kadar yüklenebileceği; değerlendirmenin staj komisyonu toplandıktan sonra yapılacağı yazmaktadır. Mezun durumundaysanız ve stajlar dışında dersiniz yoksa raporu yükledikten sonra bölüm staj komisyonuna e-posta ile değerlendirme talep etmeniz gerektiği belirtilmiştir. Genel staj yönergesinde, komisyon düzeltme isterse istenen düzeltmenin en çok 1 ay içinde yapılması gerektiği; aksi durumda stajın reddedilmiş sayılacağı yer almaktadır. Kaynaklarda geç teslim için otomatik burs/ceza gibi ayrı bir yaptırım açıkça belirtilmiyor.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Merkezi Mevzuat",
-    "sources": [
-      {
-        "kategori": "fakulte_bolum",
-        "baslik": "Bilgisayar Mühendisliği - Staj SSS",
-        "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
-      },
-      {
-        "kategori": "merkezi_mevzuat",
-        "baslik": "Merkezi Mevzuat",
-        "url": "https://cdn.duzce.edu.tr/File/GetFile/0060a4d6-6dad-424e-baf6-0bed4c103d1b"
-      }
-    ],
-    "expected_answer_terms": [
-      "sbs",
-      "yaklasik 30 gun",
-      "sabit bir son tarih"
-    ]
-  },
-  {
-    "id": "yaz_okulu_sure",
-    "messages": [
-      {
-        "role": "user",
-        "content": "Yaz okulu kac hafta suruyor"
-      }
-    ],
-    "assistant": "Sayın öğrencimiz,\nAkademik takvime göre yaz okulu 5 hafta veya 7 hafta olarak uygulanabilmektedir. 5 haftalık yaz okulu 14.08.2026, 7 haftalık yaz okulu ise 28.08.2026 tarihinde sona ermektedir.\n\nDayanak: [Kaynak 1] Akademik Takvim",
-    "sources": [
-      {
-        "kategori": "akademik_takvim",
-        "baslik": "Akademik Takvim",
-        "url": "https://cdn.duzce.edu.tr/File/GetFile/a44682bb-4437-4908-aaf0-c6020e1fc991"
-      }
-    ],
-    "expected_answer_terms": [
-      "5 hafta",
-      "7 hafta"
-    ]
-  },
-  {
-    "id": "disiplin_burs_belirsiz",
-    "messages": [
-      {
-        "role": "user",
-        "content": "Disiplin cezasi alan ogrenci bursunu kaybeder mi"
-      }
-    ],
-    "assistant": "Sayın öğrencimiz,\nResmi belgelerde disiplin cezası alan öğrencinin bursunu kaybedip kaybetmeyeceğine dair açık bir hüküm bulamadım. Bu nedenle kesin cevap veremiyorum; burs türüne göre ilgili birimden doğrulama alınmalıdır.",
-    "sources": [],
-    "expected_answer_terms": [
-      "kesin cevap veremiyorum"
-    ]
-  },
-  {
-    "id": "staj_donem_bm",
-    "messages": [
-      {
-        "role": "user",
-        "content": "Bilgisayar muhendisligi zorunlu staji hangi donemlerde yapmam gerekiyor"
-      }
-    ],
-    "assistant": "Sayın öğrencimiz,\nBilgisayar Mühendisliği için zorunlu stajlar yaz döneminde yapılır. Kaynakta staj yeri aramaya en geç 4. yarıyılın ve 6. yarıyılın Bahar döneminde başlanabileceği belirtilmektedir. Staj dersleri ise takip eden 5. ve 7. yarıyıllarda BM399 ve BM499 olarak alınır.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj; [Kaynak 2] Fakulte Bolum; [Kaynak 3] Bilgisayar Mühendisliği - Staj SSS",
-    "sources": [
-      {
-        "kategori": "staj",
-        "baslik": "Bilgisayar Mühendisliği - Staj",
-        "url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj"
-      },
-      {
-        "kategori": "fakulte_bolum",
-        "baslik": "Fakulte Bolum",
-        "url": "https://mf.duzce.edu.tr/sayfa/8a10/ders-kayitlari-esnasinda-sikca-sorulan-sorular-ve-cevaplari"
-      },
-      {
-        "kategori": "staj",
-        "baslik": "Bilgisayar Mühendisliği - Staj SSS",
-        "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
-      }
-    ],
-    "expected_answer_terms": [
-      "4",
-      "6",
-      "yaz"
-    ]
-  },
-  {
-    "id": "tek_cift_staj_bm",
-    "messages": [
-      {
-        "role": "user",
-        "content": "Stajimi yapmamissam ve 1 dersim kalmissa tek cift sinavina girebilir miyim"
-      },
-      {
-        "role": "user",
-        "content": "Bilgisayar muhendisligi"
-      }
-    ],
-    "assistant": "Sayın öğrencimiz,\nStaj dersine hic kayitlanmadiysaniz tek/cift ders sinavina girme hakkiniz yoktur. Ancak staj dersini daha once alip YZ notu aldiysaniz tek/cift ders sinavina basvurabilirsiniz. Tek dersi ve bahar yariyilindan staji kalan ogrenci tek/cift sinavina sadece dersten girebilir.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj",
-    "sources": [
-      {
-        "kategori": "fakulte_bolum",
-        "baslik": "Bilgisayar Mühendisliği - Staj SSS",
-        "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
-      },
-      {
-        "kategori": "staj",
-        "baslik": "Bilgisayar Mühendisliği - Staj",
+        "title": "Bilgisayar Mühendisliği - Staj",
         "url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj"
       }
     ],
-    "expected_answer_terms": [
-      "staj dersine hic kayitlanmadiysaniz",
-      "hakkiniz yoktur"
+    "expected_points": [
+      "staj süresi",
+      "iş günü bilgisi",
+      "bölüm bazlı açıklama"
     ]
   },
   {
-    "id": "cift_anadal_genel",
+    "id": "staj_002",
+    "topic": "staj",
     "messages": [
       {
         "role": "user",
-        "content": "Cift anadal basvuru sartlari nelerdir"
+        "content": "Staj başvurusu nasıl yapılır?"
       }
     ],
-    "assistant": "Sayın öğrencimiz,\nÇift Anadal ve Yandal programlarına başvurmak için aşağıdaki şartları karşılamalısınız:\n1. Öğrenci başka bir çift anadal ya da yandal programına kayıtlı olmamış olması gerekir.\nBu bilgiler, [Kaynak 4] sayesinde doğrudan belgelere dayandırılmıştır.\n\nDayanak: [Kaynak 1] Akademik Takvim; [Kaynak 2] Akademik Takvim; [Kaynak 3] Cap Yandal",
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Staj Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başvuru süreci, başvuru birimi ve adımlar bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
     "sources": [
       {
-        "kategori": "akademik_takvim",
-        "baslik": "Akademik Takvim",
-        "url": "https://cdn.duzce.edu.tr/File/GetFile/a44682bb-4437-4908-aaf0-c6020e1fc991"
-      },
+        "title": "Bilgisayar Mühendisliği - Staj SSS",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
+      }
+    ],
+    "expected_points": [
+      "başvuru süreci",
+      "başvuru birimi",
+      "adımlar"
+    ]
+  },
+  {
+    "id": "staj_003",
+    "topic": "staj",
+    "messages": [
       {
-        "kategori": "akademik_takvim",
-        "baslik": "Akademik Takvim",
+        "role": "user",
+        "content": "Staj için hangi belgeler gerekli?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Staj Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle gerekli evraklar ve teslim yöntemi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Bilgisayar Mühendisliği - Staj",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj"
+      }
+    ],
+    "expected_points": [
+      "gerekli evraklar",
+      "teslim yöntemi"
+    ]
+  },
+  {
+    "id": "ders_kaydi_001",
+    "topic": "ders_kaydi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Kayıt yenileme nasıl yapılır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Kayıt Yenileme İşlemleri başlıklı resmî kaynaktadır. Yanıt verilirken özellikle kayıt yenileme adımları, ders seçimi ve onay süreci bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Kayıt Yenileme İşlemleri",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/a40f9bfd-0852-44d9-ade0-1c543f4fee6b"
+      }
+    ],
+    "expected_points": [
+      "kayıt yenileme adımları",
+      "ders seçimi",
+      "onay süreci"
+    ]
+  },
+  {
+    "id": "ders_kaydi_002",
+    "topic": "ders_kaydi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Ders kaydı ne zaman başlar?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Akademik Takvim başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başlangıç tarihi, bitiş tarihi ve takvim referansı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Akademik Takvim",
         "url": "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5"
-      },
-      {
-        "kategori": "cap_yandal",
-        "baslik": "Cap Yandal",
-        "url": "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal"
       }
     ],
-    "expected_answer_terms": [
-      "cift anadal"
+    "expected_points": [
+      "başlangıç tarihi",
+      "bitiş tarihi",
+      "takvim referansı"
+    ]
+  },
+  {
+    "id": "ders_kaydi_003",
+    "topic": "ders_kaydi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bir dönemde maksimum kaç kredi alınabilir?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle maksimum kredi ve koşullar bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Ders Kayıtları Esnasında Sıkça Sorulan Sorular ve Cevapları",
+        "url": "https://mf.duzce.edu.tr/sayfa/8a10/ders-kayitlari-esnasinda-sikca-sorulan-sorular-ve-cevaplari"
+      }
+    ],
+    "expected_points": [
+      "maksimum kredi",
+      "koşullar"
+    ]
+  },
+  {
+    "id": "add_drop_001",
+    "topic": "add_drop",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Add-drop haftası ne zaman?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Akademik Takvim başlıklı resmî kaynaktadır. Yanıt verilirken özellikle tarih aralığı ve takvim referansı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Akademik Takvim",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/0bf859f9-969c-4171-b6ae-356555f8dd99"
+      }
+    ],
+    "expected_points": [
+      "tarih aralığı",
+      "takvim referansı"
+    ]
+  },
+  {
+    "id": "add_drop_002",
+    "topic": "add_drop",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Add-drop döneminde ders ekleyebilir miyim?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Kayıt Yenileme İşlemleri başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ders ekleme işlemi ve onay gerekliliği bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Yaz Okulu Uygulama Esasları",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19"
+      }
+    ],
+    "expected_points": [
+      "ders ekleme işlemi",
+      "onay gerekliliği"
+    ]
+  },
+  {
+    "id": "add_drop_003",
+    "topic": "add_drop",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Seçtiğim dersi bırakabilir miyim?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Kayıt Yenileme İşlemleri başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ders bırakma işlemi ve koşullar bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Yaz Okulu Uygulama Esasları",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19"
+      }
+    ],
+    "expected_points": [
+      "ders bırakma işlemi",
+      "koşullar"
+    ]
+  },
+  {
+    "id": "devamsizlik_001",
+    "topic": "devamsizlik",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Devamsızlık sınırı nedir?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle devamsızlık sınırı ve uygulama türü bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Lisans Eğitim Öğretim Yönetmeliği",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/17ac/yaz-okulu"
+      }
+    ],
+    "expected_points": [
+      "devamsızlık sınırı",
+      "uygulama türü"
+    ]
+  },
+  {
+    "id": "devamsizlik_002",
+    "topic": "devamsizlik",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Devamsızlıktan kalınca ne olur?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başarısızlık sonucu ve sınav hakkı ilişkisi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Lisans Eğitim Öğretim Yönetmeliği",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/17ac/yaz-okulu"
+      }
+    ],
+    "expected_points": [
+      "başarısızlık sonucu",
+      "sınav hakkı ilişkisi"
+    ]
+  },
+  {
+    "id": "devamsizlik_003",
+    "topic": "devamsizlik",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Uygulamalı derslerde devamsızlık nasıl hesaplanır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle uygulamalı ders devam koşulu ve hesaplama mantığı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Kayıt Yenileme İşlemleri",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943"
+      }
+    ],
+    "expected_points": [
+      "uygulamalı ders devam koşulu",
+      "hesaplama mantığı"
+    ]
+  },
+  {
+    "id": "sinavlar_001",
+    "topic": "sinavlar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mazeret sınavına kimler girebilir?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle uygun mazeret koşulları ve başvuru gerekliliği bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Lisans Eğitim Öğretim Yönetmeliği",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/17ac/yaz-okulu"
+      }
+    ],
+    "expected_points": [
+      "uygun mazeret koşulları",
+      "başvuru gerekliliği"
+    ]
+  },
+  {
+    "id": "sinavlar_002",
+    "topic": "sinavlar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bütünleme sınavı var mı?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle bütünleme durumu ve not ilişkisi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Lisans Eğitim Öğretim Yönetmeliği",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/0070ab4a-559e-41a3-b1c7-1c28b68f0514"
+      }
+    ],
+    "expected_points": [
+      "bütünleme durumu",
+      "not ilişkisi"
+    ]
+  },
+  {
+    "id": "sinavlar_003",
+    "topic": "sinavlar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Final tarihleri nereden öğrenilir?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Akademik Takvim başlıklı resmî kaynaktadır. Yanıt verilirken özellikle tarih bilgisi ve takvim referansı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Akademik Takvim",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/7772123f-c7c5-4552-b300-7147262a5377"
+      }
+    ],
+    "expected_points": [
+      "tarih bilgisi",
+      "takvim referansı"
+    ]
+  },
+  {
+    "id": "not_sistemi_ortalama_001",
+    "topic": "not_sistemi_ortalama",
+    "messages": [
+      {
+        "role": "user",
+        "content": "GANO nasıl hesaplanır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Not Sistemi ve Ortalama Hesaplama başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ağırlıklı ortalama ve kredi ve not ilişkisi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Kayıt Yenileme İşlemleri",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da"
+      }
+    ],
+    "expected_points": [
+      "ağırlıklı ortalama",
+      "kredi ve not ilişkisi"
+    ]
+  },
+  {
+    "id": "not_sistemi_ortalama_002",
+    "topic": "not_sistemi_ortalama",
+    "messages": [
+      {
+        "role": "user",
+        "content": "DC ile geçilir mi?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle koşullu geçme ve ortalama etkisi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Lisans Eğitim Öğretim Yönetmeliği",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/17ac/yaz-okulu"
+      }
+    ],
+    "expected_points": [
+      "koşullu geçme",
+      "ortalama etkisi"
+    ]
+  },
+  {
+    "id": "not_sistemi_ortalama_003",
+    "topic": "not_sistemi_ortalama",
+    "messages": [
+      {
+        "role": "user",
+        "content": "FF alınca ne olur?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başarısızlık durumu ve tekrar veya bütünleme bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Lisans Eğitim Öğretim Yönetmeliği",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/17ac/yaz-okulu"
+      }
+    ],
+    "expected_points": [
+      "başarısızlık durumu",
+      "tekrar veya bütünleme"
+    ]
+  },
+  {
+    "id": "mezuniyet_001",
+    "topic": "mezuniyet",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mezuniyet şartları nelerdir?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ders tamamlama, kredi tamamlama ve ortalama şartı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Kayıt Yenileme İşlemleri",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da"
+      }
+    ],
+    "expected_points": [
+      "ders tamamlama",
+      "kredi tamamlama",
+      "ortalama şartı"
+    ]
+  },
+  {
+    "id": "mezuniyet_002",
+    "topic": "mezuniyet",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mezun olmak için ortalama kaç olmalı?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle minimum ortalama ve ek mezuniyet şartları bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Kayıt Yenileme İşlemleri",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da"
+      }
+    ],
+    "expected_points": [
+      "minimum ortalama",
+      "ek mezuniyet şartları"
+    ]
+  },
+  {
+    "id": "mezuniyet_003",
+    "topic": "mezuniyet",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mezuniyet başvurusu nasıl yapılır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Öğrenci İşleri Duyuruları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başvuru süreci ve başvuru tarihi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Öğrenci İşleri Duyuruları",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e"
+      }
+    ],
+    "expected_points": [
+      "başvuru süreci",
+      "başvuru tarihi"
+    ]
+  },
+  {
+    "id": "cap_yandal_001",
+    "topic": "cap_yandal",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ÇAP başvurusu nasıl yapılır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi ÇAP ve Yandal Başvuru Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başvuru adımları ve başvuru yeri bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "ÇAP ve Yandal Başvuru Esasları",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337"
+      }
+    ],
+    "expected_points": [
+      "başvuru adımları",
+      "başvuru yeri"
+    ]
+  },
+  {
+    "id": "cap_yandal_002",
+    "topic": "cap_yandal",
+    "messages": [
+      {
+        "role": "user",
+        "content": "ÇAP için ortalama kaç olmalı?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi ÇAP ve Yandal Başvuru Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ortalama şartı ve ek başvuru koşulları bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "ÇAP ve Yandal Başvuru Esasları",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337"
+      }
+    ],
+    "expected_points": [
+      "ortalama şartı",
+      "ek başvuru koşulları"
+    ]
+  },
+  {
+    "id": "cap_yandal_003",
+    "topic": "cap_yandal",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Yandal şartları nelerdir?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi ÇAP ve Yandal Başvuru Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ortalama şartı ve başvuru koşulları bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "ÇAP ve Yandal Başvuru Esasları",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337"
+      }
+    ],
+    "expected_points": [
+      "ortalama şartı",
+      "başvuru koşulları"
+    ]
+  },
+  {
+    "id": "yatay_gecis_001",
+    "topic": "yatay_gecis",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Yatay geçiş başvurusu nasıl yapılır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Yatay Geçiş Başvuru Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başvuru süreci ve başvuru kanalı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Yatay Geçiş Başvuru Esasları",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/e6ac6d2e-d9b1-4be9-9eff-98b7b04dcbb7"
+      }
+    ],
+    "expected_points": [
+      "başvuru süreci",
+      "başvuru kanalı"
+    ]
+  },
+  {
+    "id": "yatay_gecis_002",
+    "topic": "yatay_gecis",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Kurum içi yatay geçiş şartları nelerdir?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Yatay Geçiş Başvuru Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başvuru şartları ve ortalama ve kontenjan bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Yatay Geçiş Başvuru Esasları",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/e6ac6d2e-d9b1-4be9-9eff-98b7b04dcbb7"
+      }
+    ],
+    "expected_points": [
+      "başvuru şartları",
+      "ortalama ve kontenjan"
+    ]
+  },
+  {
+    "id": "yatay_gecis_003",
+    "topic": "yatay_gecis",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Yatay geçiş için gerekli belgeler nelerdir?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Yatay Geçiş Başvuru Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle gerekli evraklar ve başvuru dosyası bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Yatay Geçiş Başvuru Esasları",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/e6ac6d2e-d9b1-4be9-9eff-98b7b04dcbb7"
+      }
+    ],
+    "expected_points": [
+      "gerekli evraklar",
+      "başvuru dosyası"
+    ]
+  },
+  {
+    "id": "harc_ucret_001",
+    "topic": "harc_ucret",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Harç ne zaman yatırılır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Katkı Payı ve Öğrenim Ücreti başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ödeme tarih aralığı ve duyuru/takvim referansı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Katkı Payı ve Öğrenim Ücreti",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745"
+      }
+    ],
+    "expected_points": [
+      "ödeme tarih aralığı",
+      "duyuru/takvim referansı"
+    ]
+  },
+  {
+    "id": "harc_ucret_002",
+    "topic": "harc_ucret",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Öğrenim ücreti ne kadar?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Katkı Payı ve Öğrenim Ücreti başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ücret bilgisi ve hesaplama veya program farkı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Katkı Payı ve Öğrenim Ücreti",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745"
+      }
+    ],
+    "expected_points": [
+      "ücret bilgisi",
+      "hesaplama veya program farkı"
+    ]
+  },
+  {
+    "id": "harc_ucret_003",
+    "topic": "harc_ucret",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Harç yatırmadan ders kaydı yapılır mı?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Katkı Payı ve Öğrenim Ücreti başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ödeme gerekliliği ve ders kaydı ilişkisi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Katkı Payı ve Öğrenim Ücreti",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745"
+      }
+    ],
+    "expected_points": [
+      "ödeme gerekliliği",
+      "ders kaydı ilişkisi"
+    ]
+  },
+  {
+    "id": "burs_001",
+    "topic": "burs",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Burs başvurusu nasıl yapılır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Burs Başvuru Duyuruları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başvuru süreci ve başvuru tarihi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Burs Başvuru Duyuruları",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/e6ac6d2e-d9b1-4be9-9eff-98b7b04dcbb7"
+      }
+    ],
+    "expected_points": [
+      "başvuru süreci",
+      "başvuru tarihi"
+    ]
+  },
+  {
+    "id": "burs_002",
+    "topic": "burs",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Burs almak için hangi şartlar gerekiyor?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Burs Başvuru Duyuruları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başvuru şartları ve uygunluk koşulları bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Burs Başvuru Duyuruları",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/e6ac6d2e-d9b1-4be9-9eff-98b7b04dcbb7"
+      }
+    ],
+    "expected_points": [
+      "başvuru şartları",
+      "uygunluk koşulları"
+    ]
+  },
+  {
+    "id": "burs_003",
+    "topic": "burs",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Burs hangi durumlarda kesilir?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Burs Başvuru Duyuruları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle bursun kesilme nedenleri ve devam/başarı ilişkisi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Burs Başvuru Duyuruları",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/e6ac6d2e-d9b1-4be9-9eff-98b7b04dcbb7"
+      }
+    ],
+    "expected_points": [
+      "bursun kesilme nedenleri",
+      "devam/başarı ilişkisi"
+    ]
+  },
+  {
+    "id": "ogrenci_belgesi_transkript_001",
+    "topic": "ogrenci_belgesi_transkript",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Öğrenci belgesi nasıl alınır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Öğrenci Belgesi ve Resmî Evrak İşlemleri başlıklı resmî kaynaktadır. Yanıt verilirken özellikle alma yöntemi ve online veya fiziksel seçenek bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Kayıt Yenileme İşlemleri",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da"
+      }
+    ],
+    "expected_points": [
+      "alma yöntemi",
+      "online veya fiziksel seçenek"
+    ]
+  },
+  {
+    "id": "ogrenci_belgesi_transkript_002",
+    "topic": "ogrenci_belgesi_transkript",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Transkript nereden alınır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Öğrenci Belgesi ve Resmî Evrak İşlemleri başlıklı resmî kaynaktadır. Yanıt verilirken özellikle alma yöntemi ve sistem veya birim bilgisi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Kayıt Yenileme İşlemleri",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da"
+      }
+    ],
+    "expected_points": [
+      "alma yöntemi",
+      "sistem veya birim bilgisi"
+    ]
+  },
+  {
+    "id": "ogrenci_belgesi_transkript_003",
+    "topic": "ogrenci_belgesi_transkript",
+    "messages": [
+      {
+        "role": "user",
+        "content": "İngilizce transkript alabilir miyim?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Öğrenci Belgesi ve Resmî Evrak İşlemleri başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ingilizce belge durumu ve başvuru yöntemi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Öğrenci Belgesi ve Resmî Evrak İşlemleri",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e"
+      }
+    ],
+    "expected_points": [
+      "ingilizce belge durumu",
+      "başvuru yöntemi"
+    ]
+  },
+  {
+    "id": "askerlik_tecili_001",
+    "topic": "askerlik_tecili",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Askerlik tecili nasıl yapılır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Askerlik Tecil İşlemleri başlıklı resmî kaynaktadır. Yanıt verilirken özellikle tecil süreci ve ilgili kurum veya belge bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Askerlik Tecil İşlemleri",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458"
+      }
+    ],
+    "expected_points": [
+      "tecil süreci",
+      "ilgili kurum veya belge"
+    ]
+  },
+  {
+    "id": "askerlik_tecili_002",
+    "topic": "askerlik_tecili",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Tecil için hangi belgeler gerekir?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Askerlik Tecil İşlemleri başlıklı resmî kaynaktadır. Yanıt verilirken özellikle gerekli belgeler ve teslim bilgisi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Askerlik Tecil İşlemleri",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/476cb2d7-5847-4c3c-8c6d-2b48cc126705"
+      }
+    ],
+    "expected_points": [
+      "gerekli belgeler",
+      "teslim bilgisi"
+    ]
+  },
+  {
+    "id": "askerlik_tecili_003",
+    "topic": "askerlik_tecili",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Tecili öğrenci işleri mi yapıyor?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Askerlik Tecil İşlemleri başlıklı resmî kaynaktadır. Yanıt verilirken özellikle öğrenci işleri rolü ve öğrenci yükümlülüğü bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Askerlik Tecil İşlemleri",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458"
+      }
+    ],
+    "expected_points": [
+      "öğrenci işleri rolü",
+      "öğrenci yükümlülüğü"
+    ]
+  },
+  {
+    "id": "disiplin_islemleri_001",
+    "topic": "disiplin_islemleri",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Disiplin cezası türleri nelerdir?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Öğrenci Disiplin Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ceza türleri ve ceza sınıfları bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Öğrenci Disiplin Yönetmeliği",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/672fbe98-7a69-4fa4-905e-dd79db4244a3"
+      }
+    ],
+    "expected_points": [
+      "ceza türleri",
+      "ceza sınıfları"
+    ]
+  },
+  {
+    "id": "disiplin_islemleri_002",
+    "topic": "disiplin_islemleri",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Disiplin süreci nasıl işler?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Öğrenci Disiplin Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle soruşturma süreci ve savunma hakkı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Öğrenci Disiplin Yönetmeliği",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864"
+      }
+    ],
+    "expected_points": [
+      "soruşturma süreci",
+      "savunma hakkı"
+    ]
+  },
+  {
+    "id": "disiplin_islemleri_003",
+    "topic": "disiplin_islemleri",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Disiplin kararına itiraz edilebilir mi?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Öğrenci Disiplin Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle itiraz hakkı ve başvuru süresi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Öğrenci Disiplin Yönetmeliği",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/e6ac6d2e-d9b1-4be9-9eff-98b7b04dcbb7"
+      }
+    ],
+    "expected_points": [
+      "itiraz hakkı",
+      "başvuru süresi"
+    ]
+  },
+  {
+    "id": "akademik_takvim_duyurular_001",
+    "topic": "akademik_takvim_duyurular",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Akademik takvim nerede yayınlanır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Akademik Takvim başlıklı resmî kaynaktadır. Yanıt verilirken özellikle takvim bağlantısı ve yayınlandığı yer bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Akademik Takvim",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/d8ef4f38-23fe-441a-b8f9-6e510eba3c20"
+      }
+    ],
+    "expected_points": [
+      "takvim bağlantısı",
+      "yayınlandığı yer"
+    ]
+  },
+  {
+    "id": "akademik_takvim_duyurular_002",
+    "topic": "akademik_takvim_duyurular",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Güncel duyuruları nereden takip edebilirim?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Öğrenci İşleri Duyuruları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle duyuru sayfası ve güncel bilgi vurgusu bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Öğrenci İşleri Duyuruları",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/d8ef4f38-23fe-441a-b8f9-6e510eba3c20"
+      }
+    ],
+    "expected_points": [
+      "duyuru sayfası",
+      "güncel bilgi vurgusu"
+    ]
+  },
+  {
+    "id": "akademik_takvim_duyurular_003",
+    "topic": "akademik_takvim_duyurular",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Dersler ne zaman başlıyor?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Akademik Takvim başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ders başlangıç tarihi ve takvim referansı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Akademik Takvim",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/2e7e3563-3307-4cfa-963b-1c24f531efc8"
+      }
+    ],
+    "expected_points": [
+      "ders başlangıç tarihi",
+      "takvim referansı"
+    ]
+  },
+  {
+    "id": "yaz_okulu_001",
+    "topic": "yaz_okulu",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Yaz okuluna nasıl başvurulur?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Yaz Okulu Uygulama Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başvuru süreci ve takvim bilgisi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Yaz Okulu Uygulama Esasları",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/17ac/yaz-okulu"
+      }
+    ],
+    "expected_points": [
+      "başvuru süreci",
+      "takvim bilgisi"
+    ]
+  },
+  {
+    "id": "yaz_okulu_002",
+    "topic": "yaz_okulu",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Yaz okulunda en fazla kaç ders alınabilir?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Yaz Okulu Uygulama Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ders sayısı sınırı ve kredi sınırı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Yaz Okulu Uygulama Esasları",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/17ac/yaz-okulu"
+      }
+    ],
+    "expected_points": [
+      "ders sayısı sınırı",
+      "kredi sınırı"
+    ]
+  },
+  {
+    "id": "yaz_okulu_003",
+    "topic": "yaz_okulu",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Yaz okulu ücreti nasıl hesaplanır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Yaz Okulu Uygulama Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ücret hesaplama mantığı ve program farkı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Yaz Okulu Uygulama Esasları",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/17ac/yaz-okulu"
+      }
+    ],
+    "expected_points": [
+      "ücret hesaplama mantığı",
+      "program farkı"
+    ]
+  },
+  {
+    "id": "muafiyet_intibak_001",
+    "topic": "muafiyet_intibak",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Muafiyet başvurusu nasıl yapılır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Muafiyet ve İntibak Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başvuru yöntemi ve başvuru süresi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Ders Muafiyeti ve İntibak Esasları",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a"
+      }
+    ],
+    "expected_points": [
+      "başvuru yöntemi",
+      "başvuru süresi"
+    ]
+  },
+  {
+    "id": "muafiyet_intibak_002",
+    "topic": "muafiyet_intibak",
+    "messages": [
+      {
+        "role": "user",
+        "content": "İntibak işlemleri neye göre yapılır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Muafiyet ve İntibak Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle değerlendirme ölçütü ve karar mercii bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Ders Muafiyeti ve İntibak Esasları",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a"
+      }
+    ],
+    "expected_points": [
+      "değerlendirme ölçütü",
+      "karar mercii"
+    ]
+  },
+  {
+    "id": "muafiyet_intibak_003",
+    "topic": "muafiyet_intibak",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Muafiyet / intibak için hangi belgeler gerekir?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Muafiyet ve İntibak Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle gerekli belgeler ve belge niteliği bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir.",
+    "sources": [
+      {
+        "title": "Ders Muafiyeti ve İntibak Esasları",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a"
+      }
+    ],
+    "expected_points": [
+      "gerekli belgeler",
+      "belge niteliği"
+    ]
+  },
+  {
+    "id": "staj_001_dialog_01",
+    "topic": "staj",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Zorunlu staj kaç gün?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Staj Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle staj süresi, iş günü bilgisi ve bölüm bazlı açıklama bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Tek seferde mi yapılmalı?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Staj Esasları içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle staj süresi, iş günü bilgisi, bölüm bazlı açıklama ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Bilgisayar Mühendisliği - Staj",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj"
+      }
+    ],
+    "expected_points": [
+      "staj süresi",
+      "iş günü bilgisi",
+      "bölüm bazlı açıklama"
+    ]
+  },
+  {
+    "id": "staj_002_dialog_01",
+    "topic": "staj",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Staj başvurusu nasıl yapılır?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Staj Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başvuru süreci, başvuru birimi ve adımlar bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Hangi belgeler gerekli?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Staj Esasları içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle başvuru süreci, başvuru birimi, adımlar ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Bilgisayar Mühendisliği - Staj",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj"
+      }
+    ],
+    "expected_points": [
+      "başvuru süreci",
+      "başvuru birimi",
+      "adımlar"
+    ]
+  },
+  {
+    "id": "staj_003_dialog_01",
+    "topic": "staj",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Staj için hangi belgeler gerekli?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Staj Esasları başlıklı resmî kaynaktadır. Yanıt verilirken özellikle gerekli evraklar ve teslim yöntemi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Belgeleri nereye teslim edeceğim?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Staj Esasları içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle gerekli evraklar, teslim yöntemi ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Bilgisayar Mühendisliği - Staj",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj"
+      }
+    ],
+    "expected_points": [
+      "gerekli evraklar",
+      "teslim yöntemi"
+    ]
+  },
+  {
+    "id": "ders_kaydi_001_dialog_01",
+    "topic": "ders_kaydi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Kayıt yenileme nasıl yapılır?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Kayıt Yenileme İşlemleri başlıklı resmî kaynaktadır. Yanıt verilirken özellikle kayıt yenileme adımları, ders seçimi ve onay süreci bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Danışman onayı gerekiyor mu?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Kayıt Yenileme İşlemleri içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle kayıt yenileme adımları, ders seçimi, onay süreci ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Yaz Okulu Uygulama Esasları",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19"
+      }
+    ],
+    "expected_points": [
+      "kayıt yenileme adımları",
+      "ders seçimi",
+      "onay süreci"
+    ]
+  },
+  {
+    "id": "ders_kaydi_002_dialog_01",
+    "topic": "ders_kaydi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Ders kaydı ne zaman başlar?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Akademik Takvim başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başlangıç tarihi, bitiş tarihi ve takvim referansı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Son gün ne zaman?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Akademik Takvim içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle başlangıç tarihi, bitiş tarihi, takvim referansı ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Akademik Takvim",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5"
+      }
+    ],
+    "expected_points": [
+      "başlangıç tarihi",
+      "bitiş tarihi",
+      "takvim referansı"
+    ]
+  },
+  {
+    "id": "ders_kaydi_003_dialog_01",
+    "topic": "ders_kaydi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bir dönemde maksimum kaç kredi alınabilir?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle maksimum kredi ve koşullar bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Minimum kredi sınırı da var mı?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Lisans Eğitim Öğretim Yönetmeliği içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle maksimum kredi, koşullar ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Ders Kayıtları Esnasında Sıkça Sorulan Sorular ve Cevapları",
+        "url": "https://mf.duzce.edu.tr/sayfa/8a10/ders-kayitlari-esnasinda-sikca-sorulan-sorular-ve-cevaplari"
+      }
+    ],
+    "expected_points": [
+      "maksimum kredi",
+      "koşullar"
+    ]
+  },
+  {
+    "id": "add_drop_001_dialog_01",
+    "topic": "add_drop",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Add-drop haftası ne zaman?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Akademik Takvim başlıklı resmî kaynaktadır. Yanıt verilirken özellikle tarih aralığı ve takvim referansı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Son gün hangi tarih?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Akademik Takvim içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle tarih aralığı, takvim referansı ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Yaz Okulu Uygulama Esasları",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19"
+      }
+    ],
+    "expected_points": [
+      "tarih aralığı",
+      "takvim referansı"
+    ]
+  },
+  {
+    "id": "add_drop_002_dialog_01",
+    "topic": "add_drop",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Add-drop döneminde ders ekleyebilir miyim?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Kayıt Yenileme İşlemleri başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ders ekleme işlemi ve onay gerekliliği bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Danışman onayı gerekir mi?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Kayıt Yenileme İşlemleri içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle ders ekleme işlemi, onay gerekliliği ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Yaz Okulu Uygulama Esasları",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19"
+      }
+    ],
+    "expected_points": [
+      "ders ekleme işlemi",
+      "onay gerekliliği"
+    ]
+  },
+  {
+    "id": "add_drop_003_dialog_01",
+    "topic": "add_drop",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Seçtiğim dersi bırakabilir miyim?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Kayıt Yenileme İşlemleri başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ders bırakma işlemi ve koşullar bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Bırakırsam kredi alt sınırına düşer miyim?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Kayıt Yenileme İşlemleri içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle ders bırakma işlemi, koşullar ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Yaz Okulu Uygulama Esasları",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19"
+      }
+    ],
+    "expected_points": [
+      "ders bırakma işlemi",
+      "koşullar"
+    ]
+  },
+  {
+    "id": "devamsizlik_001_dialog_01",
+    "topic": "devamsizlik",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Devamsızlık sınırı nedir?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle devamsızlık sınırı ve uygulama türü bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Uygulamalı derslerde de aynı mı?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Lisans Eğitim Öğretim Yönetmeliği içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle devamsızlık sınırı, uygulama türü ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Kayıt Yenileme İşlemleri",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943"
+      }
+    ],
+    "expected_points": [
+      "devamsızlık sınırı",
+      "uygulama türü"
+    ]
+  },
+  {
+    "id": "devamsizlik_002_dialog_01",
+    "topic": "devamsizlik",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Devamsızlıktan kalınca ne olur?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başarısızlık sonucu ve sınav hakkı ilişkisi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Büte girebilir miyim?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Lisans Eğitim Öğretim Yönetmeliği içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle başarısızlık sonucu, sınav hakkı ilişkisi ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Lisans Eğitim Öğretim Yönetmeliği",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/e8e91159-6912-4613-a66c-0b1761c70840"
+      }
+    ],
+    "expected_points": [
+      "başarısızlık sonucu",
+      "sınav hakkı ilişkisi"
+    ]
+  },
+  {
+    "id": "devamsizlik_003_dialog_01",
+    "topic": "devamsizlik",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Uygulamalı derslerde devamsızlık nasıl hesaplanır?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle uygulamalı ders devam koşulu ve hesaplama mantığı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Teori dersiyle farkı var mı?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Lisans Eğitim Öğretim Yönetmeliği içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle uygulamalı ders devam koşulu, hesaplama mantığı ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Kayıt Yenileme İşlemleri",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943"
+      }
+    ],
+    "expected_points": [
+      "uygulamalı ders devam koşulu",
+      "hesaplama mantığı"
+    ]
+  },
+  {
+    "id": "sinavlar_001_dialog_01",
+    "topic": "sinavlar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mazeret sınavına kimler girebilir?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle uygun mazeret koşulları ve başvuru gerekliliği bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Başvuru nasıl yapılır?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Lisans Eğitim Öğretim Yönetmeliği içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle uygun mazeret koşulları, başvuru gerekliliği ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Lisans Eğitim Öğretim Yönetmeliği",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d"
+      }
+    ],
+    "expected_points": [
+      "uygun mazeret koşulları",
+      "başvuru gerekliliği"
+    ]
+  },
+  {
+    "id": "sinavlar_002_dialog_01",
+    "topic": "sinavlar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bütünleme sınavı var mı?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle bütünleme durumu ve not ilişkisi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Büt notu final yerine geçer mi?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Lisans Eğitim Öğretim Yönetmeliği içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle bütünleme durumu, not ilişkisi ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Lisans Eğitim Öğretim Yönetmeliği",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/0070ab4a-559e-41a3-b1c7-1c28b68f0514"
+      }
+    ],
+    "expected_points": [
+      "bütünleme durumu",
+      "not ilişkisi"
+    ]
+  },
+  {
+    "id": "sinavlar_003_dialog_01",
+    "topic": "sinavlar",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Final tarihleri nereden öğrenilir?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Akademik Takvim başlıklı resmî kaynaktadır. Yanıt verilirken özellikle tarih bilgisi ve takvim referansı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Büt tarihleri de burada yazar mı?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Akademik Takvim içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle tarih bilgisi, takvim referansı ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Akademik Takvim",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/0070ab4a-559e-41a3-b1c7-1c28b68f0514"
+      }
+    ],
+    "expected_points": [
+      "tarih bilgisi",
+      "takvim referansı"
+    ]
+  },
+  {
+    "id": "not_sistemi_ortalama_001_dialog_01",
+    "topic": "not_sistemi_ortalama",
+    "messages": [
+      {
+        "role": "user",
+        "content": "GANO nasıl hesaplanır?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Not Sistemi ve Ortalama Hesaplama başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ağırlıklı ortalama ve kredi ve not ilişkisi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Büt notu ortalamayı etkiler mi?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Not Sistemi ve Ortalama Hesaplama içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle ağırlıklı ortalama, kredi ve not ilişkisi ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Kayıt Yenileme İşlemleri",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da"
+      }
+    ],
+    "expected_points": [
+      "ağırlıklı ortalama",
+      "kredi ve not ilişkisi"
+    ]
+  },
+  {
+    "id": "not_sistemi_ortalama_002_dialog_01",
+    "topic": "not_sistemi_ortalama",
+    "messages": [
+      {
+        "role": "user",
+        "content": "DC ile geçilir mi?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle koşullu geçme ve ortalama etkisi bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Ortalamaya göre değişir mi?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Lisans Eğitim Öğretim Yönetmeliği içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle koşullu geçme, ortalama etkisi ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Lisans Eğitim Öğretim Yönetmeliği",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864"
+      }
+    ],
+    "expected_points": [
+      "koşullu geçme",
+      "ortalama etkisi"
+    ]
+  },
+  {
+    "id": "not_sistemi_ortalama_003_dialog_01",
+    "topic": "not_sistemi_ortalama",
+    "messages": [
+      {
+        "role": "user",
+        "content": "FF alınca ne olur?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle başarısızlık durumu ve tekrar veya bütünleme bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Büte girebilir miyim?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Lisans Eğitim Öğretim Yönetmeliği içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle başarısızlık durumu, tekrar veya bütünleme ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Lisans Eğitim Öğretim Yönetmeliği",
+        "url": "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864"
+      }
+    ],
+    "expected_points": [
+      "başarısızlık durumu",
+      "tekrar veya bütünleme"
+    ]
+  },
+  {
+    "id": "mezuniyet_001_dialog_01",
+    "topic": "mezuniyet",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mezuniyet şartları nelerdir?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle ders tamamlama, kredi tamamlama ve ortalama şartı bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Ortalama kaç olmalı?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Lisans Eğitim Öğretim Yönetmeliği içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle ders tamamlama, kredi tamamlama, ortalama şartı ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Kayıt Yenileme İşlemleri",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da"
+      }
+    ],
+    "expected_points": [
+      "ders tamamlama",
+      "kredi tamamlama",
+      "ortalama şartı"
+    ]
+  },
+  {
+    "id": "mezuniyet_002_dialog_01",
+    "topic": "mezuniyet",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mezun olmak için ortalama kaç olmalı?"
+      },
+      {
+        "role": "assistant",
+        "content": "Sayın öğrencimiz,\nBu konuda esas alınması gereken bilgi Lisans Eğitim Öğretim Yönetmeliği başlıklı resmî kaynaktadır. Yanıt verilirken özellikle minimum ortalama ve ek mezuniyet şartları bilgileri dikkate alınmalıdır.\n\nKesin ve güncel uygulama için ilgili resmî duyuru, yönerge veya yönetmelik maddesinin incelenmesi önerilir."
+      },
+      {
+        "role": "user",
+        "content": "Tüm dersleri geçmiş olmak zorunlu mu?"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nTakip sorunuzun yanıtı için yine Lisans Eğitim Öğretim Yönetmeliği içindeki ilgili madde esas alınmalıdır. Bu aşamada özellikle minimum ortalama, ek mezuniyet şartları ile bağlantılı hükümler kontrol edilmelidir.",
+    "sources": [
+      {
+        "title": "Kayıt Yenileme İşlemleri",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da"
+      }
+    ],
+    "expected_points": [
+      "minimum ortalama",
+      "ek mezuniyet şartları"
     ]
   }
 ]

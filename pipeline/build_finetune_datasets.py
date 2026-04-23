@@ -11,7 +11,7 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from core.chatbot import RAGChatbot, normalize_text
-from pipeline.evaluate_golden import DEFAULT_GOLDEN_FILE, run_case
+from pipeline.evaluate_golden import DEFAULT_GOLDEN_FILE, case_turns, normalized_case, run_case
 
 CHUNKS_FILE = ROOT_DIR / "data" / "chunks.json"
 RETRIEVAL_OUTPUT = ROOT_DIR / "data" / "retrieval_finetune_data.json"
@@ -40,6 +40,7 @@ def dedupe_chunks(chunks: List[Dict]) -> List[Dict]:
 
 
 def find_positive_chunks(case: Dict, chunks: List[Dict]) -> List[Dict]:
+    case = normalized_case(case)
     source_terms = [term.lower() for term in case.get("expected_source_terms", []) if term]
     if not source_terms:
         return []
@@ -53,6 +54,7 @@ def find_positive_chunks(case: Dict, chunks: List[Dict]) -> List[Dict]:
 
 
 def find_negative_chunks(case: Dict, chunks: List[Dict], positives: List[Dict], limit: int = 5) -> List[Dict]:
+    case = normalized_case(case)
     positive_ids = {chunk.get("chunk_id") for chunk in positives}
     query_terms = set(normalize_text(" ".join(case.get("turns", []))).split())
     negatives = []
@@ -83,6 +85,7 @@ def find_negative_chunks(case: Dict, chunks: List[Dict], positives: List[Dict], 
 def build_retrieval_samples(cases: List[Dict], chunks: List[Dict]) -> List[Dict]:
     samples = []
     for case in cases:
+        case = normalized_case(case)
         positives = find_positive_chunks(case, chunks)
         if not positives:
             continue
@@ -109,9 +112,10 @@ def build_retrieval_samples(cases: List[Dict], chunks: List[Dict]) -> List[Dict]
 def build_generation_samples(cases: List[Dict], bot: RAGChatbot) -> List[Dict]:
     samples = []
     for case in cases:
+        case = normalized_case(case)
         bot.clear_memory()
         result = None
-        for turn in case["turns"]:
+        for turn in case_turns(case):
             result = bot.chat(turn)
 
         if result is None:
