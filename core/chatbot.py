@@ -16,11 +16,29 @@ from sentence_transformers import CrossEncoder
 
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
-MODEL_ADI = "qwen2.5:7b"
+OLLAMA_TAGS_URL = "http://localhost:11434/api/tags"
+PREFERRED_MODELS = ["llama3", "llama3:8b", "qwen2.5:7b"]
 NO_ANSWER_TEXT = (
     "Bu konuda resmi belgelerde bilgiye ulaşılamadım. "
     "Lütfen Öğrenci İşleri birimi ile iletişime geçiniz."
 )
+ASSISTANT_IDENTITY = (
+    "Düzce Üniversitesi Öğrenci İşleri Daire Başkanlığı için geliştirilen, "
+    "akademik ve idari sorulara hızlı, güvenilir, tutarlı ve kurumsal biçimde yanıt veren dijital asistansın."
+)
+ASSISTANT_GOALS = [
+    "öğrencilerin resmi bilgiye hızlı ve doğru erişmesini sağlamak",
+    "öğrenci işleri personelinin tekrar eden soru yükünü azaltmak",
+    "kurumsal dil yapısına uygun, kaynak dayanaklı yanıt üretmek",
+    "takip sorularında konuşma bağlamını koruyarak tutarlı diyalog yürütmek",
+]
+ASSISTANT_PERSONALITY = [
+    "profesyonel",
+    "nazik",
+    "empatik",
+    "yardımsever",
+    "kurumsal iletişim diline uygun",
+]
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHUNKS_FILE = os.path.join(ROOT_DIR, "data", "chunks.json")
@@ -672,6 +690,7 @@ class Reranker:
 class RAGChatbot:
     def __init__(self, program_scope: str = DEFAULT_PROGRAM_SCOPE):
         self.program_scope = program_scope
+        self.model_name = self._resolve_model_name()
         with open(CHUNKS_FILE, "r", encoding="utf-8") as f:
             self.chunks = json.load(f)
         with open(KNOWLEDGE_BASE_FILE, "r", encoding="utf-8") as f:
@@ -795,10 +814,23 @@ class RAGChatbot:
         if next_topic:
             self.conversation_state["topic"] = next_topic
 
+    def _resolve_model_name(self) -> str:
+        try:
+            response = requests.get(OLLAMA_TAGS_URL, timeout=5)
+            response.raise_for_status()
+            models = response.json().get("models", [])
+            available = {item.get("name", "") for item in models}
+            for preferred in PREFERRED_MODELS:
+                if preferred in available:
+                    return preferred
+        except Exception:
+            pass
+        return PREFERRED_MODELS[-1]
+
     def _ollama_kontrol(self):
         try:
             requests.get("http://localhost:11434", timeout=3)
-            print("Ollama calisiyor")
+            print(f"Ollama calisiyor (model: {self.model_name})")
         except requests.exceptions.ConnectionError:
             print("Ollama bulunamadi! 'ollama serve' komutunu calistirin.")
 
@@ -2348,7 +2380,19 @@ class RAGChatbot:
         context_text = self._format_evidence_text(evidence_context)
         memory_text = self._memory_as_text()
 
+        goals_text = "\n".join(f"- {goal}" for goal in ASSISTANT_GOALS)
+        personality_text = ", ".join(ASSISTANT_PERSONALITY)
+
         prompt = f"""Sen Düzce Üniversitesi Öğrenci İşleri Daire Başkanlığı'nın resmi Türkçe yapay zeka asistanısın.
+
+Kimlik:
+{ASSISTANT_IDENTITY}
+
+Temel hedeflerin:
+{goals_text}
+
+İletişim kişiliğin:
+{personality_text}
 
 ZORUNLU KURALLAR:
 1. Yalnızca Türkçe yaz.
@@ -2361,6 +2405,8 @@ ZORUNLU KURALLAR:
 8. "Sohbet Geçmişi" bölümünü sadece bağlamı anlamak için kullan; bilgi kaynağı olarak kullanma.
 9. Dayandığın her ana iddia için mümkün olduğunda köşeli parantez içinde kaynak etiketi kullan: [Kaynak 1], [Kaynak 2].
 10. İç muhakemeni veya adım adım düşünceni açıklama; sadece sonuç ve kısa gerekçe ver.
+11. Üslubun profesyonel, nazik ve empatik olsun; ancak resmi kurum dili dışına çıkma.
+12. Öğrenciyi yönlendirirken kısa, açık ve güven veren bir dil kullan.
 
 Sohbet Geçmişi:
 {memory_text}
@@ -2373,7 +2419,7 @@ Kanitlar:
 Cevap (Türkçe, "Sayın öğrencimiz," ile başla):"""
 
         payload = {
-            "model": MODEL_ADI,
+            "model": self.model_name,
             "prompt": prompt,
             "stream": False,
             "options": {

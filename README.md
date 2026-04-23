@@ -10,7 +10,9 @@ TEZ4/
 │
 ├── data/                    ← Tüm veri dosyaları (otomatik oluşur)
 │   ├── knowledge_base.json  ← Ham crawler çıktısı
-│   └── chunks.json          ← İşlenmiş chunk'lar
+│   ├── chunks.json          ← İşlenmiş chunk'lar
+│   ├── retrieval_finetune_data.json   ← Retrieval eğitim verisi
+│   └── generation_finetune_data.json  ← Generation eğitim verisi
 │
 ├── db/
 │   └── chroma_db/           ← ChromaDB (otomatik oluşur)
@@ -22,6 +24,7 @@ TEZ4/
 │   ├── crawler.py           ← Siteyi tara → data/knowledge_base.json
 │   ├── smart_chunker.py     ← Temizle & böl → data/chunks.json
 │   ├── create_vector_db.py  ← ChromaDB oluştur → db/chroma_db/
+│   ├── build_finetune_datasets.py  ← Fine-tune JSON'larını üret
 │   └── veri_kalite_test.py  ← Chunk kalitesini puanla
 │
 └── logs/
@@ -53,6 +56,9 @@ python pipeline/smart_chunker.py
 
 # ChromaDB oluştur
 python pipeline/create_vector_db.py
+
+# Fine-tune veri setlerini üret
+python pipeline/build_finetune_datasets.py
 ```
 
 Not: `db/chroma_db/` Git'e eklenmez. Yeni makinede, DB silindiyse veya ChromaDB kayıt sayısı

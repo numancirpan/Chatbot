@@ -1,0 +1,225 @@
+[
+  {
+    "id": "staj_bm_sure",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bilgisayar muhendisligi staj kac gun suruyor"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nStaj süresi 25 iş günüdür.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj; [Kaynak 2] Bilgisayar Mühendisliği - Staj SSS",
+    "sources": [
+      {
+        "kategori": "staj",
+        "baslik": "Bilgisayar Mühendisliği - Staj",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj"
+      },
+      {
+        "kategori": "staj",
+        "baslik": "Bilgisayar Mühendisliği - Staj SSS",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
+      }
+    ],
+    "expected_answer_terms": [
+      "25 is gunu"
+    ]
+  },
+  {
+    "id": "staj_bm_20_gun_mu",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bilgisayar muhendisligi staj suresi 20 gun mu"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nHayır. Staj süresi 25 iş günüdür.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj; [Kaynak 2] Bilgisayar Mühendisliği - Staj SSS",
+    "sources": [
+      {
+        "kategori": "staj",
+        "baslik": "Bilgisayar Mühendisliği - Staj",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj"
+      },
+      {
+        "kategori": "staj",
+        "baslik": "Bilgisayar Mühendisliği - Staj SSS",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
+      }
+    ],
+    "expected_answer_terms": [
+      "hayir",
+      "25 is gunu"
+    ]
+  },
+  {
+    "id": "staj_teslim_bolum_ister",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Stajini zamaninda teslim etmeyen ogrenci icin surec nasil isler"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.",
+    "sources": [],
+    "expected_answer_terms": [
+      "bolum veya fakulteye gore degisebilmektedir"
+    ]
+  },
+  {
+    "id": "staj_teslim_bm_takip",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Stajini zamaninda teslim etmeyen ogrenci icin surec nasil isler"
+      },
+      {
+        "role": "user",
+        "content": "Bilgisayar muhendisligi"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBilgisayar Mühendisliği SSS kaynağına göre staj raporu imza/kaşe onayından sonra taranıp SBS'ye yüklenir. Aynı kaynakta sistemde yüklemek için sabit bir son tarih bulunmadığı belirtilmektedir. Yaz stajı için raporun yeni güz dönemi başlangıcından itibaren yaklaşık 30 gün sonrasına kadar yüklenebileceği; değerlendirmenin staj komisyonu toplandıktan sonra yapılacağı yazmaktadır. Mezun durumundaysanız ve stajlar dışında dersiniz yoksa raporu yükledikten sonra bölüm staj komisyonuna e-posta ile değerlendirme talep etmeniz gerektiği belirtilmiştir. Genel staj yönergesinde, komisyon düzeltme isterse istenen düzeltmenin en çok 1 ay içinde yapılması gerektiği; aksi durumda stajın reddedilmiş sayılacağı yer almaktadır. Kaynaklarda geç teslim için otomatik burs/ceza gibi ayrı bir yaptırım açıkça belirtilmiyor.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Merkezi Mevzuat",
+    "sources": [
+      {
+        "kategori": "fakulte_bolum",
+        "baslik": "Bilgisayar Mühendisliği - Staj SSS",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
+      },
+      {
+        "kategori": "merkezi_mevzuat",
+        "baslik": "Merkezi Mevzuat",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/0060a4d6-6dad-424e-baf6-0bed4c103d1b"
+      }
+    ],
+    "expected_answer_terms": [
+      "sbs",
+      "yaklasik 30 gun",
+      "sabit bir son tarih"
+    ]
+  },
+  {
+    "id": "yaz_okulu_sure",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Yaz okulu kac hafta suruyor"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nAkademik takvime göre yaz okulu 5 hafta veya 7 hafta olarak uygulanabilmektedir. 5 haftalık yaz okulu 14.08.2026, 7 haftalık yaz okulu ise 28.08.2026 tarihinde sona ermektedir.\n\nDayanak: [Kaynak 1] Akademik Takvim",
+    "sources": [
+      {
+        "kategori": "akademik_takvim",
+        "baslik": "Akademik Takvim",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/a44682bb-4437-4908-aaf0-c6020e1fc991"
+      }
+    ],
+    "expected_answer_terms": [
+      "5 hafta",
+      "7 hafta"
+    ]
+  },
+  {
+    "id": "disiplin_burs_belirsiz",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Disiplin cezasi alan ogrenci bursunu kaybeder mi"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nResmi belgelerde disiplin cezası alan öğrencinin bursunu kaybedip kaybetmeyeceğine dair açık bir hüküm bulamadım. Bu nedenle kesin cevap veremiyorum; burs türüne göre ilgili birimden doğrulama alınmalıdır.",
+    "sources": [],
+    "expected_answer_terms": [
+      "kesin cevap veremiyorum"
+    ]
+  },
+  {
+    "id": "staj_donem_bm",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Bilgisayar muhendisligi zorunlu staji hangi donemlerde yapmam gerekiyor"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nBilgisayar Mühendisliği için zorunlu stajlar yaz döneminde yapılır. Kaynakta staj yeri aramaya en geç 4. yarıyılın ve 6. yarıyılın Bahar döneminde başlanabileceği belirtilmektedir. Staj dersleri ise takip eden 5. ve 7. yarıyıllarda BM399 ve BM499 olarak alınır.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj; [Kaynak 2] Fakulte Bolum; [Kaynak 3] Bilgisayar Mühendisliği - Staj SSS",
+    "sources": [
+      {
+        "kategori": "staj",
+        "baslik": "Bilgisayar Mühendisliği - Staj",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj"
+      },
+      {
+        "kategori": "fakulte_bolum",
+        "baslik": "Fakulte Bolum",
+        "url": "https://mf.duzce.edu.tr/sayfa/8a10/ders-kayitlari-esnasinda-sikca-sorulan-sorular-ve-cevaplari"
+      },
+      {
+        "kategori": "staj",
+        "baslik": "Bilgisayar Mühendisliği - Staj SSS",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
+      }
+    ],
+    "expected_answer_terms": [
+      "4",
+      "6",
+      "yaz"
+    ]
+  },
+  {
+    "id": "tek_cift_staj_bm",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Stajimi yapmamissam ve 1 dersim kalmissa tek cift sinavina girebilir miyim"
+      },
+      {
+        "role": "user",
+        "content": "Bilgisayar muhendisligi"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nStaj dersine hic kayitlanmadiysaniz tek/cift ders sinavina girme hakkiniz yoktur. Ancak staj dersini daha once alip YZ notu aldiysaniz tek/cift ders sinavina basvurabilirsiniz. Tek dersi ve bahar yariyilindan staji kalan ogrenci tek/cift sinavina sadece dersten girebilir.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj",
+    "sources": [
+      {
+        "kategori": "fakulte_bolum",
+        "baslik": "Bilgisayar Mühendisliği - Staj SSS",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
+      },
+      {
+        "kategori": "staj",
+        "baslik": "Bilgisayar Mühendisliği - Staj",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj"
+      }
+    ],
+    "expected_answer_terms": [
+      "staj dersine hic kayitlanmadiysaniz",
+      "hakkiniz yoktur"
+    ]
+  },
+  {
+    "id": "cift_anadal_genel",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Cift anadal basvuru sartlari nelerdir"
+      }
+    ],
+    "assistant": "Sayın öğrencimiz,\nÇift Anadal ve Yandal programlarına başvurmak için aşağıdaki şartları karşılamalısınız:\n1. Öğrenci başka bir çift anadal ya da yandal programına kayıtlı olmamış olması gerekir.\nBu bilgiler, [Kaynak 4] sayesinde doğrudan belgelere dayandırılmıştır.\n\nDayanak: [Kaynak 1] Akademik Takvim; [Kaynak 2] Akademik Takvim; [Kaynak 3] Cap Yandal",
+    "sources": [
+      {
+        "kategori": "akademik_takvim",
+        "baslik": "Akademik Takvim",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/a44682bb-4437-4908-aaf0-c6020e1fc991"
+      },
+      {
+        "kategori": "akademik_takvim",
+        "baslik": "Akademik Takvim",
+        "url": "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5"
+      },
+      {
+        "kategori": "cap_yandal",
+        "baslik": "Cap Yandal",
+        "url": "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal"
+      }
+    ],
+    "expected_answer_terms": [
+      "cift anadal"
+    ]
+  }
+]
