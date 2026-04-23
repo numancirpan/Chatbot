@@ -22,6 +22,7 @@ OUTPUT_FILE = os.path.join(DATA_DIR, "chunks.json")
 
 MIN_CHUNK = 100
 MAX_CHUNK = 1200
+CHUNK_OVERLAP = 120
 
 NAV_PATTERNS = [
     r"Düzce Üniversitesi \| Öğrenci İşleri Daire Başkanlığı \|[^\n]*",
@@ -62,7 +63,51 @@ def cumle_bol(metin: str, max_uzunluk: int) -> List[str]:
             tampon = (tampon + " " + cumle).strip() if tampon else cumle
     if tampon:
         parcalar.append(tampon.strip())
-    return [p for p in parcalar if len(p) >= MIN_CHUNK]
+    guvenli = []
+    for parca in parcalar:
+        if len(parca) > max_uzunluk:
+            guvenli.extend(sert_bol(parca, max_uzunluk))
+        else:
+            guvenli.append(parca)
+    return [p for p in guvenli if len(p) >= MIN_CHUNK]
+
+
+def sert_bol(metin: str, max_uzunluk: int) -> List[str]:
+    if len(metin) <= max_uzunluk:
+        return [metin]
+
+    kelimeler = metin.split()
+    if not kelimeler:
+        return []
+
+    parcalar = []
+    baslangic = 0
+    while baslangic < len(kelimeler):
+        uzunluk = 0
+        bitis = baslangic
+        while bitis < len(kelimeler):
+            eklenecek = len(kelimeler[bitis]) + (1 if uzunluk else 0)
+            if uzunluk + eklenecek > max_uzunluk and bitis > baslangic:
+                break
+            uzunluk += eklenecek
+            bitis += 1
+
+        parca = " ".join(kelimeler[baslangic:bitis]).strip()
+        if len(parca) >= MIN_CHUNK:
+            parcalar.append(parca)
+
+        if bitis >= len(kelimeler):
+            break
+
+        overlap_uzunlugu = 0
+        yeni_baslangic = bitis
+        while yeni_baslangic > baslangic:
+            overlap_uzunlugu += len(kelimeler[yeni_baslangic - 1]) + 1
+            if overlap_uzunlugu >= CHUNK_OVERLAP:
+                break
+            yeni_baslangic -= 1
+        baslangic = max(yeni_baslangic, baslangic + 1)
+    return parcalar
 
 
 # ── Chunk stratejileri ───────────────────────────────────────────────────────
@@ -90,6 +135,10 @@ def paragraf_bazli(metin: str, meta: Dict) -> List[Dict]:
         p = p.strip()
         if not p:
             continue
+        if len(p) > MAX_CHUNK:
+            for alt in cumle_bol(p, MAX_CHUNK) or sert_bol(p, MAX_CHUNK):
+                chunks.append({"content": alt, **meta, "chunk_tipi": "paragraf"})
+            continue
         if tampon and len(tampon) + len(p) > MAX_CHUNK:
             if len(tampon) >= MIN_CHUNK:
                 chunks.append({"content": tampon, **meta, "chunk_tipi": "paragraf"})
@@ -97,7 +146,11 @@ def paragraf_bazli(metin: str, meta: Dict) -> List[Dict]:
         else:
             tampon = (tampon + "\n\n" + p).strip() if tampon else p
     if len(tampon) >= MIN_CHUNK:
-        chunks.append({"content": tampon, **meta, "chunk_tipi": "paragraf"})
+        if len(tampon) > MAX_CHUNK:
+            for alt in cumle_bol(tampon, MAX_CHUNK) or sert_bol(tampon, MAX_CHUNK):
+                chunks.append({"content": alt, **meta, "chunk_tipi": "paragraf"})
+        else:
+            chunks.append({"content": tampon, **meta, "chunk_tipi": "paragraf"})
     return chunks
 
 
@@ -118,6 +171,7 @@ def kategori_tespit(url: str, mevcut: str) -> str:
     if any(k in ul for k in ["duyuru", "haber"]):                   return "duyuru"
     if any(k in ul for k in ["takvim"]):                            return "akademik_takvim"
     if any(k in ul for k in ["cap", "yandal", "cift-anadal"]):      return "cap_yandal"
+    if mevcut not in {"", "genel", "belgeler"}:                      return mevcut
     if "pdf" in ul or "getfile" in ul:                               return "belge_pdf"
     return mevcut
 
@@ -166,12 +220,12 @@ def tekrar_kaldir(chunks: List[Dict]) -> List[Dict]:
 
 if __name__ == "__main__":
     print("=" * 55)
-    print("🔪 AKILLI CHUNK'LAMA")
+    print("AKILLI CHUNK'LAMA")
     print("=" * 55)
 
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
         kayitlar = json.load(f)
-    print(f"📥 {len(kayitlar)} kayıt yüklendi")
+    print(f"{len(kayitlar)} kayit yuklendi")
 
     tum_chunks, sayac = [], {}
     for kayit in kayitlar:
@@ -181,12 +235,12 @@ if __name__ == "__main__":
 
     once = len(tum_chunks)
     tum_chunks = tekrar_kaldir(tum_chunks)
-    print(f"🧹 {once - len(tum_chunks)} tekrar kaldırıldı")
+    print(f"{once - len(tum_chunks)} tekrar kaldirildi")
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(tum_chunks, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ {len(tum_chunks)} chunk → {OUTPUT_FILE}")
-    print("\n📊 Kategori dağılımı:")
+    print(f"{len(tum_chunks)} chunk -> {OUTPUT_FILE}")
+    print("\nKategori dagilimi:")
     for k, v in sorted(sayac.items(), key=lambda x: -x[1]):
         print(f"   {k:<25} {v}")

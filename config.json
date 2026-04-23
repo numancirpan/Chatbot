@@ -4,8 +4,13 @@
         "https://w3.api.duzce.edu.tr/df48/yonetmelik-ve-yonergeler",
         "https://duzce.edu.tr/akademik-takvim"
     ],
+    "akademik_takvim": [
+        "https://www.duzce.edu.tr/sayfa/2bd9/akademik-takvim",
+        "https://cdn.duzce.edu.tr/File/GetFile/a44682bb-4437-4908-aaf0-c6020e1fc991"
+    ],
     "fakulte_bolum": [
         "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj",
+        "https://mf.duzce.edu.tr/sayfa/967a/yaz-staji",
         "https://ogrenciisleri.duzce.edu.tr/S%C4%B1k%C3%A7a-Sorulan-Sorular",
         "https://bm.mf.duzce.edu.tr/"
     ],
