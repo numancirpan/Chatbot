@@ -13,6 +13,8 @@ import json
 import sys
 from pathlib import Path
 
+import requests
+
 ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
@@ -129,7 +131,11 @@ def main() -> int:
         cases = json.load(f)
 
     bot = RAGChatbot()
-    results = [run_case(bot, case) for case in cases]
+    try:
+        results = [run_case(bot, case) for case in cases]
+    except requests.exceptions.RequestException:
+        print("Ollama erisilemiyor. Golden evaluation calistirmadan once `ollama serve` komutunu baslatin.")
+        return 2
     passed_count = sum(1 for result in results if result["passed"])
 
     if args.json:

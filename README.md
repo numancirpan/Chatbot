@@ -100,6 +100,25 @@ sağlamadığını kontrol eder. Hızlı kontrol için:
 python pipeline/rag_smoke_test.py
 ```
 
+Fine-tune veri setlerinin güncel durumunu özetlemek için:
+
+```bash
+python pipeline/finetune_dataset_audit.py
+```
+
+`build_finetune_datasets.py` veri üretimini Ollama'ya bağlı olmadan offline yapar; soru
+varyantları ve takip soruları kullanılarak daha geniş retrieval/generation örnekleri üretir.
+
+Fine-tune export dosyalarini olusturmak icin:
+
+```bash
+python pipeline/export_finetune_jsonl.py
+```
+
+Bu exportlar `data/exports/` altina yazilir. Her kayitta deterministik `train` /
+`validation` split bilgisi ve generation tarafinda secilen `evidence_sentences`
+alanlari bulunur.
+
 ### 7. Disaridan Hazirlanan Fine-Tune JSON URL'lerini Duzelt
 
 Masaustunde veya baska bir klasorde hazirladiginiz `golden_questions.json`,

@@ -73,6 +73,26 @@ def reset_db_dir() -> None:
     os.makedirs(DB_DIR, exist_ok=True)
 
 
+def clear_collection_in_place(vector_store: Chroma) -> None:
+    collection = vector_store._collection
+    offset = 0
+    batch_size = 500
+
+    while True:
+        result = collection.get(include=[], limit=batch_size, offset=offset)
+        ids = result.get("ids", [])
+        if not ids:
+            break
+        collection.delete(ids=ids)
+        if len(ids) < batch_size:
+            break
+    try:
+        # Best effort to flush deletions before re-adding new records.
+        vector_store._client.persist()
+    except Exception:
+        pass
+
+
 def build(rebuild: bool = False):
     chunks = load_chunks()
     print(f"{len(chunks)} chunk yuklendi")
@@ -91,7 +111,12 @@ def build(rebuild: bool = False):
     print("Embedding modeli yukleniyor...")
     embedding_fn = build_embedding_function()
 
-    reset_db_dir()
+    recreate_dir = True
+    try:
+        reset_db_dir()
+    except PermissionError as exc:
+        recreate_dir = False
+        print(f"DB klasoru silinemedi ({exc}). Koleksiyon yerinde temizlenip yeniden doldurulacak.")
 
     print("ChromaDB olusturuluyor...")
     vector_store = Chroma(
@@ -99,6 +124,9 @@ def build(rebuild: bool = False):
         persist_directory=DB_DIR,
         embedding_function=embedding_fn,
     )
+
+    if rebuild and not recreate_dir:
+        clear_collection_in_place(vector_store)
 
     batch_size = 100
     for i in range(0, len(chunks), batch_size):
