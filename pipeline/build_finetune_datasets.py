@@ -227,6 +227,12 @@ def sentence_matches_focus(query: str, sentence: str) -> bool:
     normalized_sentence = fold_text(sentence)
     sentence_tokens = set(re.findall(r"[a-z0-9]+", normalized_sentence))
 
+    if "staj" in normalized_query and "kac" in normalized_query:
+        return "is gunu" in normalized_sentence or any(token in sentence_tokens for token in ["gun", "hafta", "ay"])
+    if "yaz okulu" in normalized_query and "ne zaman" in normalized_query:
+        return bool(re.search(r"\b20\d{2}\b", sentence) or re.search(r"\b\d{1,2}\.\d{1,2}\.\d{4}\b", sentence))
+    if "yaz okulu" in normalized_query and "kac" in normalized_query:
+        return "hafta" in sentence_tokens
     if "hangi belge" in normalized_query or "evrak" in normalized_query:
         return any(marker in sentence_tokens for marker in ["belge", "evrak", "form", "rapor", "dilekce"])
     if "ne zaman" in normalized_query:

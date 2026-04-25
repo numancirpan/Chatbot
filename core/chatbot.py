@@ -126,7 +126,7 @@ TOPIC_HINTS = {
     "harc_ucret": ["harc", "katki payi", "ogrenim ucreti", "ucret"],
     "burs": ["burs", "bursu", "bursunu"],
     "askerlik_tecili": ["askerlik", "tecil", "askerlik tecili"],
-    "ogrenci_belgesi_transkript": ["ogrenci belgesi", "transkript", "belge", "not dokumu"],
+    "ogrenci_belgesi_transkript": ["ogrenci belgesi", "transkript", "not dokumu"],
     "disiplin": ["disiplin", "uzaklastirma", "kinama"],
     "akademik_takvim_duyurular": ["akademik takvim", "duyuru", "onemli basvuru", "derslerin baslamasi"],
     "yaz_okulu": ["yaz okulu", "yaz okulu kayit", "yaz okulunun"],
@@ -175,6 +175,14 @@ SOURCE_STOPWORDS = {
     "birimi",
     "iletisim",
     "geciniz",
+}
+GENERIC_SOURCE_TITLES = {
+    "ogrenci isleri",
+    "merkezi mevzuat",
+    "fakulte bolum",
+    "fakulte bolum sayfasi",
+    "akademik takvim",
+    "genel",
 }
 SCOPE_CLARIFICATION_TEXT = (
     "Bu bilgi bölüm veya fakülteye göre değişebilmektedir. "
@@ -415,6 +423,74 @@ def asks_yaz_staji_schedule(query: str) -> bool:
     )
 
 
+def asks_yaz_okulu_attendance(query: str) -> bool:
+    normalized = normalize_text(query)
+    return "yaz okulu" in normalized and any(
+        marker in normalized for marker in ["devam", "devamsizlik", "devam zorunlulugu", "yoklama"]
+    )
+
+
+def asks_staj_insurance(query: str) -> bool:
+    normalized = normalize_text(query)
+    return "staj" in normalized and "sigorta" in normalized
+
+
+def asks_external_summer_school_course(query: str) -> bool:
+    normalized = normalize_text(query)
+    if "yaz okulu" not in normalized:
+        return False
+    if re.search(r"\b\w*niversit\w*\b", normalized):
+        return True
+    return any(
+        marker in normalized
+        for marker in [
+            "baska universite",
+            "baska universit",
+            "diger universite",
+            "universiteden",
+            "niversiteden",
+            "universitelerden",
+            "universitemiz disinda",
+            "misafir ogrenci",
+            "disaridan ders",
+        ]
+    )
+
+
+def asks_graduation_with_incomplete_internship(query: str) -> bool:
+    normalized = normalize_text(query)
+    graduation_markers = ["mezun", "mezuniyet", "diploma"]
+    internship_markers = ["staj", "stajini", "stajim", "staj eksik", "staj eksikse", "stajini tamamlamamis"]
+    incomplete_markers = ["eksik", "tamamlamamis", "tamamlanmamis", "yapmamis", "kalmis", "almadan", "bitirmeden"]
+    return (
+        any(marker in normalized for marker in graduation_markers)
+        and any(marker in normalized for marker in internship_markers)
+        and any(marker in normalized for marker in incomplete_markers)
+    )
+
+
+def asks_graduation_requirements(query: str) -> bool:
+    normalized = normalize_text(query)
+    if not any(marker in normalized for marker in ["mezun", "mezuniyet", "diploma"]):
+        return False
+    return any(
+        marker in normalized
+        for marker in ["sart", "sartlar", "kosul", "kosullar", "gerek", "gerekiyor", "temel"]
+    )
+
+
+def asks_post_upload_graduation(query: str) -> bool:
+    normalized = normalize_text(query)
+    if "staj" not in normalized and "rapor" not in normalized:
+        return False
+    if "mezun" not in normalized:
+        return False
+    return any(
+        marker in normalized
+        for marker in ["yukledikten sonra", "yukledim", "raporu yukle", "mail", "e posta", "degerlendirme talebi"]
+    )
+
+
 def asks_period_count(query: str) -> bool:
     normalized = normalize_text(query)
     return any(marker in normalized for marker in ["kac donem", "donem var", "kac tane donem"])
@@ -436,6 +512,8 @@ def get_confirmed_day_count(query: str) -> Optional[int]:
 
 def is_program_specific_query(query: str) -> bool:
     normalized = normalize_text(query)
+    if infer_query_scope(query):
+        return True
     program_specific_markers = [
         "staj",
         "obs",
@@ -480,10 +558,62 @@ def infer_topic(chunk: Dict) -> str:
     normalized_content = normalize_text(chunk.get("content", ""))
     normalized_url = chunk.get("source_url", "").lower()
     kategori = normalize_text(chunk.get("kategori", ""))
-    haystack = f"{normalized_content} {normalized_url} {kategori}"
+    source_title = normalize_text(chunk.get("source_title", ""))
+    haystack = f"{normalized_content} {normalized_url} {kategori} {source_title}"
 
-    for topic, hints in TOPIC_HINTS.items():
+    if "bm.mf.duzce.edu.tr/sayfa/878b" in normalized_url:
+        return "staj"
+    if "bm.mf.duzce.edu.tr/sayfa/17ac" in normalized_url:
+        return "yaz_okulu"
+    if "mf.duzce.edu.tr/sayfa/967a" in normalized_url:
+        return "staj"
+
+    specific_categories = {
+        "staj",
+        "yaz_okulu",
+        "cap_yandal",
+        "yatay_gecis",
+        "muafiyet_intibak",
+        "mezuniyet",
+        "harc_ucret",
+        "disiplin",
+        "burs",
+        "askerlik_tecili",
+        "ders_kaydi",
+        "add_drop",
+        "devamsizlik",
+        "sinavlar",
+        "not_sistemi",
+        "ogrenci_belgesi_transkript",
+    }
+    if kategori in specific_categories:
+        return kategori
+
+    priority_topics = [
+        "cap_yandal",
+        "yatay_gecis",
+        "muafiyet_intibak",
+        "yaz_okulu",
+        "staj",
+        "harc_ucret",
+        "burs",
+        "askerlik_tecili",
+        "disiplin",
+        "ogrenci_belgesi_transkript",
+        "ders_kaydi",
+        "add_drop",
+        "devamsizlik",
+        "sinavlar",
+        "not_sistemi",
+        "mezuniyet",
+        "akademik_takvim_duyurular",
+    ]
+
+    for topic in priority_topics:
+        hints = TOPIC_HINTS.get(topic, [])
         if any(hint in haystack for hint in hints):
+            if topic == "cap_yandal" and any(marker in haystack for marker in ["mezuniyet", "diploma", "gecici mezuniyet"]):
+                continue
             return topic
 
     if kategori:
@@ -491,10 +621,150 @@ def infer_topic(chunk: Dict) -> str:
     return "genel"
 
 
+def infer_query_topic(query: str) -> str:
+    normalized = normalize_text(query)
+
+    if asks_post_upload_graduation(query):
+        return "staj"
+    if asks_graduation_with_incomplete_internship(query) or asks_graduation_requirements(query):
+        return "mezuniyet"
+    if asks_yaz_okulu_attendance(query) or "yaz okulu" in normalized:
+        return "yaz_okulu"
+    if (
+        asks_staj_timing(query)
+        or asks_staj_course_registration(query)
+        or asks_staj_missed_period(query)
+        or asks_staj_duration(query)
+        or asks_staj_count(query)
+        or asks_staj_report_submission(query)
+        or asks_makeup_exam_with_missing_internship(query)
+        or asks_staj_insurance(query)
+        or "staj" in normalized
+    ):
+        return "staj"
+    if "devamsiz" in normalized or "devam zorunlulugu" in normalized or "yoklama" in normalized:
+        return "devamsizlik"
+    if "sinav" in normalized or "butunleme" in normalized or "mazeret" in normalized:
+        return "sinavlar"
+    if "muafiyet" in normalized or "intibak" in normalized:
+        return "muafiyet_intibak"
+    if "harc" in normalized or "ucret" in normalized or "katki payi" in normalized:
+        return "harc_ucret"
+    if "burs" in normalized:
+        return "burs"
+    if "yatay gecis" in normalized:
+        return "yatay_gecis"
+    if "cap" in normalized or "cift anadal" in normalized or "yandal" in normalized:
+        return "cap_yandal"
+
+    return infer_topic({"content": query, "source_url": "", "kategori": ""})
+
+
+def _title_from_url_slug(url: str) -> str:
+    parts = [part for part in url.split("/") if part]
+    for part in reversed(parts):
+        if re.fullmatch(r"[0-9a-f]{3,}", part.lower()):
+            continue
+        candidate = part.replace("-", " ").replace("_", " ").strip()
+        if len(normalize_text(candidate)) >= 8:
+            return candidate.title()
+    return ""
+
+
+def _title_from_content_lines(content: str) -> str:
+    lines = []
+    for raw_line in str(content).splitlines():
+        line = " ".join(raw_line.split()).strip(" -:|")
+        if not line:
+            continue
+        normalized = normalize_text(line)
+        if len(normalized) < 6 or len(line) > 140:
+            continue
+        lines.append(line)
+        if len(lines) >= 8:
+            break
+
+    if not lines:
+        return ""
+
+    joined = normalize_text(" ".join(lines[:4]))
+    if "yaz okulu yonergesi" in joined:
+        return "Yaz Okulu Yonergesi"
+    if "yaz okulu egitimi" in joined:
+        return "Yaz Okulu Egitimi"
+    if "stajlar hakkinda sikca sorulan sorular" in joined:
+        return "Bilgisayar Muhendisligi - Staj SSS"
+    if "bilgisayar muhendisligi" in joined and "staj" in joined:
+        return "Bilgisayar Muhendisligi - Staj"
+    if "yaz staji" in joined:
+        return "Muhendislik Fakultesi - Yaz Staji"
+    if "cift anadal" in joined or "yandal" in joined:
+        return "CAP ve Yandal"
+    if "diploma" in joined or "mezuniyet" in joined:
+        return "Diploma ve Mezuniyet Belgeleri Yonergesi"
+    if "akademik takvim" in joined:
+        return "Akademik Takvim"
+
+    return lines[0]
+
+
+def _is_graduation_whitelisted_source(result: Dict) -> bool:
+    source_title = normalize_text(str(result.get("source_title", "")))
+    source_url = str(result.get("source_url", "")).lower()
+    content = normalize_text(str(result.get("content", ""))[:1200])
+
+    if any(marker in source_url for marker in ["cift-anadal", "yandal-program", "cap"]):
+        return False
+    if any(
+        marker in source_title
+        for marker in [
+            "cap",
+            "yandal",
+            "akreditasyon",
+            "yabanci uyruklu",
+            "ek ",
+            "ek-",
+            "uluslararasi",
+        ]
+    ):
+        return False
+    if any(
+        marker in source_title
+        for marker in [
+            "mezuniyet",
+            "diploma",
+            "lisans egitim",
+            "sinav yonetmeligi",
+            "stajlar hakkinda sikca sorulan sorular",
+            "bilgisayar muhendisligi staj sss",
+        ]
+    ):
+        return True
+    if any(
+        marker in content
+        for marker in [
+            "mezun olmaya hak kazanir",
+            "butun calismalari tamamlamis",
+            "gecici mezuniyet belgesi",
+            "diploma defteri",
+            "stajini tamamlamayan ogrenci",
+        ]
+    ):
+        return True
+    return False
+
+
 def infer_source_title(chunk: Dict) -> str:
+    explicit_title = str(chunk.get("source_title", "")).strip()
+    if explicit_title and normalize_text(explicit_title) not in GENERIC_SOURCE_TITLES:
+        return explicit_title
+
     url = chunk.get("source_url", "")
     kategori = chunk.get("kategori", "Genel")
+    content = str(chunk.get("content", ""))
     normalized_url = url.lower()
+    if any(marker in normalized_url for marker in ["cift-anadal", "yandal-program", "/yandal"]):
+        return "ÇAP ve Yandal"
     if "bm.mf.duzce.edu.tr/sayfa/878b" in normalized_url:
         return "Bilgisayar Mühendisliği - Staj SSS"
     if "bm.mf.duzce.edu.tr/sayfa/4a82" in normalized_url:
@@ -503,10 +773,33 @@ def infer_source_title(chunk: Dict) -> str:
         return "Bilgisayar Mühendisliği - Yaz Okulu"
     if "mf.duzce.edu.tr/sayfa/967a" in normalized_url:
         return "Mühendislik Fakültesi - Yaz Stajı"
+    normalized_content = normalize_text(content[:800])
+    if "yaz okulu yonergesi" in normalized_content:
+        return "Yaz Okulu Yönergesi"
+    if "diploma diploma defteri gecici mezuniyet belgesi" in normalized_content:
+        return "Diploma ve Mezuniyet Belgeleri Yönergesi"
+    if "lisans egitim ogretim ve sinav yonetmeligi" in normalized_content:
+        return "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği"
+    if "cift anadal" in normalized_content or "yandal" in normalized_content:
+        return "ÇAP ve Yandal"
+    if "yatay gecis" in normalized_content:
+        return "Yatay Geçiş"
+    if "muafiyet" in normalized_content and "intibak" in normalized_content:
+        return "Muafiyet ve İntibak Esasları"
     if "akademik-takvim" in normalized_url or chunk.get("kategori") == "akademik_takvim":
         return "Akademik Takvim"
+    extracted_title = _title_from_content_lines(content)
+    if extracted_title:
+        return extracted_title
+    slug_title = _title_from_url_slug(url)
+    if slug_title:
+        return slug_title
     if "ogrenciisleri.duzce.edu.tr" in normalized_url:
         return "Öğrenci İşleri"
+    if kategori == "fakulte_bolum":
+        return "Fakülte/Bölüm Sayfası"
+    if kategori == "merkezi_mevzuat":
+        return "Merkezi Mevzuat"
     return kategori.replace("_", " ").title()
 
 
@@ -802,7 +1095,7 @@ class RAGChatbot:
         )
 
     def _resolve_topic(self, query: str) -> str:
-        query_topic = infer_topic({"content": query, "source_url": "", "kategori": ""})
+        query_topic = infer_query_topic(query)
         if query_topic != "genel":
             return query_topic
         return self.conversation_state.get("topic", "")
@@ -840,7 +1133,7 @@ class RAGChatbot:
         context: Optional[List[Dict]] = None,
     ) -> None:
         inferred_scope = infer_query_scope(query)
-        inferred_topic = infer_topic({"content": query, "source_url": "", "kategori": ""})
+        inferred_topic = infer_query_topic(query)
 
         context = context or []
         dominant_scope = self._dominant_scope(context)
@@ -862,7 +1155,7 @@ class RAGChatbot:
         if is_scope_clarification_query(query) or is_follow_up_query(query):
             return True
 
-        query_topic = infer_topic({"content": query, "source_url": "", "kategori": ""})
+        query_topic = infer_query_topic(query)
         previous_topic = self.conversation_state.get("topic", "")
         if query_topic != "genel":
             return query_topic == previous_topic and bool(previous_topic)
@@ -1157,6 +1450,25 @@ class RAGChatbot:
                 score += 12
             elif candidate_topic not in {"", "genel"}:
                 score -= 10
+        if asks_graduation_with_incomplete_internship(query) or asks_graduation_requirements(query):
+            if _is_graduation_whitelisted_source(candidate):
+                score += 20
+            else:
+                score -= 24
+            if candidate_topic == "cap_yandal":
+                score -= 28
+            if any(marker in normalize_text(candidate.get("source_title", "")) for marker in ["cap", "yandal"]):
+                score -= 24
+        if asks_external_summer_school_course(query) or asks_yaz_okulu_attendance(query):
+            if candidate_topic == "staj":
+                score -= 18
+        if asks_post_upload_graduation(query):
+            if "mezun durumundaysaniz" in normalized_content and "staj komisyonuna" in normalized_content:
+                score += 26
+            if "mail" in normalized_content or "e posta" in normalized_content:
+                score += 14
+        if asks_staj_report_submission(query) and candidate_topic in {"cap_yandal", "mezuniyet"}:
+            score -= 22
         if asks_staj_timing(query):
             if "yariyil" in normalized_content:
                 score += 6
@@ -1271,6 +1583,50 @@ class RAGChatbot:
                         score += 18
             if "yaz staji" in normalized_content and "yaz okulu" not in normalized_content:
                 score -= 12
+        if asks_yaz_okulu_attendance(query):
+            if "yaz okulu" in normalized_content and "devam" in normalized_content:
+                score += 22
+            elif "yaz okulu" in normalized_content:
+                score -= 8
+            if "devam zorunlulugu aranmaz" in normalized_content:
+                score += 24
+            if "devam kosulunu yerine getirilen bir dersin tekrari" in normalized_content:
+                score += 18
+        if asks_external_summer_school_course(query):
+            if any(
+                marker in normalized_content
+                for marker in ["diger universitelerin", "diger universitelerden", "universitemiz disinda", "esdeger"]
+            ):
+                score += 24
+            if "bolum anabilim dali baskanliklarinin uygun gormesi" in normalized_content:
+                score += 16
+        if asks_staj_insurance(query):
+            if "sigorta" in normalized_content:
+                score += 24
+            if "okul tarafindan sigorta yapilmiyor" in normalized_content or "okulun sigorta yapmasi" in normalized_content:
+                score += 18
+        if asks_graduation_with_incomplete_internship(query):
+            if any(
+                marker in normalized_content
+                for marker in ["stajini tamamlamayan ogrenci", "mezun olmaya hak kazanir", "butun calismalari tamamlamis"]
+            ):
+                score += 26
+            if any(
+                marker in normalized_content
+                for marker in ["staj yapacaginiz firmada", "elektrik elektronik muhendisi", "muhendisi olmasi gerekir"]
+            ):
+                score -= 30
+        if asks_graduation_requirements(query):
+            if any(
+                marker in normalized_content
+                for marker in ["mezun olmaya hak kazanir", "butun calismalari tamamlamis", "diploma", "mezuniyet"]
+            ):
+                score += 20
+            if any(
+                marker in normalized_content
+                for marker in ["staj yapacaginiz firmada", "muhendisi olmasi gerekir", "sbs"]
+            ):
+                score -= 24
 
         if asks_yaz_staji_schedule(query):
             if "yaz staji" in normalized_content:
@@ -1288,6 +1644,10 @@ class RAGChatbot:
 
         if requested_years and any(str(year) in candidate.get("content", "") for year in requested_years):
             score += 6
+
+        source_title = normalize_text(candidate.get("source_title") or infer_source_title(candidate))
+        if any(marker in source_title for marker in ["fakulte bolum", "bolum", "ogrenci isleri"]):
+            score -= 5
 
         return score
 
@@ -1481,6 +1841,50 @@ class RAGChatbot:
             score += 18.0
         if asks_staj_duration(query) and "staj" in normalized_content and "is gunu" in normalized_content:
             score += 18.0
+        if asks_yaz_okulu_attendance(query):
+            if "yaz okulu" in normalized_content and "devam" in normalized_content:
+                score += 24.0
+            elif "yaz okulu" in normalized_content:
+                score -= 10.0
+        if asks_external_summer_school_course(query):
+            if any(
+                marker in normalized_content
+                for marker in ["diger universitelerden", "diger universite", "universitemiz disinda", "esdeger"]
+            ):
+                score += 24.0
+        if asks_post_upload_graduation(query):
+            if "mezun durumundaysaniz" in normalized_content and "staj komisyonuna" in normalized_content:
+                score += 26.0
+            if "mail" in normalized_content or "e posta" in normalized_content:
+                score += 14.0
+        if asks_staj_insurance(query):
+            if "sigorta" in normalized_content:
+                score += 24.0
+        if asks_graduation_with_incomplete_internship(query) or asks_graduation_requirements(query):
+            if _is_graduation_whitelisted_source(result):
+                score += 20.0
+            else:
+                score -= 24.0
+            if any(
+                marker in normalized_content
+                for marker in ["mezun olmaya hak kazanir", "butun calismalari tamamlamis", "diploma", "mezuniyet"]
+            ):
+                score += 24.0
+            if any(
+                marker in normalized_content
+                for marker in ["staj yapacaginiz firmada", "elektrik elektronik muhendisi", "muhendisi olmasi gerekir"]
+            ):
+                score -= 24.0
+
+        source_title = normalize_text(result.get("source_title") or self._source_title(result))
+        if any(marker in source_title for marker in ["fakulte bolum", "bolum", "ogrenci isleri"]):
+            score -= 6.0
+        if asks_yaz_okulu_attendance(query) and "merkezi mevzuat" in source_title:
+            score -= 8.0
+        if (asks_graduation_with_incomplete_internship(query) or asks_graduation_requirements(query)) and any(
+            marker in source_title for marker in ["cap", "yandal"]
+        ):
+            score -= 30.0
 
         return score
 
@@ -1519,6 +1923,8 @@ class RAGChatbot:
             if item["score"] <= 0:
                 continue
             result = item["result"]
+            if self._is_noisy_source_for_query(query, result):
+                continue
             if has_date_support and not any(date in result.get("content", "") for date in answer_dates):
                 continue
             candidate_scope = result.get("program_scope", infer_chunk_scope(result))
@@ -1551,6 +1957,36 @@ class RAGChatbot:
             title = source.get("baslik", "Kaynak")
             refs.append(f"[Kaynak {index}] {title}")
         return f"{answer}\n\nDayanak: " + "; ".join(refs)
+
+    def _is_noisy_source_for_query(self, query: str, result: Dict) -> bool:
+        title = normalize_text(result.get("source_title") or self._source_title(result))
+        url = (result.get("source_url") or "").lower()
+
+        if any(
+            marker in title
+            for marker in [
+                "yonetim dekanlik",
+                "ogrenci panolari",
+                "ucretli staj",
+                "komisyonu tarafindan ogrenci panolari",
+                "yaz okulu egitimi",
+            ]
+        ):
+            return True
+        if asks_external_summer_school_course(query) or asks_yaz_okulu_attendance(query):
+            if "cap ve yandal" in title:
+                return True
+            if "yaz okulu egitimi" in title:
+                return True
+        if asks_staj_insurance(query) or asks_staj_report_submission(query) or asks_post_upload_graduation(query):
+            if any(marker in title for marker in ["yonetim dekanlik", "ucretli staj", "ogrenci panolari"]):
+                return True
+        if asks_graduation_with_incomplete_internship(query) or asks_graduation_requirements(query):
+            if not _is_graduation_whitelisted_source(result) and "akademik takvim" not in title:
+                return True
+        if "/duyuru/" in url and not asks_yaz_staji_schedule(query):
+            return True
+        return False
 
     def _extract_staj_timing_answer(self, query: str, context: List[Dict]) -> Optional[str]:
         if not asks_staj_timing(query):
@@ -1791,17 +2227,17 @@ class RAGChatbot:
 
         if has_bm_submission_rule or has_bm_no_fixed_deadline or has_bm_approx_30_days:
             parts = [
-                "Bilgisayar Mühendisliği SSS kaynağına göre staj raporu imza/kaşe onayından sonra taranıp SBS'ye yüklenir."
+                "Bilgisayar Mühendisliği Staj SSS kaynağına göre staj raporu, imza ve kaşe işlemleri tamamlandıktan sonra taranarak SBS'ye yüklenir."
             ]
             if has_bm_no_fixed_deadline:
-                parts.append("Aynı kaynakta sistemde yüklemek için sabit bir son tarih bulunmadığı belirtilmektedir.")
+                parts.append("Aynı kaynakta, sistem yüklemesi için sabit bir son tarih bulunmadığı belirtilmektedir.")
             if has_bm_approx_30_days:
-                parts.append("Yaz stajı için raporun yeni güz dönemi başlangıcından itibaren yaklaşık 30 gün sonrasına kadar yüklenebileceği; değerlendirmenin staj komisyonu toplandıktan sonra yapılacağı yazmaktadır.")
+                parts.append("Yaz stajı için raporun, yeni güz dönemi başladıktan sonra yaklaşık 30 gün içinde yüklenebileceği ve değerlendirmenin staj komisyonu toplandıktan sonra yapılacağı ifade edilmektedir.")
             if has_bm_graduation_note:
-                parts.append("Mezun durumundaysanız ve stajlar dışında dersiniz yoksa raporu yükledikten sonra bölüm staj komisyonuna e-posta ile değerlendirme talep etmeniz gerektiği belirtilmiştir.")
+                parts.append("Mezun durumundaysanız ve stajlar dışında dersiniz yoksa, raporu yükledikten sonra bölüm staj komisyonuna e-posta ile değerlendirme talebi iletmeniz gerektiği belirtilmiştir.")
             if has_general_correction_rule:
-                parts.append("Genel staj yönergesinde, komisyon düzeltme isterse istenen düzeltmenin en çok 1 ay içinde yapılması gerektiği; aksi durumda stajın reddedilmiş sayılacağı yer almaktadır.")
-            parts.append("Kaynaklarda geç teslim için otomatik burs/ceza gibi ayrı bir yaptırım açıkça belirtilmiyor.")
+                parts.append("Genel staj yönergesinde, komisyon düzeltme isterse bu düzeltmenin en fazla 1 ay içinde yapılması gerektiği; aksi durumda stajın reddedilmiş sayılacağı belirtilmektedir.")
+            parts.append("Kaynaklarda geç teslim için otomatik burs kesintisi veya ayrı bir disiplin cezası şeklinde açık bir yaptırım yer almamaktadır.")
             return "Sayın öğrencimiz,\n" + " ".join(parts)
 
         if has_general_one_month_rule or has_general_correction_rule:
@@ -1914,6 +2350,218 @@ class RAGChatbot:
         if actual_days == 25 and has_min_20_rule:
             answer += " Ancak bazı merkezi mevzuat metinlerinde bir staj döneminin en az 20 iş günü olabileceği de belirtilmektedir."
         return answer
+
+    def _extract_yaz_okulu_attendance_answer(self, query: str, context: List[Dict]) -> Optional[str]:
+        if not asks_yaz_okulu_attendance(query):
+            return None
+
+        exception_sentence = ""
+        general_sentence = ""
+        for chunk in context + self.chunks + self.raw_records:
+            content = chunk.get("content", "")
+            normalized_content = normalize_text(content)
+            if "yaz okulu" not in normalized_content or "devam" not in normalized_content:
+                continue
+            for sentence in SENTENCE_SPLIT_PATTERN.split(content):
+                normalized_sentence = normalize_text(sentence)
+                if "yaz okulu" not in normalized_sentence or "devam" not in normalized_sentence:
+                    continue
+                if "devam zorunlulugu aranmaz" in normalized_sentence:
+                    exception_sentence = sentence.strip()
+                elif any(
+                    marker in normalized_sentence
+                    for marker in ["basari durumlari devam", "devam ara sinavlar", "devam kosulu"]
+                ):
+                    general_sentence = sentence.strip()
+            if exception_sentence and general_sentence:
+                break
+
+        if not exception_sentence and not general_sentence:
+            return None
+
+        parts = []
+        if general_sentence:
+            parts.append(
+                "Yaz Okulu Uygulama Esaslarina gore yaz okulunda basari degerlendirmesinde devam durumu dikkate alinir."
+            )
+        if exception_sentence:
+            parts.append(
+                "Ancak universite disinda yaz okulunda ders alip esdeger ders icin devam kosulunu sagladigini belgeleyen ogrenciler icin devam zorunlulugu aranmaz."
+            )
+        return "Sayin ogrencimiz,\n" + " ".join(parts)
+
+    def _extract_staj_insurance_answer(self, query: str, context: List[Dict]) -> Optional[str]:
+        if not asks_staj_insurance(query):
+            return None
+
+        yes_sentence = ""
+        no_sentence = ""
+        for chunk in context + self.chunks + self.raw_records:
+            content = chunk.get("content", "")
+            normalized_content = normalize_text(content)
+            if "sigorta" not in normalized_content or "staj" not in normalized_content:
+                continue
+            for sentence in SENTENCE_SPLIT_PATTERN.split(content):
+                normalized_sentence = normalize_text(sentence)
+                if "sigorta" not in normalized_sentence:
+                    continue
+                if "okul tarafindan sigorta yapilmiyor" in normalized_sentence:
+                    no_sentence = sentence.strip()
+                elif "okulun sigorta yapmasi" in normalized_sentence or "okul sigortami yapacagi icin" in normalized_sentence:
+                    yes_sentence = sentence.strip()
+            if yes_sentence and no_sentence:
+                break
+
+        if yes_sentence:
+            answer = (
+                "Sayin ogrencimiz,\n"
+                "Bilgisayar Muhendisligi Staj SSS kaynagina gore zorunlu stajlarda sigorta islemleri okul tarafindan yurutulur. "
+                "Basvuru sirasinda okulun sigorta islemini yapabilmesi icin gerekli beyanin dogru sekilde verilmesi gerekir."
+            )
+            if no_sentence:
+                answer += (
+                    " Buna karsilik zorunlu stajlardan ayri yapilan gonullu staj, staj uzatma veya ilan edilen donemler disindaki stajlarda okul tarafindan sigorta yapilmadigi belirtilmektedir."
+                )
+            return answer
+        if no_sentence:
+            return (
+                "Sayin ogrencimiz,\n"
+                "Bilgisayar Muhendisligi Staj SSS kaynagina gore zorunlu staj kapsami disindaki gonullu veya farkli tarihlerde yapilan stajlarda okul tarafindan sigorta yapilmamaktadir."
+            )
+        return None
+
+    def _extract_post_upload_graduation_answer(self, query: str, context: List[Dict]) -> Optional[str]:
+        if not asks_post_upload_graduation(query):
+            return None
+
+        found_rule = False
+        for chunk in context + self.chunks + self.raw_records:
+            normalized_content = normalize_text(chunk.get("content", ""))
+            if "mezun durumundaysaniz" in normalized_content and (
+                "staj komisyonuna mail" in normalized_content or "e posta" in normalized_content
+            ):
+                found_rule = True
+                break
+
+        if not found_rule:
+            return None
+
+        return (
+            "Sayin ogrencimiz,\n"
+            "Mezun durumundaysaniz ve stajlar disinda dersiniz yoksa, staj raporunuzu sisteme yukledikten sonra "
+            "bolum staj komisyonuna e-posta ile degerlendirme talebinizi iletmeniz gerekir."
+        )
+
+    def _extract_external_summer_school_answer(self, query: str, context: List[Dict]) -> Optional[str]:
+        if not asks_external_summer_school_course(query):
+            return None
+
+        permission_sentence = ""
+        condition_sentence = ""
+        for chunk in context + self.chunks + self.raw_records:
+            content = chunk.get("content", "")
+            normalized_content = normalize_text(content)
+            if "yaz okulu" not in normalized_content:
+                continue
+            if (
+                not permission_sentence
+                and any(marker in normalized_content for marker in ["diger universitelerde", "diger universite", "universitemiz disinda"])
+                and "ders alabilir" in normalized_content
+            ):
+                permission_sentence = "Yaz okulunda baska universitelerden ders alinabilir."
+            if (
+                not condition_sentence
+                and any(marker in normalized_content for marker in ["esdeger", "uygun gormesi", "yuzde sekseninin uyumlu"])
+            ):
+                condition_sentence = "Bu derslerin sayilabilmesi icin esdegerlik kosullarinin saglanmasi ve bolum onayinin alinmasi gerekir."
+            for sentence in SENTENCE_SPLIT_PATTERN.split(content):
+                normalized_sentence = normalize_text(sentence)
+                if (
+                    "universite" in normalized_sentence
+                    and any(marker in normalized_sentence for marker in ["diger", "universitemiz disinda", "baska"])
+                ):
+                    permission_sentence = sentence.strip()
+                if any(
+                    marker in normalized_sentence
+                    for marker in ["bolum anabilim dali baskanliklarinin uygun gormesi", "esdeger", "notlari kabul edilmez"]
+                ):
+                    condition_sentence = sentence.strip()
+            if permission_sentence and condition_sentence:
+                break
+
+        if not permission_sentence:
+            return None
+
+        answer = (
+            "Sayin ogrencimiz,\n"
+            "Yaz Okulu Uygulama Esaslarina gore baska universitelerden yaz okulu dersi alinabilmesi mumkundur."
+        )
+        if condition_sentence:
+            answer += " Ancak dersin esdeger sayilabilmesi icin bolum baskanliginin uygun gormesi ve ilgili esdegerlik sartlarinin saglanmasi gerekir."
+        return answer
+
+    def _extract_graduation_with_internship_answer(self, query: str, context: List[Dict]) -> Optional[str]:
+        if not asks_graduation_with_incomplete_internship(query):
+            return None
+
+        support_sentence = ""
+        for chunk in context + self.chunks + self.raw_records:
+            content = chunk.get("content", "")
+            normalized_content = normalize_text(content)
+            if "mezun" not in normalized_content and "diploma" not in normalized_content:
+                continue
+            for sentence in SENTENCE_SPLIT_PATTERN.split(content):
+                normalized_sentence = normalize_text(sentence)
+                if any(
+                    marker in normalized_sentence
+                    for marker in ["butun calismalari tamamlamis olan ogrenci mezun olmaya hak kazanir", "stajini tamamlamayan ogrenci"]
+                ):
+                    support_sentence = sentence.strip()
+                    break
+            if support_sentence:
+                break
+
+        if not support_sentence:
+            return None
+
+        return (
+            "Sayin ogrencimiz,\n"
+            "Hayir. Mezuniyet icin yalnizca derslerin degil, ilgili mevzuatta yer alan tum akademik yukumluluklerin de tamamlanmis olmasi gerekir. "
+            "Bu nedenle staj yukumlulugu eksikse diploma islemleri tamamlanmis sayilmaz."
+        )
+
+    def _extract_graduation_requirements_answer(self, query: str, context: List[Dict]) -> Optional[str]:
+        if not asks_graduation_requirements(query):
+            return None
+
+        requirement_sentences = []
+        for chunk in context + self.chunks + self.raw_records:
+            content = chunk.get("content", "")
+            normalized_content = normalize_text(content)
+            if not any(marker in normalized_content for marker in ["mezun", "diploma"]):
+                continue
+            for sentence in SENTENCE_SPLIT_PATTERN.split(content):
+                normalized_sentence = normalize_text(sentence)
+                if any(
+                    marker in normalized_sentence
+                    for marker in ["mezun olmaya hak kazanir", "butun calismalari tamamlamis", "basarili olmus"]
+                ):
+                    cleaned = sentence.strip()
+                    if cleaned and cleaned not in requirement_sentences:
+                        requirement_sentences.append(cleaned)
+                if len(requirement_sentences) >= 2:
+                    break
+            if len(requirement_sentences) >= 2:
+                break
+
+        if not requirement_sentences:
+            return None
+
+        return (
+            "Sayin ogrencimiz,\n"
+            "Mezuniyet icin temel kosul, ogretim programinda yer alan derslerin ve ilgili mevzuatta ongorulen diger akademik yukumluluklerin tamamlanmis olmasidir. "
+            "Baska bir ifadeyle, mezuniyet icin yalnizca dersleri gecmek degil, programin tum resmi sartlarini yerine getirmek gerekir."
+        )
 
     def _extract_yaz_okulu_duration_answer(self, query: str, context: List[Dict]) -> Optional[str]:
         if not asks_yaz_okulu_duration(query):
@@ -2192,55 +2840,85 @@ class RAGChatbot:
         return None
 
     def _extract_direct_answer(self, query: str, context: List[Dict]) -> Optional[str]:
-        direct_answer = self._extract_yaz_okulu_duration_answer(query, context)
+        working_query = query
+        if is_scope_clarification_query(query):
+            previous_user_query = self._last_user_query()
+            if previous_user_query:
+                working_query = f"{previous_user_query} {query}".strip()
+
+        direct_answer = self._extract_post_upload_graduation_answer(working_query, context)
         if direct_answer:
             return direct_answer
 
-        direct_answer = self._extract_yaz_okulu_start_answer(query, context)
+        direct_answer = self._extract_graduation_with_internship_answer(working_query, context)
         if direct_answer:
             return direct_answer
 
-        direct_answer = self._extract_yaz_staji_schedule_answer(query, context)
+        direct_answer = self._extract_graduation_requirements_answer(working_query, context)
         if direct_answer:
             return direct_answer
 
-        direct_answer = self._extract_disciplinary_scholarship_answer(query, context)
+        direct_answer = self._extract_yaz_okulu_attendance_answer(working_query, context)
         if direct_answer:
             return direct_answer
 
-        direct_answer = self._extract_makeup_exam_with_missing_internship_answer(query, context)
+        direct_answer = self._extract_external_summer_school_answer(working_query, context)
         if direct_answer:
             return direct_answer
 
-        direct_answer = self._extract_staj_report_submission_answer(query, context)
+        direct_answer = self._extract_staj_insurance_answer(working_query, context)
         if direct_answer:
             return direct_answer
 
-        direct_answer = self._extract_staj_missed_period_answer(query, context)
+        direct_answer = self._extract_yaz_okulu_duration_answer(working_query, context)
         if direct_answer:
             return direct_answer
 
-        direct_answer = self._extract_staj_duration_confirmation_answer(query, context)
+        direct_answer = self._extract_yaz_okulu_start_answer(working_query, context)
         if direct_answer:
             return direct_answer
 
-        direct_answer = self._extract_staj_count_answer(query, context)
+        direct_answer = self._extract_yaz_staji_schedule_answer(working_query, context)
         if direct_answer:
             return direct_answer
 
-        direct_answer = self._extract_staj_timing_answer(query, context)
+        direct_answer = self._extract_disciplinary_scholarship_answer(working_query, context)
         if direct_answer:
             return direct_answer
 
-        direct_answer = self._extract_staj_course_registration_answer(query, context)
+        direct_answer = self._extract_makeup_exam_with_missing_internship_answer(working_query, context)
         if direct_answer:
             return direct_answer
 
-        if not is_short_factual_query(query):
+        direct_answer = self._extract_staj_report_submission_answer(working_query, context)
+        if direct_answer:
+            return direct_answer
+
+        direct_answer = self._extract_staj_missed_period_answer(working_query, context)
+        if direct_answer:
+            return direct_answer
+
+        direct_answer = self._extract_staj_duration_confirmation_answer(working_query, context)
+        if direct_answer:
+            return direct_answer
+
+        direct_answer = self._extract_staj_count_answer(working_query, context)
+        if direct_answer:
+            return direct_answer
+
+        direct_answer = self._extract_staj_timing_answer(working_query, context)
+        if direct_answer:
+            return direct_answer
+
+        direct_answer = self._extract_staj_course_registration_answer(working_query, context)
+        if direct_answer:
+            return direct_answer
+
+        if not is_short_factual_query(working_query):
             return None
 
-        normalized_query = normalize_text(query)
-        wants_staj_duration = asks_staj_duration(query)
+        normalized_query = normalize_text(working_query)
+        wants_staj_duration = asks_staj_duration(working_query)
         if not wants_staj_duration:
             return None
 
@@ -2326,11 +3004,14 @@ class RAGChatbot:
             chunk.get("program_scope", GENERAL_SCOPE) == effective_scope for chunk in context
         ):
             return None
+        if effective_scope and asks_graduation_requirements(query):
+            if any(_is_graduation_whitelisted_source(chunk) for chunk in context):
+                return None
         if effective_scope:
             return (
                 "Sayın öğrencimiz,\n"
-                "Belirttiğiniz bölüm veya program için doğrudan resmi bir kaynak bulamadım. "
-                "Yanlış yönlendirmemek için net cevap veremiyorum."
+                "Belirttiğiniz bölüm veya program için açık ve doğrudan bir resmi dayanak bulamadım. "
+                "Yanlış yönlendirmemek için kesin bir cevap veremiyorum."
             )
 
         specific_scopes = {
@@ -2341,6 +3022,100 @@ class RAGChatbot:
         if specific_scopes:
             return f"Sayın öğrencimiz,\n{SCOPE_CLARIFICATION_TEXT}"
         return f"Sayın öğrencimiz,\n{SCOPE_CLARIFICATION_TEXT}"
+
+    def _evidence_focus_type(self, query: str) -> str:
+        normalized = normalize_text(query)
+        if asks_yaz_okulu_attendance(query):
+            return "attendance"
+        if asks_staj_insurance(query):
+            return "insurance"
+        if asks_external_summer_school_course(query):
+            return "external_university"
+        if asks_graduation_with_incomplete_internship(query) or asks_graduation_requirements(query):
+            return "graduation_requirement"
+        if asks_yaz_okulu_start(query) or asks_yaz_staji_schedule(query):
+            return "date"
+        if asks_yaz_okulu_duration(query):
+            return "week_duration"
+        if asks_staj_duration(query):
+            return "workday_duration"
+        if asks_staj_report_submission(query):
+            return "submission_process"
+        if asks_makeup_exam_with_missing_internship(query):
+            return "tek_cift_rule"
+        if asks_period_count(query):
+            return "period_count"
+        if any(marker in normalized for marker in ["hangi belge", "hangi belgeler", "evrak", "form", "dilekce"]):
+            return "document"
+        if any(marker in normalized for marker in ["ne zaman", "hangi tarihte", "son gun", "son tarih"]):
+            return "date"
+        if any(marker in normalized for marker in ["kac", "ne kadar", "suresi", "sure", "akts", "kredi"]):
+            return "numeric"
+        if any(marker in normalized for marker in ["nasil", "surec", "adim", "basvuru", "itiraz", "teslim"]):
+            return "process"
+        return ""
+
+    def _snippet_matches_focus(self, query: str, snippet: str) -> bool:
+        focus_type = self._evidence_focus_type(query)
+        if not focus_type:
+            return True
+
+        normalized_snippet = normalize_text(snippet)
+        snippet_tokens = set(normalized_snippet.split())
+
+        if focus_type == "date":
+            return bool(DATE_PATTERN.search(snippet) or re.search(r"\b20\d{2}\b", snippet))
+        if focus_type == "week_duration":
+            return "hafta" in snippet_tokens or WEEK_PATTERN.search(snippet) is not None
+        if focus_type == "workday_duration":
+            return "is gunu" in normalized_snippet or WORKDAY_NUMBER_PATTERN.search(snippet) is not None
+        if focus_type == "submission_process":
+            return any(
+                marker in normalized_snippet
+                for marker in ["rapor", "defter", "sbs", "teslim", "yukle", "yaklasik 30 gun"]
+            )
+        if focus_type == "attendance":
+            return "devam" in snippet_tokens or "devamsizlik" in snippet_tokens or "yoklama" in snippet_tokens
+        if focus_type == "insurance":
+            return "sigorta" in snippet_tokens
+        if focus_type == "external_university":
+            return any(
+                marker in normalized_snippet
+                for marker in ["diger universite", "universitemiz disinda", "esdeger", "farkli fakulte", "misafir ogrenci"]
+            )
+        if focus_type == "graduation_requirement":
+            return any(
+                marker in normalized_snippet
+                for marker in [
+                    "mezun",
+                    "mezuniyet",
+                    "diploma",
+                    "basarili",
+                    "butun calismalari tamamlamis",
+                    "mezun olmaya hak kazanir",
+                ]
+            )
+        if focus_type == "tek_cift_rule":
+            return any(marker in normalized_snippet for marker in ["tek cift", "tek ders", "cift ders"])
+        if focus_type == "period_count":
+            return any(marker in snippet_tokens for marker in ["donem", "yariyil"]) or any(
+                marker in normalized_snippet for marker in ["donem", "yariyil"]
+            )
+        if focus_type == "document":
+            return any(
+                marker in snippet_tokens
+                for marker in ["belge", "belgeler", "evrak", "form", "dilekce", "transkript", "rapor", "defter"]
+            )
+        if focus_type == "numeric":
+            return bool(NUMERIC_UNIT_PATTERN.search(snippet)) or any(
+                marker in snippet_tokens for marker in ["gun", "hafta", "ay", "kredi", "akts", "yariyil", "donem"]
+            )
+        if focus_type == "process":
+            return any(
+                marker in snippet_tokens
+                for marker in ["basvuru", "teslim", "onay", "yukle", "islem", "itiraz", "duyuru", "obs", "sbs"]
+            )
+        return True
 
     def _evidence_score(self, query: str, snippet: str, source: Dict) -> float:
         normalized_snippet = normalize_text(snippet)
@@ -2359,13 +3134,18 @@ class RAGChatbot:
         elif effective_scope and candidate_scope not in {GENERAL_SCOPE, ""}:
             score -= 12.0
 
-        query_topic = infer_topic({"content": query, "source_url": "", "kategori": ""})
+        query_topic = infer_query_topic(query)
         if query_topic != "genel" and source.get("topic") == query_topic:
             score += 8.0
 
         requested_years = extract_years(query)
         if requested_years and any(str(year) in snippet for year in requested_years):
             score += 10.0
+
+        if self._snippet_matches_focus(query, snippet):
+            score += 12.0
+        else:
+            score -= 10.0
 
         if is_short_factual_query(query):
             if NUMERIC_UNIT_PATTERN.search(snippet):
@@ -2422,6 +3202,7 @@ class RAGChatbot:
                 evidence = dict(source)
                 evidence["content"] = snippet
                 evidence["evidence_score"] = score
+                evidence["focus_match"] = self._snippet_matches_focus(query, snippet)
                 evidence["source_title"] = source.get("source_title") or infer_source_title(source)
                 candidates.append(evidence)
 
@@ -2432,6 +3213,12 @@ class RAGChatbot:
         top_score = ranked[0]["evidence_score"]
         if top_score < 6:
             return []
+
+        if any(item.get("focus_match") for item in ranked):
+            ranked = [item for item in ranked if item.get("focus_match")]
+            if not ranked:
+                return []
+            top_score = ranked[0]["evidence_score"]
 
         threshold = max(5.0, top_score * 0.35)
         selected = [item for item in ranked if item["evidence_score"] >= threshold]

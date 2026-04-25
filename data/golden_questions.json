@@ -1139,5 +1139,1325 @@
       "gerekli belgeler",
       "belge niteliği"
     ]
+  },
+  {
+    "id": "staj_004",
+    "intent": "staj_sigorta",
+    "topic": "staj",
+    "topic_label": "Staj",
+    "source_url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular",
+    "source_title": "Bilgisayar Mühendisliği - Staj SSS",
+    "query": "Staj sigortasını kim yapıyor?",
+    "query_variants": [
+      "Staj sigortamı üniversite mi yapıyor?",
+      "zorunlu staj sigortasını kim karşılıyor",
+      "staj sigorta işlemleri nasıl oluyor"
+    ],
+    "followups": [
+      "Sigorta için ayrıca başvuru yapmam gerekir mi?",
+      "Staj başlamadan önce sigorta tamamlanır mı?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "sigorta işlemleri",
+      "sorumlu birim",
+      "başvuru süreci"
+    ]
+  },
+  {
+    "id": "staj_005",
+    "intent": "staj_rapor_teslim",
+    "topic": "staj",
+    "topic_label": "Staj",
+    "source_url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular",
+    "source_title": "Bilgisayar Mühendisliği - Staj SSS",
+    "query": "Staj raporunu ne zaman teslim etmeliyim?",
+    "query_variants": [
+      "staj defteri ne zaman teslim edilir",
+      "staj raporu yükleme süresi ne kadar",
+      "staj dosyasını geç teslim edersem ne olur"
+    ],
+    "followups": [
+      "SBS üzerinden mi yükleniyor?",
+      "Teslim süresi bölümden bölüme değişir mi?"
+    ],
+    "answer_style": "kurumsal_maddeli",
+    "expected_points": [
+      "teslim süresi",
+      "SBS yükleme",
+      "değerlendirme süreci"
+    ]
+  },
+  {
+    "id": "staj_006",
+    "intent": "staj_donemleri",
+    "topic": "staj",
+    "topic_label": "Staj",
+    "source_url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj",
+    "source_title": "Bilgisayar Mühendisliği - Staj",
+    "query": "Zorunlu staj hangi dönemlerde yapılır?",
+    "query_variants": [
+      "staj 1 ve staj 2 hangi dönemlerde yapılmalı",
+      "zorunlu stajı hangi yarıyıllardan sonra yaparım",
+      "bilgisayar mühendisliği staj dönemleri neler"
+    ],
+    "followups": [
+      "Döneminde yapamazsam sonraki yaz yapabilir miyim?",
+      "Staj dersini sonra seçerek saydırabilir miyim?"
+    ],
+    "answer_style": "kurumsal_maddeli",
+    "expected_points": [
+      "yarıyıl bilgisi",
+      "staj dönemleri",
+      "bölüm bazlı açıklama"
+    ]
+  },
+  {
+    "id": "ders_kaydi_004",
+    "intent": "ders_kaydi_danisman",
+    "topic": "ders_kaydi",
+    "topic_label": "Ders Kaydı / Kayıt Yenileme",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+    "source_title": "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+    "query": "Ders kaydında danışman onayı gerekiyor mu?",
+    "query_variants": [
+      "ders seçiminden sonra danışman onayı var mı",
+      "kayıt yenilemede danışman onaylamazsa ne olur",
+      "ders kaydı danışman onayıyla mı tamamlanır"
+    ],
+    "followups": [
+      "Onay gelmezse kayıt geçersiz olur mu?",
+      "OBS üzerinden takip edebilir miyim?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "danışman onayı",
+      "OBS süreci",
+      "kayıt tamamlanması"
+    ]
+  },
+  {
+    "id": "ders_kaydi_005",
+    "intent": "ders_kaydi_mazeret",
+    "topic": "ders_kaydi",
+    "topic_label": "Ders Kaydı / Kayıt Yenileme",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+    "source_title": "Akademik Takvim",
+    "query": "Mazeretli ders kaydı ne zaman yapılır?",
+    "query_variants": [
+      "mazeretli kayıt tarihleri ne zaman",
+      "ders kaydını kaçırırsam mazeretli kayıt var mı",
+      "geç kalanlar için ders kaydı ne zaman açılır"
+    ],
+    "followups": [
+      "Mazeretli kayıt akademik takvimde yazar mı?",
+      "Her öğrenci mazeretli kayıt yapabilir mi?"
+    ],
+    "answer_style": "kurumsal_maddeli",
+    "expected_points": [
+      "mazeretli kayıt tarihi",
+      "akademik takvim",
+      "başvuru koşulu"
+    ]
+  },
+  {
+    "id": "ders_kaydi_006",
+    "intent": "ders_kaydi_alttan_ustten",
+    "topic": "ders_kaydi",
+    "topic_label": "Ders Kaydı / Kayıt Yenileme",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+    "source_title": "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+    "query": "Alttan dersim varken üstten ders alabilir miyim?",
+    "query_variants": [
+      "üstten ders alma şartları neler",
+      "alttan ders olunca ekstra ders seçilir mi",
+      "bir dönemde üstten ders seçmek mümkün mü"
+    ],
+    "followups": [
+      "Kredi sınırı buna göre değişir mi?",
+      "Danışman onayı gerekir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "üstten ders alma",
+      "kredi sınırı",
+      "koşullar"
+    ]
+  },
+  {
+    "id": "add_drop_004",
+    "intent": "add_drop_son_gun",
+    "topic": "add_drop",
+    "topic_label": "Add-Drop",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+    "source_title": "2024-2025 Eğitim-Öğretim Yılı Akademik Takvimi",
+    "query": "Add-drop işlemleri hangi gün sona erer?",
+    "query_variants": [
+      "add-drop son gün ne zaman",
+      "ders ekle sil haftası ne zaman biter",
+      "add drop son tarihi nedir"
+    ],
+    "followups": [
+      "Takvimde lisans için ayrı mı gösteriliyor?",
+      "Son gün saat sınırı olur mu?"
+    ],
+    "answer_style": "kurumsal_maddeli",
+    "expected_points": [
+      "bitiş tarihi",
+      "akademik takvim",
+      "add-drop dönemi"
+    ]
+  },
+  {
+    "id": "add_drop_005",
+    "intent": "add_drop_danisman",
+    "topic": "add_drop",
+    "topic_label": "Add-Drop",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+    "source_title": "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+    "query": "Add-drop sırasında danışman onayı gerekiyor mu?",
+    "query_variants": [
+      "ders ekle sil işlemi danışman onaylı mı",
+      "add-drop yapınca danışman onayı şart mı",
+      "ders değişikliğinde danışman onayı gerekir mi"
+    ],
+    "followups": [
+      "OBS’de değişiklik hemen görünür mü?",
+      "Onay olmadan ders ekleme tamamlanır mı?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "danışman onayı",
+      "ders ekleme/silme",
+      "OBS süreci"
+    ]
+  },
+  {
+    "id": "add_drop_006",
+    "intent": "add_drop_kredi",
+    "topic": "add_drop",
+    "topic_label": "Add-Drop",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+    "source_title": "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+    "query": "Add-drop döneminde kredi sınırını aşabilir miyim?",
+    "query_variants": [
+      "add-drop yaparken maksimum kredi değişir mi",
+      "ders ekle sil haftasında kredi limiti aşılır mı",
+      "kredi sınırı add-drop’ta da geçerli mi"
+    ],
+    "followups": [
+      "Danışman onayıyla aşılabilir mi?",
+      "Üstten ders alırken durum değişir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "kredi sınırı",
+      "add-drop kuralı",
+      "koşullar"
+    ]
+  },
+  {
+    "id": "devamsizlik_004",
+    "intent": "devamsizlik_teori_uygulama",
+    "topic": "devamsizlik",
+    "topic_label": "Devamsızlık",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+    "source_title": "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+    "query": "Teorik ve uygulamalı derslerde devamsızlık sınırı aynı mı?",
+    "query_variants": [
+      "uygulamalı ders devamsızlığı farklı mı",
+      "teori ve uygulamada devam şartı değişir mi",
+      "laboratuvar derslerinde devamsızlık nasıl olur"
+    ],
+    "followups": [
+      "Yüzde olarak mı hesaplanır?",
+      "Ders planında ayrıca belirtilir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "teorik ders",
+      "uygulamalı ders",
+      "devam zorunluluğu"
+    ]
+  },
+  {
+    "id": "devamsizlik_005",
+    "intent": "devamsizlik_final",
+    "topic": "devamsizlik",
+    "topic_label": "Devamsızlık",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+    "source_title": "Lisans Eğitim Öğretim Yönetmeliği",
+    "query": "Devamsızlıktan kalan öğrenci finale girebilir mi?",
+    "query_variants": [
+      "devamsızlıktan kalınca final hakkı olur mu",
+      "devamsızlık nedeniyle sınava girilir mi",
+      "devamsız öğrencinin dönem sonu sınav hakkı var mı"
+    ],
+    "followups": [
+      "Bütünleme hakkı da gider mi?",
+      "OBS’de devamsız görünür mü?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "final hakkı",
+      "devamsızlıktan kalma",
+      "sınav durumu"
+    ]
+  },
+  {
+    "id": "devamsizlik_006",
+    "intent": "devamsizlik_rapor",
+    "topic": "devamsizlik",
+    "topic_label": "Devamsızlık",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+    "source_title": "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+    "query": "Sağlık raporu devamsızlığı siler mi?",
+    "query_variants": [
+      "rapor alınca devamsızlık düşer mi",
+      "hastane raporu devamsızlık yerine geçer mi",
+      "mazeret raporu devam şartını kaldırır mı"
+    ],
+    "followups": [
+      "Rapor mazeret sınavı için geçerli olur mu?",
+      "Derse devam zorunluluğu yine de sürer mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "sağlık raporu",
+      "devam zorunluluğu",
+      "mazeret ayrımı"
+    ]
+  },
+  {
+    "id": "sinavlar_004",
+    "intent": "sinavlar_mazeret_basvuru",
+    "topic": "sinavlar",
+    "topic_label": "Sınavlar",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+    "source_title": "Yaz Okulu Uygulama Esasları",
+    "query": "Mazeret sınavı için nasıl başvuru yapılır?",
+    "query_variants": [
+      "mazeret sınav başvurusu nasıl oluyor",
+      "mazeret sınavına girmek için ne yapmalıyım",
+      "sınav mazereti nereye bildirilir"
+    ],
+    "followups": [
+      "Rapor yeterli olur mu?",
+      "Başvuru süresi kaç gündür?"
+    ],
+    "answer_style": "kurumsal_maddeli",
+    "expected_points": [
+      "başvuru süreci",
+      "mazeret belgesi",
+      "süre"
+    ]
+  },
+  {
+    "id": "sinavlar_005",
+    "intent": "sinavlar_but_final",
+    "topic": "sinavlar",
+    "topic_label": "Sınavlar",
+    "source_url": "https://panel.duzce.edu.tr//Dosya/GetFile/0070ab4a-559e-41a3-b1c7-1c28b68f0514",
+    "source_title": "Lisans Eğitim Öğretim Yönetmeliği",
+    "query": "Bütünleme notu final notunun yerine geçer mi?",
+    "query_variants": [
+      "büt notu finalin yerine yazılır mı",
+      "bütünleme sınavı finali siler mi",
+      "final ve bütünleme notundan hangisi geçerli olur"
+    ],
+    "followups": [
+      "Daha düşük alırsam son not değişir mi?",
+      "Her ders için bütünleme var mı?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "bütünleme notu",
+      "final notu",
+      "geçerli not"
+    ]
+  },
+  {
+    "id": "sinavlar_006",
+    "intent": "sinavlar_yaz_okulu_but",
+    "topic": "sinavlar",
+    "topic_label": "Sınavlar",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+    "source_title": "2024-2025 Eğitim-Öğretim Yılı Akademik Takvimi",
+    "query": "Yaz okulunda bütünleme sınavı olur mu?",
+    "query_variants": [
+      "yaz okulunda büt var mı",
+      "yaz okulu derslerinde bütünleme yapılıyor mu",
+      "yaz okulunda finalden sonra ek sınav olur mu"
+    ],
+    "followups": [
+      "Yaz okulu uygulama esaslarında yazıyor mu?",
+      "Mazeret sınavı ile karışır mı?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "yaz okulu",
+      "bütünleme sınavı",
+      "uygulama esasları"
+    ]
+  },
+  {
+    "id": "not_sistemi_ortalama_004",
+    "intent": "not_sistemi_agno",
+    "topic": "not_sistemi_ortalama",
+    "topic_label": "Not Sistemi / Ortalama",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+    "source_title": "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+    "query": "AGNO ve GANO aynı şey mi?",
+    "query_variants": [
+      "agno ile gano farkı nedir",
+      "genel not ortalaması ile agno aynı mı",
+      "ortalama türleri nelerdir"
+    ],
+    "followups": [
+      "Mezuniyet için hangisi kullanılır?",
+      "Dönem ortalaması ayrı mı hesaplanır?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "AGNO/GANO",
+      "ortalama türü",
+      "hesaplama mantığı"
+    ]
+  },
+  {
+    "id": "not_sistemi_ortalama_005",
+    "intent": "not_sistemi_kosullu_gecis",
+    "topic": "not_sistemi_ortalama",
+    "topic_label": "Not Sistemi / Ortalama",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+    "source_title": "Lisans Eğitim Öğretim Yönetmeliği",
+    "query": "DD ve DC notlarıyla koşullu geçiş nasıl oluyor?",
+    "query_variants": [
+      "dc dd ile ders geçilir mi",
+      "koşullu geçme için ortalama kaç olmalı",
+      "dd dc notu başarısız sayılır mı"
+    ],
+    "followups": [
+      "AGNO düşükse kalır mıyım?",
+      "Tekrar almam gerekir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "DD/DC",
+      "koşullu geçiş",
+      "ortalama koşulu"
+    ]
+  },
+  {
+    "id": "not_sistemi_ortalama_006",
+    "intent": "not_sistemi_tekrar",
+    "topic": "not_sistemi_ortalama",
+    "topic_label": "Not Sistemi / Ortalama",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/06193c82-1968-4c61-9891-d55538ef9528",
+    "source_title": "Lisans Eğitim Öğretim Yönetmeliği",
+    "query": "Not yükseltmek için başarılı olduğum dersi tekrar alabilir miyim?",
+    "query_variants": [
+      "geçtiğim dersi not yükseltmek için tekrar seçebilir miyim",
+      "başarılı dersi ortalama artırmak için almak mümkün mü",
+      "harf notunu yükseltmek için ders tekrarı yapılır mı"
+    ],
+    "followups": [
+      "Son alınan not mu geçerli olur?",
+      "Kredi hesabı değişir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "ders tekrarı",
+      "not yükseltme",
+      "geçerli not"
+    ]
+  },
+  {
+    "id": "mezuniyet_004",
+    "intent": "mezuniyet_eksik_ders",
+    "topic": "mezuniyet",
+    "topic_label": "Mezuniyet",
+    "source_url": "https://panel.duzce.edu.tr//Dosya/GetFile/0bf859f9-969c-4171-b6ae-356555f8dd99",
+    "source_title": "Lisans Eğitim Öğretim Yönetmeliği",
+    "query": "Bir dersim eksikken mezun olabilir miyim?",
+    "query_variants": [
+      "tek ders kalınca mezun sayılır mıyım",
+      "mezuniyet için tüm dersleri geçmiş olmak zorunlu mu",
+      "eksik dersle mezuniyet olur mu"
+    ],
+    "followups": [
+      "Tek ders sınavı varsa durum değişir mi?",
+      "Staj da mezuniyet şartına dahil mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "ders tamamlama",
+      "mezuniyet şartı",
+      "tek ders durumu"
+    ]
+  },
+  {
+    "id": "mezuniyet_005",
+    "intent": "mezuniyet_staj",
+    "topic": "mezuniyet",
+    "topic_label": "Mezuniyet",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+    "source_title": "Lisans Eğitim Öğretim Yönetmeliği",
+    "query": "Mezuniyet için stajın tamamlanmış olması gerekir mi?",
+    "query_variants": [
+      "stajı yapmadan mezun olunur mu",
+      "mezuniyet için zorunlu staj şart mı",
+      "staj eksikse diploma alınır mı"
+    ],
+    "followups": [
+      "Tek ders sınavı olsa bile staj zorunlu mu?",
+      "Bölüm bazlı farklılık olabilir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "staj şartı",
+      "mezuniyet koşulu",
+      "tamamlama zorunluluğu"
+    ]
+  },
+  {
+    "id": "mezuniyet_006",
+    "intent": "mezuniyet_diploma",
+    "topic": "mezuniyet",
+    "topic_label": "Mezuniyet",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+    "source_title": "Öğrenci İşleri Duyuruları",
+    "query": "Diplomamı mezun olduktan ne kadar sonra alabilirim?",
+    "query_variants": [
+      "mezuniyet sonrası diploma ne zaman verilir",
+      "diploma teslim süreci nasıl işler",
+      "geçici mezuniyet belgesi alınabilir mi"
+    ],
+    "followups": [
+      "Diploma için ayrıca başvuru gerekir mi?",
+      "Geçici mezuniyet belgesi önce verilir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "diploma süreci",
+      "teslim",
+      "geçici mezuniyet belgesi"
+    ]
+  },
+  {
+    "id": "cap_yandal_004",
+    "intent": "cap_yandal_takvim",
+    "topic": "cap_yandal",
+    "topic_label": "ÇAP / Yandal",
+    "source_url": "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+    "source_title": "ÇAP ve Yandal Başvuru Esasları",
+    "query": "ÇAP başvuruları hangi tarihlerde yapılır?",
+    "query_variants": [
+      "çift anadal başvuru tarihleri ne zaman",
+      "çap takvimi nerede açıklanır",
+      "çap başvuru dönemi hangi haftada olur"
+    ],
+    "followups": [
+      "Her dönem açılır mı?",
+      "Duyurular bölüm sayfasında mı yayımlanır?"
+    ],
+    "answer_style": "kurumsal_maddeli",
+    "expected_points": [
+      "başvuru tarihi",
+      "duyuru",
+      "çap takvimi"
+    ]
+  },
+  {
+    "id": "cap_yandal_005",
+    "intent": "cap_yandal_ayni_anda",
+    "topic": "cap_yandal",
+    "topic_label": "ÇAP / Yandal",
+    "source_url": "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+    "source_title": "ÇAP ve Yandal Başvuru Esasları",
+    "query": "Aynı anda hem ÇAP hem yandal yapılabilir mi?",
+    "query_variants": [
+      "çap ve yandal birlikte okunur mu",
+      "aynı dönemde hem çift anadal hem yandal olur mu",
+      "iki program birden yürütülebilir mi"
+    ],
+    "followups": [
+      "Birini bırakınca diğeri devam eder mi?",
+      "Ortalama şartı ikisi için de geçerli mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "çap",
+      "yandal",
+      "birlikte yürütme"
+    ]
+  },
+  {
+    "id": "cap_yandal_006",
+    "intent": "cap_yandal_birakma",
+    "topic": "cap_yandal",
+    "topic_label": "ÇAP / Yandal",
+    "source_url": "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+    "source_title": "ÇAP ve Yandal Başvuru Esasları",
+    "query": "Yandalı bırakmak istersem ne olur?",
+    "query_variants": [
+      "yandal programından ayrılabilir miyim",
+      "yandalı silince ana program etkilenir mi",
+      "yandal bırakma işlemi nasıl yapılır"
+    ],
+    "followups": [
+      "ÇAP için de benzer kural var mı?",
+      "Başvuru ile mi bırakılır?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "programdan ayrılma",
+      "başvuru",
+      "ana program etkisi"
+    ]
+  },
+  {
+    "id": "yatay_gecis_004",
+    "intent": "yatay_gecis_takvim",
+    "topic": "yatay_gecis",
+    "topic_label": "Yatay Geçiş",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/cd218698-9e13-4d5b-911a-deeb096326de",
+    "source_title": "Yatay Geçiş Başvuru Esasları",
+    "query": "Yatay geçiş başvuruları ne zaman açıklanır?",
+    "query_variants": [
+      "yatay geçiş takvimi ne zaman yayımlanır",
+      "başvuru tarihleri hangi dönemde duyurulur",
+      "yatay geçiş tarihleri nerede ilan edilir"
+    ],
+    "followups": [
+      "Her yıl değişir mi?",
+      "Sonuçlar aynı yerde mi duyurulur?"
+    ],
+    "answer_style": "kurumsal_maddeli",
+    "expected_points": [
+      "başvuru takvimi",
+      "duyuru",
+      "ilan"
+    ]
+  },
+  {
+    "id": "yatay_gecis_005",
+    "intent": "yatay_gecis_hazirlik",
+    "topic": "yatay_gecis",
+    "topic_label": "Yatay Geçiş",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+    "source_title": "Yatay Geçiş Başvuru Esasları",
+    "query": "Hazırlık okuyan öğrenci yatay geçiş yapabilir mi?",
+    "query_variants": [
+      "hazırlık sınıfındayken yatay geçiş olur mu",
+      "hazırlık öğrencisi kurum içi geçiş yapabilir mi",
+      "hazırlıkta okurken bölüm değiştirilebilir mi"
+    ],
+    "followups": [
+      "Merkezi puanla durum değişir mi?",
+      "Dil hazırlığı şartı etkiler mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "hazırlık sınıfı",
+      "yatay geçiş koşulu",
+      "başvuru durumu"
+    ]
+  },
+  {
+    "id": "yatay_gecis_006",
+    "intent": "yatay_gecis_online",
+    "topic": "yatay_gecis",
+    "topic_label": "Yatay Geçiş",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+    "source_title": "Yatay Geçiş Başvuru Esasları",
+    "query": "Yatay geçiş başvurusu online mı yapılıyor?",
+    "query_variants": [
+      "yatay geçiş başvurusu internetten mi",
+      "evraklar online yükleniyor mu",
+      "başvuru sistemi var mı"
+    ],
+    "followups": [
+      "Belgeleri ayrıca teslim etmek gerekir mi?",
+      "Sonuçlar online açıklanır mı?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "online başvuru",
+      "evrak yükleme",
+      "başvuru sistemi"
+    ]
+  },
+  {
+    "id": "harc_ucret_004",
+    "intent": "harc_ucret_son_gun",
+    "topic": "harc_ucret",
+    "topic_label": "Harç / Ücret",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745",
+    "source_title": "Katkı Payı ve Öğrenim Ücreti",
+    "query": "Harç ödeme için son gün ne zaman?",
+    "query_variants": [
+      "katkı payı son ödeme tarihi nedir",
+      "öğrenim ücreti ödeme son günü ne zaman",
+      "harç yatırma tarihi ne zaman bitiyor"
+    ],
+    "followups": [
+      "Akademik takvimde ayrıca gösterilir mi?",
+      "Gecikince kayıt yenileme olur mu?"
+    ],
+    "answer_style": "kurumsal_maddeli",
+    "expected_points": [
+      "son ödeme tarihi",
+      "akademik takvim",
+      "kayıt yenileme ilişkisi"
+    ]
+  },
+  {
+    "id": "harc_ucret_005",
+    "intent": "harc_ucret_iade",
+    "topic": "harc_ucret",
+    "topic_label": "Harç / Ücret",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745",
+    "source_title": "Katkı Payı ve Öğrenim Ücreti",
+    "query": "Fazla yatırılan harç iade edilir mi?",
+    "query_variants": [
+      "yanlış yatırılan katkı payı geri alınır mı",
+      "fazla ödeme olursa iade var mı",
+      "öğrenim ücreti iadesi nasıl yapılır"
+    ],
+    "followups": [
+      "İade için dilekçe gerekir mi?",
+      "Öğrenci işleri mi muhasebe mi ilgilenir?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "iade süreci",
+      "dilekçe",
+      "ilgili birim"
+    ]
+  },
+  {
+    "id": "harc_ucret_006",
+    "intent": "harc_ucret_kayit_engel",
+    "topic": "harc_ucret",
+    "topic_label": "Harç / Ücret",
+    "source_url": "https://mf.duzce.edu.tr/sayfa/8a10/ders-kayitlari-esnasinda-sikca-sorulan-sorular-ve-cevaplari",
+    "source_title": "Ders Kayıtları Esnasında Sıkça Sorulan Sorular ve Cevapları",
+    "query": "Harç ödenmezse öğrenci ders seçebilir mi?",
+    "query_variants": [
+      "katkı payı yatırmadan obs açılır mı",
+      "ücret ödenmeden kayıt tamamlanır mı",
+      "harç borcu varsa ders seçimi olur mu"
+    ],
+    "followups": [
+      "Danışman onayı da bekler mi?",
+      "Mazeretli kayıt için durum değişir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "ödeme zorunluluğu",
+      "ders seçimi",
+      "kayıt engeli"
+    ]
+  },
+  {
+    "id": "burs_004",
+    "intent": "burs_belge",
+    "topic": "burs",
+    "topic_label": "Burs",
+    "source_url": "https://panel.duzce.edu.tr//Dosya/GetFile/22a1f570-c7f7-4dd8-8598-616f2ae00e21",
+    "source_title": "Burs Başvuru Duyuruları",
+    "query": "Burs başvurusunda hangi belgeler istenir?",
+    "query_variants": [
+      "burs için gerekli evraklar neler",
+      "burs başvurusu belge listesi nedir",
+      "hangi belgelerle burs başvurusu yapacağım"
+    ],
+    "followups": [
+      "Belgeler online mi yüklenir?",
+      "Eksik belge olursa başvuru reddedilir mi?"
+    ],
+    "answer_style": "kurumsal_maddeli",
+    "expected_points": [
+      "gerekli belgeler",
+      "başvuru evrakı",
+      "yükleme/teslim"
+    ]
+  },
+  {
+    "id": "burs_005",
+    "intent": "burs_sonuclar",
+    "topic": "burs",
+    "topic_label": "Burs",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e",
+    "source_title": "Burs Başvuru Duyuruları",
+    "query": "Burs sonuçları ne zaman açıklanır?",
+    "query_variants": [
+      "burs başvuru sonuçları ne zaman belli olur",
+      "burs kazananlar ne zaman ilan edilir",
+      "sonuç duyurusu nereden yapılır"
+    ],
+    "followups": [
+      "Duyuru öğrenci işleri sayfasında mı olur?",
+      "Sonuçlar bireysel olarak bildirilir mi?"
+    ],
+    "answer_style": "kurumsal_maddeli",
+    "expected_points": [
+      "sonuç tarihi",
+      "duyuru",
+      "ilan yöntemi"
+    ]
+  },
+  {
+    "id": "burs_006",
+    "intent": "burs_basarisizlik",
+    "topic": "burs",
+    "topic_label": "Burs",
+    "source_url": "https://panel.duzce.edu.tr//Dosya/GetFile/22a1f570-c7f7-4dd8-8598-616f2ae00e21",
+    "source_title": "Burs Başvuru Duyuruları",
+    "query": "Başarısız olursam bursum kesilir mi?",
+    "query_variants": [
+      "ortalama düşünce burs kesilir mi",
+      "akademik başarısızlık bursu etkiler mi",
+      "burs devamı için başarı şartı var mı"
+    ],
+    "followups": [
+      "Disiplin cezası ile aynı şey mi?",
+      "Her burs türünde kural aynı mı?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "başarı şartı",
+      "burs kesilmesi",
+      "burs türü farkı"
+    ]
+  },
+  {
+    "id": "ogrenci_belgesi_transkript_004",
+    "intent": "ogrenci_belgesi_e_devlet",
+    "topic": "ogrenci_belgesi_transkript",
+    "topic_label": "Öğrenci Belgesi / Transkript",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+    "source_title": "Ders Muafiyeti ve İntibak Esasları",
+    "query": "Öğrenci belgesini e-Devlet üzerinden alabilir miyim?",
+    "query_variants": [
+      "öğrenci belgesi e devletten çıkar mı",
+      "okula gitmeden öğrenci belgesi alınır mı",
+      "online öğrenci belgesi mümkün mü"
+    ],
+    "followups": [
+      "Islak imzalı istenirse ne yapmalıyım?",
+      "Barkodlu belge geçerli olur mu?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "e-Devlet",
+      "öğrenci belgesi",
+      "barkod/ıslak imza"
+    ]
+  },
+  {
+    "id": "ogrenci_belgesi_transkript_005",
+    "intent": "transkript_ucret",
+    "topic": "ogrenci_belgesi_transkript",
+    "topic_label": "Öğrenci Belgesi / Transkript",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+    "source_title": "Ders Muafiyeti ve İntibak Esasları",
+    "query": "İngilizce transkript ücretli mi?",
+    "query_variants": [
+      "yabancı dilde transkript için ücret ödenir mi",
+      "ingilizce transkript paralı mı",
+      "transkript alırken ücret istenir mi"
+    ],
+    "followups": [
+      "Kaç günde hazırlanır?",
+      "Online talep edilebilir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "İngilizce transkript",
+      "ücret",
+      "talep süreci"
+    ]
+  },
+  {
+    "id": "ogrenci_belgesi_transkript_006",
+    "intent": "transkript_onayli",
+    "topic": "ogrenci_belgesi_transkript",
+    "topic_label": "Öğrenci Belgesi / Transkript",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da",
+    "source_title": "Kayıt Yenileme İşlemleri",
+    "query": "Onaylı transkripti nereden alırım?",
+    "query_variants": [
+      "imzalı kaşeli transkript nasıl alınır",
+      "resmi transkript için nereye başvurulur",
+      "onaylı not dökümü öğrenci işlerinden mi alınır"
+    ],
+    "followups": [
+      "E-devlet transkripti yeterli olur mu?",
+      "İngilizce onaylı transkript de veriliyor mu?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "onaylı transkript",
+      "başvuru birimi",
+      "belge türü"
+    ]
+  },
+  {
+    "id": "askerlik_tecili_004",
+    "intent": "askerlik_tecili_sure",
+    "topic": "askerlik_tecili",
+    "topic_label": "Askerlik Tecili",
+    "source_url": "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+    "source_title": "Askerlik Tecil İşlemleri",
+    "query": "Öğrencilik nedeniyle tecil ne zamana kadar sürer?",
+    "query_variants": [
+      "öğrenci tecili kaç yaşına kadar geçerli",
+      "askerlik tecil süresi ne kadar",
+      "öğrenciyken tecil bitişi nasıl hesaplanır"
+    ],
+    "followups": [
+      "Program süresine göre değişir mi?",
+      "Kayıt dondurunca etkilenir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "tecil süresi",
+      "öğrencilik durumu",
+      "bitiş"
+    ]
+  },
+  {
+    "id": "askerlik_tecili_005",
+    "intent": "askerlik_mezuniyet",
+    "topic": "askerlik_tecili",
+    "topic_label": "Askerlik Tecili",
+    "source_url": "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+    "source_title": "Askerlik Tecil İşlemleri",
+    "query": "Mezun olunca askerlik tecilim hemen bozulur mu?",
+    "query_variants": [
+      "mezuniyet sonrası tecil devam eder mi",
+      "diploma alınca askerlik ertelenmesi biter mi",
+      "mezun olduktan sonra askerlik süreci nasıl işler"
+    ],
+    "followups": [
+      "Ek tecil süresi olur mu?",
+      "Askerlik şubesi mi belirler?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "mezuniyet sonrası",
+      "tecil durumu",
+      "askerlik şubesi"
+    ]
+  },
+  {
+    "id": "askerlik_tecili_006",
+    "intent": "askerlik_ilisik",
+    "topic": "askerlik_tecili",
+    "topic_label": "Askerlik Tecili",
+    "source_url": "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+    "source_title": "Askerlik Tecil İşlemleri",
+    "query": "Kaydım silinirse askerlik tecilim ne olur?",
+    "query_variants": [
+      "ilişik kesilince tecil bozulur mu",
+      "üniversite kaydı kapanırsa askerlik ertelenmesi devam eder mi",
+      "öğrencilik bitince tecil iptal olur mu"
+    ],
+    "followups": [
+      "Kayıt dondurma ile aynı şey mi?",
+      "Askerlik şubesine ayrıca bildirilir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "ilişik kesme",
+      "tecil iptali",
+      "bildirim"
+    ]
+  },
+  {
+    "id": "disiplin_islemleri_004",
+    "intent": "disiplin_kinama",
+    "topic": "disiplin_islemleri",
+    "topic_label": "Disiplin İşlemleri",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/a3dc4e5a-a9d6-45f0-8ec8-0b6d8293987c",
+    "source_title": "Öğrenci Disiplin Yönetmeliği",
+    "query": "Kınama cezası hangi fiiller için verilir?",
+    "query_variants": [
+      "uyarma ve kınama cezası farkı nedir",
+      "kınama cezası gerektiren durumlar neler",
+      "hangi davranışlar disiplin cezasına girer"
+    ],
+    "followups": [
+      "Yönetmelikte madde madde yazıyor mu?",
+      "Daha ağır cezalar da var mı?"
+    ],
+    "answer_style": "kurumsal_maddeli",
+    "expected_points": [
+      "kınama cezası",
+      "fiiller",
+      "disiplin türleri"
+    ]
+  },
+  {
+    "id": "disiplin_islemleri_005",
+    "intent": "disiplin_savunma",
+    "topic": "disiplin_islemleri",
+    "topic_label": "Disiplin İşlemleri",
+    "source_url": "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864",
+    "source_title": "Öğrenci Disiplin Yönetmeliği",
+    "query": "Savunma alınmadan disiplin cezası verilebilir mi?",
+    "query_variants": [
+      "disiplin sürecinde savunma zorunlu mu",
+      "öğrenciden savunma istenmeden ceza çıkar mı",
+      "savunma hakkı olmadan işlem yapılır mı"
+    ],
+    "followups": [
+      "Savunma için süre verilir mi?",
+      "Yazılı savunma gerekir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "savunma hakkı",
+      "süreç",
+      "öğrenci hakkı"
+    ]
+  },
+  {
+    "id": "disiplin_islemleri_006",
+    "intent": "disiplin_itiraz_sure",
+    "topic": "disiplin_islemleri",
+    "topic_label": "Disiplin İşlemleri",
+    "source_url": "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864",
+    "source_title": "Öğrenci Disiplin Yönetmeliği",
+    "query": "Disiplin kararına kaç gün içinde itiraz edilir?",
+    "query_variants": [
+      "disiplin cezası itiraz süresi nedir",
+      "karara ne kadar sürede başvurulur",
+      "disiplin kararına karşı süre kaç gün"
+    ],
+    "followups": [
+      "İtiraz nereye yapılır?",
+      "Dava açma süresi farklı mı?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "itiraz süresi",
+      "başvuru mercii",
+      "disiplin kararı"
+    ]
+  },
+  {
+    "id": "akademik_takvim_duyurular_004",
+    "intent": "akademik_takvim_kayit",
+    "topic": "akademik_takvim_duyurular",
+    "topic_label": "Akademik Takvim / Duyurular",
+    "source_url": "https://ogrenciisleri.duzce.edu.tr/duyurular",
+    "source_title": "Akademik Takvim",
+    "query": "Kayıt yenileme tarihleri akademik takvimde yazar mı?",
+    "query_variants": [
+      "ders kaydı tarihleri akademik takvimde olur mu",
+      "kayıt yenileme günleri nerede açıklanır",
+      "akademik takvimde ders kayıt tarihi var mı"
+    ],
+    "followups": [
+      "Mazeretli kayıt da eklenir mi?",
+      "Her fakülte için aynı mı olur?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "kayıt yenileme",
+      "akademik takvim",
+      "mazeretli kayıt"
+    ]
+  },
+  {
+    "id": "akademik_takvim_duyurular_005",
+    "intent": "duyurular_staj",
+    "topic": "akademik_takvim_duyurular",
+    "topic_label": "Akademik Takvim / Duyurular",
+    "source_url": "https://ogrenciisleri.duzce.edu.tr/duyurular",
+    "source_title": "Öğrenci İşleri Duyuruları",
+    "query": "Öğrenci işleri duyurularını düzenli olarak nereden takip etmeliyim?",
+    "query_variants": [
+      "güncel öğrenci işleri duyuruları nerede olur",
+      "duyurular için hangi sayfayı izlemeliyim",
+      "resmi açıklamalar hangi sitede yayımlanıyor"
+    ],
+    "followups": [
+      "Akademik takvim ve duyuru sayfası aynı mı?",
+      "Bölüm duyuruları ayrıca kontrol edilmeli mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "duyuru sayfası",
+      "resmi takip",
+      "bölüm duyuruları"
+    ]
+  },
+  {
+    "id": "akademik_takvim_duyurular_006",
+    "intent": "akademik_takvim_sinav",
+    "topic": "akademik_takvim_duyurular",
+    "topic_label": "Akademik Takvim / Duyurular",
+    "source_url": "https://ogrenciisleri.duzce.edu.tr/duyurular",
+    "source_title": "Akademik Takvim",
+    "query": "Final ve bütünleme tarihleri akademik takvimde yer alır mı?",
+    "query_variants": [
+      "sınav tarihleri akademik takvimde olur mu",
+      "final haftası nereden öğrenilir",
+      "büt sınavları takvimde gösterilir mi"
+    ],
+    "followups": [
+      "Yaz okulu sınavları da eklenir mi?",
+      "Bölüm bazlı değişiklik olabilir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "sınav tarihleri",
+      "akademik takvim",
+      "final/bütünleme"
+    ]
+  },
+  {
+    "id": "yaz_okulu_004",
+    "intent": "yaz_okulu_devam",
+    "topic": "yaz_okulu",
+    "topic_label": "Yaz Okulu",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+    "source_title": "Yaz Okulu Uygulama Esasları",
+    "query": "Yaz okulunda devam zorunluluğu var mı?",
+    "query_variants": [
+      "yaz okulunda derse devam şart mı",
+      "yaz okulu yoklama zorunlu mu",
+      "yaz okulunda devamsızlık nasıl işler"
+    ],
+    "followups": [
+      "Normal dönemden farklı mı?",
+      "Uygulamalı derslerde durum değişir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "devam zorunluluğu",
+      "yaz okulu",
+      "uygulama"
+    ]
+  },
+  {
+    "id": "yaz_okulu_005",
+    "intent": "yaz_okulu_ders_sayisi",
+    "topic": "yaz_okulu",
+    "topic_label": "Yaz Okulu",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+    "source_title": "Yaz Okulu Uygulama Esasları",
+    "query": "Yaz okulunda en fazla kaç AKTS alınabilir?",
+    "query_variants": [
+      "yaz okulu kredi sınırı nedir",
+      "yaz okulunda maksimum akts kaç",
+      "kaç ders yerine kaç akts alınır"
+    ],
+    "followups": [
+      "Ders sayısı ile AKTS sınırı aynı şey mi?",
+      "Başka üniversiteden alınırsa değişir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "AKTS sınırı",
+      "ders sayısı",
+      "yaz okulu limiti"
+    ]
+  },
+  {
+    "id": "yaz_okulu_006",
+    "intent": "yaz_okulu_dis_universite",
+    "topic": "yaz_okulu",
+    "topic_label": "Yaz Okulu",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+    "source_title": "Yaz Okulu Uygulama Esasları",
+    "query": "Yaz okulunda başka üniversiteden ders alabilir miyim?",
+    "query_variants": [
+      "farklı üniversiteden yaz okulu dersi saydırılır mı",
+      "başka okuldan yaz dersi almak mümkün mü",
+      "misafir öğrenci olarak yaz okulu olur mu"
+    ],
+    "followups": [
+      "Önceden onay almak gerekir mi?",
+      "Muafiyet/intibak işlemi gerekir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "başka üniversite",
+      "ön onay",
+      "saydırma/intibak"
+    ]
+  },
+  {
+    "id": "muafiyet_intibak_004",
+    "intent": "muafiyet_tarih",
+    "topic": "muafiyet_intibak",
+    "topic_label": "Muafiyet / İntibak",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+    "source_title": "Ders Muafiyeti ve İntibak Esasları",
+    "query": "Muafiyet başvurusu hangi tarihlerde yapılır?",
+    "query_variants": [
+      "muafiyet için son başvuru tarihi nedir",
+      "ders saydırma başvurusu ne zaman yapılır",
+      "intibak başvurusu hangi hafta alınır"
+    ],
+    "followups": [
+      "Kayıt olduktan hemen sonra mı yapılır?",
+      "Geç başvuru kabul edilir mi?"
+    ],
+    "answer_style": "kurumsal_maddeli",
+    "expected_points": [
+      "başvuru tarihi",
+      "muafiyet dönemi",
+      "geç başvuru"
+    ]
+  },
+  {
+    "id": "muafiyet_intibak_005",
+    "intent": "muafiyet_sonuc",
+    "topic": "muafiyet_intibak",
+    "topic_label": "Muafiyet / İntibak",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+    "source_title": "Ders Muafiyeti ve İntibak Esasları",
+    "query": "İntibak sonucu nereden öğrenilir?",
+    "query_variants": [
+      "muafiyet sonucu nasıl açıklanır",
+      "ders saydırma sonucu obs’de görünür mü",
+      "intibak kararını nereden takip ederim"
+    ],
+    "followups": [
+      "Bölüm kurul kararı gerekir mi?",
+      "Sonuç öğrenci işleri tarafından mı duyurulur?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "intibak sonucu",
+      "duyuru/takip",
+      "kurul kararı"
+    ]
+  },
+  {
+    "id": "muafiyet_intibak_006",
+    "intent": "muafiyet_akts",
+    "topic": "muafiyet_intibak",
+    "topic_label": "Muafiyet / İntibak",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+    "source_title": "Ders Muafiyeti ve İntibak Esasları",
+    "query": "Daha önce aldığım dersin kredisi düşükse yine de sayılır mı?",
+    "query_variants": [
+      "muafiyet için akts eşit olmak zorunda mı",
+      "kredi farkı varsa ders saydırılır mı",
+      "eşdeğer dersin kredisi farklıysa ne olur"
+    ],
+    "followups": [
+      "İçerik benzerliği mi esas alınır?",
+      "Kurul kararına mı bağlıdır?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "AKTS/kredi",
+      "eşdeğerlik",
+      "kurul değerlendirmesi"
+    ]
+  },
+  {
+    "id": "staj_007",
+    "intent": "staj_doneminde_yapamazsa",
+    "topic": "staj",
+    "topic_label": "Staj",
+    "source_url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj",
+    "source_title": "Bilgisayar Mühendisliği - Staj",
+    "query": "Bilgisayar mühendisliği öğrencisi döneminde staj yapamazsa daha sonra nasıl saydırır?",
+    "query_variants": [
+      "stajımı döneminde yapamazsam sonra nasıl saydırırım",
+      "bilgisayar mühendisliğinde stajı geciktirirsem ne yaparım",
+      "döneminde yapılmayan staj daha sonra nasıl işlenir"
+    ],
+    "followups": [
+      "Takip eden yarıyılda OBS'de ders almak gerekir mi?",
+      "Dersi daha önce aldıysam tekrar almam gerekir mi?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "takip eden yarıyıl",
+      "OBS staj dersi",
+      "saydırma süreci"
+    ]
+  },
+  {
+    "id": "mezuniyet_007",
+    "intent": "mezuniyet_temin_sartlar",
+    "topic": "mezuniyet",
+    "topic_label": "Mezuniyet",
+    "source_url": "https://panel.duzce.edu.tr//Dosya/GetFile/0bf859f9-969c-4171-b6ae-356555f8dd99",
+    "source_title": "Lisans Eğitim Öğretim Yönetmeliği",
+    "query": "Bilgisayar mühendisliğinde mezun olabilmek için staj dışında hangi temel şartlar sağlanmalı?",
+    "query_variants": [
+      "mezuniyet için staj dışında hangi koşullar var",
+      "bilgisayar mühendisliğinde diploma almak için temel mezuniyet şartları neler",
+      "staj hariç mezuniyet koşulları nelerdir"
+    ],
+    "followups": [
+      "Derslerin tamamı başarılı olmalı mı?",
+      "Genel not ortalaması şartı da aranır mı?"
+    ],
+    "answer_style": "kurumsal_maddeli",
+    "expected_points": [
+      "mezuniyet şartları",
+      "derslerin tamamlanması",
+      "ilgili mevzuat koşulları"
+    ]
+  },
+  {
+    "id": "yaz_okulu_007",
+    "intent": "yaz_okulu_devam_bm",
+    "topic": "yaz_okulu",
+    "topic_label": "Yaz Okulu",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+    "source_title": "Yaz Okulu Uygulama Esasları",
+    "query": "Bilgisayar mühendisliği yaz okulunda devam zorunluluğu var mı?",
+    "query_variants": [
+      "bilgisayar mühendisliğinde yaz okulunda devam zorunlu mu",
+      "yaz okulunda devamsızlık kuralı var mı",
+      "yaz okulu derslerinde yoklama zorunlu mu"
+    ],
+    "followups": [
+      "Daha önce devam şartını sağladığım dersi tekrar alırsam durum değişir mi?",
+      "Başka üniversiteden alınan yaz okulu dersinde devam şartı nasıl olur?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "yaz okulu",
+      "devam zorunluluğu",
+      "istisna koşulu"
+    ]
+  },
+  {
+    "id": "yaz_okulu_008",
+    "intent": "yaz_okulu_dis_universite_bm",
+    "topic": "yaz_okulu",
+    "topic_label": "Yaz Okulu",
+    "source_url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+    "source_title": "Yaz Okulu Uygulama Esasları",
+    "query": "Bilgisayar mühendisliği bölümünde yaz okulunda başka üniversiteden ders alabilir miyim?",
+    "query_variants": [
+      "bilgisayar mühendisliği öğrencisi yaz okulunda başka üniversiteden ders alabilir mi",
+      "yaz okulunda başka üniversite dersi saydırılır mı",
+      "misafir öğrenci gibi başka üniversiteden yaz dersi alabilir miyim"
+    ],
+    "followups": [
+      "Bölüm başkanlığının onayı gerekir mi?",
+      "Eşdeğerlik için AKTS ve içerik şartı aranır mı?"
+    ],
+    "answer_style": "kurumsal_kisa",
+    "expected_points": [
+      "başka üniversite",
+      "bölüm onayı",
+      "eşdeğerlik koşulu"
+    ]
   }
 ]
