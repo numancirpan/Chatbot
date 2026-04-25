@@ -6,13 +6,22 @@ import unicodedata
 from collections import Counter
 from typing import Dict, List, Optional
 
+import numpy as np
 import requests
 from langchain_chroma import Chroma
+from langchain_core.documents import Document
 from langchain_core.chat_history import InMemoryChatMessageHistory
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_huggingface import HuggingFaceEmbeddings
 from rank_bm25 import BM25Okapi
-from sentence_transformers import CrossEncoder
+from sentence_transformers import CrossEncoder, SentenceTransformer
+
+from core.vector_db_utils import (
+    candidate_vector_db_dirs,
+    sqlite_embedding_count,
+    sqlite_collection_names,
+    subprocess_similarity_search,
+)
 
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
@@ -43,7 +52,12 @@ ASSISTANT_PERSONALITY = [
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHUNKS_FILE = os.path.join(ROOT_DIR, "data", "chunks.json")
 KNOWLEDGE_BASE_FILE = os.path.join(ROOT_DIR, "data", "knowledge_base.json")
-DB_DIR = os.path.join(ROOT_DIR, "db", "chroma_db")
+LOCAL_VECTOR_EMBEDDINGS_FILE = os.path.join(ROOT_DIR, "data", "local_vector_index.npy")
+LOCAL_VECTOR_META_FILE = os.path.join(ROOT_DIR, "data", "local_vector_index_meta.json")
+DB_DIR = next(
+    (path for path in candidate_vector_db_dirs(ROOT_DIR) if sqlite_embedding_count(path)),
+    os.path.join(ROOT_DIR, "db", "chroma_store_live"),
+)
 MAX_MEMORY_TURNS = 5
 COLLECTION_NAME = "langchain"
 EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
@@ -1020,18 +1034,74 @@ class BM25Search:
 
 class Reranker:
     def __init__(self):
-        self.model = CrossEncoder(
-            "cross-encoder/ms-marco-MiniLM-L-6-v2",
-            max_length=512,
-            local_files_only=True,
-        )
+        self.model = None
+
+    def _ensure_model(self):
+        if self.model is None:
+            self.model = CrossEncoder(
+                "cross-encoder/ms-marco-MiniLM-L-6-v2",
+                max_length=512,
+                local_files_only=True,
+            )
 
     def rerank(self, query: str, chunks: List[Dict], k: int = 5) -> List[Dict]:
         if not chunks:
             return []
+        self._ensure_model()
         scores = self.model.predict([[query, chunk["content"]] for chunk in chunks])
         ranked = sorted(zip(chunks, scores), key=lambda item: item[1], reverse=True)
         return [chunk for chunk, _ in ranked[:k]]
+
+
+class LocalVectorIndex:
+    def __init__(self, chunks: List[Dict]):
+        self.chunks = chunks
+        self.model = None
+        self.embeddings = None
+        self.chunk_ids = [chunk.get("chunk_id", "") for chunk in chunks]
+        self._load_or_build()
+
+    def _ensure_model(self):
+        if self.model is None:
+            self.model = SentenceTransformer(EMBEDDING_MODEL_NAME, local_files_only=True)
+
+    def _load_or_build(self):
+        if os.path.exists(LOCAL_VECTOR_EMBEDDINGS_FILE) and os.path.exists(LOCAL_VECTOR_META_FILE):
+            try:
+                with open(LOCAL_VECTOR_META_FILE, "r", encoding="utf-8") as f:
+                    meta = json.load(f)
+                if meta.get("chunk_ids") == self.chunk_ids:
+                    self.embeddings = np.load(LOCAL_VECTOR_EMBEDDINGS_FILE)
+                    return
+            except Exception:
+                pass
+        self._build()
+
+    def _build(self):
+        self._ensure_model()
+        self.embeddings = self.model.encode(
+            [chunk.get("content", "") for chunk in self.chunks],
+            normalize_embeddings=True,
+            convert_to_numpy=True,
+            show_progress_bar=False,
+        ).astype("float32")
+        np.save(LOCAL_VECTOR_EMBEDDINGS_FILE, self.embeddings)
+        with open(LOCAL_VECTOR_META_FILE, "w", encoding="utf-8") as f:
+            json.dump({"chunk_ids": self.chunk_ids}, f, ensure_ascii=False)
+
+    def search(self, query: str, k: int) -> List[Dict]:
+        if self.embeddings is None or not len(self.chunks):
+            return []
+        self._ensure_model()
+        query_embedding = self.model.encode(
+            query,
+            normalize_embeddings=True,
+            convert_to_numpy=True,
+            show_progress_bar=False,
+        ).astype("float32")
+        scores = self.embeddings @ query_embedding
+        top_indices = np.argsort(scores)[-k:][::-1]
+        return [self.chunks[int(index)] for index in top_indices]
 
 
 class RAGChatbot:
@@ -1061,16 +1131,11 @@ class RAGChatbot:
             self.raw_records.append(enrich_chunk_metadata(mapped))
 
         self.bm25_search = BM25Search(self.chunks)
-        self.reranker = Reranker()
-        self.vector_store = Chroma(
-            collection_name=COLLECTION_NAME,
-            persist_directory=DB_DIR,
-            embedding_function=HuggingFaceEmbeddings(
-                model_name=EMBEDDING_MODEL_NAME,
-                model_kwargs={"local_files_only": True},
-            ),
-        )
+        self.local_vector_index = LocalVectorIndex(self.chunks)
+        self.vector_store = None
+        self.vector_db_health = self._vector_store_health()
         self.vector_count = self._vector_store_count()
+        self.reranker = Reranker()
         self.message_history = InMemoryChatMessageHistory()
         self.conversation_state = {
             "program_scope": self.program_scope or "",
@@ -1082,8 +1147,17 @@ class RAGChatbot:
         print(f"{len(self.chunks)} chunk yuklendi")
         if self.vector_count:
             print(f"ChromaDB hazir ({self.vector_count} kayit)")
+            print(f"Aktif DB yolu: {DB_DIR}")
+            if self.vector_db_health.get("health_source"):
+                print(f"DB saglik kontrolu: {self.vector_db_health['health_source']}")
+            if self.vector_db_health.get("sqlite_count") not in (None, self.vector_count):
+                print(
+                    "UYARI: ChromaDB istemci sayimi ve sqlite sayimi farkli. "
+                    "DB sagligi tekrar kontrol edilmeli."
+                )
         else:
             print("UYARI: ChromaDB bos veya okunamiyor. Arama BM25 uzerinden devam edecek.")
+            print(f"Aktif DB yolu: {DB_DIR}")
             print("DB'yi yenilemek icin: python pipeline/create_vector_db.py --rebuild")
         print("BM25 + Reranker + ChromaDB + sohbet hafizasi hazir")
 
@@ -1181,11 +1255,83 @@ class RAGChatbot:
         except requests.exceptions.ConnectionError:
             print("Ollama bulunamadi! 'ollama serve' komutunu calistirin.")
 
+    def _vector_store_health(self) -> Dict:
+        sqlite_count = sqlite_embedding_count(DB_DIR)
+        return {
+            "count": sqlite_count,
+            "count_error": None,
+            "queryable": bool(sqlite_count),
+            "probe_error": None,
+            "sqlite_count": sqlite_count,
+            "collection_names": sqlite_collection_names(DB_DIR),
+            "health_source": "sqlite_metadata",
+        }
+
     def _vector_store_count(self) -> int:
-        try:
-            return int(self.vector_store._collection.count())
-        except Exception:
-            return 0
+        health = self.vector_db_health
+        queryable = bool(health.get("queryable"))
+        count = health.get("count")
+        sqlite_count = health.get("sqlite_count")
+
+        if queryable and isinstance(count, int):
+            return count
+        if queryable and isinstance(sqlite_count, int):
+            return sqlite_count
+        if health.get("health_source") in {"fresh_process", "sqlite_metadata"} and isinstance(sqlite_count, int) and sqlite_count > 0:
+            return sqlite_count
+        if isinstance(count, int) and isinstance(sqlite_count, int) and count == sqlite_count:
+            return count
+        return 0
+
+    def _vector_search_available(self) -> bool:
+        count = self.vector_count
+        return count > 0
+
+    def _refresh_vector_db_health(self) -> None:
+        self.vector_db_health = self._vector_store_health()
+        self.vector_count = self._vector_store_count()
+
+    def _safe_similarity_search(self, query: str, k: int) -> List:
+        if not self._vector_search_available():
+            return []
+        local_results = self.local_vector_index.search(query, k)
+        if local_results:
+            self.vector_db_health["search_source"] = "local_index"
+            return [
+                Document(
+                    page_content=item.get("content", ""),
+                    metadata={
+                        "source_url": item.get("source_url", ""),
+                        "kategori": item.get("kategori", ""),
+                        "program_scope": item.get("program_scope", ""),
+                        "topic": item.get("topic", ""),
+                        "source_title": item.get("source_title", ""),
+                        "years": item.get("years", ""),
+                        "chunk_id": item.get("chunk_id", ""),
+                    },
+                )
+                for item in local_results
+            ]
+        subprocess_results, subprocess_error = subprocess_similarity_search(DB_DIR, query, k)
+        if subprocess_results:
+            self.vector_db_health["queryable"] = True
+            self.vector_db_health["search_source"] = "fresh_process"
+            return [
+                Document(
+                    page_content=item.get("page_content", ""),
+                    metadata=item.get("metadata", {}),
+                )
+                for item in subprocess_results
+            ]
+
+        self.vector_db_health["queryable"] = False
+        self.vector_db_health["search_source"] = "disabled_after_error"
+        self.vector_db_health["fallback_error"] = subprocess_error
+        self.vector_count = 0
+        print("UYARI: ChromaDB subprocess sorgusu basarisiz, vector arama devre disi.")
+        if subprocess_error:
+            print(f"DB fallback hatasi: {subprocess_error}")
+        return []
 
     def _specialized_candidates(self, query: str) -> List[Dict]:
         normalized_query = normalize_text(query)
@@ -1301,11 +1447,8 @@ class RAGChatbot:
 
         for variant in build_query_variants(query):
             bm25_results.extend(self.bm25_search.search(variant, k=candidate_k))
-            if self.vector_count > 0:
-                try:
-                    vector_docs = self.vector_store.similarity_search(variant, k=candidate_k)
-                except Exception:
-                    vector_docs = []
+            if self._vector_search_available():
+                vector_docs = self._safe_similarity_search(variant, k=candidate_k)
                 vector_results.extend(
                     [
                         enrich_chunk_metadata(
