@@ -100,6 +100,52 @@ sağlamadığını kontrol eder. Hızlı kontrol için:
 python pipeline/rag_smoke_test.py
 ```
 
+Fine-tune veri setlerinin güncel durumunu özetlemek için:
+
+```bash
+python pipeline/finetune_dataset_audit.py
+```
+
+`build_finetune_datasets.py` veri üretimini Ollama'ya bağlı olmadan offline yapar; soru
+varyantları ve takip soruları kullanılarak daha geniş retrieval/generation örnekleri üretir.
+
+Fine-tune export dosyalarini olusturmak icin:
+
+```bash
+python pipeline/export_finetune_jsonl.py
+```
+
+Bu exportlar `data/exports/` altina yazilir. Her kayitta deterministik `train` /
+`validation` split bilgisi ve generation tarafinda secilen `evidence_sentences`
+alanlari bulunur.
+
+### 7. Disaridan Hazirlanan Fine-Tune JSON URL'lerini Duzelt
+
+Masaustunde veya baska bir klasorde hazirladiginiz `golden_questions.json`,
+`retrieval_finetune_data.json` ve `generation_finetune_data.json` dosyalarindaki
+ornek/fake URL'leri, projedeki `data/chunks.json` ile eslestirerek duzeltebilirsiniz:
+
+```bash
+python pipeline/suggest_dataset_urls.py ^
+  --golden "C:\Users\Esra Kılıç\Desktop\Tübitak\golden_questions.json" ^
+  --retrieval "C:\Users\Esra Kılıç\Desktop\Tübitak\retrieval_finetune_data.json" ^
+  --generation "C:\Users\Esra Kılıç\Desktop\Tübitak\generation_finetune_data.json"
+```
+
+Bu komut orijinal dosyalari bozmaz; yanlarina `_url_suggestions.json` kopyalari uretir.
+Eger dogrudan kendi dosyalarinizin ustune yazmak isterseniz `--apply` ekleyin:
+
+```bash
+python pipeline/suggest_dataset_urls.py ^
+  --golden "C:\Users\Esra Kılıç\Desktop\Tübitak\golden_questions.json" ^
+  --retrieval "C:\Users\Esra Kılıç\Desktop\Tübitak\retrieval_finetune_data.json" ^
+  --generation "C:\Users\Esra Kılıç\Desktop\Tübitak\generation_finetune_data.json" ^
+  --apply
+```
+
+Not: Script, her kayda `url_candidates` alanini ekler. Otomatik secim faydali bir baslangictir
+ama nihai veri setinden once bu URL'leri gozle kontrol etmeniz onerilir.
+
 ## Cevaplama Mimarisi
 
 Sistem model ağırlıklarına mevzuat ezberletmez. Bilgi `data/chunks.json` ve ChromaDB/BM25

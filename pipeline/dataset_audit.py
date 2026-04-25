@@ -8,6 +8,7 @@ Amac, veri kalitesini tartisilabilir olmaktan cikarip olculebilir hale getirmekt
 import argparse
 import json
 import os
+import sqlite3
 import sys
 from collections import Counter
 from statistics import mean
@@ -87,12 +88,29 @@ def print_counter(title: str, counter: Counter, limit: int = 10):
 
 def chroma_counts(db_dir: str = DB_DIR):
     if chromadb is None:
-        return None
+        sqlite_path = os.path.join(db_dir, "chroma.sqlite3")
+        if not os.path.exists(sqlite_path):
+            return None
+        try:
+            with sqlite3.connect(sqlite_path) as conn:
+                cur = conn.cursor()
+                cur.execute("SELECT COUNT(*) FROM embeddings")
+                return {"langchain": int(cur.fetchone()[0])}
+        except Exception as exc:
+            return {"ERROR": str(exc)}
     if not os.path.exists(db_dir) or not os.listdir(db_dir):
         return {}
     try:
         client = chromadb.PersistentClient(path=db_dir)
-        return {collection.name: collection.count() for collection in client.list_collections()}
+        counts = {collection.name: collection.count() for collection in client.list_collections()}
+        if sum(counts.values()) == 0:
+            sqlite_path = os.path.join(db_dir, "chroma.sqlite3")
+            if os.path.exists(sqlite_path):
+                with sqlite3.connect(sqlite_path) as conn:
+                    cur = conn.cursor()
+                    cur.execute("SELECT COUNT(*) FROM embeddings")
+                    return {"langchain": int(cur.fetchone()[0])}
+        return counts
     except Exception as exc:
         return {"ERROR": str(exc)}
 
