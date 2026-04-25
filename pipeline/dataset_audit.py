@@ -92,14 +92,9 @@ def print_counter(title: str, counter: Counter, limit: int = 10):
 
 
 def chroma_counts(db_dir: str = DB_DIR):
-    subprocess_health = subprocess_vector_store_health(db_dir)
-    if subprocess_health.get("queryable"):
-        count = subprocess_health.get("count")
-        if isinstance(count, int):
-            return {
-                "langchain": count,
-                "_source": subprocess_health.get("health_source", "fresh_process"),
-            }
+    sqlite_count = sqlite_embedding_count(db_dir)
+    if isinstance(sqlite_count, int) and sqlite_count > 0:
+        return {"langchain": sqlite_count, "_source": "sqlite_primary"}
     if chromadb is None:
         sqlite_count = sqlite_embedding_count(db_dir)
         if sqlite_count is None:

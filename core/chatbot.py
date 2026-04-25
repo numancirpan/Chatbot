@@ -18,6 +18,7 @@ from sentence_transformers import CrossEncoder, SentenceTransformer
 
 from core.vector_db_utils import (
     candidate_vector_db_dirs,
+    resolve_vector_db_dir,
     sqlite_embedding_count,
     sqlite_collection_names,
     subprocess_similarity_search,
@@ -54,10 +55,7 @@ CHUNKS_FILE = os.path.join(ROOT_DIR, "data", "chunks.json")
 KNOWLEDGE_BASE_FILE = os.path.join(ROOT_DIR, "data", "knowledge_base.json")
 LOCAL_VECTOR_EMBEDDINGS_FILE = os.path.join(ROOT_DIR, "data", "local_vector_index.npy")
 LOCAL_VECTOR_META_FILE = os.path.join(ROOT_DIR, "data", "local_vector_index_meta.json")
-DB_DIR = next(
-    (path for path in candidate_vector_db_dirs(ROOT_DIR) if sqlite_embedding_count(path)),
-    os.path.join(ROOT_DIR, "db", "chroma_store_live"),
-)
+DB_DIR = resolve_vector_db_dir(ROOT_DIR)
 MAX_MEMORY_TURNS = 5
 COLLECTION_NAME = "langchain"
 EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"

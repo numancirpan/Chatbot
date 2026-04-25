@@ -16,21 +16,31 @@ def chroma_sqlite_path(db_dir: str) -> str:
 def candidate_vector_db_dirs(root_dir: str) -> List[str]:
     db_root = os.path.join(root_dir, "db")
     return [
+        os.path.join(db_root, "chroma_db"),
         os.path.join(db_root, "chroma_store_live"),
         os.path.join(db_root, "chroma_db_candidate"),
-        os.path.join(db_root, "chroma_db"),
     ]
 
 
 def resolve_vector_db_dir(root_dir: str) -> str:
+    best_dir = candidate_vector_db_dirs(root_dir)[0]
+    best_sqlite_count = -1
+
+    for db_dir in candidate_vector_db_dirs(root_dir):
+        sqlite_count = sqlite_embedding_count(db_dir)
+        if isinstance(sqlite_count, int) and sqlite_count > best_sqlite_count:
+            best_dir = db_dir
+            best_sqlite_count = sqlite_count
+
+    if best_sqlite_count > 0:
+        return best_dir
+
     for db_dir in candidate_vector_db_dirs(root_dir):
         health = subprocess_vector_store_health(db_dir)
-        if health.get("queryable") and health.get("sqlite_count"):
+        if health.get("queryable"):
             return db_dir
-    for db_dir in candidate_vector_db_dirs(root_dir):
-        if sqlite_embedding_count(db_dir):
-            return db_dir
-    return candidate_vector_db_dirs(root_dir)[0]
+
+    return best_dir
 
 
 def sqlite_embedding_count(db_dir: str) -> Optional[int]:
@@ -72,6 +82,21 @@ def safe_similarity_probe(vector_store: Any, sample_query: str = "ogrenci") -> T
         return True, None
     except Exception as exc:
         return False, str(exc)
+
+
+def compact_probe_error(raw_text: str) -> str:
+    lines = [line.strip() for line in raw_text.splitlines() if line.strip()]
+    filtered = [
+        line for line in lines
+        if not line.startswith("Loading weights:")
+        and "BertModel LOAD REPORT" not in line
+        and "embeddings.position_ids" not in line
+        and not line.startswith("Notes:")
+        and "UNEXPECTED" not in line
+    ]
+    if filtered:
+        return filtered[-1]
+    return lines[-1] if lines else raw_text.strip()
 
 
 def vector_store_health(vector_store: Any, db_dir: str, sample_query: str = "ogrenci") -> Dict[str, Any]:
@@ -150,6 +175,7 @@ with open(output_path, "w", encoding="utf-8") as f:
         )
         if completed.returncode != 0:
             stderr = (completed.stderr or completed.stdout or b"").decode("utf-8", errors="replace").strip()
+            stderr = compact_probe_error(stderr)
             raise RuntimeError(stderr or f"Vector DB subprocess probe failed for {db_dir}")
         if not os.path.exists(output_path) or not os.path.getsize(output_path):
             raise RuntimeError(f"Vector DB subprocess probe returned empty output for {db_dir}")
