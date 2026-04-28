@@ -1,0 +1,180 @@
+{
+  "created_at": "2026-04-28",
+  "description": "Manual regression soru seti. Gercek ogrenci sorulari, zorlu varyasyonlar ve takip sorusu akislariyla RAG kalitesini izlemek icin kullanilir.",
+  "groups": [
+    {
+      "name": "Bilgisayar Muhendisligi Staj",
+      "questions": [
+        "Bilgisayar muhendisligi zorunlu staj kac gun?",
+        "Bilgisayar muhendisliginde kac zorunlu staj var?",
+        "Bilgisayar muhendisligi ogrencisi stajini hangi yariyillardan sonra yapmali?",
+        "2. sinif yazinda staj yapip 3. sinif guz doneminde staj dersini alarak saydirabilir miyim?",
+        "Bilgisayar muhendisligi ogrencisi doneminde staj yapamazsa daha sonra nasil saydirir?",
+        "Staj basvurusu nasil yapilir?",
+        "Bilgisayar muhendisligi staj basvurusu icin hangi belgeler gerekli?",
+        "Bilgisayar muhendisligi staj raporu SBS'ye ne zaman yuklenmeli?",
+        "Stajimi zamaninda teslim etmezsem bilgisayar muhendisligi icin surec nasil isler?",
+        "Mezun durumundaysam staj raporumu yukledikten sonra ne yapmam gerekiyor?",
+        "Bilgisayar muhendisligi icin staj sigortasini kim yapiyor?",
+        "Zorunlu staj disinda gonullu staj yaparsam sigortami okul yapar mi?",
+        "Ucretli staj yaparsam farkli bir islem gerekiyor mu?",
+        "Staj yapacagim firmada hangi bolumden muhendis bulunmasi gerekiyor?",
+        "Bilgisayar muhendisligi ogrencisi tek cift sinavina girmek icin stajini tamamlamis olmak zorunda mi?",
+        "Bilgisayar muhendisligi ogrencisiyim; staj dersine daha once hic kayitlanmadiysam tek/cift ders sinavina girebilir miyim?"
+      ]
+    },
+    {
+      "name": "Yaz Okulu",
+      "questions": [
+        "Yaz okulu kac hafta suruyor?",
+        "2026 yilinda yaz okulu ne zaman basliyor?",
+        "Bilgisayar muhendisligi 2026 yili icin yaz okulu ne zaman basliyor?",
+        "Bilgisayar muhendisligi yaz staji 2026 yilinda ne zaman basliyor?",
+        "Bilgisayar muhendisligi icin yaz stajinda kac donem var?",
+        "Bilgisayar muhendisligi yaz okulunda devam zorunlulugu var mi?",
+        "Bilgisayar muhendisligi bolumunde yaz okulunda baska universiteden ders alabilir miyim?",
+        "Baska universiteden alacagim yaz okulu dersinin sayilmasi icin hangi sartlar gerekir?",
+        "Yaz okulunda aldigim dersin esdeger sayilmasi icin kimin onayi gerekir?",
+        "Universite disinda yaz okulunda ders alirsam devam kosulunu nasil belgelemeliyim?",
+        "Yaz okulunda final haftasi dahil mi?",
+        "Yaz okulunda ders secimi akademik takvimde nereden takip edilir?"
+      ]
+    },
+    {
+      "name": "Ders Kaydi ve Add-Drop",
+      "questions": [
+        "Ders kaydi ne zaman basliyor?",
+        "2025-2026 bahar doneminde ders kaydimi ne zaman yapmaliyim ve ekle-sil haftasi hangi tarihlerde?",
+        "Kayit yenileme nasil yapilir?",
+        "Ders kaydimi OBS uzerinden mi yapmaliyim?",
+        "Harc yatirmadan ders kaydi yapilabilir mi?",
+        "Katki payi veya ogrenim ucreti odemem gerekiyorsa ders kaydindan once mi odemeliyim?",
+        "Add-drop haftasinda ders ekleyebilir miyim?",
+        "Ekle-sil haftasinda sectigim dersi birakabilir miyim?",
+        "Bir donemde en fazla kac AKTS alabilirim?",
+        "Not ortalamam yuksekse daha fazla AKTS alabilir miyim?",
+        "Alttan dersim varsa ustten ders alabilir miyim?",
+        "Danisman onayi olmadan ders kaydim tamamlanir mi?",
+        "Ders kaydi ve kayit yenileme arasinda fark var mi?",
+        "Ders kaydimi yapmazsam o donem ogrencilik haklarim etkilenir mi?"
+      ]
+    },
+    {
+      "name": "Devamsizlik ve Sinavlar",
+      "questions": [
+        "Devamsizlik siniri nedir?",
+        "Teorik derslerde devam zorunlulugu kac?",
+        "Uygulamali derslerde devam zorunlulugu kactir?",
+        "Ilk kez aldigim bir uygulamali derste devam zorunlulugu kactir ve raporlu oldugum gunler devamsizliktan sayilir mi?",
+        "Daha once aldigim derste devam zorunlulugundan muaf olur muyum?",
+        "Raporlu gunlerim devamsizliktan dusulur mu?",
+        "Butunleme sinavi var mi?",
+        "But notu ortalamayi etkiler mi?",
+        "Final tarihlerini nereden ogrenebilirim?",
+        "Sinav programi nerede yayinlanir?",
+        "Mazeret sinavina kimler girebilir?",
+        "Mazeret sinavi icin kac gun icinde basvuru yapilmali?",
+        "Ara sinava giremezsem mazeret sinavina basvurabilir miyim?",
+        "Final sinavi icin mazeret sinavi yapilir mi?",
+        "Tek ders sinavina kimler basvurabilir?",
+        "Cift ders sinavina kimler basvurabilir?"
+      ]
+    },
+    {
+      "name": "Not Sistemi ve Mezuniyet",
+      "questions": [
+        "GANO nasil hesaplanir?",
+        "Ders basari notu nasil hesaplanir?",
+        "Finalden kac almam gerekir?",
+        "Mezuniyet icin tum dersleri gecmek yeterli mi?",
+        "Bilgisayar muhendisliginde mezun olabilmek icin staj disinda hangi temel sartlar saglanmali?",
+        "Bilgisayar muhendisligi ogrencisi mezuniyet icin staj eksikse diplomasini alabilir mi?",
+        "Stajim eksikse mezun olabilir miyim?",
+        "Mezuniyet icin GANO sarti var mi?",
+        "Diploma islemleri icin hangi sartlar tamamlanmali?",
+        "Gecici mezuniyet belgesi ne zaman verilir?",
+        "Mezuniyet basari siralamasi nasil belirlenir?",
+        "Mezun durumdayim ama tek stajim kaldiysa ne yapmaliyim?",
+        "Stajim reddedilirse mezuniyetim etkilenir mi?"
+      ]
+    },
+    {
+      "name": "Belgeler ve Idari Konular",
+      "questions": [
+        "Ogrenci belgesi nasil alinir?",
+        "Transkript nereden alinir?",
+        "Ogrenci belgesi veya transkript almam gerekirse once nereden almaliyim, e-Devlet belgesi yeterli olur mu?",
+        "E-Devlet'ten alamadigim belge icin nereye basvurmaliyim?",
+        "Islak imzali ogrenci belgesi gerekiyorsa ne yapmaliyim?",
+        "Askerlik tecili icin ne yapmaliyim?",
+        "CAP basvurusu icin ortalama sarti nedir?",
+        "Cift anadal basvurusu yapmak icin genel not ortalamam kac olmali, ayrica basari siralamasi sarti var mi?",
+        "Yandal basvurusu icin hangi sartlar aranir?",
+        "Yatay gecis basvurulari ne zaman?",
+        "Kurum ici yatay gecis ve kurumlar arasi yatay gecis basvurulari nereden takip edilir?",
+        "Disiplin islemleriyle ilgili mevzuata nereden ulasabilirim?",
+        "Disiplin cezasi alan ogrenci bursunu kaybeder mi?",
+        "Ogrenci isleri ile nasil iletisime gecebilirim?",
+        "Belge basvurularinda hangi birime e-posta atabilirim?"
+      ]
+    },
+    {
+      "name": "Karma Orta-Zor Sorular",
+      "questions": [
+        "Bilgisayar muhendisligi ogrencisiyim, stajimi yapmadim ve tek dersim kaldi; tek/cift ders sinavina girebilir miyim?",
+        "Staj raporumu gec yuklersem direkt reddedilir mi yoksa duzeltme veya degerlendirme sureci var mi?",
+        "Baska universiteden yaz okulunda ders alirsam hem esdegerlik hem devam acisindan neye dikkat etmeliyim?",
+        "Kayit yenileme ve ekle-sil tarihlerini kacirirsam ders ekleme sansim olur mu?",
+        "Hem ogrenci belgesi hem transkript gerekiyorsa ikisini de e-Devlet'ten almam yeterli mi?",
+        "Staj dersini daha once almadim ama mezun durumundayim; raporu yukledikten sonra kime yazmaliyim?",
+        "Mazeret sinavina basvuru suresi ile raporlu devamsizlik ayni sey mi?",
+        "Cift anadal icin hem ortalama hem basari siralamasi sartini birlikte saglamam gerekiyor mu?",
+        "Ders kaydi yapmayan bir ogrenci tek/cift ders sinavina basvurabilir mi?",
+        "Mezuniyet icin sadece dersleri gecmek neden yeterli olmayabilir?"
+      ]
+    }
+  ],
+  "followup_flows": [
+    {
+      "name": "Staj Hafiza Akisi",
+      "messages": [
+        "Bilgisayar muhendisligi zorunlu staj kac gun?",
+        "Peki kac kere yapmaliyim?",
+        "Basvuru nasil oluyor?",
+        "Belgeler neler?"
+      ]
+    },
+    {
+      "name": "Mezuniyet Sonrasi Staj Raporu",
+      "messages": [
+        "Mezun durumundaysam staj raporumu yukledikten sonra ne yapmam gerekiyor?",
+        "Bilgisayar muhendisligi icin soruyorum.",
+        "Ne yazmaliyim?"
+      ]
+    },
+    {
+      "name": "Yaz Okulu Baglam Akisi",
+      "messages": [
+        "Bilgisayar muhendisligi yaz okulunda baska universiteden ders alabilir miyim?",
+        "Peki sayilmasi icin hangi sartlar gerekiyor?",
+        "Devam zorunlulugu konusunda neye dikkat etmeliyim?"
+      ]
+    },
+    {
+      "name": "Belge Islemleri Akisi",
+      "messages": [
+        "Ogrenci belgesi nasil alinir?",
+        "Transkript icin de ayni yol gecerli mi?",
+        "E-Devlet'ten alamazsam nereye basvurayim?"
+      ]
+    },
+    {
+      "name": "Ders Kaydi Akisi",
+      "messages": [
+        "2025-2026 bahar doneminde ders kaydi ne zaman?",
+        "Ekle-sil haftasi hangi tarihlerde?",
+        "Danisman onayi gerekiyor mu?"
+      ]
+    }
+  ]
+}

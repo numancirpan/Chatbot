@@ -27,6 +27,30 @@ MIN_CHUNK = 120
 MAX_CHUNK = 1200
 CHUNK_OVERLAP = 120
 MAX_TITLE_LENGTH = 140
+GENERIC_SOURCE_TITLES = {
+    "ogrenci isleri",
+    "merkezi mevzuat",
+    "fakulte bolum",
+    "fakulte bolum sayfasi",
+    "akademik takvim",
+    "genel",
+    "t c",
+    "tc",
+    "bitis",
+    "baslangic",
+    "aciklama",
+    "akademik",
+    "ek 7",
+    "ek 12",
+    "1 donem",
+    "2 donem",
+    "3 donem",
+    "4 donem",
+    "5 donem",
+    "6 donem",
+    "7 donem",
+    "8 donem",
+}
 
 LINE_NOISE_PATTERNS = [
     r"^anasayfa$",
@@ -249,7 +273,54 @@ def clean_text(text: str) -> str:
     return cleaned.strip()
 
 
+def canonical_title_from_signals(url: str, text: str) -> str:
+    normalized_url = str(url).lower()
+    normalized_text = normalize_text(str(text)[:1800])
+    combined = f"{normalized_url} {normalized_text}"
+
+    url_overrides = [
+        ("bm.mf.duzce.edu.tr/sayfa/878b", "Bilgisayar Mühendisliği - Staj SSS"),
+        ("bm.mf.duzce.edu.tr/sayfa/4a82", "Bilgisayar Mühendisliği - Staj"),
+        ("bm.mf.duzce.edu.tr/sayfa/17ac", "Bilgisayar Mühendisliği - Yaz Okulu"),
+        ("mf.duzce.edu.tr/sayfa/967a", "Mühendislik Fakültesi - Yaz Stajı"),
+        ("tekcift-ders-sinavlari-hakkinda-sss", "Tek/Çift Ders Sınavları Hakkında SSS"),
+        ("fakultemz-ogrenc-sler-letsm-blgler", "Öğrenci İşleri İletişim ve Belge İşlemleri"),
+        ("2025-2026-egitim-ogretim-yili-bahar-yariyili-ders-kayit", "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu"),
+        ("0cbab535-65f1-4dcb-8f93-84e9d7e57634", "Düzce Üniversitesi Çift Anadal Programı Yönergesi"),
+        ("a44682bb-4437-4908-aaf0-c6020e1fc991", "2025-2026 Akademik Takvim"),
+        ("add5581f-0544-454b-a009-c15d9f581faf", "Eczacılık Fakültesi Hizmet Standartları"),
+    ]
+    for marker, title in url_overrides:
+        if marker in normalized_url:
+            return title
+
+    content_overrides = [
+        ("tek cift ders sinavlari hakkinda sss", "Tek/Çift Ders Sınavları Hakkında SSS"),
+        ("2025 2026 egitim ogretim yili bahar yariyili ders kayit", "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu"),
+        ("duzce universitesi cift anadal programi yonergesi", "Düzce Üniversitesi Çift Anadal Programı Yönergesi"),
+        ("diploma diploma defteri gecici mezuniyet belgesi", "Diploma ve Mezuniyet Belgeleri Yönergesi"),
+        ("diploma ve mezuniyet belgeleri yonergesi", "Diploma ve Mezuniyet Belgeleri Yönergesi"),
+        ("lisans egitim ogretim ve sinav yonetmeligi", "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği"),
+        ("on lisans egitim ogretim ve sinav yonetmeligi", "Ön Lisans Eğitim-Öğretim ve Sınav Yönetmeliği"),
+        ("yaz okulu uygulama esaslari", "Yaz Okulu Yönergesi"),
+        ("yaz okulu yonergesi", "Yaz Okulu Yönergesi"),
+        ("muhendislik fakultesi ve teknoloji fakultesi staj yonergesi", "Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi"),
+        ("stajlar hakkinda sikca sorulan sorular", "Bilgisayar Mühendisliği - Staj SSS"),
+        ("ogrenci belgesi", "Öğrenci Belgesi ve Transkript İşlemleri"),
+        ("transkript", "Öğrenci Belgesi ve Transkript İşlemleri"),
+        ("akademik takvim", "Akademik Takvim"),
+    ]
+    for marker, title in content_overrides:
+        if marker in combined:
+            return title
+    return ""
+
+
 def extract_title(text: str, url: str, kategori: str, icerik_tipi: str) -> str:
+    canonical_title = canonical_title_from_signals(url, text)
+    if canonical_title:
+        return canonical_title
+
     lines = [" ".join(line.split()).strip() for line in text.splitlines()]
     candidates = []
     for line in lines[:25]:
@@ -296,6 +367,10 @@ def extract_title(text: str, url: str, kategori: str, icerik_tipi: str) -> str:
         return "Akademik Takvim"
 
     first = candidates[0]
+    if normalize_text(first) in GENERIC_SOURCE_TITLES and len(candidates) > 1:
+        for candidate in candidates[1:]:
+            if normalize_text(candidate) not in GENERIC_SOURCE_TITLES:
+                return candidate
     if icerik_tipi == "html" and len(first.split()) <= 2 and len(candidates) > 1:
         return candidates[1]
     return first
