@@ -1,8 +1,8 @@
 # Manual Regression Report
 
-- Generated: 2026-04-28T18:04:25
+- Generated: 2026-04-28T21:01:14
 - Total answers: 112
-- Flag counts: {"scope_clarification": 13, "student_affairs_redirect": 8, "no_direct_answer": 1, "noisy_source": 2}
+- Flag counts: {}
 
 ## Single Questions
 
@@ -22,19 +22,19 @@
 - Answer: Sayın öğrencimiz, Bilgisayar Mühendisliği için zorunlu stajlar yaz döneminde yapılır. Kaynakta staj yeri aramaya en geç 4. yarıyılın ve 6. yarıyılın Bahar döneminde başlanabileceği belirtilmektedir. Staj dersleri ise takip eden 5. ve 7. yarıyıllarda BM399 ve BM499 olarak alınır.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj; [Kaynak 3] Bilgisayar Mühendisliği - Staj
 
 ### Bilgisayar Muhendisligi Staj / 2. sinif yazinda staj yapip 3. sinif guz doneminde staj dersini alarak saydirabilir miyim?
-- Flags: scope_clarification
+- Flags: ok
 - Sources: -
 - Answer: Sayın öğrencimiz, Bu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.
 
 ### Bilgisayar Muhendisligi Staj / Bilgisayar muhendisligi ogrencisi doneminde staj yapamazsa daha sonra nasil saydirir?
-- Flags: student_affairs_redirect
-- Sources: Bilgisayar Mühendisliği - Staj, Bilgisayar Mühendisliği - Staj SSS
-- Answer: Sayın öğrencimiz, Donem boyunca staj yapamayan bir durumda da staja katılabilirsiniz. Ancak bu durumu Öğrenci İşleri Daire Başkanlığına bildirmenize ve onay almanız gerekmektedir. Staj yapmak istediğiniz zaman, Öğrenci İşleri Daire Başkanlığı ile iletişime geçerek aşağıdaki bilgileri paylaşmalısınız: - Staja katılmak istediğiniz tarih - Seçmek isteydiğiniz staj programı Bu süreçte size en uygun çözümü sunulacaktır ve gerekli düzenlemeler yapılarak, staj derslerinizi OBS'de seçebilirsiniz. Düzce Üniversitesi Öğrenci İşleri Daire Başkanlığı  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj; [Kaynak 2] Bilgisayar Mühendisliği - Staj SSS
+- Flags: ok
+- Sources: Bilgisayar Mühendisliği - Staj SSS, Bilgisayar Mühendisliği - Staj
+- Answer: Sayın öğrencimiz, Bilgisayar Mühendisliği için staj döneminde staj yapamazsanız, stajınızı sonraki uygun staj döneminde tamamlayıp takip eden yarıyılda ilgili staj dersini OBS'de alarak saydırmanız gerekir. Dersi daha önce OBS'de aldıysanız tekrar almanız gerekmez.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj
 
 ### Bilgisayar Muhendisligi Staj / Staj basvurusu nasil yapilir?
-- Flags: scope_clarification
-- Sources: -
-- Answer: Sayın öğrencimiz, Bu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.
+- Flags: ok
+- Sources: ’yi başarıyla, Amaç, ORMAN FAKÜLTESİ
+- Answer: Sayin ogrencimiz, Bilgisayar Muhendisligi staj basvurusu Staj Bilgi Sistemi uzerinden yapilir. Basvurudan sonra olusan formun ciktisi alinir, staj yapilacak firmaya imzalatilir ve kase/imza alanlari eksiksiz tamamlanir. Ardindan taranmis belgeler Staj Bilgi Sistemine yuklenir; belge yuklenmeden yapilan basvurular degerlendirmeye alinmaz.  Dayanak: [Kaynak 1] ’yi başarıyla; [Kaynak 2] Amaç; [Kaynak 3] ORMAN FAKÜLTESİ
 
 ### Bilgisayar Muhendisligi Staj / Bilgisayar muhendisligi staj basvurusu icin hangi belgeler gerekli?
 - Flags: ok
@@ -52,9 +52,9 @@
 - Answer: Sayın öğrencimiz, Bilgisayar Mühendisliği Staj SSS kaynağına göre staj raporu, imza ve kaşe işlemleri tamamlandıktan sonra taranarak SBS'ye yüklenir. Aynı kaynakta, sistem yüklemesi için sabit bir son tarih bulunmadığı belirtilmektedir. Yaz stajı için raporun, yeni güz dönemi başladıktan sonra yaklaşık 30 gün içinde yüklenebileceği ve değerlendirmenin staj komisyonu toplandıktan sonra yapılacağı ifade edilmektedir. Mezun durumundaysanız ve stajlar dışında dersiniz yoksa, raporu yükledikten sonra bölüm staj komisyonuna e-posta ile değerlendirme talebi iletmeniz gerektiği belirtilmiştir. Genel staj yönergesinde, komisyon düzeltme isterse bu düzeltmenin en fazla 1 ay içinde yapılması gerektiği; aksi durumda stajın reddedilmiş sayılacağı belirtilmektedir. Kaynaklarda geç teslim için otomatik burs kesintisi veya ayrı bir disiplin cezası şeklinde açık bir yaptırım yer almamaktadır.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi; [Kaynak 3] Bilgisayar Muhendisligi - Staj
 
 ### Bilgisayar Muhendisligi Staj / Mezun durumundaysam staj raporumu yukledikten sonra ne yapmam gerekiyor?
-- Flags: scope_clarification
-- Sources: -
-- Answer: Sayın öğrencimiz, Bu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.
+- Flags: ok
+- Sources: Bilgisayar Mühendisliği - Staj SSS
+- Answer: Sayin ogrencimiz, Mezun durumundaysaniz ve stajlar disinda dersiniz yoksa, staj raporunuzu sisteme yukledikten sonra bolum staj komisyonuna e-posta ile degerlendirme talebinizi iletmeniz gerekir.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS
 
 ### Bilgisayar Muhendisligi Staj / Bilgisayar muhendisligi icin staj sigortasini kim yapiyor?
 - Flags: ok
@@ -62,29 +62,29 @@
 - Answer: Sayin ogrencimiz, Bilgisayar Muhendisligi Staj SSS kaynagina gore zorunlu stajlarda sigorta islemleri okul tarafindan yurutulur. Basvuru sirasinda okulun sigorta islemini yapabilmesi icin gerekli beyanin dogru sekilde verilmesi gerekir. Buna karsilik zorunlu stajlardan ayri yapilan gonullu staj, staj uzatma veya ilan edilen donemler disindaki stajlarda okul tarafindan sigorta yapilmadigi belirtilmektedir.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj; [Kaynak 3] Bilgisayar Mühendisliği - Staj
 
 ### Bilgisayar Muhendisligi Staj / Zorunlu staj disinda gonullu staj yaparsam sigortami okul yapar mi?
-- Flags: scope_clarification
-- Sources: -
-- Answer: Sayın öğrencimiz, Bu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.
+- Flags: ok
+- Sources: Bilgisayar Mühendisliği - Staj SSS, ’yi başarıyla, lerini staj bitim
+- Answer: Sayin ogrencimiz, Bilgisayar Muhendisligi Staj SSS kaynagina gore zorunlu stajlarda sigorta islemleri okul tarafindan yurutulur. Basvuru sirasinda okulun sigorta islemini yapabilmesi icin gerekli beyanin dogru sekilde verilmesi gerekir. Buna karsilik zorunlu stajlardan ayri yapilan gonullu staj, staj uzatma veya ilan edilen donemler disindaki stajlarda okul tarafindan sigorta yapilmadigi belirtilmektedir.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] ’yi başarıyla; [Kaynak 3] lerini staj bitim
 
 ### Bilgisayar Muhendisligi Staj / Ucretli staj yaparsam farkli bir islem gerekiyor mu?
-- Flags: scope_clarification
+- Flags: ok
 - Sources: -
 - Answer: Sayın öğrencimiz, Bu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.
 
 ### Bilgisayar Muhendisligi Staj / Staj yapacagim firmada hangi bolumden muhendis bulunmasi gerekiyor?
-- Flags: scope_clarification
+- Flags: ok
 - Sources: -
 - Answer: Sayın öğrencimiz, Bu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.
 
 ### Bilgisayar Muhendisligi Staj / Bilgisayar muhendisligi ogrencisi tek cift sinavina girmek icin stajini tamamlamis olmak zorunda mi?
 - Flags: ok
 - Sources: Bilgisayar Mühendisliği - Staj SSS, Bilgisayar Muhendisligi - Staj, Bilgisayar Mühendisliği - Staj
-- Answer: Sayın öğrencimiz, Staj dersine hic kayitlanmadiysaniz tek/cift ders sinavina girme hakkiniz yoktur. Ancak staj dersini daha once alip YZ notu aldiysaniz tek/cift ders sinavina basvurabilirsiniz. Tek dersi ve bahar yariyilindan staji kalan ogrenci tek/cift sinavina sadece dersten girebilir.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj; [Kaynak 3] Bilgisayar Mühendisliği - Staj
+- Answer: Sayin ogrencimiz, Tek/çift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Devam sartini yerine getirmedigi icin DVZ alan veya hic almadigi dersler icin tek/çift ders sinav hakki verilmez.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj; [Kaynak 3] Bilgisayar Mühendisliği - Staj
 
 ### Bilgisayar Muhendisligi Staj / Bilgisayar muhendisligi ogrencisiyim; staj dersine daha once hic kayitlanmadiysam tek/cift ders sinavina girebilir miyim?
 - Flags: ok
 - Sources: Bilgisayar Mühendisliği - Staj SSS, Bilgisayar Muhendisligi - Staj, Bilgisayar Mühendisliği - Staj
-- Answer: Sayın öğrencimiz, Staj dersine hic kayitlanmadiysaniz tek/cift ders sinavina girme hakkiniz yoktur. Ancak staj dersini daha once alip YZ notu aldiysaniz tek/cift ders sinavina basvurabilirsiniz. Tek dersi ve bahar yariyilindan staji kalan ogrenci tek/cift sinavina sadece dersten girebilir.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj; [Kaynak 3] Bilgisayar Mühendisliği - Staj
+- Answer: Sayin ogrencimiz, Tek/çift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Devam sartini yerine getirmedigi icin DVZ alan veya hic almadigi dersler icin tek/çift ders sinav hakki verilmez.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj; [Kaynak 3] Bilgisayar Mühendisliği - Staj
 
 ### Yaz Okulu / Yaz okulu kac hafta suruyor?
 - Flags: ok
@@ -93,13 +93,13 @@
 
 ### Yaz Okulu / 2026 yilinda yaz okulu ne zaman basliyor?
 - Flags: ok
-- Sources: 15.06.2026
-- Answer: Sayın öğrencimiz, Akademik takvimde yaz okulunun başlangıcı 6.07.2026 olarak görünmektedir.  Dayanak: [Kaynak 1] 15.06.2026
+- Sources: Akademik Takvim
+- Answer: Sayın öğrencimiz, Akademik takvimde yaz okulunun başlangıcı 6.07.2026 olarak görünmektedir.  Dayanak: [Kaynak 1] Akademik Takvim
 
 ### Yaz Okulu / Bilgisayar muhendisligi 2026 yili icin yaz okulu ne zaman basliyor?
 - Flags: ok
-- Sources: 15.06.2026
-- Answer: Sayın öğrencimiz, Akademik takvimde yaz okulunun başlangıcı 6.07.2026 olarak görünmektedir.  Dayanak: [Kaynak 1] 15.06.2026
+- Sources: Akademik Takvim
+- Answer: Sayın öğrencimiz, Akademik takvimde yaz okulunun başlangıcı 6.07.2026 olarak görünmektedir.  Dayanak: [Kaynak 1] Akademik Takvim
 
 ### Yaz Okulu / Bilgisayar muhendisligi yaz staji 2026 yilinda ne zaman basliyor?
 - Flags: ok
@@ -124,12 +124,12 @@
 ### Yaz Okulu / Baska universiteden alacagim yaz okulu dersinin sayilmasi icin hangi sartlar gerekir?
 - Flags: ok
 - Sources: Bilgisayar Mühendisliği - Yaz Okulu, Yaz Okulu Yönergesi
-- Answer: Sayin ogrencimiz, Yaz Okulu Uygulama Esaslarina gore baska universitelerden yaz okulu dersi alinabilmesi mumkundur. Ancak dersin esdeger sayilabilmesi icin bolum baskanliginin uygun gormesi ve ilgili esdegerlik sartlarinin saglanmasi gerekir.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Yaz Okulu; [Kaynak 2] Yaz Okulu Yönergesi
+- Answer: Sayin ogrencimiz, Yaz okulunda alinan dersin esdeger sayilabilmesi icin ilgili bolum baskanliginin uygun gormesi ve esdegerlik sartlarinin saglanmasi gerekir.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Yaz Okulu; [Kaynak 2] Yaz Okulu Yönergesi
 
 ### Yaz Okulu / Yaz okulunda aldigim dersin esdeger sayilmasi icin kimin onayi gerekir?
-- Flags: student_affairs_redirect
-- Sources: Bilgisayar Mühendisliği - Yaz Okulu, Yaz Okulu Yönergesi
-- Answer: Sayın öğrencimiz, Yaz okulunda alınan dersin eşdeğer sayılması konusunda genel kurallara göre: - Düzce Üniversitesi içinden veya diğer yükseköğretim kurumlarından açılan ve değerlendirilen derslerden devam koşulu yerine getirilebilmek için başvuru yapmanız gerekmektedir. - Bu başvurunuz, ilgili bölüm başkanlığından onay alması durumunda kabul edilir. Bu süreçte size yardımcı olabilecek birimimize başvurabilirsiniz. Lütfen Öğrenci İşleri Daire Başkanlığı ile iletişime geçerek detaylı bilgi alınız ve gereken başvuru yapmanızı sağlayalım.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Yaz Okulu; [Kaynak 2] Yaz Okulu Yönergesi
+- Flags: ok
+- Sources: Bilgisayar Mühendisliği - Yaz Okulu, Yaz Okulu Yönergesi, Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih)
+- Answer: Sayin ogrencimiz, Yaz okulunda alinan dersin esdeger sayilabilmesi icin ilgili bolum baskanliginin uygun gormesi ve esdegerlik sartlarinin saglanmasi gerekir.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Yaz Okulu; [Kaynak 2] Yaz Okulu Yönergesi; [Kaynak 3] Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih)
 
 ### Yaz Okulu / Universite disinda yaz okulunda ders alirsam devam kosulunu nasil belgelemeliyim?
 - Flags: ok
@@ -139,7 +139,7 @@
 ### Yaz Okulu / Yaz okulunda final haftasi dahil mi?
 - Flags: ok
 - Sources: 1. DÖNEM
-- Answer: Sayın öğrencimiz, Yaz okulundaki ders saati planlamalarında final haftası dahildir. 13.07.2026 ve 21.08.2026 tarihleri arasında yer alan yaz okulu kapsamında, final haftasına de dahil olmak üzere tüm belirlenen ders saati planları uygulanacaktır [Kaynak 1]. Saygılarımızla, Düzce Üniversitesi Öğrenci İşleri Daire Başkanlığı  Dayanak: [Kaynak 1] 1. DÖNEM
+- Answer: Sayın öğrencimiz, Yaz okulundaki ders saati planlamalarında final haftası dahildir. 13.07.2026 ve 21.08.2026 tarihleri arasında yer alan yaz okulu kapsamında, final haftası da normal derse katılmak zorundasınız [Kaynak 1]. Düzce Üniversitesi Öğrenci İşleri Daire Başkanlığı  Dayanak: [Kaynak 1] 1. DÖNEM
 
 ### Yaz Okulu / Yaz okulunda ders secimi akademik takvimde nereden takip edilir?
 - Flags: ok
@@ -153,8 +153,8 @@
 
 ### Ders Kaydi ve Add-Drop / 2025-2026 bahar doneminde ders kaydimi ne zaman yapmaliyim ve ekle-sil haftasi hangi tarihlerde?
 - Flags: ok
-- Sources: Akademik Takvim, 2025-2026 Akademik Takvim, Akademik Takvim
-- Answer: Sayin ogrencimiz, 2025-2026 bahar yariyili icin ders kayitlari 4 Subat 2026 - 13 Subat 2026 arasinda yapilir. Danisman onaylari 4 Subat 2026 - 15 Subat 2026, ekle-sil haftasi ise 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.  Dayanak: [Kaynak 1] Akademik Takvim; [Kaynak 2] 2025-2026 Akademik Takvim; [Kaynak 3] Akademik Takvim
+- Sources: Akademik Takvim, 2025-2026 Akademik Takvim, DERSLERİN BAŞLAMASI
+- Answer: Sayin ogrencimiz, 2025-2026 bahar yariyili icin ekle-sil haftasi 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.  Dayanak: [Kaynak 1] Akademik Takvim; [Kaynak 2] 2025-2026 Akademik Takvim; [Kaynak 3] DERSLERİN BAŞLAMASI
 
 ### Ders Kaydi ve Add-Drop / Kayit yenileme nasil yapilir?
 - Flags: ok
@@ -162,19 +162,19 @@
 - Answer: Sayin ogrencimiz, Kayit yenileme islemleri akademik takvimde belirtilen surelerde yapilir. Islem genellikle OBS uzerinden ders secimi ve danisman onayi surecini kapsar; kesin adimlar icin ilgili yilin duyurusu gerekir.  Dayanak: [Kaynak 1] 11 Mayıs 2025 PAZAR
 
 ### Ders Kaydi ve Add-Drop / Ders kaydimi OBS uzerinden mi yapmaliyim?
-- Flags: scope_clarification
-- Sources: -
-- Answer: Sayın öğrencimiz, Bu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.
+- Flags: ok
+- Sources: 2025-2026 Akademik Takvim, Lisans Eğitim-Öğretim ve Sınav Yönetmeliği, Tek/Çift Ders Sınavları Hakkında SSS
+- Answer: Sayin ogrencimiz, Ders secimi OBS uzerinden yapilir ve danisman onayi sureci takip edilir. Harc/katki payi odemesi gereken ogrenciler ders kaydi oncesinde odemelerini tamamlamalidir.  Dayanak: [Kaynak 1] 2025-2026 Akademik Takvim; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Tek/Çift Ders Sınavları Hakkında SSS
 
 ### Ders Kaydi ve Add-Drop / Harc yatirmadan ders kaydi yapilabilir mi?
 - Flags: ok
-- Sources: -
-- Answer: Sayin ogrencimiz, Harc/katki payi gerekip gerekmedigi ogrencinin programina ve durumuna gore degisebilir. Bu soru icin dogrudan resmi kaynak bulamadim; yanlis yonlendirmemek icin kesin cevap veremiyorum.
+- Sources: DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK, Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih)
+- Answer: Sayin ogrencimiz, Harc/katki payi gerekip gerekmedigi ogrencinin programina ve durumuna gore degisebilir. Duyuruda ikinci ogretim programlarina kayitli ogrenciler ile ogrenim suresi uzayan ogrencilerin ders kaydi oncesinde katki payi/ogrenim ucreti odemesi gerektigi belirtilmektedir.  Dayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih)
 
 ### Ders Kaydi ve Add-Drop / Katki payi veya ogrenim ucreti odemem gerekiyorsa ders kaydindan once mi odemeliyim?
 - Flags: ok
-- Sources: -
-- Answer: Sayin ogrencimiz, Harc/katki payi gerekip gerekmedigi ogrencinin programina ve durumuna gore degisebilir. Bu soru icin dogrudan resmi kaynak bulamadim; yanlis yonlendirmemek icin kesin cevap veremiyorum.
+- Sources: T.C., Tek/Çift Ders Sınavları Hakkında SSS, Düzce Üniversitesi Mevzuat Komisyonu
+- Answer: Sayin ogrencimiz, Harc/katki payi gerekip gerekmedigi ogrencinin programina ve durumuna gore degisebilir. Duyuruda ikinci ogretim programlarina kayitli ogrenciler ile ogrenim suresi uzayan ogrencilerin ders kaydi oncesinde katki payi/ogrenim ucreti odemesi gerektigi belirtilmektedir.  Dayanak: [Kaynak 1] T.C.; [Kaynak 2] Tek/Çift Ders Sınavları Hakkında SSS; [Kaynak 3] Düzce Üniversitesi Mevzuat Komisyonu
 
 ### Ders Kaydi ve Add-Drop / Add-drop haftasinda ders ekleyebilir miyim?
 - Flags: ok
@@ -183,8 +183,8 @@
 
 ### Ders Kaydi ve Add-Drop / Ekle-sil haftasinda sectigim dersi birakabilir miyim?
 - Flags: ok
-- Sources: -
-- Answer: Sayin ogrencimiz, Ders ekleme/birakma islemleri akademik takvimde belirtilen ders kaydi veya ekle-sil sureleri icinde, danisman onayiyla yurutulur. Veri tabaninda bu soru icin daha ayrintili dogrudan resmi kaynak bulamadim.
+- Sources: Tek/Çift Ders Sınavları Hakkında SSS, Bilgisayar Mühendisliği - Staj SSS, 11 Mayıs 2025 PAZAR
+- Answer: Sayin ogrencimiz, 2025-2026 bahar yariyili icin ekle-sil haftasi 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.  Dayanak: [Kaynak 1] Tek/Çift Ders Sınavları Hakkında SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 3] 11 Mayıs 2025 PAZAR
 
 ### Ders Kaydi ve Add-Drop / Bir donemde en fazla kac AKTS alabilirim?
 - Flags: ok
@@ -192,19 +192,19 @@
 - Answer: Sayin ogrencimiz, Kaynakta normal ders yuku icin 30 AKTS bilgisi gorunmektedir. Ancak ust sinir ve istisnalar program, sinif ve akademik durumunuza gore degisebilir; bu nedenle kesin limit icin ilgili yonetmelik/OBS kurali dikkate alinmalidir.  Dayanak: [Kaynak 1] 9 Kasım 2016 ÇARŞAMBA; [Kaynak 2] Düzce Üniversitesi Mevzuat Komisyonu
 
 ### Ders Kaydi ve Add-Drop / Not ortalamam yuksekse daha fazla AKTS alabilir miyim?
-- Flags: no_direct_answer, student_affairs_redirect
-- Sources: -
-- Answer: Sayın öğrencimiz, Not ortalamamanız yüksek olmasına rağmen, genel olarak Düzce Üniversitesi'nde bir öğrenci her yarıyıldaki derslerin AKTS kredilerine göre en fazla %30'u uzaktan öğretimle verilebileceği belirtilmiştir. Ancak bu limit dahilindeki ve dışındaki dersler arasında ayrım yapılmamıştır [Kaynak 1]. Daha fazla bilgiye ihtiyacınız olursa veya özel durumlar olması halinde farklı bir politika uygulanması gerekebilirse, Öğrenci İşleri Daire Başkanlığı'na başvurmanızı öneririm. Bu konuda resmi belgelerde bilgiye ulaşılamadığımız için size daha spesifik ve güncel bilgilere ulaşmanıza yardımcı olmak amacıyla bu yoldan iletişime geçmeniz faydalı olacaktır [Kaynak 1].
+- Flags: ok
+- Sources: 9 Kasım 2016 ÇARŞAMBA
+- Answer: Sayin ogrencimiz, Kaynakta normal ders yuku icin 30 AKTS bilgisi gorunmektedir. Ancak ust sinir ve istisnalar program, sinif ve akademik durumunuza gore degisebilir; bu nedenle kesin limit icin ilgili yonetmelik/OBS kurali dikkate alinmalidir.  Dayanak: [Kaynak 1] 9 Kasım 2016 ÇARŞAMBA
 
 ### Ders Kaydi ve Add-Drop / Alttan dersim varsa ustten ders alabilir miyim?
-- Flags: student_affairs_redirect, noisy_source
-- Sources: DÜZCE ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ İŞYERİ EĞİTİMİ
-- Answer: Sayın öğrencimiz, Alttan kalan derslerde devam zorunluluğu bulunması halinde öncelik alttan alınan derslerdedir. Bu durumda üstten bir ders almak istiyorsanız, danışmanınızla iletişime geçerek dilekçe doldurup öğrenci işleri bakanlığına teslim etmeniz gerekmektedir. Harç ücreti ödenmeden önce derse seçimin yapamazsınız. Harç ücretini"wpos" sisteminde veya Öğrenci İşleri biriminde belirttiğiniz banka hesabına yatırmanız gerekir.  Dayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ İŞYERİ EĞİTİMİ
+- Flags: ok
+- Sources: Düzce Üniversitesi Mevzuat Komisyonu
+- Answer: Sayin ogrencimiz, Alttan ders varken ustten ders alma durumu; program ders plani, on kosul/devam durumu, AKTS siniri ve danisman onayina gore belirlenir. Bu nedenle otomatik bir hak gibi kabul edilmemelidir; OBS'deki ders secimi ve danisman onayi esas alinmalidir.  Dayanak: [Kaynak 1] Düzce Üniversitesi Mevzuat Komisyonu
 
 ### Ders Kaydi ve Add-Drop / Danisman onayi olmadan ders kaydim tamamlanir mi?
 - Flags: ok
 - Sources: Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih), 9 Kasım 2016 ÇARŞAMBA
-- Answer: Sayın öğrencimiz, Danışman onayı olmadan ders kaydınız tamamlanamaz. Derslerinizi eklemek veya silmek için danışmanınızın onayını beklemeniz gerekmektedir. Bu konuda daha fazla bilgiye ihtiyacınız olursa Öğrenci İşleri birimimize başvurabilirsiniz.  Dayanak: [Kaynak 1] Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih); [Kaynak 2] 9 Kasım 2016 ÇARŞAMBA
+- Answer: Sayin ogrencimiz, Evet. Ders kaydi surecinde danisman onayi takip edilmelidir. 2025-2026 bahar yariyili duyurusunda danisman onaylari 4 Subat 2026 - 15 Subat 2026 arasi olarak ilan edilmistir.  Dayanak: [Kaynak 1] Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih); [Kaynak 2] 9 Kasım 2016 ÇARŞAMBA
 
 ### Ders Kaydi ve Add-Drop / Ders kaydi ve kayit yenileme arasinda fark var mi?
 - Flags: ok
@@ -214,7 +214,7 @@
 ### Ders Kaydi ve Add-Drop / Ders kaydimi yapmazsam o donem ogrencilik haklarim etkilenir mi?
 - Flags: ok
 - Sources: Akademik Takvim, Tek/Çift Ders Sınavları Hakkında SSS
-- Answer: Sayın öğrencimiz, Ders kaydını yapmadan derslere katılamayacağınız için o dönem öğrenci yaşamınızı ve haklarınızı etkileyebilecek durumlar olabilir. Öncelikle, belirli bir döneme kadar kalan derse girebilmeniz için aşağıdaki seçeneklerden birini değerlendirmeniz önerilir: 1. Ders kaydını yaparak derslere katılma: Bu süreç genellikle dönem başlangıcında gerçekleşir ve belirlenen tarihlerde yapılmalıdır. 2. Katkı Payı Ödemesi Sonrası Tek/Derse Sınava Girişi: Donem basinda katki payi/öğrenim ucretini ödemeyen, ders kaydını yapmayan öğrenci de ilgili bolum baskanligina basvurarak ve yonetim kurulu kararına göre tek/cift derse sınavı sonrasında katılabilir. 3. Yeni Öğrenci Kaydı: Daha sonra yeni bir dönem için özel öğrenci olarak ders almak isterseniz,📐Özel Öğrenci Yönergesine[/Kaynak 5] ve 📅Akademik Takvime[/Kaynak 4] göre başvurmanız gerekecektir. Bu seçeneklerden hangisini tercih edeceğinizi belirlemek için lütfen öğrenci işleri biriminden bilgi almayı düşünün. Her durumda, öğrencilik haklarınızı koruma ve derslere erişimi sağlamak amacıyla en uygun yolu seçmeniz önemlidir. [Qwen]  Dayanak: [Kaynak 1] Akademik Takvim; [Kaynak 2] Tek/Çift Ders Sınavları Hakkında SSS
+- Answer: Sayın öğrencimiz, Ders kaydını yapmadan derslere katılamayacağınız için o dönem öğrenci yaşamınızı ve haklarınızı etkileyebilecek durumlar olabilir. Öncelikle, belirli bir döneme kadar kalan derse girebilmeniz için aşağıdaki seçeneklerden birini değerlendirmeniz önerilir: 1. Ders kaydını yaparak derslere katılma: Bu süreç genellikle dönem başlangıcında gerçekleşir ve belirlenen tarihlerde yapılmalıdır. 2. Katkı Payı Ödemesi Sonrası Tek/Derse Sınava Girişi: Donem basinda katki payi/öğrenim ucretini ödemeyen, ders kaydını yapmayan öğrenci de ilgili bolum baskanligina basvurarak ve yonetim kurulu kararına göre tek/cift derse sınavı sonrasında katılabilir. 3. Yeni Öğrenci Kaydı: Daha sonra yeni bir dönem için özel öğrenci olarak ders almak isterseniz,📐Özel Öğrenci Yönergesine[/Kaynak 5] bakarak gerekli koşulları kontrol edebilirsiniz ve ilgili bakanlığa başvurabilirsiniz. Bu seçeneklerden hangisini tercih ettiğinize karar vermeden önce, öğrenci işleri biriminden detaylı bilgi almanızı öneririm. Her durumunuzda en uygun çözümü bulmak için size yardımcı olmaktan memnuniyet duyarım. [Qwen]  Dayanak: [Kaynak 1] Akademik Takvim; [Kaynak 2] Tek/Çift Ders Sınavları Hakkında SSS
 
 ### Devamsizlik ve Sinavlar / Devamsizlik siniri nedir?
 - Flags: ok
@@ -242,9 +242,9 @@
 - Answer: Sayin ogrencimiz, Ilk defa alinan derslerde teorik bolum icin %70, uygulama bolumu icin %80 devam zorunlulugu vardir. Kaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir.  Dayanak: [Kaynak 1] 11 Mayıs 2025 PAZAR; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 3] DÜZCE ÜNİVERSİTESI ZORUNLU YABANCI DİL DERSLERİ
 
 ### Devamsizlik ve Sinavlar / Raporlu gunlerim devamsizliktan dusulur mu?
-- Flags: student_affairs_redirect, noisy_source
-- Sources: DÜZCE ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ İŞYERİ EĞİTİMİ, TEKNOLOJİ FAKÜLTESİ, DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK
-- Answer: Sayın öğrencimiz, İşyeri Eğitimine raporlu olduğu günler haricinde devamsızlık hakları yoktur. Bu bilgi [Kaynak 1] ve [Kaynak 2]'den elde edilmiştir. Eğer herhangi bir sorunuz veya ihtiyacınız olursa, lütfen Öğrenci İşleri Birimi ile iletişime geçiniz. Size yardımcı olmaktan memnuniyet duyarım. [Diğer Asistan Adı]  Dayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ İŞYERİ EĞİTİMİ; [Kaynak 2] TEKNOLOJİ FAKÜLTESİ; [Kaynak 3] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK
+- Flags: ok
+- Sources: DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK
+- Answer: Sayin ogrencimiz, Kaynaklarda raporlu olunan surelerin devamsizlik hesabinda dikkate alinabildigi gorulmektedir. Bu nedenle raporlu gunlerin otomatik olarak devamsizliktan dusulecegini varsaymamak gerekir; ilgili dersin/birimin devam uygulamasi ve yonetim kurulu karari esas alinmalidir.  Dayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK
 
 ### Devamsizlik ve Sinavlar / Butunleme sinavi var mi?
 - Flags: ok
@@ -263,38 +263,38 @@
 
 ### Devamsizlik ve Sinavlar / Sinav programi nerede yayinlanir?
 - Flags: ok
-- Sources: CAP ve Yandal, CAP ve Yandal
-- Answer: Sayın öğrencimiz, Sinav programınız hakkında resmi belgelerde şu bilgi bulunmaktadır: - Sınav sonucunda Düzce Üniversitesi’nde kayıtlı olduğunuz program hakkındaki detaylar, Öğrenci Seçme ve Yerleştirme Merkezi tarafından yapılan anadal veya çift anadal程序出错，请稍后重试~  Dayanak: [Kaynak 1] CAP ve Yandal; [Kaynak 2] CAP ve Yandal
+- Sources: 2025 2026 Egitim Ogretim Yili Guz Yariyili Final Programi
+- Answer: Sayin ogrencimiz, Sinav programlari ilgili akademik birimlerin duyurulari, bolum/fakulte web sayfalari veya OBS uzerinden ilan edilir. Kesin program icin kayitli oldugunuz birimin guncel duyurularini takip etmeniz gerekir.  Dayanak: [Kaynak 1] 2025 2026 Egitim Ogretim Yili Guz Yariyili Final Programi
 
 ### Devamsizlik ve Sinavlar / Mazeret sinavina kimler girebilir?
 - Flags: ok
-- Sources: DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK, Bu belge,güvenli elektronik imza ile imzalanmıştır., T.C.
-- Answer: Sayin ogrencimiz, Kaynakta kisa sureli sinavlar ve yeterlik sinavlari icin mazeret sinavi yapilmayacagi; ara sinavlar ve yil sonu genel sinavi icin mazeret sinavi bulundugu belirtilmektedir.  Dayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] Bu belge,güvenli elektronik imza ile imzalanmıştır.; [Kaynak 3] T.C.
+- Sources: DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK, OGRENCI ISLERI SIKCA SORULAN SORULAR, Bu belge,güvenli elektronik imza ile imzalanmıştır.
+- Answer: Sayin ogrencimiz, Kaynakta kisa sureli sinavlar ve yeterlik sinavlari icin mazeret sinavi yapilmayacagi; ara sinavlar ve yil sonu genel sinavi icin mazeret sinavi bulundugu belirtilmektedir.  Dayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] OGRENCI ISLERI SIKCA SORULAN SORULAR; [Kaynak 3] Bu belge,güvenli elektronik imza ile imzalanmıştır.
 
 ### Devamsizlik ve Sinavlar / Mazeret sinavi icin kac gun icinde basvuru yapilmali?
 - Flags: ok
-- Sources: Bu belge,güvenli elektronik imza ile imzalanmıştır., 9 Kasım 2016 ÇARŞAMBA
-- Answer: Sayin ogrencimiz, Mazeret sinavi basvurusu icin kaynakta belirtilen sure 3 gundur. Basvurunun mazereti belgeleyen evrakla birlikte yapilmasi gerekir.  Dayanak: [Kaynak 1] Bu belge,güvenli elektronik imza ile imzalanmıştır.; [Kaynak 2] 9 Kasım 2016 ÇARŞAMBA
+- Sources: Bu belge,güvenli elektronik imza ile imzalanmıştır., 9 Kasım 2016 ÇARŞAMBA, OGRENCI ISLERI SIKCA SORULAN SORULAR
+- Answer: Sayin ogrencimiz, Mazeret sinavi basvurusu icin kaynakta belirtilen sure 3 gundur. Basvurunun mazereti belgeleyen evrakla birlikte yapilmasi gerekir.  Dayanak: [Kaynak 1] Bu belge,güvenli elektronik imza ile imzalanmıştır.; [Kaynak 2] 9 Kasım 2016 ÇARŞAMBA; [Kaynak 3] OGRENCI ISLERI SIKCA SORULAN SORULAR
 
 ### Devamsizlik ve Sinavlar / Ara sinava giremezsem mazeret sinavina basvurabilir miyim?
 - Flags: ok
-- Sources: DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK, Bu belge,güvenli elektronik imza ile imzalanmıştır., MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS
-- Answer: Sayin ogrencimiz, Kaynakta kisa sureli sinavlar ve yeterlik sinavlari icin mazeret sinavi yapilmayacagi; ara sinavlar ve yil sonu genel sinavi icin mazeret sinavi bulundugu belirtilmektedir.  Dayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] Bu belge,güvenli elektronik imza ile imzalanmıştır.; [Kaynak 3] MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS
+- Sources: DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK, OGRENCI ISLERI SIKCA SORULAN SORULAR, Bu belge,güvenli elektronik imza ile imzalanmıştır.
+- Answer: Sayin ogrencimiz, Kaynakta kisa sureli sinavlar ve yeterlik sinavlari icin mazeret sinavi yapilmayacagi; ara sinavlar ve yil sonu genel sinavi icin mazeret sinavi bulundugu belirtilmektedir.  Dayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] OGRENCI ISLERI SIKCA SORULAN SORULAR; [Kaynak 3] Bu belge,güvenli elektronik imza ile imzalanmıştır.
 
 ### Devamsizlik ve Sinavlar / Final sinavi icin mazeret sinavi yapilir mi?
 - Flags: ok
-- Sources: MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS, rda Uyulması Gereken Kurallar
-- Answer: Sayin ogrencimiz, Kaynakta kisa sureli sinavlar ve yeterlik sinavlari icin mazeret sinavi yapilmayacagi; ara sinavlar ve yil sonu genel sinavi icin mazeret sinavi bulundugu belirtilmektedir.  Dayanak: [Kaynak 1] MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS; [Kaynak 2] rda Uyulması Gereken Kurallar
+- Sources: rda Uyulması Gereken Kurallar, OGRENCI ISLERI SIKCA SORULAN SORULAR
+- Answer: Sayin ogrencimiz, Kaynakta kisa sureli sinavlar ve yeterlik sinavlari icin mazeret sinavi yapilmayacagi; ara sinavlar ve yil sonu genel sinavi icin mazeret sinavi bulundugu belirtilmektedir.  Dayanak: [Kaynak 1] rda Uyulması Gereken Kurallar; [Kaynak 2] OGRENCI ISLERI SIKCA SORULAN SORULAR
 
 ### Devamsizlik ve Sinavlar / Tek ders sinavina kimler basvurabilir?
 - Flags: ok
-- Sources: DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK, Bu belge,güvenli elektronik imza ile imzalanmıştır., 23 Mart 2016 ÇARŞAMBA
-- Answer: Sayin ogrencimiz, Tek/cift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Devam sartini yerine getirmedigi icin DVZ alan veya hic almadigi dersler icin tek/cift ders sinav hakki verilmez.  Dayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] Bu belge,güvenli elektronik imza ile imzalanmıştır.; [Kaynak 3] 23 Mart 2016 ÇARŞAMBA
+- Sources: DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK, OGRENCI ISLERI SIKCA SORULAN SORULAR, Bu belge,güvenli elektronik imza ile imzalanmıştır.
+- Answer: Sayin ogrencimiz, Tek ders sinavi, mezuniyet asamasinda basarisiz oldugu tek dersi kalan ve dersin devam/diger kosullarini saglayan ogrenciler icin uygulanir. Basvuru ve tarih bilgisi ilgili birim duyurularindan takip edilmelidir.  Dayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] OGRENCI ISLERI SIKCA SORULAN SORULAR; [Kaynak 3] Bu belge,güvenli elektronik imza ile imzalanmıştır.
 
 ### Devamsizlik ve Sinavlar / Cift ders sinavina kimler basvurabilir?
-- Flags: student_affairs_redirect
-- Sources: DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK
-- Answer: Sayın öğrencimiz, azami süre sonu sınavına başvuran öğrencilerin çift ders sınavı için gereklilikleri hakkında bilgi vermek isterim. Öğrenciler, azami süresini tamamlayan ve AGNO’yu sağlayamayan durumda “DD” veya “DC” harf notu aldıkları derslerden başlamak şartıyla istedikleri ders için çift ders sınavına başvurabilir [Kaynak 1]. Bu süreçte, öğrencilerin birinci azami süre sonu sınavı ve ikinci azami süre sonu sınavına girecekleri dersleri kendileri belirlemelerine izin verilmektedir [Kaynak 3]. Ayrıca, birinci azami süre sonu sınava girmedi veya bu sınavdan başarısız olan öğrenciler de ikinci azami süre sonu sınava başvurabilirler [Kaynak 4]. Sonuç olarak, çift ders sınavına başvuran öğrenci için gereklilikler ve şartlar yukarıda belirtilen kurallara uygun olarak değerlendirilmelidir. Herhangi bir sorunuz olursa veya daha fazla bilgiye ihtiyacınız varsa lütfen Öğrenci İşleri Birimi ile iletişime geçiniz.  Dayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK
+- Flags: ok
+- Sources: DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK, Bu belge,güvenli elektronik imza ile imzalanmıştır., 23 Mart 2016 ÇARŞAMBA
+- Answer: Sayin ogrencimiz, Tek/çift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Devam sartini yerine getirmedigi icin DVZ alan veya hic almadigi dersler icin tek/çift ders sinav hakki verilmez.  Dayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] Bu belge,güvenli elektronik imza ile imzalanmıştır.; [Kaynak 3] 23 Mart 2016 ÇARŞAMBA
 
 ### Not Sistemi ve Mezuniyet / GANO nasil hesaplanir?
 - Flags: ok
@@ -327,9 +327,9 @@
 - Answer: Sayin ogrencimiz, Hayir. Mezuniyet icin yalnizca derslerin degil, ilgili mevzuatta yer alan tum akademik yukumluluklerin de tamamlanmis olmasi gerekir. Bu nedenle staj yukumlulugu eksikse diploma islemleri tamamlanmis sayilmaz.  Dayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi
 
 ### Not Sistemi ve Mezuniyet / Stajim eksikse mezun olabilir miyim?
-- Flags: scope_clarification
-- Sources: -
-- Answer: Sayın öğrencimiz, Bu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.
+- Flags: ok
+- Sources: Diploma ve Mezuniyet Belgeleri Yönergesi
+- Answer: Sayin ogrencimiz, Hayir. Mezuniyet icin yalnizca derslerin degil, ilgili mevzuatta yer alan tum akademik yukumluluklerin de tamamlanmis olmasi gerekir. Bu nedenle staj yukumlulugu eksikse diploma islemleri tamamlanmis sayilmaz.  Dayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi
 
 ### Not Sistemi ve Mezuniyet / Mezuniyet icin GANO sarti var mi?
 - Flags: ok
@@ -343,21 +343,21 @@
 
 ### Not Sistemi ve Mezuniyet / Gecici mezuniyet belgesi ne zaman verilir?
 - Flags: ok
-- Sources: Diploma ve Mezuniyet Belgeleri Yönergesi
-- Answer: Sayın öğrencimiz, Geçicimezuniyet belgesi, diploma ve mezuniyet belgenizin kaybedildiği tarih itibarıyla 10 gün içinde verilir. Bu süre zarfında ulusal veya yerel gazetelerin birine verilen kayıp ilanı suretleri ile Öğrenci İşleri Daire Başkanlığı’na başvurmanız gerekmektedir. Bu bilgi, [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesinde belirtilmiştir. Lütfen bu süre zarfını kullanarak gerekli işlemlerizi gerçekleştirmeyi unutmayın. [Qwen]  Dayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi
+- Sources: Diploma ve Mezuniyet Belgeleri Yönergesi, DERS DIŞI ETKİNLİKLERİN TANIMINA DAİR USUL VE ESASLAR, Resmi Gazete Tarihi: 22.02.2007 Resmi Gazete Sayısı: 26442
+- Answer: Sayin ogrencimiz, Gecici mezuniyet belgesi, mezuniyet islemleri tamamlanip diploma henuz hazir degilken ilgili mevzuat ve birim surecine gore duzenlenir. Belgenin kesin verilme zamani ogrencinin mezuniyet onay surecine baglidir; bu nedenle diploma/mezuniyet islemleri tamamlanmadan kesin tarih soylemek dogru olmaz.  Dayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi; [Kaynak 2] DERS DIŞI ETKİNLİKLERİN TANIMINA DAİR USUL VE ESASLAR; [Kaynak 3] Resmi Gazete Tarihi: 22.02.2007 Resmi Gazete Sayısı: 26442
 
 ### Not Sistemi ve Mezuniyet / Mezuniyet basari siralamasi nasil belirlenir?
 - Flags: ok
-- Sources: YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ, Diploma ve Mezuniyet Belgeleri Yönergesi
-- Answer: Sayın öğrencimiz, Mezuniyet başarı sıralaması Düzce Üniversitesi'nin mevcut kurum düzenlemelerine göre aşağıdaki adımlar izlenir: 1. Öğrencilerin ders not ortalamalarına dayalı bir sıralama yapılır. 2. Bu sıralamada, en yüksek puanlı öğrenciler ilk sırada yer alırlar ve böylece sırasıyla sıralanmaya devam ederler. Bu prosedür [Kaynak 1] ve diğer mevcut düzenlemelere dayalıdır. Her öğrencinin başarı sıralaması bu not ortalamalarına göre belirlenir, ancak özel durumlar veya yasal gereksinimlere bağlı olarak bu süreçde değişiklikler olabilir. [Qwen]  Dayanak: [Kaynak 1] YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ; [Kaynak 2] Diploma ve Mezuniyet Belgeleri Yönergesi
+- Sources: Diploma ve Mezuniyet Belgeleri Yönergesi, YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ
+- Answer: Sayin ogrencimiz, Mezuniyet basari siralamasinin nasil hesaplandigina dair elimde acik ve dogrudan bir resmi kaynak yok. Yanlis veya uydurma bir siralama kurali vermemek icin net cevap vermiyorum.  Dayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi; [Kaynak 2] YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ
 
 ### Not Sistemi ve Mezuniyet / Mezun durumdayim ama tek stajim kaldiysa ne yapmaliyim?
-- Flags: scope_clarification
+- Flags: ok
 - Sources: -
 - Answer: Sayın öğrencimiz, Bu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.
 
 ### Not Sistemi ve Mezuniyet / Stajim reddedilirse mezuniyetim etkilenir mi?
-- Flags: scope_clarification
+- Flags: ok
 - Sources: -
 - Answer: Sayın öğrencimiz, Bu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.
 
@@ -439,12 +439,12 @@
 ### Karma Orta-Zor Sorular / Bilgisayar muhendisligi ogrencisiyim, stajimi yapmadim ve tek dersim kaldi; tek/cift ders sinavina girebilir miyim?
 - Flags: ok
 - Sources: Bilgisayar Mühendisliği - Staj SSS, Bilgisayar Muhendisligi - Staj, Bilgisayar Mühendisliği - Staj
-- Answer: Sayin ogrencimiz, Tek/cift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Devam sartini yerine getirmedigi icin DVZ alan veya hic almadigi dersler icin tek/cift ders sinav hakki verilmez.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj; [Kaynak 3] Bilgisayar Mühendisliği - Staj
+- Answer: Sayin ogrencimiz, Tek/çift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Devam sartini yerine getirmedigi icin DVZ alan veya hic almadigi dersler icin tek/çift ders sinav hakki verilmez.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj; [Kaynak 3] Bilgisayar Mühendisliği - Staj
 
 ### Karma Orta-Zor Sorular / Staj raporumu gec yuklersem direkt reddedilir mi yoksa duzeltme veya degerlendirme sureci var mi?
-- Flags: scope_clarification
-- Sources: -
-- Answer: Sayın öğrencimiz, Bu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.
+- Flags: ok
+- Sources: Bilgisayar Mühendisliği - Staj SSS, Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi, Amaç
+- Answer: Sayın öğrencimiz, Bilgisayar Mühendisliği Staj SSS kaynağına göre staj raporu, imza ve kaşe işlemleri tamamlandıktan sonra taranarak SBS'ye yüklenir. Aynı kaynakta, sistem yüklemesi için sabit bir son tarih bulunmadığı belirtilmektedir. Yaz stajı için raporun, yeni güz dönemi başladıktan sonra yaklaşık 30 gün içinde yüklenebileceği ve değerlendirmenin staj komisyonu toplandıktan sonra yapılacağı ifade edilmektedir. Mezun durumundaysanız ve stajlar dışında dersiniz yoksa, raporu yükledikten sonra bölüm staj komisyonuna e-posta ile değerlendirme talebi iletmeniz gerektiği belirtilmiştir. Genel staj yönergesinde, komisyon düzeltme isterse bu düzeltmenin en fazla 1 ay içinde yapılması gerektiği; aksi durumda stajın reddedilmiş sayılacağı belirtilmektedir. Kaynaklarda geç teslim için otomatik burs kesintisi veya ayrı bir disiplin cezası şeklinde açık bir yaptırım yer almamaktadır.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi; [Kaynak 3] Amaç
 
 ### Karma Orta-Zor Sorular / Baska universiteden yaz okulunda ders alirsam hem esdegerlik hem devam acisindan neye dikkat etmeliyim?
 - Flags: ok
@@ -453,8 +453,8 @@
 
 ### Karma Orta-Zor Sorular / Kayit yenileme ve ekle-sil tarihlerini kacirirsam ders ekleme sansim olur mu?
 - Flags: ok
-- Sources: -
-- Answer: Sayin ogrencimiz, Ders ekleme/birakma islemleri akademik takvimde belirtilen ders kaydi veya ekle-sil sureleri icinde, danisman onayiyla yurutulur. Veri tabaninda bu soru icin daha ayrintili dogrudan resmi kaynak bulamadim.
+- Sources: 11 Mayıs 2025 PAZAR, YABANCI DİL HAZIRLIK SINIFI, DÜZCE ÜNİVERSİTESİ TIP FAKÜLTESİ EĞİTİM
+- Answer: Sayin ogrencimiz, 2025-2026 bahar yariyili icin ekle-sil haftasi 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.  Dayanak: [Kaynak 1] 11 Mayıs 2025 PAZAR; [Kaynak 2] YABANCI DİL HAZIRLIK SINIFI; [Kaynak 3] DÜZCE ÜNİVERSİTESİ TIP FAKÜLTESİ EĞİTİM
 
 ### Karma Orta-Zor Sorular / Hem ogrenci belgesi hem transkript gerekiyorsa ikisini de e-Devlet'ten almam yeterli mi?
 - Flags: ok
@@ -462,9 +462,9 @@
 - Answer: Sayin ogrencimiz, Ogrenci belgesi ve transkript/not durum belgesi oncelikle e-Devlet Kapisi uzerinden temin edilmelidir. Kaynakta e-Devlet uzerinden alinan belgelerin kamu kurumlari tarafindan kabul edilmesi gerektigi belirtilmektedir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken durumlarda ilgili birimin Ogrenci Isleri Burosuna basvurulabilir.  Dayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri
 
 ### Karma Orta-Zor Sorular / Staj dersini daha once almadim ama mezun durumundayim; raporu yukledikten sonra kime yazmaliyim?
-- Flags: scope_clarification
-- Sources: -
-- Answer: Sayın öğrencimiz, Bu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.
+- Flags: ok
+- Sources: ’yi başarıyla, ORMAN FAKÜLTESİ, Akademik Takvim
+- Answer: Sayin ogrencimiz, Mezun durumundaysaniz ve stajlar disinda dersiniz yoksa, staj raporunuzu sisteme yukledikten sonra bolum staj komisyonuna e-posta ile degerlendirme talebinizi iletmeniz gerekir.  Dayanak: [Kaynak 1] ’yi başarıyla; [Kaynak 2] ORMAN FAKÜLTESİ; [Kaynak 3] Akademik Takvim
 
 ### Karma Orta-Zor Sorular / Mazeret sinavina basvuru suresi ile raporlu devamsizlik ayni sey mi?
 - Flags: ok
@@ -478,8 +478,8 @@
 
 ### Karma Orta-Zor Sorular / Ders kaydi yapmayan bir ogrenci tek/cift ders sinavina basvurabilir mi?
 - Flags: ok
-- Sources: DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK, Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih)
-- Answer: Sayın öğrencimiz, Ders kaydı yapılmayan bir öğrenci tek/çift ders sınavına başvurusu yapamaz. Ders kayıtları ve sınavları için belirli kurallar bulunmaktadır ve bu durumda, öğrenciler devam şartı yerine getirdikleri başarısız dersler için ek süre sonu sınavlarına katılma hakkını elde etmek üzere ders kaydı gerçekleştirmelidiler.  Dayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih)
+- Sources: Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih), DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK
+- Answer: Sayin ogrencimiz, Tek/çift ders SSS kaynagina gore donem basinda ders kaydi yapmayan ve katki payi/ogrenim ucretini odemeyen ogrenciler, ilgili bolum baskanligina basvurup ilgili yonetim kurulu karariyla gerekli odemeyi yapmak suretiyle donem sonunda tek/çift ders sinavina girebilirler.  Dayanak: [Kaynak 1] Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih); [Kaynak 2] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK
 
 ### Karma Orta-Zor Sorular / Mezuniyet icin sadece dersleri gecmek neden yeterli olmayabilir?
 - Flags: ok
@@ -508,9 +508,9 @@
 
 ### Mezuniyet Sonrasi Staj Raporu
 - Q: Mezun durumundaysam staj raporumu yukledikten sonra ne yapmam gerekiyor?
-  Flags: scope_clarification
-  Sources: -
-  A: Sayın öğrencimiz, Bu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.
+  Flags: ok
+  Sources: Bilgisayar Mühendisliği - Staj SSS
+  A: Sayin ogrencimiz, Mezun durumundaysaniz ve stajlar disinda dersiniz yoksa, staj raporunuzu sisteme yukledikten sonra bolum staj komisyonuna e-posta ile degerlendirme talebinizi iletmeniz gerekir.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS
 - Q: Bilgisayar muhendisligi icin soruyorum.
   Flags: ok
   Sources: Bilgisayar Mühendisliği - Staj SSS
@@ -528,7 +528,7 @@
 - Q: Peki sayilmasi icin hangi sartlar gerekiyor?
   Flags: ok
   Sources: Bilgisayar Mühendisliği - Yaz Okulu, Yaz Okulu Yönergesi
-  A: Sayin ogrencimiz, Yaz Okulu Uygulama Esaslarina gore baska universitelerden yaz okulu dersi alinabilmesi mumkundur. Ancak dersin esdeger sayilabilmesi icin bolum baskanliginin uygun gormesi ve ilgili esdegerlik sartlarinin saglanmasi gerekir.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Yaz Okulu; [Kaynak 2] Yaz Okulu Yönergesi
+  A: Sayin ogrencimiz, Yaz okulunda alinan dersin esdeger sayilabilmesi icin ilgili bolum baskanliginin uygun gormesi ve esdegerlik sartlarinin saglanmasi gerekir.  Dayanak: [Kaynak 1] Bilgisayar Mühendisliği - Yaz Okulu; [Kaynak 2] Yaz Okulu Yönergesi
 - Q: Devam zorunlulugu konusunda neye dikkat etmeliyim?
   Flags: ok
   Sources: T.C., YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME
@@ -554,10 +554,10 @@
   Sources: 2025-2026 Akademik Takvim, Akademik Takvim, Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Not Ortalaması, Önlisans-Lisans)
   A: Sayin ogrencimiz, 2025-2026 bahar yariyili icin ders kayitlari 4 Subat 2026 - 13 Subat 2026 arasinda yapilir. Danisman onaylari 4 Subat 2026 - 15 Subat 2026, ekle-sil haftasi ise 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.  Dayanak: [Kaynak 1] 2025-2026 Akademik Takvim; [Kaynak 2] Akademik Takvim; [Kaynak 3] Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Not Ortalaması, Önlisans-Lisans)
 - Q: Ekle-sil haftasi hangi tarihlerde?
-  Flags: student_affairs_redirect
-  Sources: Resmi Gazete Tarihi: 22.02.2007 Resmi Gazete Sayısı: 26442, DÜZCE ÜNİVERSİTESİ İŞLETME FAKÜLTESİ, Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans)
-  A: Sayın öğrencimiz, Ekle-sil haftası 16 Mart 2026 - 18 Mart 2026 tarihleri arasında gerçekleşecektir. Bu bilgi [Kaynak 1] sayesinde elde edilmiş olup, ders kayıt ve kayıt yenileme işlemlerinin ayrıntılı zaman çizelgesine uygun olarak belirlenmiştir. Herhangi bir sorunuz veya ihtiyacınız olduğunda lütfen Öğrenci İşleri Birimi ile iletişime geçiniz.  Dayanak: [Kaynak 1] Resmi Gazete Tarihi: 22.02.2007 Resmi Gazete Sayısı: 26442; [Kaynak 2] DÜZCE ÜNİVERSİTESİ İŞLETME FAKÜLTESİ; [Kaynak 3] Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans)
+  Flags: ok
+  Sources: 11 Mayıs 2025 PAZAR
+  A: Sayin ogrencimiz, 2025-2026 bahar yariyili icin ekle-sil haftasi 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.  Dayanak: [Kaynak 1] 11 Mayıs 2025 PAZAR
 - Q: Danisman onayi gerekiyor mu?
-  Flags: student_affairs_redirect
-  Sources: -
-  A: Sayın öğrencimiz, Ders seçimi ve eklemek veya çıkarmak için danışmanınızın onayı gereklidir. Bu işlem OBS üzerinden gerçekleştirilir. Öğrenci işleri biriminize dilekçe olarak danışman onayını iletebilirsiniz ya da danışmanınızla doğrudan iletişime geçerek gerekli adımları gerçekleştirebilirsiniz [Kaynak 3]. Eğer başka sorularınız veya yardıma ihtiyacınız varsa, lütfen öğrenci işleri birimimize ulaşın. [Diğer]
+  Flags: ok
+  Sources: Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih), 11 Mayıs 2025 PAZAR
+  A: Sayin ogrencimiz, Evet. Ders kaydi surecinde danisman onayi takip edilmelidir. 2025-2026 bahar yariyili duyurusunda danisman onaylari 4 Subat 2026 - 15 Subat 2026 arasi olarak ilan edilmistir.  Dayanak: [Kaynak 1] Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih); [Kaynak 2] 11 Mayıs 2025 PAZAR

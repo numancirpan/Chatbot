@@ -1,0 +1,88 @@
+{
+  "generated_at": "2026-04-28T21:01:15",
+  "source_report": "C:\\Users\\numan\\OneDrive\\Belgeler\\GitHub\\Chatbot\\data\\reports\\manual_regression_latest.json",
+  "total_answers": 112,
+  "metrics": {
+    "clean_answer_rate": 100.0,
+    "source_coverage_rate": 90.18,
+    "no_direct_answer_rate": 0.0,
+    "noisy_source_rate": 0.0,
+    "student_affairs_redirect_rate": 0.0,
+    "scope_clarification_rate": 0.0
+  },
+  "by_group": {
+    "Bilgisayar Muhendisligi Staj": {
+      "total": 16,
+      "clean": 16,
+      "flag_counts": {},
+      "clean_rate": 100.0
+    },
+    "Yaz Okulu": {
+      "total": 12,
+      "clean": 12,
+      "flag_counts": {},
+      "clean_rate": 100.0
+    },
+    "Ders Kaydi ve Add-Drop": {
+      "total": 14,
+      "clean": 14,
+      "flag_counts": {},
+      "clean_rate": 100.0
+    },
+    "Devamsizlik ve Sinavlar": {
+      "total": 16,
+      "clean": 16,
+      "flag_counts": {},
+      "clean_rate": 100.0
+    },
+    "Not Sistemi ve Mezuniyet": {
+      "total": 13,
+      "clean": 13,
+      "flag_counts": {},
+      "clean_rate": 100.0
+    },
+    "Belgeler ve Idari Konular": {
+      "total": 15,
+      "clean": 15,
+      "flag_counts": {},
+      "clean_rate": 100.0
+    },
+    "Karma Orta-Zor Sorular": {
+      "total": 10,
+      "clean": 10,
+      "flag_counts": {},
+      "clean_rate": 100.0
+    },
+    "Staj Hafiza Akisi": {
+      "total": 4,
+      "clean": 4,
+      "flag_counts": {},
+      "clean_rate": 100.0
+    },
+    "Mezuniyet Sonrasi Staj Raporu": {
+      "total": 3,
+      "clean": 3,
+      "flag_counts": {},
+      "clean_rate": 100.0
+    },
+    "Yaz Okulu Baglam Akisi": {
+      "total": 3,
+      "clean": 3,
+      "flag_counts": {},
+      "clean_rate": 100.0
+    },
+    "Belge Islemleri Akisi": {
+      "total": 3,
+      "clean": 3,
+      "flag_counts": {},
+      "clean_rate": 100.0
+    },
+    "Ders Kaydi Akisi": {
+      "total": 3,
+      "clean": 3,
+      "flag_counts": {},
+      "clean_rate": 100.0
+    }
+  },
+  "high_risk_items": []
+}

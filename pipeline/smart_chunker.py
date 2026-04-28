@@ -363,10 +363,13 @@ def extract_title(text: str, url: str, kategori: str, icerik_tipi: str) -> str:
         return "Diploma ve Mezuniyet Belgeleri Yonergesi"
     if "cift anadal" in normalized_joined or "yandal" in normalized_joined:
         return "CAP ve Yandal"
+    first = candidates[0]
     if "akademik takvim" in normalized_joined:
         return "Akademik Takvim"
-
-    first = candidates[0]
+    if re.fullmatch(r"\d{1,2}\.\d{1,2}\.\d{4}", first):
+        if "yaz okulu" in normalized_joined or "2025 2026" in normalized_joined:
+            return "2025-2026 Akademik Takvim"
+        return "Akademik Takvim"
     if normalize_text(first) in GENERIC_SOURCE_TITLES and len(candidates) > 1:
         for candidate in candidates[1:]:
             if normalize_text(candidate) not in GENERIC_SOURCE_TITLES:

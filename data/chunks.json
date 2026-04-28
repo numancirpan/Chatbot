@@ -9282,14 +9282,14 @@
     "source_hash": "d2c84093d070c669cd86a298ce88c6c5"
   },
   {
-    "content": "eri İşletmede Mesleki Eğitim, Staj ve Uygulamalı Ders Hakkında Bilgilendirme Formlar Akademik Birim Formları Öğrenci Formları Öğretim Programı Değişikliği Formları Çift Ders Sınav Başvuru Formu (Lisans Öğrencileri İçin) Çift Ders Sınav Başvuru Formu (Ön Lisans Öğrencileri İçin) Ders Kaydı Düzeltme Formu Ders Muafiyeti Talep Formu Dersten Çekilme Başvuru Formu Fark Birimlerden Ders Alma Talep Formu (Lisans Öğrencileri İçin) Fark Birimlerden Ders Alma Talep Formu (Ön Lisans Öğrencileri İçin) Harç İadesi Başvuru Dilekçesi İlişik Kesme Formu (TIP Fakültesi Öğrencileri İçin) Kayıt Dondurma Talep Dilekçesi Kayıt Sildirne Dilekçesi Maddi Hata Başvuru Dilekçesi Mazeret Sınavına Alınma Dilekçesi Özel Öğrenci Başvuru Dilekçesi Özel Öğrenci Bölüm Başkanlığı Ders Eşleştirme Tablosu (Özel Öğrenci Başvrusu Dilekçe Eki İçin) Pasaport Harcı Muafiyeti Başvuru Formu Tek Ders Sınav Başvuru Formu (Lisans Öğrencileri İçin) Tek Ders Sınav Başvuru Formu (Ön Lisans Öğrencileri İçin) Yaz Okulunda Farklı Üniversiteden Ders Alma Onay Formu Yaz Okulu Ücreti İadesi Başvuru Formu Yeni Kayıt Eksik Belge Beyan Formu Yatay Geçiş Yapan Öğrencilerin Geri Dönüş Başvuru Formu (Merkezi Puanla Geçiş Yapanlar)",
+    "content": "OGRENCI ISLERI OGRENCI FORMLARI\nOgrenci Isleri Daire Baskanligi sayfasinda Ders Kaydi Duzeltme Formu, Tek Ders Sinav Basvuru Formu, Cift Ders Sinav Basvuru Formu ve Yaz Okulu Ucreti Iadesi Basvuru Formu gibi ogrenci formlari yer almaktadir. Ders kaydi veya sinav basvuru sureclerinde gerekli formlar ilgili birim tarafindan istenebilir.",
     "source_url": "https://ogrenciisleri.duzce.edu.tr/sayfa/f006/ogrenci-formlari",
     "kategori": "yaz_okulu",
-    "source_title": "İşletmede Mesleki Eğitim, Staj ve Uygulamalı Ders Hakkında Bilgilendirme",
+    "source_title": "OGRENCI ISLERI OGRENCI FORMLARI",
     "icerik_tipi": "html",
-    "cekim_tarihi": "2026-03-26 23:56:09",
+    "cekim_tarihi": "2026-04-28 20:17:52",
     "chunk_tipi": "paragraf",
-    "chunk_id": "75d0972e9c649af0bc8c8a38b9db6166",
+    "chunk_id": "0645a0f4cbfaa409d603446883f7b7d9",
     "source_hash": "9791d159d68cea9a82bfdf238ba4a2c4"
   },
   {
@@ -15219,5 +15219,38 @@
     "chunk_tipi": "duyuru",
     "chunk_id": "7d9cc667d1e3f60adc75b79c8d0cb0f7",
     "source_hash": "d8c8b3d82c5e7ab795666ab3a82bb4e4"
+  },
+  {
+    "content": "OGRENCI ISLERI SIKCA SORULAN SORULAR\nSaglik, dogal afet ve ilgili yonetim kurulunca kabul edilen diger mazeretleri nedeniyle bir dersin ara sinavina giremeyen ogrenciler; mazeretlerinin kabul edilebilmesi icin aldiklari saglik raporlarini veya diger mazeret belgelerini elden uc gun icerisinde, posta ile bir hafta icerisinde fakulte/yuksekokul/meslek yuksekokulu sekreterligine teslim etmek zorundadirlar.\nSon donem ogrencilerden, yariyil sonu ve/veya butunleme sinavlari sonunda basarisiz olduklari tek dersi kalarak bu dersin devam ve diger kosullarini saglayanlara tek ders sinav hakki verilir.",
+    "source_url": "https://ogrenciisleri.duzce.edu.tr/Sayfa/af7f/s_s_s_",
+    "kategori": "sinavlar",
+    "source_title": "OGRENCI ISLERI SIKCA SORULAN SORULAR",
+    "icerik_tipi": "html",
+    "cekim_tarihi": "2026-04-28 20:17:52",
+    "chunk_tipi": "paragraf",
+    "chunk_id": "d3852149ed055c65c10ec559eedddd11",
+    "source_hash": "3e8d84a87d121edc606a559f07cb44c8"
+  },
+  {
+    "content": "2025-2026 GUZ DONEMI FINAL MAZERET SINAV BASVURUSU HAKKINDA\nMazeret sinav hakkindan faydalanmak isteyen ogrenciler, mazeret dilekcesini ve mazeret belgelerini de ekleyerek 3 is gunu icerisinde ogrenci islerine elden veya e-posta yoluyla basvurmalidir. Bir dersin mazereti ilgili yonetim kurulu tarafindan kabul edilen ogrencilere ara sinavi icin mazeret sinavi yapilir; yariyil sonu sinavi icin ayrica mazeret sinavi yapilmaz, mazereti kabul edilen ogrenci butunleme sinavina girer.",
+    "source_url": "https://ef.duzce.edu.tr/duyuru/83e6/2025-2026-guz-donemi-final-mazeret-sinav-basvurusu-hakkinda",
+    "kategori": "duyuru",
+    "source_title": "2025 2026 Guz Donemi Final Mazeret Sinav Basvurusu Hakkinda",
+    "icerik_tipi": "html",
+    "cekim_tarihi": "2026-04-28 20:17:52",
+    "chunk_tipi": "duyuru",
+    "chunk_id": "96e1c6cabf2d3c83e8c0a6d6bd92af53",
+    "source_hash": "b90afb98c0393b428cdcee727ce67c86"
+  },
+  {
+    "content": "2025-2026 EGITIM OGRETIM YILI GUZ YARIYILI FINAL PROGRAMI\nFinal sinav programi ilgili bolum duyuru sayfasinda yayinlanir. Yayinlanan sinav programi taslak nitelikte olabilir; programda meydana gelebilecek degisiklikleri takip edebilmek ve magduriyet yasamamak icin duyurular duzenli olarak takip edilmeli ve guncelleme tarih-saati kontrol edilmelidir. US-MS kodlu dersler icin dersin acildigi bolumlerdeki programlar kontrol edilmelidir.",
+    "source_url": "https://biyomedikal.mf.duzce.edu.tr/duyuru/3776/2025-2026-egitim-ogretim-yili-guz-yariyili-final-programi",
+    "kategori": "duyuru",
+    "source_title": "2025 2026 Egitim Ogretim Yili Guz Yariyili Final Programi",
+    "icerik_tipi": "html",
+    "cekim_tarihi": "2026-04-28 20:37:58",
+    "chunk_tipi": "duyuru",
+    "chunk_id": "a687a82fdbadd4a02d539b69a21507b6",
+    "source_hash": "4d68f2974dc39974c975eb6adfa3b570"
   }
 ]

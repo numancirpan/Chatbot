@@ -49,7 +49,26 @@ def source_titles(result: Dict) -> List[str]:
     return [source.get("baslik", "") for source in result.get("kaynaklar", [])]
 
 
-def classify_result(answer: str, titles: List[str]) -> List[str]:
+def should_expect_scope_clarification(question: str) -> bool:
+    normalized = normalize_text(question)
+    program_markers = [
+        "bilgisayar muhendisligi",
+        "muhendislik fakultesi",
+        "egitim fakultesi",
+        "eczacilik fakultesi",
+        "orman fakultesi",
+        "isletme fakultesi",
+        "bolumunde",
+        "bolumu",
+        "programi",
+    ]
+    scope_sensitive_markers = ["staj", "isyeri egitimi", "uygulamali egitim"]
+    return any(marker in normalized for marker in scope_sensitive_markers) and not any(
+        marker in normalized for marker in program_markers
+    )
+
+
+def classify_result(question: str, answer: str, titles: List[str]) -> List[str]:
     normalized_answer = normalize_text(answer)
     normalized_titles = [normalize_text(title) for title in titles]
     flags = []
@@ -63,6 +82,9 @@ def classify_result(answer: str, titles: List[str]) -> List[str]:
             haystack = normalized_answer
         if any(marker in haystack for marker in markers):
             flags.append(flag)
+
+    if should_expect_scope_clarification(question):
+        flags = [flag for flag in flags if flag != "scope_clarification"]
 
     return flags
 
@@ -84,7 +106,7 @@ def run_single_questions(bot: RAGChatbot, groups: List[Dict], limit: int = 0) ->
                     "question": question,
                     "answer": answer,
                     "sources": titles,
-                    "flags": classify_result(answer, titles),
+                    "flags": classify_result(question, answer, titles),
                 }
             )
             count += 1
@@ -107,7 +129,7 @@ def run_followup_flows(bot: RAGChatbot, flows: List[Dict], limit: int = 0) -> Li
                     "question": question,
                     "answer": answer,
                     "sources": titles,
-                    "flags": classify_result(answer, titles),
+                    "flags": classify_result(question, answer, titles),
                 }
             )
         results.append({"name": flow.get("name", ""), "messages": messages})

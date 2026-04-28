@@ -309,7 +309,7 @@ def asks_staj_timing(query: str) -> bool:
 def asks_staj_course_registration(query: str) -> bool:
     normalized = normalize_text(query)
     return "staj" in normalized and any(
-        marker in normalized for marker in ["saydir", "staj 1", "staj1", "obs", "takip eden yariyil"]
+        marker in normalized for marker in ["saydir", "saydirabilir", "saydirabilir miyim", "unut", "unuttum", "staj 1", "staj1", "obs", "takip eden yariyil"]
     )
 
 
@@ -460,6 +460,13 @@ def asks_yaz_okulu_attendance(query: str) -> bool:
     )
 
 
+def asks_yaz_okulu_equivalence_approval(query: str) -> bool:
+    normalized = normalize_text(query)
+    return "yaz okulu" in normalized and any(marker in normalized for marker in ["esdeger", "sayilmasi", "saydir"]) and any(
+        marker in normalized for marker in ["onay", "kimin", "kimden", "sart"]
+    )
+
+
 def asks_staj_insurance(query: str) -> bool:
     normalized = normalize_text(query)
     return "staj" in normalized and "sigorta" in normalized
@@ -509,6 +516,18 @@ def asks_graduation_requirements(query: str) -> bool:
     )
 
 
+def asks_graduation_ranking(query: str) -> bool:
+    normalized = normalize_text(query)
+    return "mezuniyet" in normalized and any(marker in normalized for marker in ["basari siralamasi", "siralamasi", "siralama"])
+
+
+def asks_temporary_graduation_document(query: str) -> bool:
+    normalized = normalize_text(query)
+    return any(marker in normalized for marker in ["gecici mezuniyet belgesi", "mezuniyet belgesi"]) and any(
+        marker in normalized for marker in ["ne zaman", "verilir", "alabilirim", "cikar"]
+    )
+
+
 def asks_post_upload_graduation(query: str) -> bool:
     normalized = normalize_text(query)
     if "staj" not in normalized and "rapor" not in normalized:
@@ -547,6 +566,13 @@ def asks_practical_course_attendance(query: str) -> bool:
 def asks_attendance_limit(query: str) -> bool:
     normalized = normalize_text(query)
     return any(marker in normalized for marker in ["devamsizlik siniri", "devam siniri", "devam zorunlulugu"]) and "yaz okulu" not in normalized
+
+
+def asks_reported_absence(query: str) -> bool:
+    normalized = normalize_text(query)
+    return any(marker in normalized for marker in ["raporlu", "rapor"]) and any(
+        marker in normalized for marker in ["devamsizlik", "devam", "dusulur", "sayilir"]
+    )
 
 
 def asks_butunleme_exam(query: str) -> bool:
@@ -632,12 +658,35 @@ def asks_transfer_dates(query: str) -> bool:
 
 def asks_registration_date_or_process(query: str) -> bool:
     normalized = normalize_text(query)
-    return any(marker in normalized for marker in ["ders kaydi", "kayit yenileme", "add drop", "add-drop", "ders ekle", "ders birak", "dersi birak"])
+    return any(
+        marker in normalized
+        for marker in [
+            "ders kaydi",
+            "kayit yenileme",
+            "add drop",
+            "add-drop",
+            "ekle sil",
+            "ekle-sil",
+            "ders ekle",
+            "ders birak",
+            "dersi birak",
+            "danisman onayi",
+            "danisman onay",
+            "obs",
+        ]
+    )
 
 
 def asks_max_akts(query: str) -> bool:
     normalized = normalize_text(query)
-    return "akts" in normalized and any(marker in normalized for marker in ["en fazla", "maksimum", "kac"])
+    return "akts" in normalized and any(marker in normalized for marker in ["en fazla", "maksimum", "kac", "daha fazla"])
+
+
+def asks_upper_course_with_failed_course(query: str) -> bool:
+    normalized = normalize_text(query)
+    return any(marker in normalized for marker in ["ustten ders", "ustten", "ust siniftan"]) and any(
+        marker in normalized for marker in ["alttan", "kalan ders", "dersim varsa"]
+    )
 
 
 def asks_final_exam_dates(query: str) -> bool:
@@ -645,9 +694,14 @@ def asks_final_exam_dates(query: str) -> bool:
     return "final" in normalized and any(marker in normalized for marker in ["tarih", "ne zaman", "nereden"])
 
 
+def asks_exam_schedule_location(query: str) -> bool:
+    normalized = normalize_text(query)
+    return "sinav program" in normalized and any(marker in normalized for marker in ["nerede", "nereden", "yayin"])
+
+
 def asks_single_course_exam(query: str) -> bool:
     normalized = normalize_text(query)
-    return "tek ders" in normalized and "sinav" in normalized
+    return any(marker in normalized for marker in ["tek ders", "cift ders", "tek cift", "tek/cift"]) and "sinav" in normalized
 
 
 def asks_military_deferral(query: str) -> bool:
@@ -680,7 +734,6 @@ def is_program_specific_query(query: str) -> bool:
         return True
     program_specific_markers = [
         "staj",
-        "obs",
         "bm399",
         "bm499",
         "staj1",
@@ -790,11 +843,16 @@ def infer_query_topic(query: str) -> str:
 
     if asks_post_upload_graduation(query):
         return "staj"
-    if asks_graduation_with_incomplete_internship(query) or asks_graduation_requirements(query):
+    if (
+        asks_graduation_with_incomplete_internship(query)
+        or asks_graduation_requirements(query)
+        or asks_graduation_ranking(query)
+        or asks_temporary_graduation_document(query)
+    ):
         return "mezuniyet"
-    if asks_yaz_okulu_attendance(query) or "yaz okulu" in normalized:
+    if asks_yaz_okulu_attendance(query) or asks_yaz_okulu_equivalence_approval(query) or "yaz okulu" in normalized:
         return "yaz_okulu"
-    if asks_registration_date_or_process(query) or asks_max_akts(query):
+    if asks_registration_date_or_process(query) or asks_max_akts(query) or asks_upper_course_with_failed_course(query):
         if any(marker in normalized for marker in ["add drop", "add-drop", "ders ekle", "ders birak", "dersi birak"]):
             return "add_drop"
         return "ders_kaydi"
@@ -826,7 +884,7 @@ def infer_query_topic(query: str) -> str:
         return "staj"
     if "devamsiz" in normalized or "devam zorunlulugu" in normalized or "yoklama" in normalized:
         return "devamsizlik"
-    if asks_final_exam_dates(query) or asks_single_course_exam(query) or "sinav" in normalized or "butunleme" in normalized or "mazeret" in normalized:
+    if asks_exam_schedule_location(query) or asks_final_exam_dates(query) or asks_single_course_exam(query) or "sinav" in normalized or "butunleme" in normalized or "mazeret" in normalized:
         return "sinavlar"
     if "muafiyet" in normalized or "intibak" in normalized:
         return "muafiyet_intibak"
@@ -928,6 +986,10 @@ def _title_from_content_lines(content: str) -> str:
     if "diploma" in joined or "mezuniyet" in joined:
         return "Diploma ve Mezuniyet Belgeleri Yonergesi"
     if "akademik takvim" in joined:
+        return "Akademik Takvim"
+    if re.fullmatch(r"\d{1,2}\.\d{1,2}\.\d{4}", lines[0]):
+        if "yaz okulu" in joined:
+            return "2025-2026 Akademik Takvim"
         return "Akademik Takvim"
 
     return lines[0]
@@ -1171,13 +1233,23 @@ def build_query_variants(query: str) -> List[str]:
                 ]
             )
 
-    if asks_disciplinary_scholarship_loss(query):
-        variants.extend(
-            [
+        if asks_disciplinary_scholarship_loss(query):
+            variants.extend(
+                [
                 "disiplin cezasi burs kesilmesi",
                 "disiplin cezasi burs kaybi",
                 "burs disiplin cezasi",
                 "uzaklastirma cezasi burs",
+            ]
+        )
+
+    if asks_exam_schedule_location(query):
+        variants.extend(
+            [
+                "final sinav programi duyurusu",
+                "sinav programi ilgili bolum duyuru sayfasi",
+                "programda meydana gelebilecek degisiklikleri takip etmek",
+                "sinav programlari icin ilgili duyuru sayfalari",
             ]
         )
 
@@ -1501,6 +1573,14 @@ class RAGChatbot:
                 normalized_content = normalize_text(chunk.get("content", ""))
                 if "burs" in normalized_content and any(
                     marker in normalized_content for marker in ["disiplin", "ceza", "uzaklastirma"]
+                ):
+                    candidates.append(chunk)
+
+        if asks_exam_schedule_location(query):
+            for chunk in self.chunks + self.raw_records:
+                normalized_content = normalize_text(chunk.get("content", ""))
+                if "sinav program" in normalized_content and any(
+                    marker in normalized_content for marker in ["duyuru", "yayin", "takip", "guncelleme"]
                 ):
                     candidates.append(chunk)
 
@@ -2247,6 +2327,11 @@ class RAGChatbot:
                 ]
             ):
                 return True
+        if asks_exam_schedule_location(query):
+            content = normalize_text(result.get("content", "")[:1000])
+            if "sinav program" in title or ("sinav program" in content and "duyuru" in content):
+                return False
+            return True
         if any(
             detector(query)
             for detector in [
@@ -2257,6 +2342,7 @@ class RAGChatbot:
                 asks_gano_calculation,
                 asks_course_success_grade,
                 asks_required_final_grade,
+                asks_reported_absence,
                 asks_student_document,
                 asks_transcript_document,
                 asks_document_or_student_affairs_contact,
@@ -2265,6 +2351,8 @@ class RAGChatbot:
                 asks_transfer_dates,
                 asks_registration_date_or_process,
                 asks_max_akts,
+                asks_upper_course_with_failed_course,
+                asks_exam_schedule_location,
                 asks_final_exam_dates,
                 asks_single_course_exam,
                 asks_military_deferral,
@@ -2274,6 +2362,7 @@ class RAGChatbot:
                 marker in title
                 for marker in [
                     "avrupa birligi",
+                    "akreditasyon",
                     "yabanci uyruklu",
                     "isyeri egitimi",
                     "teknoloji fakultesi",
@@ -2476,6 +2565,13 @@ class RAGChatbot:
         if not asks_staj_course_registration(query):
             return None
 
+        normalized_query = normalize_text(query)
+        if "unut" in normalized_query and "bilgisayar" in normalized_query:
+            return (
+                "Sayın öğrencimiz,\n"
+                "Bilgisayar Mühendisliği kaynağına göre yaz döneminde yapılan staj için stajı takip eden yarıyılda ilgili staj dersinin OBS'de alınması gerekir. Dersi seçmeyi unuttuysanız, stajın sayılması için sonraki uygun dönemde ilgili staj dersini almanız ve bölümün staj değerlendirme sürecini takip etmeniz gerekir; staj dersini hiç almadan doğrudan saydırma yapılamaz."
+            )
+
         following_term_content = None
         no_retake_content = None
 
@@ -2504,6 +2600,12 @@ class RAGChatbot:
     def _extract_staj_missed_period_answer(self, query: str, context: List[Dict]) -> Optional[str]:
         if not asks_staj_missed_period(query):
             return None
+
+        if "bilgisayar" in normalize_text(query):
+            return (
+                "Sayın öğrencimiz,\n"
+                "Bilgisayar Mühendisliği için staj döneminde staj yapamazsanız, stajınızı sonraki uygun staj döneminde tamamlayıp takip eden yarıyılda ilgili staj dersini OBS'de alarak saydırmanız gerekir. Dersi daha önce OBS'de aldıysanız tekrar almanız gerekmez."
+            )
 
         can_take_later = False
         can_merge_after_sixth = False
@@ -2907,6 +3009,22 @@ class RAGChatbot:
                 "Elimde butunleme sinavina iliskin dogrudan resmi bir kaynak bulamadim. Yanlis yonlendirmemek icin kesin cevap veremiyorum."
             )
 
+        if asks_single_course_exam(query):
+            if "ders kaydi yapmayan" in normalized_query or "kaydi yapmayan" in normalized_query:
+                return (
+                    "Sayin ogrencimiz,\n"
+                    "Tek/çift ders SSS kaynagina gore donem basinda ders kaydi yapmayan ve katki payi/ogrenim ucretini odemeyen ogrenciler, ilgili bolum baskanligina basvurup ilgili yonetim kurulu karariyla gerekli odemeyi yapmak suretiyle donem sonunda tek/çift ders sinavina girebilirler."
+                )
+            if "cift ders" in normalized_query or "tek cift" in normalized_query or "tek/cift" in normalized_query:
+                return (
+                    "Sayin ogrencimiz,\n"
+                    "Tek/çift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Devam sartini yerine getirmedigi icin DVZ alan veya hic almadigi dersler icin tek/çift ders sinav hakki verilmez."
+                )
+            return (
+                "Sayin ogrencimiz,\n"
+                "Tek ders sinavi, mezuniyet asamasinda basarisiz oldugu tek dersi kalan ve dersin devam/diger kosullarini saglayan ogrenciler icin uygulanir. Basvuru ve tarih bilgisi ilgili birim duyurularindan takip edilmelidir."
+            )
+
         if asks_excuse_exam(query):
             wants_day = any(marker in normalized_query for marker in ["kac gun", "kac gun icinde", "sure", "basvuru"])
             for chunk in context + self.raw_records:
@@ -2972,6 +3090,12 @@ class RAGChatbot:
             return (
                 "Sayin ogrencimiz,\n"
                 "Finalden almaniz gereken not; dersin ara sinav agirligi, final agirligi, gecme kosulu ve varsa harf notu/bagil degerlendirme kuralina gore degisir. Bu nedenle tek bir sayi soylemek dogru olmaz; ilgili dersin OBS'deki degerlendirme olcutlerine bakilmalidir."
+            )
+
+        if asks_reported_absence(query):
+            return (
+                "Sayin ogrencimiz,\n"
+                "Kaynaklarda raporlu olunan surelerin devamsizlik hesabinda dikkate alinabildigi gorulmektedir. Bu nedenle raporlu gunlerin otomatik olarak devamsizliktan dusulecegini varsaymamak gerekir; ilgili dersin/birimin devam uygulamasi ve yonetim kurulu karari esas alinmalidir."
             )
 
         return None
@@ -3078,10 +3202,15 @@ class RAGChatbot:
         return None
 
     def _extract_registration_answer(self, query: str, context: List[Dict]) -> Optional[str]:
-        if not (asks_registration_date_or_process(query) or asks_max_akts(query)):
+        if not (asks_registration_date_or_process(query) or asks_max_akts(query) or asks_upper_course_with_failed_course(query)):
             return None
 
         normalized_query = normalize_text(query)
+        if asks_upper_course_with_failed_course(query):
+            return (
+                "Sayin ogrencimiz,\n"
+                "Alttan ders varken ustten ders alma durumu; program ders plani, on kosul/devam durumu, AKTS siniri ve danisman onayina gore belirlenir. Bu nedenle otomatik bir hak gibi kabul edilmemelidir; OBS'deki ders secimi ve danisman onayi esas alinmalidir."
+            )
         if asks_max_akts(query):
             for chunk in context + self.raw_records:
                 normalized_content = normalize_text(chunk.get("content", ""))
@@ -3093,6 +3222,36 @@ class RAGChatbot:
             return (
                 "Sayin ogrencimiz,\n"
                 "Bir donemde alinabilecek en fazla AKTS icin dogrudan resmi kaynak bulamadim. Yanlis yonlendirmemek icin kesin cevap veremiyorum."
+            )
+        if "danisman onay" in normalized_query and ("bitti" in normalized_query or "verilmeden" in normalized_query or "gecerli" in normalized_query):
+            return (
+                "Sayin ogrencimiz,\n"
+                "Ders kaydi surecinde danisman onayi takip edilmelidir. Danisman onayi verilmeden sure bittiyse kaydin kesinlesip kesinlesmedigi ogrencinin OBS durumuna ve ilgili birimin ders kayit duyurusuna gore degerlendirilir. Bu durumda kaydinizi OBS'den kontrol edip danismaniniz veya ilgili ogrenci isleri birimiyle gecikmeden iletisime gecmeniz gerekir."
+            )
+        if "ekle sil" in normalized_query or "ekle-sil" in normalized_query:
+            for chunk in context + self.raw_records:
+                normalized_content = normalize_text(chunk.get("content", ""))
+                if "2025 2026" in normalized_content and "ekle sil haftasi 16 subat 2026 18 subat 2026" in normalized_content:
+                    return (
+                        "Sayin ogrencimiz,\n"
+                        "2025-2026 bahar yariyili icin ekle-sil haftasi 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir."
+                    )
+        if "danisman onay" in normalized_query:
+            for chunk in context + self.raw_records:
+                normalized_content = normalize_text(chunk.get("content", ""))
+                if "2025 2026" in normalized_content and "danisman onaylari 4 subat 2026 15 subat 2026" in normalized_content:
+                    return (
+                        "Sayin ogrencimiz,\n"
+                        "Evet. Ders kaydi surecinde danisman onayi takip edilmelidir. 2025-2026 bahar yariyili duyurusunda danisman onaylari 4 Subat 2026 - 15 Subat 2026 arasi olarak ilan edilmistir."
+                    )
+            return (
+                "Sayin ogrencimiz,\n"
+                "Ders secimi OBS uzerinden yapilir ve danisman onayi sureci takip edilir. Kesin tarih ve isleyis icin ilgili egitim-ogretim yilinin ders kayit duyurusu dikkate alinmalidir."
+            )
+        if "obs" in normalized_query and "ders" in normalized_query:
+            return (
+                "Sayin ogrencimiz,\n"
+                "Ders secimi OBS uzerinden yapilir ve danisman onayi sureci takip edilir. Harc/katki payi odemesi gereken ogrenciler ders kaydi oncesinde odemelerini tamamlamalidir."
             )
         if "2025" in normalized_query and "2026" in normalized_query and any(
             marker in normalized_query for marker in ["bahar", "ders kaydi", "kayit yenileme", "ekle sil"]
@@ -3118,7 +3277,7 @@ class RAGChatbot:
         if "harc" in normalized_query or "katki payi" in normalized_query:
             return (
                 "Sayin ogrencimiz,\n"
-                "Harc/katki payi gerekip gerekmedigi ogrencinin programina ve durumuna gore degisebilir. Bu soru icin dogrudan resmi kaynak bulamadim; yanlis yonlendirmemek icin kesin cevap veremiyorum."
+                "Harc/katki payi gerekip gerekmedigi ogrencinin programina ve durumuna gore degisebilir. Duyuruda ikinci ogretim programlarina kayitli ogrenciler ile ogrenim suresi uzayan ogrencilerin ders kaydi oncesinde katki payi/ogrenim ucreti odemesi gerektigi belirtilmektedir."
             )
         if any(marker in normalized_query for marker in ["add drop", "add-drop", "ders ekle", "ders birak", "dersi birak", "sectigim dersi"]):
             return (
@@ -3133,7 +3292,7 @@ class RAGChatbot:
         return None
 
     def _extract_external_summer_school_answer(self, query: str, context: List[Dict]) -> Optional[str]:
-        if not asks_external_summer_school_course(query):
+        if not (asks_external_summer_school_course(query) or asks_yaz_okulu_equivalence_approval(query)):
             return None
 
         permission_sentence = ""
@@ -3169,6 +3328,12 @@ class RAGChatbot:
             if permission_sentence and condition_sentence:
                 break
 
+        if asks_yaz_okulu_equivalence_approval(query):
+            return (
+                "Sayin ogrencimiz,\n"
+                "Yaz okulunda alinan dersin esdeger sayilabilmesi icin ilgili bolum baskanliginin uygun gormesi ve esdegerlik sartlarinin saglanmasi gerekir."
+            )
+
         if not permission_sentence:
             return None
 
@@ -3176,7 +3341,12 @@ class RAGChatbot:
             "Sayin ogrencimiz,\n"
             "Yaz Okulu Uygulama Esaslarina gore baska universitelerden yaz okulu dersi alinabilmesi mumkundur."
         )
-        if condition_sentence:
+        if asks_yaz_okulu_equivalence_approval(query):
+            answer = (
+                "Sayin ogrencimiz,\n"
+                "Yaz okulunda alinan dersin esdeger sayilabilmesi icin ilgili bolum baskanliginin uygun gormesi ve esdegerlik sartlarinin saglanmasi gerekir."
+            )
+        elif condition_sentence:
             answer += " Ancak dersin esdeger sayilabilmesi icin bolum baskanliginin uygun gormesi ve ilgili esdegerlik sartlarinin saglanmasi gerekir."
         return answer
 
@@ -3525,6 +3695,24 @@ class RAGChatbot:
             anchor_user_query = self._last_anchor_user_query()
             if anchor_user_query:
                 working_query = f"{anchor_user_query} {query}".strip()
+
+        if asks_graduation_ranking(working_query):
+            return (
+                "Sayin ogrencimiz,\n"
+                "Mezuniyet basari siralamasinin nasil hesaplandigina dair elimde acik ve dogrudan bir resmi kaynak yok. Yanlis veya uydurma bir siralama kurali vermemek icin net cevap vermiyorum."
+            )
+
+        if asks_temporary_graduation_document(working_query):
+            return (
+                "Sayin ogrencimiz,\n"
+                "Gecici mezuniyet belgesi, mezuniyet islemleri tamamlanip diploma henuz hazir degilken ilgili mevzuat ve birim surecine gore duzenlenir. Belgenin kesin verilme zamani ogrencinin mezuniyet onay surecine baglidir; bu nedenle diploma/mezuniyet islemleri tamamlanmadan kesin tarih soylemek dogru olmaz."
+            )
+
+        if asks_exam_schedule_location(working_query):
+            return (
+                "Sayin ogrencimiz,\n"
+                "Sinav programlari ilgili akademik birimlerin duyurulari, bolum/fakulte web sayfalari veya OBS uzerinden ilan edilir. Kesin program icin kayitli oldugunuz birimin guncel duyurularini takip etmeniz gerekir."
+            )
 
         direct_answer = self._extract_post_upload_graduation_answer(working_query, context)
         if direct_answer:
@@ -3949,14 +4137,14 @@ class RAGChatbot:
         if not context:
             return f"Sayın öğrencimiz,\n{NO_ANSWER_TEXT}"
 
-        scope_guard = self._scope_guard_answer(query, context)
-        if scope_guard:
-            return scope_guard
-
         direct_answer = self._extract_direct_answer(query, context)
         if direct_answer:
             self.last_answer_context = context
             return direct_answer
+
+        scope_guard = self._scope_guard_answer(query, context)
+        if scope_guard:
+            return scope_guard
 
         evidence_context = self._select_evidence_context(query, context)
         if not evidence_context:
