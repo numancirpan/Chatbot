@@ -1,0 +1,1415 @@
+{
+  "generated_at": "2026-04-30T15:47:39",
+  "summary": {
+    "total": 106,
+    "passed": 106,
+    "checked_answerable": 106
+  },
+  "items": [
+    {
+      "group": "Bilgisayar Muhendisligi Staj",
+      "question": "Bilgisayar muhendisligi zorunlu staj kac gun?",
+      "topic": "staj",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Mühendisliği - Staj"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi staj sss bilgisayar muhendisligi staj"
+    },
+    {
+      "group": "Bilgisayar Muhendisligi Staj",
+      "question": "Bilgisayar muhendisliginde kac zorunlu staj var?",
+      "topic": "staj",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Mühendisliği - Staj",
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "bilgisayar muhendisligi staj sss bilgisayar muhendisligi staj ogrenci belgesi ve transkript islemleri"
+    },
+    {
+      "group": "Bilgisayar Muhendisligi Staj",
+      "question": "Bilgisayar muhendisligi ogrencisi stajini hangi yariyillardan sonra yapmali?",
+      "topic": "staj",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Öğrenci Belgesi ve Transkript İşlemleri",
+        "Bilgisayar Mühendisliği - Staj"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "bilgisayar muhendisligi staj sss ogrenci belgesi ve transkript islemleri bilgisayar muhendisligi staj"
+    },
+    {
+      "group": "Bilgisayar Muhendisligi Staj",
+      "question": "Bilgisayar muhendisligi ogrencisi doneminde staj yapamazsa daha sonra nasil saydirir?",
+      "topic": "staj",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Mühendisliği - Staj"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi staj sss bilgisayar muhendisligi staj"
+    },
+    {
+      "group": "Bilgisayar Muhendisligi Staj",
+      "question": "Bilgisayar muhendisligi staj basvurusu icin hangi belgeler gerekli?",
+      "topic": "staj",
+      "sources": [
+        "Bilgisayar Muhendisligi - Staj",
+        "Bilgisayar Mühendisliği - Staj SSS"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi staj bilgisayar muhendisligi staj sss"
+    },
+    {
+      "group": "Bilgisayar Muhendisligi Staj",
+      "question": "Bilgisayar muhendisligi staj raporu SBS'ye ne zaman yuklenmeli?",
+      "topic": "staj",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Mühendisliği - Staj",
+        "Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "bilgisayar muhendisligi staj sss bilgisayar muhendisligi staj duzce universitesi muhendislik ve teknoloji fakulteleri staj yonergesi"
+    },
+    {
+      "group": "Bilgisayar Muhendisligi Staj",
+      "question": "Stajimi zamaninda teslim etmezsem bilgisayar muhendisligi icin surec nasil isler?",
+      "topic": "staj",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Mühendisliği - Staj",
+        "Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "bilgisayar muhendisligi staj sss bilgisayar muhendisligi staj duzce universitesi muhendislik ve teknoloji fakulteleri staj yonergesi"
+    },
+    {
+      "group": "Bilgisayar Muhendisligi Staj",
+      "question": "Bilgisayar muhendisligi icin staj sigortasini kim yapiyor?",
+      "topic": "staj",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Muhendisligi - Staj"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi staj sss bilgisayar muhendisligi staj"
+    },
+    {
+      "group": "Bilgisayar Muhendisligi Staj",
+      "question": "Bilgisayar muhendisligi icin zorunlu staj disinda gonullu staj yaparsam sigortami okul yapar mi?",
+      "topic": "staj",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Muhendisligi - Staj"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi staj sss bilgisayar muhendisligi staj"
+    },
+    {
+      "group": "Bilgisayar Muhendisligi Staj",
+      "question": "Bilgisayar muhendisligi ogrencisi tek cift sinavina girmek icin stajini tamamlamis olmak zorunda mi?",
+      "topic": "sinavlar",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Mühendisliği - Staj"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi staj sss bilgisayar muhendisligi staj"
+    },
+    {
+      "group": "Bilgisayar Muhendisligi Staj",
+      "question": "Bilgisayar muhendisligi ogrencisiyim; staj dersine daha once hic kayitlanmadiysam tek/cift ders sinavina girebilir miyim?",
+      "topic": "sinavlar",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Mühendisliği - Staj"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi staj sss bilgisayar muhendisligi staj"
+    },
+    {
+      "group": "Yaz Okulu",
+      "question": "Yaz okulu kac hafta suruyor?",
+      "topic": "yaz_okulu",
+      "sources": [
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "ders kayit ve kayit yenileme lisans egitim ogretim ve sinav yonetmeligi akademik takvim"
+    },
+    {
+      "group": "Yaz Okulu",
+      "question": "2026 yilinda yaz okulu ne zaman basliyor?",
+      "topic": "yaz_okulu",
+      "sources": [
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "akademik takvim"
+    },
+    {
+      "group": "Yaz Okulu",
+      "question": "Bilgisayar muhendisligi 2026 yili icin yaz okulu ne zaman basliyor?",
+      "topic": "yaz_okulu",
+      "sources": [
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "akademik takvim"
+    },
+    {
+      "group": "Yaz Okulu",
+      "question": "Bilgisayar muhendisligi yaz staji 2026 yilinda ne zaman basliyor?",
+      "topic": "staj",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Mühendislik Fakültesi - Yaz Stajı",
+        "ÇAP ve Yandal"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "bilgisayar muhendisligi staj sss muhendislik fakultesi yaz staji cap ve yandal"
+    },
+    {
+      "group": "Yaz Okulu",
+      "question": "Bilgisayar muhendisligi icin yaz stajinda kac donem var?",
+      "topic": "staj",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Mühendislik Fakültesi - Yaz Stajı",
+        "ÇAP ve Yandal"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "bilgisayar muhendisligi staj sss muhendislik fakultesi yaz staji cap ve yandal"
+    },
+    {
+      "group": "Yaz Okulu",
+      "question": "Bilgisayar muhendisligi yaz okulunda devam zorunlulugu var mi?",
+      "topic": "yaz_okulu",
+      "sources": [
+        "Yaz Okulu Yönergesi",
+        "Bilgisayar Mühendisliği - Yaz Okulu"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "yaz okulu yonergesi bilgisayar muhendisligi yaz okulu"
+    },
+    {
+      "group": "Yaz Okulu",
+      "question": "Bilgisayar muhendisligi bolumunde yaz okulunda baska universiteden ders alabilir miyim?",
+      "topic": "yaz_okulu",
+      "sources": [
+        "Bilgisayar Mühendisliği - Yaz Okulu",
+        "Yaz Okulu Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi yaz okulu yaz okulu yonergesi"
+    },
+    {
+      "group": "Yaz Okulu",
+      "question": "Baska universiteden alacagim yaz okulu dersinin sayilmasi icin hangi sartlar gerekir?",
+      "topic": "yaz_okulu",
+      "sources": [
+        "Bilgisayar Mühendisliği - Yaz Okulu",
+        "Yaz Okulu Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi yaz okulu yaz okulu yonergesi"
+    },
+    {
+      "group": "Yaz Okulu",
+      "question": "Yaz okulunda aldigim dersin esdeger sayilmasi icin kimin onayi gerekir?",
+      "topic": "yaz_okulu",
+      "sources": [
+        "Bilgisayar Mühendisliği - Yaz Okulu",
+        "Yaz Okulu Yönergesi",
+        "Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih)"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "bilgisayar muhendisligi yaz okulu yaz okulu yonergesi yeni ogrenci asil aday kesin kayitlari elektronik kayit yok un belirleyecegi tarih"
+    },
+    {
+      "group": "Yaz Okulu",
+      "question": "Universite disinda yaz okulunda ders alirsam devam kosulunu nasil belgelemeliyim?",
+      "topic": "yaz_okulu",
+      "sources": [
+        "Yaz Okulu Yönergesi",
+        "Bilgisayar Mühendisliği - Yaz Okulu"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "yaz okulu yonergesi bilgisayar muhendisligi yaz okulu"
+    },
+    {
+      "group": "Yaz Okulu",
+      "question": "Yaz okulunda final haftasi dahil mi?",
+      "topic": "yaz_okulu",
+      "sources": [
+        "Mühendislik Fakültesi - Yaz Okulu Takvimi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "muhendislik fakultesi yaz okulu takvimi"
+    },
+    {
+      "group": "Yaz Okulu",
+      "question": "Yaz okulunda ders secimi akademik takvimde nereden takip edilir?",
+      "topic": "yaz_okulu",
+      "sources": [
+        "Akademik Takvim",
+        "Bilgisayar Mühendisliği - Yaz Okulu"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "akademik takvim bilgisayar muhendisligi yaz okulu"
+    },
+    {
+      "group": "Ders Kaydi ve Add-Drop",
+      "question": "Ders kaydi ne zaman basliyor?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu lisans egitim ogretim ve sinav yonetmeligi ders kayit ve kayit yenileme"
+    },
+    {
+      "group": "Ders Kaydi ve Add-Drop",
+      "question": "2025-2026 bahar doneminde ders kaydimi ne zaman yapmaliyim ve ekle-sil haftasi hangi tarihlerde?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu ders kayit ve kayit yenileme akademik takvim"
+    },
+    {
+      "group": "Ders Kaydi ve Add-Drop",
+      "question": "Kayit yenileme nasil yapilir?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu lisans egitim ogretim ve sinav yonetmeligi ders kayit ve kayit yenileme"
+    },
+    {
+      "group": "Ders Kaydi ve Add-Drop",
+      "question": "Ders kaydimi OBS uzerinden mi yapmaliyim?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu ders kayit ve kayit yenileme akademik takvim"
+    },
+    {
+      "group": "Ders Kaydi ve Add-Drop",
+      "question": "Harc yatirmadan ders kaydi yapilabilir mi?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu ders kayit ve kayit yenileme akademik takvim"
+    },
+    {
+      "group": "Ders Kaydi ve Add-Drop",
+      "question": "Katki payi veya ogrenim ucreti odemem gerekiyorsa ders kaydindan once mi odemeliyim?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu lisans egitim ogretim ve sinav yonetmeligi ders kayit ve kayit yenileme"
+    },
+    {
+      "group": "Ders Kaydi ve Add-Drop",
+      "question": "Add-drop haftasinda ders ekleyebilir miyim?",
+      "topic": "add_drop",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Tek/Çift Ders Sınavları Hakkında SSS",
+        "Bilgisayar Mühendisliği - Staj SSS"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu tek cift ders sinavlari hakkinda sss bilgisayar muhendisligi staj sss"
+    },
+    {
+      "group": "Ders Kaydi ve Add-Drop",
+      "question": "Ekle-sil haftasinda sectigim dersi birakabilir miyim?",
+      "topic": "add_drop",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Tek/Çift Ders Sınavları Hakkında SSS",
+        "Bilgisayar Mühendisliği - Staj SSS"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu tek cift ders sinavlari hakkinda sss bilgisayar muhendisligi staj sss"
+    },
+    {
+      "group": "Ders Kaydi ve Add-Drop",
+      "question": "Bir donemde en fazla kac AKTS alabilirim?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu lisans egitim ogretim ve sinav yonetmeligi ders kayit ve kayit yenileme"
+    },
+    {
+      "group": "Ders Kaydi ve Add-Drop",
+      "question": "Not ortalamam yuksekse daha fazla AKTS alabilir miyim?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu lisans egitim ogretim ve sinav yonetmeligi ders kayit ve kayit yenileme"
+    },
+    {
+      "group": "Ders Kaydi ve Add-Drop",
+      "question": "Alttan dersim varsa ustten ders alabilir miyim?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu lisans egitim ogretim ve sinav yonetmeligi ders kayit ve kayit yenileme"
+    },
+    {
+      "group": "Ders Kaydi ve Add-Drop",
+      "question": "Danisman onayi olmadan ders kaydim tamamlanir mi?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu ders kayit ve kayit yenileme akademik takvim"
+    },
+    {
+      "group": "Ders Kaydi ve Add-Drop",
+      "question": "Ders kaydi ve kayit yenileme arasinda fark var mi?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu lisans egitim ogretim ve sinav yonetmeligi ders kayit ve kayit yenileme"
+    },
+    {
+      "group": "Ders Kaydi ve Add-Drop",
+      "question": "Ders kaydimi yapmazsam o donem ogrencilik haklarim etkilenir mi?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu lisans egitim ogretim ve sinav yonetmeligi ders kayit ve kayit yenileme"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Devamsizlik siniri nedir?",
+      "topic": "devamsizlik",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "lisans egitim ogretim ve sinav yonetmeligi yuksekogretim kurumlarinda uzaktan ogretime"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Teorik derslerde devam zorunlulugu kac?",
+      "topic": "devamsizlik",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Akademik Takvim",
+        "YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "lisans egitim ogretim ve sinav yonetmeligi akademik takvim yuksekogretim kurumlarinda uzaktan ogretime"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Uygulamali derslerde devam zorunlulugu kactir?",
+      "topic": "devamsizlik",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "lisans egitim ogretim ve sinav yonetmeligi akademik takvim"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Ilk kez aldigim bir uygulamali derste devam zorunlulugu kactir ve raporlu oldugum gunler devamsizliktan sayilir mi?",
+      "topic": "devamsizlik",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "lisans egitim ogretim ve sinav yonetmeligi akademik takvim"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Daha once aldigim derste devam zorunlulugundan muaf olur muyum?",
+      "topic": "devamsizlik",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Akademik Takvim",
+        "YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "lisans egitim ogretim ve sinav yonetmeligi akademik takvim yuksekogretim kurumlarinda uzaktan ogretime"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Raporlu gunlerim devamsizliktan dusulur mu?",
+      "topic": "devamsizlik",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "lisans egitim ogretim ve sinav yonetmeligi yuksekogretim kurumlarinda uzaktan ogretime"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Butunleme sinavi var mi?",
+      "topic": "sinavlar",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+        "Öğrenci İşleri Sıkça Sorulan Sorular"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "lisans egitim ogretim ve sinav yonetmeligi butunleme tek ders ve cift ders sinavlari ogrenci isleri sikca sorulan sorular"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "But notu ortalamayi etkiler mi?",
+      "topic": "not_sistemi",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "lisans egitim ogretim ve sinav yonetmeligi butunleme tek ders ve cift ders sinavlari akademik takvim"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Final tarihlerini nereden ogrenebilirim?",
+      "topic": "sinavlar",
+      "sources": [
+        "2025 2026 Egitim Ogretim Yili Guz Yariyili Final Programi",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Final Mazeret Sınavı Başvurusu Duyurusu"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 egitim ogretim yili guz yariyili final programi lisans egitim ogretim ve sinav yonetmeligi final mazeret sinavi basvurusu duyurusu"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Sinav programi nerede yayinlanir?",
+      "topic": "sinavlar",
+      "sources": [
+        "2025 2026 Egitim Ogretim Yili Guz Yariyili Final Programi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "2025 2026 egitim ogretim yili guz yariyili final programi"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Mazeret sinavina kimler girebilir?",
+      "topic": "sinavlar",
+      "sources": [
+        "Final Mazeret Sınavı Başvurusu Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Öğrenci İşleri Sıkça Sorulan Sorular"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "final mazeret sinavi basvurusu duyurusu lisans egitim ogretim ve sinav yonetmeligi ogrenci isleri sikca sorulan sorular"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Mazeret sinavi icin kac gun icinde basvuru yapilmali?",
+      "topic": "sinavlar",
+      "sources": [
+        "Final Mazeret Sınavı Başvurusu Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Bu belge,güvenli elektronik imza ile imzalanmıştır."
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "final mazeret sinavi basvurusu duyurusu lisans egitim ogretim ve sinav yonetmeligi bu belge guvenli elektronik imza ile imzalanmistir"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Ara sinava giremezsem mazeret sinavina basvurabilir miyim?",
+      "topic": "sinavlar",
+      "sources": [
+        "Final Mazeret Sınavı Başvurusu Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Öğrenci İşleri Sıkça Sorulan Sorular"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "final mazeret sinavi basvurusu duyurusu lisans egitim ogretim ve sinav yonetmeligi ogrenci isleri sikca sorulan sorular"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Final sinavi icin mazeret sinavi yapilir mi?",
+      "topic": "sinavlar",
+      "sources": [
+        "Final Mazeret Sınavı Başvurusu Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Öğrenci İşleri Sıkça Sorulan Sorular"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "final mazeret sinavi basvurusu duyurusu lisans egitim ogretim ve sinav yonetmeligi ogrenci isleri sikca sorulan sorular"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Tek ders sinavina kimler basvurabilir?",
+      "topic": "sinavlar",
+      "sources": [
+        "Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+        "Öğrenci İşleri Sıkça Sorulan Sorular",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "azami ogrenim suresi sonu sinav duyurusu ogrenci isleri sikca sorulan sorular lisans egitim ogretim ve sinav yonetmeligi"
+    },
+    {
+      "group": "Devamsizlik ve Sinavlar",
+      "question": "Cift ders sinavina kimler basvurabilir?",
+      "topic": "sinavlar",
+      "sources": [
+        "Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Öğrenci İşleri Sıkça Sorulan Sorular"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "azami ogrenim suresi sonu sinav duyurusu lisans egitim ogretim ve sinav yonetmeligi ogrenci isleri sikca sorulan sorular"
+    },
+    {
+      "group": "Not Sistemi ve Mezuniyet",
+      "question": "GANO nasil hesaplanir?",
+      "topic": "not_sistemi",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "lisans egitim ogretim ve sinav yonetmeligi butunleme tek ders ve cift ders sinavlari akademik takvim"
+    },
+    {
+      "group": "Not Sistemi ve Mezuniyet",
+      "question": "Ders basari notu nasil hesaplanir?",
+      "topic": "not_sistemi",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "lisans egitim ogretim ve sinav yonetmeligi butunleme tek ders ve cift ders sinavlari akademik takvim"
+    },
+    {
+      "group": "Not Sistemi ve Mezuniyet",
+      "question": "Finalden kac almam gerekir?",
+      "topic": "not_sistemi",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "lisans egitim ogretim ve sinav yonetmeligi butunleme tek ders ve cift ders sinavlari akademik takvim"
+    },
+    {
+      "group": "Not Sistemi ve Mezuniyet",
+      "question": "Mezuniyet icin tum dersleri gecmek yeterli mi?",
+      "topic": "mezuniyet",
+      "sources": [
+        "Diploma ve Mezuniyet Belgeleri Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "diploma ve mezuniyet belgeleri yonergesi"
+    },
+    {
+      "group": "Not Sistemi ve Mezuniyet",
+      "question": "Bilgisayar muhendisliginde mezun olabilmek icin staj disinda hangi temel sartlar saglanmali?",
+      "topic": "mezuniyet",
+      "sources": [
+        "Diploma ve Mezuniyet Belgeleri Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "diploma ve mezuniyet belgeleri yonergesi"
+    },
+    {
+      "group": "Not Sistemi ve Mezuniyet",
+      "question": "Bilgisayar muhendisligi ogrencisi mezuniyet icin staj eksikse diplomasini alabilir mi?",
+      "topic": "mezuniyet",
+      "sources": [
+        "Diploma ve Mezuniyet Belgeleri Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "diploma ve mezuniyet belgeleri yonergesi"
+    },
+    {
+      "group": "Not Sistemi ve Mezuniyet",
+      "question": "Stajim eksikse mezun olabilir miyim?",
+      "topic": "mezuniyet",
+      "sources": [
+        "Diploma ve Mezuniyet Belgeleri Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "diploma ve mezuniyet belgeleri yonergesi"
+    },
+    {
+      "group": "Not Sistemi ve Mezuniyet",
+      "question": "Mezuniyet icin GANO sarti var mi?",
+      "topic": "mezuniyet",
+      "sources": [
+        "Diploma ve Mezuniyet Belgeleri Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "diploma ve mezuniyet belgeleri yonergesi"
+    },
+    {
+      "group": "Not Sistemi ve Mezuniyet",
+      "question": "Diploma islemleri icin hangi sartlar tamamlanmali?",
+      "topic": "mezuniyet",
+      "sources": [
+        "Diploma ve Mezuniyet Belgeleri Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "diploma ve mezuniyet belgeleri yonergesi"
+    },
+    {
+      "group": "Not Sistemi ve Mezuniyet",
+      "question": "Gecici mezuniyet belgesi ne zaman verilir?",
+      "topic": "mezuniyet",
+      "sources": [
+        "Diploma ve Mezuniyet Belgeleri Yönergesi",
+        "Akademik Takvim",
+        "Resmi Gazete Tarihi: 22.02.2007 Resmi Gazete Sayısı: 26442"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "diploma ve mezuniyet belgeleri yonergesi akademik takvim resmi gazete tarihi 22 02 2007 resmi gazete sayisi 26442"
+    },
+    {
+      "group": "Not Sistemi ve Mezuniyet",
+      "question": "Mezuniyet basari siralamasi nasil belirlenir?",
+      "topic": "mezuniyet",
+      "sources": [
+        "Öğrenci Belgesi ve Transkript İşlemleri",
+        "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+        "YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "ogrenci belgesi ve transkript islemleri butunleme tek ders ve cift ders sinavlari yabanci uyruklu ogrenci adaylarinin lisansustu"
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
+      "question": "Ogrenci belgesi nasil alinir?",
+      "topic": "ogrenci_belgesi_transkript",
+      "sources": [
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "ogrenci belgesi ve transkript islemleri"
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
+      "question": "Transkript nereden alinir?",
+      "topic": "ogrenci_belgesi_transkript",
+      "sources": [
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "ogrenci belgesi ve transkript islemleri"
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
+      "question": "Ogrenci belgesi veya transkript almam gerekirse once nereden almaliyim, e-Devlet belgesi yeterli olur mu?",
+      "topic": "ogrenci_belgesi_transkript",
+      "sources": [
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "ogrenci belgesi ve transkript islemleri"
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
+      "question": "E-Devlet'ten alamadigim belge icin nereye basvurmaliyim?",
+      "topic": "ogrenci_belgesi_transkript",
+      "sources": [
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "ogrenci belgesi ve transkript islemleri"
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
+      "question": "Islak imzali ogrenci belgesi gerekiyorsa ne yapmaliyim?",
+      "topic": "ogrenci_belgesi_transkript",
+      "sources": [
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "ogrenci belgesi ve transkript islemleri"
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
+      "question": "Askerlik tecili icin ne yapmaliyim?",
+      "topic": "askerlik_tecili",
+      "sources": [
+        "Eczacılık Fakültesi Hizmet Standartları",
+        "Öğrenci Belgesi ve Transkript İşlemleri",
+        "MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "eczacilik fakultesi hizmet standartlari ogrenci belgesi ve transkript islemleri meslek yuksekokullari ve acikogretim on lisans programlari mezunlarinin lisans"
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
+      "question": "CAP basvurusu icin ortalama sarti nedir?",
+      "topic": "cap_yandal",
+      "sources": [
+        "Düzce Üniversitesi Çift Anadal Programı Yönergesi",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "CAP ve Yandal"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "duzce universitesi cift anadal programi yonergesi ders kayit ve kayit yenileme cap ve yandal"
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
+      "question": "Cift anadal basvurusu yapmak icin genel not ortalamam kac olmali, ayrica basari siralamasi sarti var mi?",
+      "topic": "cap_yandal",
+      "sources": [
+        "Düzce Üniversitesi Çift Anadal Programı Yönergesi",
+        "Öğrenci Belgesi ve Transkript İşlemleri",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "duzce universitesi cift anadal programi yonergesi ogrenci belgesi ve transkript islemleri ders kayit ve kayit yenileme"
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
+      "question": "Yandal basvurusu icin hangi sartlar aranir?",
+      "topic": "cap_yandal",
+      "sources": [
+        "CAP ve Yandal",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "cap ve yandal ders kayit ve kayit yenileme ogrenci belgesi ve transkript islemleri"
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
+      "question": "Yatay gecis basvurulari ne zaman?",
+      "topic": "yatay_gecis",
+      "sources": [
+        "DUZCE UNIVERSITESI KURUM ICI VE KURUMLAR ARASI YATAY GECIS ESASLARI",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Azami Öğrenim Süresi Sonu Sınav Duyurusu"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "duzce universitesi kurum ici ve kurumlar arasi yatay gecis esaslari ders kayit ve kayit yenileme azami ogrenim suresi sonu sinav duyurusu"
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
+      "question": "Kurum ici yatay gecis ve kurumlar arasi yatay gecis basvurulari nereden takip edilir?",
+      "topic": "yatay_gecis",
+      "sources": [
+        "DUZCE UNIVERSITESI KURUM ICI VE KURUMLAR ARASI YATAY GECIS ESASLARI",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Yatay Geçiş"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "duzce universitesi kurum ici ve kurumlar arasi yatay gecis esaslari lisans egitim ogretim ve sinav yonetmeligi yatay gecis"
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
+      "question": "Disiplin islemleriyle ilgili mevzuata nereden ulasabilirim?",
+      "topic": "disiplin",
+      "sources": [
+        "Yükseköğretim Kurumlarında kayıtlı öğrencilerinin disiplin işleri aşağıda verilen",
+        "2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "yuksekogretim kurumlarinda kayitli ogrencilerinin disiplin isleri asagida verilen 2547 sayili yuksekogretim kanununun 54 uncu maddesine gore"
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
+      "question": "Ogrenci isleri ile nasil iletisime gecebilirim?",
+      "topic": "ogrenci_belgesi_transkript",
+      "sources": [
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "ogrenci belgesi ve transkript islemleri"
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
+      "question": "Belge basvurularinda hangi birime e-posta atabilirim?",
+      "topic": "ogrenci_belgesi_transkript",
+      "sources": [
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "ogrenci belgesi ve transkript islemleri"
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Bilgisayar muhendisligi ogrencisiyim, stajimi yapmadim ve tek dersim kaldi; tek/cift ders sinavina girebilir miyim?",
+      "topic": "sinavlar",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "bilgisayar muhendisligi staj sss"
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Baska universiteden yaz okulunda ders alirsam hem esdegerlik hem devam acisindan neye dikkat etmeliyim?",
+      "topic": "yaz_okulu",
+      "sources": [
+        "Bilgisayar Mühendisliği - Yaz Okulu",
+        "Yaz Okulu Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi yaz okulu yaz okulu yonergesi"
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Kayit yenileme ve ekle-sil tarihlerini kacirirsam ders ekleme sansim olur mu?",
+      "topic": "add_drop",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu akademik takvim"
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Hem ogrenci belgesi hem transkript gerekiyorsa ikisini de e-Devlet'ten almam yeterli mi?",
+      "topic": "ogrenci_belgesi_transkript",
+      "sources": [
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "ogrenci belgesi ve transkript islemleri"
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Mazeret sinavina basvuru suresi ile raporlu devamsizlik ayni sey mi?",
+      "topic": "devamsizlik",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Akademik Takvim",
+        "YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "lisans egitim ogretim ve sinav yonetmeligi akademik takvim yuksekogretim kurumlarinda uzaktan ogretime"
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Cift anadal icin hem ortalama hem basari siralamasi sartini birlikte saglamam gerekiyor mu?",
+      "topic": "cap_yandal",
+      "sources": [
+        "Düzce Üniversitesi Çift Anadal Programı Yönergesi",
+        "Öğrenci Belgesi ve Transkript İşlemleri",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "duzce universitesi cift anadal programi yonergesi ogrenci belgesi ve transkript islemleri ders kayit ve kayit yenileme"
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Ders kaydi yapmayan bir ogrenci tek/cift ders sinavina basvurabilir mi?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu lisans egitim ogretim ve sinav yonetmeligi ders kayit ve kayit yenileme"
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Mezuniyet icin sadece dersleri gecmek neden yeterli olmayabilir?",
+      "topic": "mezuniyet",
+      "sources": [
+        "Diploma ve Mezuniyet Belgeleri Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "diploma ve mezuniyet belgeleri yonergesi"
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Bilgisayar muhendisligi ogrencisiyim; 2. sinif yazinda staj yaptim ama 3. sinif guzde staj dersini secmeyi unuttum. Bu staji sonra saydirabilir miyim?",
+      "topic": "staj",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Mühendisliği - Staj"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi staj sss bilgisayar muhendisligi staj"
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Yaz okulunda baska universiteden aldigim dersi saydirmak istiyorum; ders icerikleri benziyor ama AKTS farkliysa ne olur?",
+      "topic": "yaz_okulu",
+      "sources": [
+        "Bilgisayar Mühendisliği - Yaz Okulu",
+        "Yaz Okulu Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi yaz okulu yaz okulu yonergesi"
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Mazeret sinavina basvururken raporumu 3 is gunu icinde veremedim; yine de sinava girme hakkim olur mu?",
+      "topic": "sinavlar",
+      "sources": [
+        "Final Mazeret Sınavı Başvurusu Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Öğrenci İşleri Sıkça Sorulan Sorular"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "final mazeret sinavi basvurusu duyurusu lisans egitim ogretim ve sinav yonetmeligi ogrenci isleri sikca sorulan sorular"
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Mezuniyet icin tum derslerimi gectim ama zorunlu stajim eksik. Gecici mezuniyet belgesi alabilir miyim?",
+      "topic": "mezuniyet",
+      "sources": [
+        "Diploma ve Mezuniyet Belgeleri Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "diploma ve mezuniyet belgeleri yonergesi"
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Ders kaydimi yaptim ama danisman onayi verilmeden ekle-sil haftasi bitti. Kaydim gecerli sayilir mi?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu ders kayit ve kayit yenileme akademik takvim"
+    },
+    {
+      "group": "Staj Hafiza Akisi",
+      "question": "Bilgisayar muhendisligi zorunlu staj kac gun?",
+      "topic": "staj",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Mühendisliği - Staj"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi staj sss bilgisayar muhendisligi staj"
+    },
+    {
+      "group": "Staj Hafiza Akisi",
+      "question": "Peki kac kere yapmaliyim?",
+      "topic": "genel",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Mühendisliği - Staj",
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "bilgisayar muhendisligi staj sss bilgisayar muhendisligi staj ogrenci belgesi ve transkript islemleri"
+    },
+    {
+      "group": "Staj Hafiza Akisi",
+      "question": "Basvuru nasil oluyor?",
+      "topic": "genel",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Mühendisliği - Staj"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi staj sss bilgisayar muhendisligi staj"
+    },
+    {
+      "group": "Staj Hafiza Akisi",
+      "question": "Belgeler neler?",
+      "topic": "genel",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Mühendisliği - Staj"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi staj sss bilgisayar muhendisligi staj"
+    },
+    {
+      "group": "Mezuniyet Sonrasi Staj Raporu",
+      "question": "Bilgisayar muhendisligi icin soruyorum.",
+      "topic": "genel",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "bilgisayar muhendisligi staj sss"
+    },
+    {
+      "group": "Mezuniyet Sonrasi Staj Raporu",
+      "question": "Ne yazmaliyim?",
+      "topic": "genel",
+      "sources": [
+        "Bilgisayar Muhendisligi - Staj",
+        "Bilgisayar Mühendisliği - Staj SSS"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi staj bilgisayar muhendisligi staj sss"
+    },
+    {
+      "group": "Yaz Okulu Baglam Akisi",
+      "question": "Bilgisayar muhendisligi yaz okulunda baska universiteden ders alabilir miyim?",
+      "topic": "yaz_okulu",
+      "sources": [
+        "Bilgisayar Mühendisliği - Yaz Okulu",
+        "Yaz Okulu Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi yaz okulu yaz okulu yonergesi"
+    },
+    {
+      "group": "Yaz Okulu Baglam Akisi",
+      "question": "Peki sayilmasi icin hangi sartlar gerekiyor?",
+      "topic": "genel",
+      "sources": [
+        "Bilgisayar Mühendisliği - Yaz Okulu",
+        "Yaz Okulu Yönergesi"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "bilgisayar muhendisligi yaz okulu yaz okulu yonergesi"
+    },
+    {
+      "group": "Yaz Okulu Baglam Akisi",
+      "question": "Devam zorunlulugu konusunda neye dikkat etmeliyim?",
+      "topic": "devamsizlik",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "lisans egitim ogretim ve sinav yonetmeligi yuksekogretim kurumlarinda uzaktan ogretime"
+    },
+    {
+      "group": "Belge Islemleri Akisi",
+      "question": "Ogrenci belgesi nasil alinir?",
+      "topic": "ogrenci_belgesi_transkript",
+      "sources": [
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "ogrenci belgesi ve transkript islemleri"
+    },
+    {
+      "group": "Belge Islemleri Akisi",
+      "question": "Transkript icin de ayni yol gecerli mi?",
+      "topic": "ogrenci_belgesi_transkript",
+      "sources": [
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "ogrenci belgesi ve transkript islemleri"
+    },
+    {
+      "group": "Belge Islemleri Akisi",
+      "question": "E-Devlet'ten alamazsam nereye basvurayim?",
+      "topic": "ogrenci_belgesi_transkript",
+      "sources": [
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 1,
+      "source_text": "ogrenci belgesi ve transkript islemleri"
+    },
+    {
+      "group": "Ders Kaydi Akisi",
+      "question": "2025-2026 bahar doneminde ders kaydi ne zaman?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu lisans egitim ogretim ve sinav yonetmeligi ders kayit ve kayit yenileme"
+    },
+    {
+      "group": "Ders Kaydi Akisi",
+      "question": "Ekle-sil haftasi hangi tarihlerde?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Akademik Takvim"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 3,
+      "source_text": "2025 2026 bahar ders kayit ve kayit yenileme duyurusu ders kayit ve kayit yenileme akademik takvim"
+    },
+    {
+      "group": "Ders Kaydi Akisi",
+      "question": "Danisman onayi gerekiyor mu?",
+      "topic": "ders_kaydi",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "errors": [],
+      "passed": true,
+      "source_count": 2,
+      "source_text": "lisans egitim ogretim ve sinav yonetmeligi ders kayit ve kayit yenileme"
+    }
+  ]
+}

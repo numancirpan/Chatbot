@@ -17,6 +17,7 @@
         "Mezun durumundaysam staj raporumu yukledikten sonra ne yapmam gerekiyor?",
         "Bilgisayar muhendisligi icin staj sigortasini kim yapiyor?",
         "Zorunlu staj disinda gonullu staj yaparsam sigortami okul yapar mi?",
+        "Bilgisayar muhendisligi icin zorunlu staj disinda gonullu staj yaparsam sigortami okul yapar mi?",
         "Ucretli staj yaparsam farkli bir islem gerekiyor mu?",
         "Staj yapacagim firmada hangi bolumden muhendis bulunmasi gerekiyor?",
         "Bilgisayar muhendisligi ogrencisi tek cift sinavina girmek icin stajini tamamlamis olmak zorunda mi?",
@@ -130,7 +131,12 @@
         "Mazeret sinavina basvuru suresi ile raporlu devamsizlik ayni sey mi?",
         "Cift anadal icin hem ortalama hem basari siralamasi sartini birlikte saglamam gerekiyor mu?",
         "Ders kaydi yapmayan bir ogrenci tek/cift ders sinavina basvurabilir mi?",
-        "Mezuniyet icin sadece dersleri gecmek neden yeterli olmayabilir?"
+        "Mezuniyet icin sadece dersleri gecmek neden yeterli olmayabilir?",
+        "Bilgisayar muhendisligi ogrencisiyim; 2. sinif yazinda staj yaptim ama 3. sinif guzde staj dersini secmeyi unuttum. Bu staji sonra saydirabilir miyim?",
+        "Yaz okulunda baska universiteden aldigim dersi saydirmak istiyorum; ders icerikleri benziyor ama AKTS farkliysa ne olur?",
+        "Mazeret sinavina basvururken raporumu 3 is gunu icinde veremedim; yine de sinava girme hakkim olur mu?",
+        "Mezuniyet icin tum derslerimi gectim ama zorunlu stajim eksik. Gecici mezuniyet belgesi alabilir miyim?",
+        "Ders kaydimi yaptim ama danisman onayi verilmeden ekle-sil haftasi bitti. Kaydim gecerli sayilir mi?"
       ]
     }
   ],

@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-04-30T14:15:52",
+  "summary": {
+    "passed": 9,
+    "total": 9
+  },
+  "results": [
+    {
+      "id": "casual_greeting_001",
+      "query": "Merhaba",
+      "passed": true,
+      "missing_required": [],
+      "forbidden_hits": [],
+      "source_error": false,
+      "answer": "Merhaba, buradayim. Duzce Universitesi ogrenci isleriyle ilgili staj, ders kaydi, sinavlar, belgeler ve mevzuat konularinda resmi kaynaklara dayanarak yardimci olabilirim.",
+      "sources": []
+    },
+    {
+      "id": "casual_greeting_002",
+      "query": "Selam, nasilsin?",
+      "passed": true,
+      "missing_required": [],
+      "forbidden_hits": [],
+      "source_error": false,
+      "answer": "Merhaba, buradayim. Duzce Universitesi ogrenci isleriyle ilgili staj, ders kaydi, sinavlar, belgeler ve mevzuat konularinda resmi kaynaklara dayanarak yardimci olabilirim.",
+      "sources": []
+    },
+    {
+      "id": "casual_thanks_001",
+      "query": "Tesekkur ederim",
+      "passed": true,
+      "missing_required": [],
+      "forbidden_hits": [],
+      "source_error": false,
+      "answer": "Rica ederim, her zaman. Istersen bir sonraki sorunda birlikte kaynaga bakarak ilerleyebiliriz.",
+      "sources": []
+    },
+    {
+      "id": "casual_identity_001",
+      "query": "Sen kimsin?",
+      "passed": true,
+      "missing_required": [],
+      "forbidden_hits": [],
+      "source_error": false,
+      "answer": "Ben ogrenci isleri sureclerinde yardimci olmak icin gelistirilmis bir yapay zeka asistanim. Resmi belgelerde dayanak buldugumda net cevap veririm; bulamazsam tahmin etmek yerine bunu acikca soylerim.",
+      "sources": []
+    },
+    {
+      "id": "casual_empathy_001",
+      "query": "Moralim bozuk",
+      "passed": true,
+      "missing_required": [],
+      "forbidden_hits": [],
+      "source_error": false,
+      "answer": "Bunu duymak zor. Biraz nefes alip konuyu kucuk parcalara bolmek iyi gelebilir. Istersen ogrenci isleriyle ilgili takildigin kismi beraber sade sade cozebiliriz.",
+      "sources": []
+    },
+    {
+      "id": "casual_off_topic_001",
+      "query": "Bugun hava nasil?",
+      "passed": true,
+      "missing_required": [],
+      "forbidden_hits": [],
+      "source_error": false,
+      "answer": "Bu soru ogrenci isleri kapsamimin disinda kaliyor. Yine de burada kalip sana staj, ders kaydi, sinavlar, belgeler, yaz okulu veya mevzuat konularinda resmi kaynaklara dayanarak yardimci olabilirim.",
+      "sources": []
+    },
+    {
+      "id": "casual_off_topic_002",
+      "query": "Python nedir?",
+      "passed": true,
+      "missing_required": [],
+      "forbidden_hits": [],
+      "source_error": false,
+      "answer": "Bu soru ogrenci isleri kapsamimin disinda kaliyor. Yine de burada kalip sana staj, ders kaydi, sinavlar, belgeler, yaz okulu veya mevzuat konularinda resmi kaynaklara dayanarak yardimci olabilirim.",
+      "sources": []
+    },
+    {
+      "id": "academic_not_casual_001",
+      "query": "Bilgisayar muhendisligi staj kac gun?",
+      "passed": true,
+      "missing_required": [],
+      "forbidden_hits": [],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nBilgisayar Muhendisligi ogrencileri icin zorunlu stajlar BM399 ve BM499 kodlariyla yurur; her zorunlu staj 25 is gunudur.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Mühendisliği - Staj"
+      ]
+    },
+    {
+      "id": "academic_scope_guard_001",
+      "query": "Staj kac gun?",
+      "passed": true,
+      "missing_required": [],
+      "forbidden_hits": [],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.",
+      "sources": []
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-28T21:01:14",
+  "generated_at": "2026-04-30T15:47:23",
   "summary": {
-    "total_answers": 112,
+    "total_answers": 118,
     "flag_counts": {}
   },
   "single_questions": [
@@ -18,20 +18,21 @@
     {
       "group": "Bilgisayar Muhendisligi Staj",
       "question": "Bilgisayar muhendisliginde kac zorunlu staj var?",
-      "answer": "Sayın öğrencimiz,\nBilgisayar Mühendisliği bölümünde 2 zorunlu staj bulunmaktadır. Bunlar Staj I (BM399) ve Staj II'dir (BM499).\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj",
+      "answer": "Sayın öğrencimiz,\nBilgisayar Mühendisliği bölümünde 2 zorunlu staj bulunmaktadır. Bunlar Staj I (BM399) ve Staj II'dir (BM499).\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj; [Kaynak 3] Öğrenci Belgesi ve Transkript İşlemleri",
       "sources": [
         "Bilgisayar Mühendisliği - Staj SSS",
-        "Bilgisayar Mühendisliği - Staj"
+        "Bilgisayar Mühendisliği - Staj",
+        "Öğrenci Belgesi ve Transkript İşlemleri"
       ],
       "flags": []
     },
     {
       "group": "Bilgisayar Muhendisligi Staj",
       "question": "Bilgisayar muhendisligi ogrencisi stajini hangi yariyillardan sonra yapmali?",
-      "answer": "Sayın öğrencimiz,\nBilgisayar Mühendisliği için zorunlu stajlar yaz döneminde yapılır. Kaynakta staj yeri aramaya en geç 4. yarıyılın ve 6. yarıyılın Bahar döneminde başlanabileceği belirtilmektedir. Staj dersleri ise takip eden 5. ve 7. yarıyıllarda BM399 ve BM499 olarak alınır.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj; [Kaynak 3] Bilgisayar Mühendisliği - Staj",
+      "answer": "Sayın öğrencimiz,\nBilgisayar Mühendisliği için zorunlu stajlar yaz döneminde yapılır. Kaynakta staj yeri aramaya en geç 4. yarıyılın ve 6. yarıyılın Bahar döneminde başlanabileceği belirtilmektedir. Staj dersleri ise takip eden 5. ve 7. yarıyıllarda BM399 ve BM499 olarak alınır.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 3] Bilgisayar Mühendisliği - Staj",
       "sources": [
         "Bilgisayar Mühendisliği - Staj SSS",
-        "Bilgisayar Muhendisligi - Staj",
+        "Öğrenci Belgesi ve Transkript İşlemleri",
         "Bilgisayar Mühendisliği - Staj"
       ],
       "flags": []
@@ -56,12 +57,8 @@
     {
       "group": "Bilgisayar Muhendisligi Staj",
       "question": "Staj basvurusu nasil yapilir?",
-      "answer": "Sayin ogrencimiz,\nBilgisayar Muhendisligi staj basvurusu Staj Bilgi Sistemi uzerinden yapilir. Basvurudan sonra olusan formun ciktisi alinir, staj yapilacak firmaya imzalatilir ve kase/imza alanlari eksiksiz tamamlanir. Ardindan taranmis belgeler Staj Bilgi Sistemine yuklenir; belge yuklenmeden yapilan basvurular degerlendirmeye alinmaz.\n\nDayanak: [Kaynak 1] ’yi başarıyla; [Kaynak 2] Amaç; [Kaynak 3] ORMAN FAKÜLTESİ",
-      "sources": [
-        "’yi başarıyla",
-        "Amaç",
-        "ORMAN FAKÜLTESİ"
-      ],
+      "answer": "Sayın öğrencimiz,\nBu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.",
+      "sources": [],
       "flags": []
     },
     {
@@ -77,53 +74,56 @@
     {
       "group": "Bilgisayar Muhendisligi Staj",
       "question": "Bilgisayar muhendisligi staj raporu SBS'ye ne zaman yuklenmeli?",
-      "answer": "Sayın öğrencimiz,\nBilgisayar Mühendisliği Staj SSS kaynağına göre staj raporu, imza ve kaşe işlemleri tamamlandıktan sonra taranarak SBS'ye yüklenir. Aynı kaynakta, sistem yüklemesi için sabit bir son tarih bulunmadığı belirtilmektedir. Yaz stajı için raporun, yeni güz dönemi başladıktan sonra yaklaşık 30 gün içinde yüklenebileceği ve değerlendirmenin staj komisyonu toplandıktan sonra yapılacağı ifade edilmektedir. Mezun durumundaysanız ve stajlar dışında dersiniz yoksa, raporu yükledikten sonra bölüm staj komisyonuna e-posta ile değerlendirme talebi iletmeniz gerektiği belirtilmiştir. Genel staj yönergesinde, komisyon düzeltme isterse bu düzeltmenin en fazla 1 ay içinde yapılması gerektiği; aksi durumda stajın reddedilmiş sayılacağı belirtilmektedir. Kaynaklarda geç teslim için otomatik burs kesintisi veya ayrı bir disiplin cezası şeklinde açık bir yaptırım yer almamaktadır.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi; [Kaynak 3] Bilgisayar Muhendisligi - Staj",
+      "answer": "Sayın öğrencimiz,\nBilgisayar Mühendisliği Staj SSS kaynağına göre staj raporu, imza ve kaşe işlemleri tamamlandıktan sonra taranarak SBS'ye yüklenir. Aynı kaynakta, sistem yüklemesi için sabit bir son tarih bulunmadığı belirtilmektedir. Yaz stajı için raporun, yeni güz dönemi başladıktan sonra yaklaşık 30 gün içinde yüklenebileceği ve değerlendirmenin staj komisyonu toplandıktan sonra yapılacağı ifade edilmektedir. Mezun durumundaysanız ve stajlar dışında dersiniz yoksa, raporu yükledikten sonra bölüm staj komisyonuna e-posta ile değerlendirme talebi iletmeniz gerektiği belirtilmiştir. Genel staj yönergesinde, komisyon düzeltme isterse bu düzeltmenin en fazla 1 ay içinde yapılması gerektiği; aksi durumda stajın reddedilmiş sayılacağı belirtilmektedir. Kaynaklarda geç teslim için otomatik burs kesintisi veya ayrı bir disiplin cezası şeklinde açık bir yaptırım yer almamaktadır.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj; [Kaynak 3] Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi",
       "sources": [
         "Bilgisayar Mühendisliği - Staj SSS",
-        "Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi",
-        "Bilgisayar Muhendisligi - Staj"
+        "Bilgisayar Mühendisliği - Staj",
+        "Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi"
       ],
       "flags": []
     },
     {
       "group": "Bilgisayar Muhendisligi Staj",
       "question": "Stajimi zamaninda teslim etmezsem bilgisayar muhendisligi icin surec nasil isler?",
-      "answer": "Sayın öğrencimiz,\nBilgisayar Mühendisliği Staj SSS kaynağına göre staj raporu, imza ve kaşe işlemleri tamamlandıktan sonra taranarak SBS'ye yüklenir. Aynı kaynakta, sistem yüklemesi için sabit bir son tarih bulunmadığı belirtilmektedir. Yaz stajı için raporun, yeni güz dönemi başladıktan sonra yaklaşık 30 gün içinde yüklenebileceği ve değerlendirmenin staj komisyonu toplandıktan sonra yapılacağı ifade edilmektedir. Mezun durumundaysanız ve stajlar dışında dersiniz yoksa, raporu yükledikten sonra bölüm staj komisyonuna e-posta ile değerlendirme talebi iletmeniz gerektiği belirtilmiştir. Genel staj yönergesinde, komisyon düzeltme isterse bu düzeltmenin en fazla 1 ay içinde yapılması gerektiği; aksi durumda stajın reddedilmiş sayılacağı belirtilmektedir. Kaynaklarda geç teslim için otomatik burs kesintisi veya ayrı bir disiplin cezası şeklinde açık bir yaptırım yer almamaktadır.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi; [Kaynak 3] Bilgisayar Muhendisligi - Staj",
+      "answer": "Sayın öğrencimiz,\nBilgisayar Mühendisliği Staj SSS kaynağına göre staj raporu, imza ve kaşe işlemleri tamamlandıktan sonra taranarak SBS'ye yüklenir. Aynı kaynakta, sistem yüklemesi için sabit bir son tarih bulunmadığı belirtilmektedir. Yaz stajı için raporun, yeni güz dönemi başladıktan sonra yaklaşık 30 gün içinde yüklenebileceği ve değerlendirmenin staj komisyonu toplandıktan sonra yapılacağı ifade edilmektedir. Mezun durumundaysanız ve stajlar dışında dersiniz yoksa, raporu yükledikten sonra bölüm staj komisyonuna e-posta ile değerlendirme talebi iletmeniz gerektiği belirtilmiştir. Genel staj yönergesinde, komisyon düzeltme isterse bu düzeltmenin en fazla 1 ay içinde yapılması gerektiği; aksi durumda stajın reddedilmiş sayılacağı belirtilmektedir. Kaynaklarda geç teslim için otomatik burs kesintisi veya ayrı bir disiplin cezası şeklinde açık bir yaptırım yer almamaktadır.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj; [Kaynak 3] Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi",
       "sources": [
         "Bilgisayar Mühendisliği - Staj SSS",
-        "Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi",
-        "Bilgisayar Muhendisligi - Staj"
+        "Bilgisayar Mühendisliği - Staj",
+        "Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi"
       ],
       "flags": []
     },
     {
       "group": "Bilgisayar Muhendisligi Staj",
       "question": "Mezun durumundaysam staj raporumu yukledikten sonra ne yapmam gerekiyor?",
-      "answer": "Sayin ogrencimiz,\nMezun durumundaysaniz ve stajlar disinda dersiniz yoksa, staj raporunuzu sisteme yukledikten sonra bolum staj komisyonuna e-posta ile degerlendirme talebinizi iletmeniz gerekir.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS",
-      "sources": [
-        "Bilgisayar Mühendisliği - Staj SSS"
-      ],
+      "answer": "Sayın öğrencimiz,\nBu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.",
+      "sources": [],
       "flags": []
     },
     {
       "group": "Bilgisayar Muhendisligi Staj",
       "question": "Bilgisayar muhendisligi icin staj sigortasini kim yapiyor?",
-      "answer": "Sayin ogrencimiz,\nBilgisayar Muhendisligi Staj SSS kaynagina gore zorunlu stajlarda sigorta islemleri okul tarafindan yurutulur. Basvuru sirasinda okulun sigorta islemini yapabilmesi icin gerekli beyanin dogru sekilde verilmesi gerekir. Buna karsilik zorunlu stajlardan ayri yapilan gonullu staj, staj uzatma veya ilan edilen donemler disindaki stajlarda okul tarafindan sigorta yapilmadigi belirtilmektedir.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj; [Kaynak 3] Bilgisayar Mühendisliği - Staj",
+      "answer": "Sayin ogrencimiz,\nBilgisayar Muhendisligi Staj SSS kaynagina gore zorunlu stajlarda sigorta islemleri okul tarafindan yurutulur. Basvuru sirasinda okulun sigorta islemini yapabilmesi icin gerekli beyanin dogru sekilde verilmesi gerekir. Buna karsilik zorunlu stajlardan ayri yapilan gonullu staj, staj uzatma veya ilan edilen donemler disindaki stajlarda okul tarafindan sigorta yapilmadigi belirtilmektedir.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj",
       "sources": [
         "Bilgisayar Mühendisliği - Staj SSS",
-        "Bilgisayar Muhendisligi - Staj",
-        "Bilgisayar Mühendisliği - Staj"
+        "Bilgisayar Muhendisligi - Staj"
       ],
       "flags": []
     },
     {
       "group": "Bilgisayar Muhendisligi Staj",
       "question": "Zorunlu staj disinda gonullu staj yaparsam sigortami okul yapar mi?",
-      "answer": "Sayin ogrencimiz,\nBilgisayar Muhendisligi Staj SSS kaynagina gore zorunlu stajlarda sigorta islemleri okul tarafindan yurutulur. Basvuru sirasinda okulun sigorta islemini yapabilmesi icin gerekli beyanin dogru sekilde verilmesi gerekir. Buna karsilik zorunlu stajlardan ayri yapilan gonullu staj, staj uzatma veya ilan edilen donemler disindaki stajlarda okul tarafindan sigorta yapilmadigi belirtilmektedir.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] ’yi başarıyla; [Kaynak 3] lerini staj bitim",
+      "answer": "Sayın öğrencimiz,\nBu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.",
+      "sources": [],
+      "flags": []
+    },
+    {
+      "group": "Bilgisayar Muhendisligi Staj",
+      "question": "Bilgisayar muhendisligi icin zorunlu staj disinda gonullu staj yaparsam sigortami okul yapar mi?",
+      "answer": "Sayin ogrencimiz,\nBilgisayar Muhendisligi Staj SSS kaynagina gore zorunlu stajlarda sigorta islemleri okul tarafindan yurutulur. Basvuru sirasinda okulun sigorta islemini yapabilmesi icin gerekli beyanin dogru sekilde verilmesi gerekir. Buna karsilik zorunlu stajlardan ayri yapilan gonullu staj, staj uzatma veya ilan edilen donemler disindaki stajlarda okul tarafindan sigorta yapilmadigi belirtilmektedir.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj",
       "sources": [
         "Bilgisayar Mühendisliği - Staj SSS",
-        "’yi başarıyla",
-        "lerini staj bitim"
+        "Bilgisayar Muhendisligi - Staj"
       ],
       "flags": []
     },
@@ -144,10 +144,9 @@
     {
       "group": "Bilgisayar Muhendisligi Staj",
       "question": "Bilgisayar muhendisligi ogrencisi tek cift sinavina girmek icin stajini tamamlamis olmak zorunda mi?",
-      "answer": "Sayin ogrencimiz,\nTek/çift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Devam sartini yerine getirmedigi icin DVZ alan veya hic almadigi dersler icin tek/çift ders sinav hakki verilmez.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj; [Kaynak 3] Bilgisayar Mühendisliği - Staj",
+      "answer": "Sayin ogrencimiz,\nTek/cift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Staj dersine hic kayitlanmadiysaniz tek/cift ders sinavina girme hakkiniz yoktur. Ancak staj dersini daha once alip YZ notu aldiysaniz tek/cift ders sinavina basvurabilirsiniz.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj",
       "sources": [
         "Bilgisayar Mühendisliği - Staj SSS",
-        "Bilgisayar Muhendisligi - Staj",
         "Bilgisayar Mühendisliği - Staj"
       ],
       "flags": []
@@ -155,10 +154,9 @@
     {
       "group": "Bilgisayar Muhendisligi Staj",
       "question": "Bilgisayar muhendisligi ogrencisiyim; staj dersine daha once hic kayitlanmadiysam tek/cift ders sinavina girebilir miyim?",
-      "answer": "Sayin ogrencimiz,\nTek/çift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Devam sartini yerine getirmedigi icin DVZ alan veya hic almadigi dersler icin tek/çift ders sinav hakki verilmez.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj; [Kaynak 3] Bilgisayar Mühendisliği - Staj",
+      "answer": "Sayin ogrencimiz,\nTek/cift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Staj dersine hic kayitlanmadiysaniz tek/cift ders sinavina girme hakkiniz yoktur. Ancak staj dersini daha once alip YZ notu aldiysaniz tek/cift ders sinavina basvurabilirsiniz.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj",
       "sources": [
         "Bilgisayar Mühendisliği - Staj SSS",
-        "Bilgisayar Muhendisligi - Staj",
         "Bilgisayar Mühendisliği - Staj"
       ],
       "flags": []
@@ -166,11 +164,11 @@
     {
       "group": "Yaz Okulu",
       "question": "Yaz okulu kac hafta suruyor?",
-      "answer": "Sayın öğrencimiz,\nAkademik takvime göre yaz okulu 5 hafta veya 7 hafta olarak uygulanabilmektedir. 5 haftalık yaz okulu 14.08.2026, 7 haftalık yaz okulu ise 28.08.2026 tarihinde sona ermektedir.\n\nDayanak: [Kaynak 1] Akademik Takvim; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Yaz Okulu Yönergesi",
+      "answer": "Sayın öğrencimiz,\nAkademik takvime göre yaz okulu 5 hafta veya 7 hafta olarak uygulanabilmektedir. 5 haftalık yaz okulu 14.08.2026, 7 haftalık yaz okulu ise 28.08.2026 tarihinde sona ermektedir.\n\nDayanak: [Kaynak 1] Ders Kayıt ve Kayıt Yenileme; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Akademik Takvim",
       "sources": [
-        "Akademik Takvim",
+        "Ders Kayıt ve Kayıt Yenileme",
         "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
-        "Yaz Okulu Yönergesi"
+        "Akademik Takvim"
       ],
       "flags": []
     },
@@ -268,173 +266,193 @@
     {
       "group": "Yaz Okulu",
       "question": "Yaz okulunda final haftasi dahil mi?",
-      "answer": "Sayın öğrencimiz,\nYaz okulundaki ders saati planlamalarında final haftası dahildir. 13.07.2026 ve 21.08.2026 tarihleri arasında yer alan yaz okulu kapsamında, final haftası da normal derse katılmak zorundasınız [Kaynak 1].\nDüzce Üniversitesi Öğrenci İşleri Daire Başkanlığı\n\nDayanak: [Kaynak 1] 1. DÖNEM",
+      "answer": "Sayın öğrencimiz,\nEvet. Kaynakta yaz okulu final haftası dahil 13.07.2026 - 21.08.2026 aralığında gösterilmektedir.\n\nDayanak: [Kaynak 1] Mühendislik Fakültesi - Yaz Okulu Takvimi",
       "sources": [
-        "1. DÖNEM"
+        "Mühendislik Fakültesi - Yaz Okulu Takvimi"
       ],
       "flags": []
     },
     {
       "group": "Yaz Okulu",
       "question": "Yaz okulunda ders secimi akademik takvimde nereden takip edilir?",
-      "answer": "Sayın öğrencimiz,\nYaz okulu dersleri akademik takvipinizde belirlenen tarihler içinde kaydedilebilir. Yaz okulunda ders alacak öğrencilerin kesin kayıt işlemlerinin, yaz okulu dersleri başlamadan akademik takvimde belirlenecek tarihler içinde yapılması gerekmektedir [Kaynak 1].\nDüzce Üniversitesi Öğrenci İşleri Daire Başkanlığı\n\nDayanak: [Kaynak 1] Yaz Okulu Yönergesi",
+      "answer": "Sayin ogrencimiz,\nYaz okulu ders secimi ve kayit tarihleri ilgili egitim-ogretim yilinin akademik takvimi ve resmi duyuru sayfalarindan takip edilmelidir. Tarihler yila gore degisebildigi icin guncel akademik takvim esas alinmalidir.\n\nDayanak: [Kaynak 1] Akademik Takvim; [Kaynak 2] Bilgisayar Mühendisliği - Yaz Okulu",
       "sources": [
-        "Yaz Okulu Yönergesi"
+        "Akademik Takvim",
+        "Bilgisayar Mühendisliği - Yaz Okulu"
       ],
       "flags": []
     },
     {
       "group": "Ders Kaydi ve Add-Drop",
       "question": "Ders kaydi ne zaman basliyor?",
-      "answer": "Sayin ogrencimiz,\nDers kaydi/kayit yenileme tarihleri her egitim-ogretim yili icin akademik takvimde belirlenir. Kesin tarih icin ilgili yilin akademik takvim kaydina bakilmalidir.\n\nDayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] 11 Mayıs 2025 PAZAR; [Kaynak 3] Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih)",
+      "answer": "Sayin ogrencimiz,\nDers kaydi/kayit yenileme tarihleri her egitim-ogretim yili icin akademik takvimde belirlenir. Kesin tarih icin ilgili yilin akademik takvim kaydina bakilmalidir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
       "sources": [
-        "DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK",
-        "11 Mayıs 2025 PAZAR",
-        "Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih)"
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
       ],
       "flags": []
     },
     {
       "group": "Ders Kaydi ve Add-Drop",
       "question": "2025-2026 bahar doneminde ders kaydimi ne zaman yapmaliyim ve ekle-sil haftasi hangi tarihlerde?",
-      "answer": "Sayin ogrencimiz,\n2025-2026 bahar yariyili icin ekle-sil haftasi 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] Akademik Takvim; [Kaynak 2] 2025-2026 Akademik Takvim; [Kaynak 3] DERSLERİN BAŞLAMASI",
+      "answer": "Sayin ogrencimiz,\nAkademik takvim/duyuruya gore 2025-2026 bahar yariyili icin ders kayitlari 4 Subat 2026 - 13 Subat 2026 arasinda yapilir. Danisman onaylari 4 Subat 2026 - 15 Subat 2026, ekle-sil haftasi ise 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme; [Kaynak 3] Akademik Takvim",
       "sources": [
-        "Akademik Takvim",
-        "2025-2026 Akademik Takvim",
-        "DERSLERİN BAŞLAMASI"
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Akademik Takvim"
       ],
       "flags": []
     },
     {
       "group": "Ders Kaydi ve Add-Drop",
       "question": "Kayit yenileme nasil yapilir?",
-      "answer": "Sayin ogrencimiz,\nKayit yenileme islemleri akademik takvimde belirtilen surelerde yapilir. Islem genellikle OBS uzerinden ders secimi ve danisman onayi surecini kapsar; kesin adimlar icin ilgili yilin duyurusu gerekir.\n\nDayanak: [Kaynak 1] 11 Mayıs 2025 PAZAR",
+      "answer": "Sayin ogrencimiz,\nKayit yenileme islemleri akademik takvimde belirtilen surelerde yapilir. Islem genellikle OBS uzerinden ders secimi ve danisman onayi surecini kapsar; kesin adimlar icin ilgili yilin duyurusu gerekir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
       "sources": [
-        "11 Mayıs 2025 PAZAR"
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
       ],
       "flags": []
     },
     {
       "group": "Ders Kaydi ve Add-Drop",
       "question": "Ders kaydimi OBS uzerinden mi yapmaliyim?",
-      "answer": "Sayin ogrencimiz,\nDers secimi OBS uzerinden yapilir ve danisman onayi sureci takip edilir. Harc/katki payi odemesi gereken ogrenciler ders kaydi oncesinde odemelerini tamamlamalidir.\n\nDayanak: [Kaynak 1] 2025-2026 Akademik Takvim; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Tek/Çift Ders Sınavları Hakkında SSS",
+      "answer": "Sayin ogrencimiz,\nDers secimi OBS uzerinden yapilir ve danisman onayi sureci takip edilir. Harc/katki payi odemesi gereken ogrenciler ders kaydi oncesinde odemelerini tamamlamalidir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme; [Kaynak 3] Akademik Takvim",
       "sources": [
-        "2025-2026 Akademik Takvim",
-        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
-        "Tek/Çift Ders Sınavları Hakkında SSS"
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Akademik Takvim"
       ],
       "flags": []
     },
     {
       "group": "Ders Kaydi ve Add-Drop",
       "question": "Harc yatirmadan ders kaydi yapilabilir mi?",
-      "answer": "Sayin ogrencimiz,\nHarc/katki payi gerekip gerekmedigi ogrencinin programina ve durumuna gore degisebilir. Duyuruda ikinci ogretim programlarina kayitli ogrenciler ile ogrenim suresi uzayan ogrencilerin ders kaydi oncesinde katki payi/ogrenim ucreti odemesi gerektigi belirtilmektedir.\n\nDayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih)",
+      "answer": "Sayin ogrencimiz,\nHarc/katki payi gerekip gerekmedigi ogrencinin programina ve durumuna gore degisebilir. Duyuruda ikinci ogretim programlarina kayitli ogrenciler ile ogrenim suresi uzayan ogrencilerin ders kaydi oncesinde katki payi/ogrenim ucreti odemesi gerektigi belirtilmektedir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme; [Kaynak 3] Akademik Takvim",
       "sources": [
-        "DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK",
-        "Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih)"
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Akademik Takvim"
       ],
       "flags": []
     },
     {
       "group": "Ders Kaydi ve Add-Drop",
       "question": "Katki payi veya ogrenim ucreti odemem gerekiyorsa ders kaydindan once mi odemeliyim?",
-      "answer": "Sayin ogrencimiz,\nHarc/katki payi gerekip gerekmedigi ogrencinin programina ve durumuna gore degisebilir. Duyuruda ikinci ogretim programlarina kayitli ogrenciler ile ogrenim suresi uzayan ogrencilerin ders kaydi oncesinde katki payi/ogrenim ucreti odemesi gerektigi belirtilmektedir.\n\nDayanak: [Kaynak 1] T.C.; [Kaynak 2] Tek/Çift Ders Sınavları Hakkında SSS; [Kaynak 3] Düzce Üniversitesi Mevzuat Komisyonu",
+      "answer": "Sayin ogrencimiz,\nHarc/katki payi gerekip gerekmedigi ogrencinin programina ve durumuna gore degisebilir. Duyuruda ikinci ogretim programlarina kayitli ogrenciler ile ogrenim suresi uzayan ogrencilerin ders kaydi oncesinde katki payi/ogrenim ucreti odemesi gerektigi belirtilmektedir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
       "sources": [
-        "T.C.",
-        "Tek/Çift Ders Sınavları Hakkında SSS",
-        "Düzce Üniversitesi Mevzuat Komisyonu"
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
       ],
       "flags": []
     },
     {
       "group": "Ders Kaydi ve Add-Drop",
       "question": "Add-drop haftasinda ders ekleyebilir miyim?",
-      "answer": "Sayin ogrencimiz,\nDers ekleme/birakma islemleri akademik takvimde belirtilen ders kaydi veya ekle-sil sureleri icinde, danisman onayiyla yurutulur. Veri tabaninda bu soru icin daha ayrintili dogrudan resmi kaynak bulamadim.",
-      "sources": [],
+      "answer": "Sayin ogrencimiz,\nDers ekleme/birakma islemleri akademik takvimde belirtilen ders kaydi veya ekle-sil sureleri icinde, danisman onayiyla yurutulur. 2025-2026 bahar yariyili icin ekle-sil haftasi 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Tek/Çift Ders Sınavları Hakkında SSS; [Kaynak 3] Bilgisayar Mühendisliği - Staj SSS",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Tek/Çift Ders Sınavları Hakkında SSS",
+        "Bilgisayar Mühendisliği - Staj SSS"
+      ],
       "flags": []
     },
     {
       "group": "Ders Kaydi ve Add-Drop",
       "question": "Ekle-sil haftasinda sectigim dersi birakabilir miyim?",
-      "answer": "Sayin ogrencimiz,\n2025-2026 bahar yariyili icin ekle-sil haftasi 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] Tek/Çift Ders Sınavları Hakkında SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 3] 11 Mayıs 2025 PAZAR",
+      "answer": "Sayin ogrencimiz,\n2025-2026 bahar yariyili icin ekle-sil haftasi 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Tek/Çift Ders Sınavları Hakkında SSS; [Kaynak 3] Bilgisayar Mühendisliği - Staj SSS",
       "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
         "Tek/Çift Ders Sınavları Hakkında SSS",
-        "Bilgisayar Mühendisliği - Staj SSS",
-        "11 Mayıs 2025 PAZAR"
+        "Bilgisayar Mühendisliği - Staj SSS"
       ],
       "flags": []
     },
     {
       "group": "Ders Kaydi ve Add-Drop",
       "question": "Bir donemde en fazla kac AKTS alabilirim?",
-      "answer": "Sayin ogrencimiz,\nKaynakta normal ders yuku icin 30 AKTS bilgisi gorunmektedir. Ancak ust sinir ve istisnalar program, sinif ve akademik durumunuza gore degisebilir; bu nedenle kesin limit icin ilgili yonetmelik/OBS kurali dikkate alinmalidir.\n\nDayanak: [Kaynak 1] 9 Kasım 2016 ÇARŞAMBA; [Kaynak 2] Düzce Üniversitesi Mevzuat Komisyonu",
+      "answer": "Sayin ogrencimiz,\nKaynakta normal ders yuku icin 30 AKTS bilgisi gorunmektedir. Ancak ust sinir ve istisnalar program, sinif ve akademik durumunuza gore degisebilir; bu nedenle kesin limit icin ilgili yonetmelik/OBS kurali dikkate alinmalidir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
       "sources": [
-        "9 Kasım 2016 ÇARŞAMBA",
-        "Düzce Üniversitesi Mevzuat Komisyonu"
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
       ],
       "flags": []
     },
     {
       "group": "Ders Kaydi ve Add-Drop",
       "question": "Not ortalamam yuksekse daha fazla AKTS alabilir miyim?",
-      "answer": "Sayin ogrencimiz,\nKaynakta normal ders yuku icin 30 AKTS bilgisi gorunmektedir. Ancak ust sinir ve istisnalar program, sinif ve akademik durumunuza gore degisebilir; bu nedenle kesin limit icin ilgili yonetmelik/OBS kurali dikkate alinmalidir.\n\nDayanak: [Kaynak 1] 9 Kasım 2016 ÇARŞAMBA",
+      "answer": "Sayin ogrencimiz,\nKaynakta normal ders yuku icin 30 AKTS bilgisi gorunmektedir. Ancak ust sinir ve istisnalar program, sinif ve akademik durumunuza gore degisebilir; bu nedenle kesin limit icin ilgili yonetmelik/OBS kurali dikkate alinmalidir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
       "sources": [
-        "9 Kasım 2016 ÇARŞAMBA"
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
       ],
       "flags": []
     },
     {
       "group": "Ders Kaydi ve Add-Drop",
       "question": "Alttan dersim varsa ustten ders alabilir miyim?",
-      "answer": "Sayin ogrencimiz,\nAlttan ders varken ustten ders alma durumu; program ders plani, on kosul/devam durumu, AKTS siniri ve danisman onayina gore belirlenir. Bu nedenle otomatik bir hak gibi kabul edilmemelidir; OBS'deki ders secimi ve danisman onayi esas alinmalidir.\n\nDayanak: [Kaynak 1] Düzce Üniversitesi Mevzuat Komisyonu",
+      "answer": "Sayin ogrencimiz,\nAlttan ders varken ustten ders alma durumu; program ders plani, on kosul/devam durumu, AKTS siniri ve danisman onayina gore belirlenir. Bu nedenle otomatik bir hak gibi kabul edilmemelidir; OBS'deki ders secimi ve danisman onayi esas alinmalidir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
       "sources": [
-        "Düzce Üniversitesi Mevzuat Komisyonu"
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
       ],
       "flags": []
     },
     {
       "group": "Ders Kaydi ve Add-Drop",
       "question": "Danisman onayi olmadan ders kaydim tamamlanir mi?",
-      "answer": "Sayin ogrencimiz,\nEvet. Ders kaydi surecinde danisman onayi takip edilmelidir. 2025-2026 bahar yariyili duyurusunda danisman onaylari 4 Subat 2026 - 15 Subat 2026 arasi olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih); [Kaynak 2] 9 Kasım 2016 ÇARŞAMBA",
+      "answer": "Sayin ogrencimiz,\nDers kaydinin kesinlesmesi icin danisman onayi sureci takip edilmelidir. 2025-2026 bahar yariyili duyurusunda danisman onaylari 4 Subat 2026 - 15 Subat 2026 arasi olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme; [Kaynak 3] Akademik Takvim",
       "sources": [
-        "Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih)",
-        "9 Kasım 2016 ÇARŞAMBA"
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Akademik Takvim"
       ],
       "flags": []
     },
     {
       "group": "Ders Kaydi ve Add-Drop",
       "question": "Ders kaydi ve kayit yenileme arasinda fark var mi?",
-      "answer": "Sayin ogrencimiz,\nKayit yenileme islemleri akademik takvimde belirtilen surelerde yapilir. Islem genellikle OBS uzerinden ders secimi ve danisman onayi surecini kapsar; kesin adimlar icin ilgili yilin duyurusu gerekir.\n\nDayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] 11 Mayıs 2025 PAZAR",
+      "answer": "Sayin ogrencimiz,\nKayit yenileme islemleri akademik takvimde belirtilen surelerde yapilir. Islem genellikle OBS uzerinden ders secimi ve danisman onayi surecini kapsar; kesin adimlar icin ilgili yilin duyurusu gerekir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
       "sources": [
-        "DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK",
-        "11 Mayıs 2025 PAZAR"
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
       ],
       "flags": []
     },
     {
       "group": "Ders Kaydi ve Add-Drop",
       "question": "Ders kaydimi yapmazsam o donem ogrencilik haklarim etkilenir mi?",
-      "answer": "Sayın öğrencimiz,\nDers kaydını yapmadan derslere katılamayacağınız için o dönem öğrenci yaşamınızı ve haklarınızı etkileyebilecek durumlar olabilir. Öncelikle, belirli bir döneme kadar kalan derse girebilmeniz için aşağıdaki seçeneklerden birini değerlendirmeniz önerilir:\n1. Ders kaydını yaparak derslere katılma: Bu süreç genellikle dönem başlangıcında gerçekleşir ve belirlenen tarihlerde yapılmalıdır.\n2. Katkı Payı Ödemesi Sonrası Tek/Derse Sınava Girişi: Donem basinda katki payi/öğrenim ucretini ödemeyen, ders kaydını yapmayan öğrenci de ilgili bolum baskanligina basvurarak ve yonetim kurulu kararına göre tek/cift derse sınavı sonrasında katılabilir.\n3. Yeni Öğrenci Kaydı: Daha sonra yeni bir dönem için özel öğrenci olarak ders almak isterseniz,📐Özel Öğrenci Yönergesine[/Kaynak 5] bakarak gerekli koşulları kontrol edebilirsiniz ve ilgili bakanlığa başvurabilirsiniz.\nBu seçeneklerden hangisini tercih ettiğinize karar vermeden önce, öğrenci işleri biriminden detaylı bilgi almanızı öneririm. Her durumunuzda en uygun çözümü bulmak için size yardımcı olmaktan memnuniyet duyarım.\n[Qwen]\n\nDayanak: [Kaynak 1] Akademik Takvim; [Kaynak 2] Tek/Çift Ders Sınavları Hakkında SSS",
+      "answer": "Sayin ogrencimiz,\nDers kaydi/kayit yenileme yapilmayan donemde ders secimi ve danisman onayi tamamlanmadigi icin ilgili derslere devam, sinav ve donem islemleri etkilenebilir. Bu nedenle ders kaydi akademik takvimde ilan edilen sureler icinde OBS uzerinden tamamlanmali ve danisman onayi takip edilmelidir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
       "sources": [
-        "Akademik Takvim",
-        "Tek/Çift Ders Sınavları Hakkında SSS"
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
       ],
       "flags": []
     },
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "Devamsizlik siniri nedir?",
-      "answer": "Sayin ogrencimiz,\nIlk defa alinan derslerde teorik bolum icin %70, uygulama bolumu icin %80 devam zorunlulugu vardir. Kaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir.",
-      "sources": [],
+      "answer": "Sayin ogrencimiz,\nIlk defa alinan derslerde teorik bolum icin %70, uygulama bolumu icin %80 devam zorunlulugu vardir. Kaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME"
+      ],
       "flags": []
     },
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "Teorik derslerde devam zorunlulugu kac?",
-      "answer": "Sayin ogrencimiz,\nIlk defa alinan derslerde teorik bolum icin %70, uygulama bolumu icin %80 devam zorunlulugu vardir. Kaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir.\n\nDayanak: [Kaynak 1] T.C.; [Kaynak 2] YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME",
+      "answer": "Sayin ogrencimiz,\nIlk defa alinan derslerde teorik bolum icin %70, uygulama bolumu icin %80 devam zorunlulugu vardir. Kaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] Akademik Takvim; [Kaynak 3] YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME",
       "sources": [
-        "T.C.",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Akademik Takvim",
         "YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME"
       ],
       "flags": []
@@ -442,64 +460,74 @@
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "Uygulamali derslerde devam zorunlulugu kactir?",
-      "answer": "Sayin ogrencimiz,\nIlk defa alinan derslerde teorik bolum icin %70, uygulama bolumu icin %80 devam zorunlulugu vardir. Kaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir.\n\nDayanak: [Kaynak 1] T.C.",
+      "answer": "Sayin ogrencimiz,\nIlk defa alinan derslerde teorik bolum icin %70, uygulama bolumu icin %80 devam zorunlulugu vardir. Kaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] Akademik Takvim",
       "sources": [
-        "T.C."
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Akademik Takvim"
       ],
       "flags": []
     },
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "Ilk kez aldigim bir uygulamali derste devam zorunlulugu kactir ve raporlu oldugum gunler devamsizliktan sayilir mi?",
-      "answer": "Sayin ogrencimiz,\nIlk defa alinan derslerde teorik bolum icin %70, uygulama bolumu icin %80 devam zorunlulugu vardir. Kaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir.",
-      "sources": [],
+      "answer": "Sayin ogrencimiz,\nIlk defa alinan derslerde teorik bolum icin %70, uygulama bolumu icin %80 devam zorunlulugu vardir. Kaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] Akademik Takvim",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Akademik Takvim"
+      ],
       "flags": []
     },
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "Daha once aldigim derste devam zorunlulugundan muaf olur muyum?",
-      "answer": "Sayin ogrencimiz,\nIlk defa alinan derslerde teorik bolum icin %70, uygulama bolumu icin %80 devam zorunlulugu vardir. Kaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir.\n\nDayanak: [Kaynak 1] 11 Mayıs 2025 PAZAR; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 3] DÜZCE ÜNİVERSİTESI ZORUNLU YABANCI DİL DERSLERİ",
+      "answer": "Sayin ogrencimiz,\nIlk defa alinan derslerde teorik bolum icin %70, uygulama bolumu icin %80 devam zorunlulugu vardir. Kaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] Akademik Takvim; [Kaynak 3] YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME",
       "sources": [
-        "11 Mayıs 2025 PAZAR",
-        "Öğrenci Belgesi ve Transkript İşlemleri",
-        "DÜZCE ÜNİVERSİTESI ZORUNLU YABANCI DİL DERSLERİ"
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Akademik Takvim",
+        "YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME"
       ],
       "flags": []
     },
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "Raporlu gunlerim devamsizliktan dusulur mu?",
-      "answer": "Sayin ogrencimiz,\nKaynaklarda raporlu olunan surelerin devamsizlik hesabinda dikkate alinabildigi gorulmektedir. Bu nedenle raporlu gunlerin otomatik olarak devamsizliktan dusulecegini varsaymamak gerekir; ilgili dersin/birimin devam uygulamasi ve yonetim kurulu karari esas alinmalidir.\n\nDayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK",
+      "answer": "Sayin ogrencimiz,\nKaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir. Bu nedenle raporlu gunlerin otomatik olarak devamsizliktan dusulecegini varsaymamak gerekir; ilgili dersin/birimin devam uygulamasi ve yonetim kurulu karari esas alinmalidir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME",
       "sources": [
-        "DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK"
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME"
       ],
       "flags": []
     },
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "Butunleme sinavi var mi?",
-      "answer": "Sayin ogrencimiz,\nButunleme sinavlari akademik takvimde ilan edilen sinav surecine gore yapilir. Kesin tarih icin ilgili egitim-ogretim yilinin akademik takvimine bakilmalidir.\n\nDayanak: [Kaynak 1] MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS",
+      "answer": "Sayin ogrencimiz,\nButunleme sinavlari akademik takvimde ilan edilen sinav surecine gore yapilir. Kesin tarih icin ilgili egitim-ogretim yilinin akademik takvimine bakilmalidir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI; [Kaynak 3] Öğrenci İşleri Sıkça Sorulan Sorular",
       "sources": [
-        "MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS"
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+        "Öğrenci İşleri Sıkça Sorulan Sorular"
       ],
       "flags": []
     },
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "But notu ortalamayi etkiler mi?",
-      "answer": "Sayin ogrencimiz,\nEvet. Butunleme sinavina girildiginde basari notu hesaplanirken final/yil sonu genel sinav notu yerine butunleme sinav notu esas alinir.\n\nDayanak: [Kaynak 1] Ders Dışı Etkinlik Dersi (DED100); [Kaynak 2] 17 Haziran 2021 PERŞEMBE",
+      "answer": "Sayin ogrencimiz,\nEvet. Butunleme sinavina girildiginde basari notu hesaplanirken final/yil sonu genel sinav notu yerine butunleme sinav notu esas alinir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI; [Kaynak 3] Akademik Takvim",
       "sources": [
-        "Ders Dışı Etkinlik Dersi (DED100)",
-        "17 Haziran 2021 PERŞEMBE"
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+        "Akademik Takvim"
       ],
       "flags": []
     },
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "Final tarihlerini nereden ogrenebilirim?",
-      "answer": "Sayin ogrencimiz,\nFinal sinavi tarihleri akademik takvim ve ilgili birim/OBS duyurulari uzerinden ilan edilir. Kesin tarih ders ve egitim-ogretim yilina gore degistigi icin ilgili yilin akademik takvimi veya OBS sinav programi kontrol edilmelidir.\n\nDayanak: [Kaynak 1] rda Uyulması Gereken Kurallar",
+      "answer": "Sayin ogrencimiz,\nFinal sinavi tarihleri akademik takvim ve ilgili birim/OBS duyurulari uzerinden ilan edilir. Kesin tarih ders ve egitim-ogretim yilina gore degistigi icin ilgili yilin akademik takvimi veya OBS sinav programi kontrol edilmelidir.\n\nDayanak: [Kaynak 1] 2025 2026 Egitim Ogretim Yili Guz Yariyili Final Programi; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Final Mazeret Sınavı Başvurusu Duyurusu",
       "sources": [
-        "rda Uyulması Gereken Kurallar"
+        "2025 2026 Egitim Ogretim Yili Guz Yariyili Final Programi",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Final Mazeret Sınavı Başvurusu Duyurusu"
       ],
       "flags": []
     },
@@ -515,95 +543,99 @@
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "Mazeret sinavina kimler girebilir?",
-      "answer": "Sayin ogrencimiz,\nKaynakta kisa sureli sinavlar ve yeterlik sinavlari icin mazeret sinavi yapilmayacagi; ara sinavlar ve yil sonu genel sinavi icin mazeret sinavi bulundugu belirtilmektedir.\n\nDayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] OGRENCI ISLERI SIKCA SORULAN SORULAR; [Kaynak 3] Bu belge,güvenli elektronik imza ile imzalanmıştır.",
+      "answer": "Sayin ogrencimiz,\nKaynakta kisa sureli sinavlar ve yeterlik sinavlari icin mazeret sinavi yapilmayacagi; ara sinavlar ve yil sonu genel sinavi icin mazeret sinavi bulundugu belirtilmektedir.\n\nDayanak: [Kaynak 1] Final Mazeret Sınavı Başvurusu Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Öğrenci İşleri Sıkça Sorulan Sorular",
       "sources": [
-        "DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK",
-        "OGRENCI ISLERI SIKCA SORULAN SORULAR",
-        "Bu belge,güvenli elektronik imza ile imzalanmıştır."
+        "Final Mazeret Sınavı Başvurusu Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Öğrenci İşleri Sıkça Sorulan Sorular"
       ],
       "flags": []
     },
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "Mazeret sinavi icin kac gun icinde basvuru yapilmali?",
-      "answer": "Sayin ogrencimiz,\nMazeret sinavi basvurusu icin kaynakta belirtilen sure 3 gundur. Basvurunun mazereti belgeleyen evrakla birlikte yapilmasi gerekir.\n\nDayanak: [Kaynak 1] Bu belge,güvenli elektronik imza ile imzalanmıştır.; [Kaynak 2] 9 Kasım 2016 ÇARŞAMBA; [Kaynak 3] OGRENCI ISLERI SIKCA SORULAN SORULAR",
+      "answer": "Sayin ogrencimiz,\nMazeret sinavi basvurusu icin kaynakta belirtilen sure 3 is gunudur. Basvurunun mazereti belgeleyen rapor/evrakla birlikte bu sure icinde yapilmasi gerekir.\n\nDayanak: [Kaynak 1] Final Mazeret Sınavı Başvurusu Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Bu belge,güvenli elektronik imza ile imzalanmıştır.",
       "sources": [
-        "Bu belge,güvenli elektronik imza ile imzalanmıştır.",
-        "9 Kasım 2016 ÇARŞAMBA",
-        "OGRENCI ISLERI SIKCA SORULAN SORULAR"
+        "Final Mazeret Sınavı Başvurusu Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Bu belge,güvenli elektronik imza ile imzalanmıştır."
       ],
       "flags": []
     },
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "Ara sinava giremezsem mazeret sinavina basvurabilir miyim?",
-      "answer": "Sayin ogrencimiz,\nKaynakta kisa sureli sinavlar ve yeterlik sinavlari icin mazeret sinavi yapilmayacagi; ara sinavlar ve yil sonu genel sinavi icin mazeret sinavi bulundugu belirtilmektedir.\n\nDayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] OGRENCI ISLERI SIKCA SORULAN SORULAR; [Kaynak 3] Bu belge,güvenli elektronik imza ile imzalanmıştır.",
+      "answer": "Sayin ogrencimiz,\nKaynakta kisa sureli sinavlar ve yeterlik sinavlari icin mazeret sinavi yapilmayacagi; ara sinavlar ve yil sonu genel sinavi icin mazeret sinavi bulundugu belirtilmektedir.\n\nDayanak: [Kaynak 1] Final Mazeret Sınavı Başvurusu Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Öğrenci İşleri Sıkça Sorulan Sorular",
       "sources": [
-        "DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK",
-        "OGRENCI ISLERI SIKCA SORULAN SORULAR",
-        "Bu belge,güvenli elektronik imza ile imzalanmıştır."
+        "Final Mazeret Sınavı Başvurusu Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Öğrenci İşleri Sıkça Sorulan Sorular"
       ],
       "flags": []
     },
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "Final sinavi icin mazeret sinavi yapilir mi?",
-      "answer": "Sayin ogrencimiz,\nKaynakta kisa sureli sinavlar ve yeterlik sinavlari icin mazeret sinavi yapilmayacagi; ara sinavlar ve yil sonu genel sinavi icin mazeret sinavi bulundugu belirtilmektedir.\n\nDayanak: [Kaynak 1] rda Uyulması Gereken Kurallar; [Kaynak 2] OGRENCI ISLERI SIKCA SORULAN SORULAR",
+      "answer": "Sayin ogrencimiz,\nKaynakta kisa sureli sinavlar ve yeterlik sinavlari icin mazeret sinavi yapilmayacagi; ara sinavlar ve yil sonu genel sinavi icin mazeret sinavi bulundugu belirtilmektedir.\n\nDayanak: [Kaynak 1] Final Mazeret Sınavı Başvurusu Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Öğrenci İşleri Sıkça Sorulan Sorular",
       "sources": [
-        "rda Uyulması Gereken Kurallar",
-        "OGRENCI ISLERI SIKCA SORULAN SORULAR"
+        "Final Mazeret Sınavı Başvurusu Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Öğrenci İşleri Sıkça Sorulan Sorular"
       ],
       "flags": []
     },
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "Tek ders sinavina kimler basvurabilir?",
-      "answer": "Sayin ogrencimiz,\nTek ders sinavi, mezuniyet asamasinda basarisiz oldugu tek dersi kalan ve dersin devam/diger kosullarini saglayan ogrenciler icin uygulanir. Basvuru ve tarih bilgisi ilgili birim duyurularindan takip edilmelidir.\n\nDayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] OGRENCI ISLERI SIKCA SORULAN SORULAR; [Kaynak 3] Bu belge,güvenli elektronik imza ile imzalanmıştır.",
+      "answer": "Sayin ogrencimiz,\nTek ders sinavi, mezuniyet asamasinda basarisiz oldugu tek dersi kalan ve dersin devam/diger kosullarini saglayan ogrenciler icin uygulanir. Basvuru ve tarih bilgisi ilgili birim duyurularindan takip edilmelidir.\n\nDayanak: [Kaynak 1] Azami Öğrenim Süresi Sonu Sınav Duyurusu; [Kaynak 2] Öğrenci İşleri Sıkça Sorulan Sorular; [Kaynak 3] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
       "sources": [
-        "DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK",
-        "OGRENCI ISLERI SIKCA SORULAN SORULAR",
-        "Bu belge,güvenli elektronik imza ile imzalanmıştır."
+        "Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+        "Öğrenci İşleri Sıkça Sorulan Sorular",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği"
       ],
       "flags": []
     },
     {
       "group": "Devamsizlik ve Sinavlar",
       "question": "Cift ders sinavina kimler basvurabilir?",
-      "answer": "Sayin ogrencimiz,\nTek/çift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Devam sartini yerine getirmedigi icin DVZ alan veya hic almadigi dersler icin tek/çift ders sinav hakki verilmez.\n\nDayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 2] Bu belge,güvenli elektronik imza ile imzalanmıştır.; [Kaynak 3] 23 Mart 2016 ÇARŞAMBA",
+      "answer": "Sayin ogrencimiz,\nTek/cift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Staj dersine hic kayitlanmadiysaniz tek/cift ders sinavina girme hakkiniz yoktur. Ancak staj dersini daha once alip YZ notu aldiysaniz tek/cift ders sinavina basvurabilirsiniz.\n\nDayanak: [Kaynak 1] Azami Öğrenim Süresi Sonu Sınav Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Öğrenci İşleri Sıkça Sorulan Sorular",
       "sources": [
-        "DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK",
-        "Bu belge,güvenli elektronik imza ile imzalanmıştır.",
-        "23 Mart 2016 ÇARŞAMBA"
+        "Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Öğrenci İşleri Sıkça Sorulan Sorular"
       ],
       "flags": []
     },
     {
       "group": "Not Sistemi ve Mezuniyet",
       "question": "GANO nasil hesaplanir?",
-      "answer": "Sayin ogrencimiz,\nGANO/AGNO, derslerin kredi agirliklari dikkate alinarak hesaplanan agirlikli genel not ortalamasidir. Bu nedenle daha yuksek kredili derslerin ortalamaya etkisi daha fazladir.\n\nDayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ ORMAN FAKÜLTESİ",
+      "answer": "Sayin ogrencimiz,\nGANO/AGNO, derslerin kredi agirliklari dikkate alinarak hesaplanan agirlikli genel not ortalamasidir. Bu nedenle daha yuksek kredili derslerin ortalamaya etkisi daha fazladir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI; [Kaynak 3] Akademik Takvim",
       "sources": [
-        "DÜZCE ÜNİVERSİTESİ ORMAN FAKÜLTESİ"
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+        "Akademik Takvim"
       ],
       "flags": []
     },
     {
       "group": "Not Sistemi ve Mezuniyet",
       "question": "Ders basari notu nasil hesaplanir?",
-      "answer": "Sayin ogrencimiz,\nDers basari notunun hesaplanmasi dersin olcme-degerlendirme esaslarina gore belirlenir. Kaynaklarda tum dersler icin tek bir ortak oran guvenli bicimde ayrismadigi icin burada sabit bir yuzde vermiyorum. Ilgili dersin OBS/ders izlencesindeki ara sinav, final veya butunleme agirliklari esas alinmalidir.\n\nDayanak: [Kaynak 1] 17 Haziran 2021 PERŞEMBE; [Kaynak 2] Düzce Üniversitesi Mevzuat Komisyonu",
+      "answer": "Sayin ogrencimiz,\nDers basari notunun hesaplanmasi dersin olcme-degerlendirme esaslarina gore belirlenir. Kaynaklarda tum dersler icin tek bir ortak oran guvenli bicimde ayrismadigi icin burada sabit bir yuzde vermiyorum. Ilgili dersin OBS/ders izlencesindeki ara sinav, final veya butunleme agirliklari esas alinmalidir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI; [Kaynak 3] Akademik Takvim",
       "sources": [
-        "17 Haziran 2021 PERŞEMBE",
-        "Düzce Üniversitesi Mevzuat Komisyonu"
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+        "Akademik Takvim"
       ],
       "flags": []
     },
     {
       "group": "Not Sistemi ve Mezuniyet",
       "question": "Finalden kac almam gerekir?",
-      "answer": "Sayin ogrencimiz,\nFinalden almaniz gereken not; dersin ara sinav agirligi, final agirligi, gecme kosulu ve varsa harf notu/bagil degerlendirme kuralina gore degisir. Bu nedenle tek bir sayi soylemek dogru olmaz; ilgili dersin OBS'deki degerlendirme olcutlerine bakilmalidir.\n\nDayanak: [Kaynak 1] Resmi Gazete Tarihi: 28.12.2006 Resmi Gazete Sayısı: 26390; [Kaynak 2] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK; [Kaynak 3] ORMAN FAKÜLTESİ",
+      "answer": "Sayin ogrencimiz,\nFinalden almaniz gereken not; dersin ara sinav agirligi, final agirligi, gecme kosulu ve varsa harf notu/bagil degerlendirme kuralina gore degisir. Bu nedenle tek bir sayi soylemek dogru olmaz; ilgili dersin OBS'deki degerlendirme olcutlerine bakilmalidir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI; [Kaynak 3] Akademik Takvim",
       "sources": [
-        "Resmi Gazete Tarihi: 28.12.2006 Resmi Gazete Sayısı: 26390",
-        "DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK",
-        "ORMAN FAKÜLTESİ"
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+        "Akademik Takvim"
       ],
       "flags": []
     },
@@ -628,7 +660,7 @@
     {
       "group": "Not Sistemi ve Mezuniyet",
       "question": "Bilgisayar muhendisligi ogrencisi mezuniyet icin staj eksikse diplomasini alabilir mi?",
-      "answer": "Sayin ogrencimiz,\nHayir. Mezuniyet icin yalnizca derslerin degil, ilgili mevzuatta yer alan tum akademik yukumluluklerin de tamamlanmis olmasi gerekir. Bu nedenle staj yukumlulugu eksikse diploma islemleri tamamlanmis sayilmaz.\n\nDayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi",
+      "answer": "Sayin ogrencimiz,\nHayir. Mezuniyet icin yalnizca derslerin degil, ilgili mevzuatta yer alan tum akademik yukumluluklerin de tamamlanmis olmasi gerekir. Bu nedenle staj yukumlulugu eksikse gecici mezuniyet belgesi veya diploma islemleri tamamlanmis sayilmaz.\n\nDayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi",
       "sources": [
         "Diploma ve Mezuniyet Belgeleri Yönergesi"
       ],
@@ -637,7 +669,7 @@
     {
       "group": "Not Sistemi ve Mezuniyet",
       "question": "Stajim eksikse mezun olabilir miyim?",
-      "answer": "Sayin ogrencimiz,\nHayir. Mezuniyet icin yalnizca derslerin degil, ilgili mevzuatta yer alan tum akademik yukumluluklerin de tamamlanmis olmasi gerekir. Bu nedenle staj yukumlulugu eksikse diploma islemleri tamamlanmis sayilmaz.\n\nDayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi",
+      "answer": "Sayin ogrencimiz,\nHayir. Mezuniyet icin yalnizca derslerin degil, ilgili mevzuatta yer alan tum akademik yukumluluklerin de tamamlanmis olmasi gerekir. Bu nedenle staj yukumlulugu eksikse gecici mezuniyet belgesi veya diploma islemleri tamamlanmis sayilmaz.\n\nDayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi",
       "sources": [
         "Diploma ve Mezuniyet Belgeleri Yönergesi"
       ],
@@ -664,10 +696,10 @@
     {
       "group": "Not Sistemi ve Mezuniyet",
       "question": "Gecici mezuniyet belgesi ne zaman verilir?",
-      "answer": "Sayin ogrencimiz,\nGecici mezuniyet belgesi, mezuniyet islemleri tamamlanip diploma henuz hazir degilken ilgili mevzuat ve birim surecine gore duzenlenir. Belgenin kesin verilme zamani ogrencinin mezuniyet onay surecine baglidir; bu nedenle diploma/mezuniyet islemleri tamamlanmadan kesin tarih soylemek dogru olmaz.\n\nDayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi; [Kaynak 2] DERS DIŞI ETKİNLİKLERİN TANIMINA DAİR USUL VE ESASLAR; [Kaynak 3] Resmi Gazete Tarihi: 22.02.2007 Resmi Gazete Sayısı: 26442",
+      "answer": "Sayin ogrencimiz,\nGecici mezuniyet belgesi, mezuniyet islemleri tamamlanip diploma henuz hazir degilken ilgili mevzuat ve birim surecine gore duzenlenir. Belgenin kesin verilme zamani ogrencinin mezuniyet onay surecine baglidir; bu nedenle diploma/mezuniyet islemleri tamamlanmadan kesin tarih soylemek dogru olmaz.\n\nDayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi; [Kaynak 2] Akademik Takvim; [Kaynak 3] Resmi Gazete Tarihi: 22.02.2007 Resmi Gazete Sayısı: 26442",
       "sources": [
         "Diploma ve Mezuniyet Belgeleri Yönergesi",
-        "DERS DIŞI ETKİNLİKLERİN TANIMINA DAİR USUL VE ESASLAR",
+        "Akademik Takvim",
         "Resmi Gazete Tarihi: 22.02.2007 Resmi Gazete Sayısı: 26442"
       ],
       "flags": []
@@ -675,9 +707,10 @@
     {
       "group": "Not Sistemi ve Mezuniyet",
       "question": "Mezuniyet basari siralamasi nasil belirlenir?",
-      "answer": "Sayin ogrencimiz,\nMezuniyet basari siralamasinin nasil hesaplandigina dair elimde acik ve dogrudan bir resmi kaynak yok. Yanlis veya uydurma bir siralama kurali vermemek icin net cevap vermiyorum.\n\nDayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi; [Kaynak 2] YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ",
+      "answer": "Sayin ogrencimiz,\nMezuniyet basari siralamasinin nasil hesaplandigina dair elimde acik ve dogrudan bir resmi kaynak yok. Yanlis veya uydurma bir siralama kurali vermemek icin net cevap vermiyorum.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 2] BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI; [Kaynak 3] YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ",
       "sources": [
-        "Diploma ve Mezuniyet Belgeleri Yönergesi",
+        "Öğrenci Belgesi ve Transkript İşlemleri",
+        "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
         "YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ"
       ],
       "flags": []
@@ -708,10 +741,8 @@
     {
       "group": "Belgeler ve Idari Konular",
       "question": "Transkript nereden alinir?",
-      "answer": "Sayin ogrencimiz,\nTranskript/not durum belgesi oncelikle e-Devlet Kapisi uzerinden temin edilmelidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken durumlarda ilgili birimin Ogrenci Isleri Burosuna basvurulabilir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 2] Düzce Üniversitesi Mevzuat Komisyonu; [Kaynak 3] Öğrenci Belgesi ve Transkript İşlemleri",
+      "answer": "Sayin ogrencimiz,\nTranskript/not durum belgesi oncelikle e-Devlet Kapisi uzerinden temin edilmelidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken durumlarda ilgili birimin Ogrenci Isleri Burosuna basvurulabilir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
       "sources": [
-        "Öğrenci Belgesi ve Transkript İşlemleri",
-        "Düzce Üniversitesi Mevzuat Komisyonu",
         "Öğrenci Belgesi ve Transkript İşlemleri"
       ],
       "flags": []
@@ -719,9 +750,8 @@
     {
       "group": "Belgeler ve Idari Konular",
       "question": "Ogrenci belgesi veya transkript almam gerekirse once nereden almaliyim, e-Devlet belgesi yeterli olur mu?",
-      "answer": "Sayin ogrencimiz,\nOgrenci belgesi ve transkript/not durum belgesi oncelikle e-Devlet Kapisi uzerinden temin edilmelidir. Kaynakta e-Devlet uzerinden alinan belgelerin kamu kurumlari tarafindan kabul edilmesi gerektigi belirtilmektedir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken durumlarda ilgili birimin Ogrenci Isleri Burosuna basvurulabilir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri",
+      "answer": "Sayin ogrencimiz,\nOgrenci belgesi ve transkript/not durum belgesi oncelikle e-Devlet Kapisi uzerinden temin edilmelidir. Kaynakta e-Devlet uzerinden alinan belgelerin kamu kurumlari tarafindan kabul edilmesi gerektigi belirtilmektedir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken durumlarda ilgili birimin Ogrenci Isleri Burosuna basvurulabilir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
       "sources": [
-        "Öğrenci Belgesi ve Transkript İşlemleri",
         "Öğrenci Belgesi ve Transkript İşlemleri"
       ],
       "flags": []
@@ -729,9 +759,8 @@
     {
       "group": "Belgeler ve Idari Konular",
       "question": "E-Devlet'ten alamadigim belge icin nereye basvurmaliyim?",
-      "answer": "Sayin ogrencimiz,\nBelge islemleri icin once e-Devlet Kapisi kullanilmalidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken belgeler icin ilgili fakulte/birim Ogrenci Isleri Burosuna basvurulabilir. Elimizdeki kaynakta uzakta olan ogrenciler icin imzali belge talep formunun ogrenciisleri.ef@duzce.edu.tr adresine iletilebilecegi belirtilmektedir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri",
+      "answer": "Sayin ogrencimiz,\nBelge islemleri icin once e-Devlet Kapisi kullanilmalidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken belgeler icin ilgili fakulte/birim Ogrenci Isleri Burosuna basvurulabilir. Elimizdeki kaynakta uzakta olan ogrenciler icin imzali belge talep formunun ogrenciisleri.ef@duzce.edu.tr adresine iletilebilecegi belirtilmektedir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
       "sources": [
-        "Öğrenci Belgesi ve Transkript İşlemleri",
         "Öğrenci Belgesi ve Transkript İşlemleri"
       ],
       "flags": []
@@ -739,9 +768,8 @@
     {
       "group": "Belgeler ve Idari Konular",
       "question": "Islak imzali ogrenci belgesi gerekiyorsa ne yapmaliyim?",
-      "answer": "Sayin ogrencimiz,\nBelge islemleri icin once e-Devlet Kapisi kullanilmalidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken belgeler icin ilgili fakulte/birim Ogrenci Isleri Burosuna basvurulabilir. Elimizdeki kaynakta uzakta olan ogrenciler icin imzali belge talep formunun ogrenciisleri.ef@duzce.edu.tr adresine iletilebilecegi belirtilmektedir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri",
+      "answer": "Sayin ogrencimiz,\nBelge islemleri icin once e-Devlet Kapisi kullanilmalidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken belgeler icin ilgili fakulte/birim Ogrenci Isleri Burosuna basvurulabilir. Elimizdeki kaynakta uzakta olan ogrenciler icin imzali belge talep formunun ogrenciisleri.ef@duzce.edu.tr adresine iletilebilecegi belirtilmektedir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
       "sources": [
-        "Öğrenci Belgesi ve Transkript İşlemleri",
         "Öğrenci Belgesi ve Transkript İşlemleri"
       ],
       "flags": []
@@ -749,10 +777,10 @@
     {
       "group": "Belgeler ve Idari Konular",
       "question": "Askerlik tecili icin ne yapmaliyim?",
-      "answer": "Sayin ogrencimiz,\nKaynakta askerlik tecil islemlerinin Rektorluk Ogrenci Isleri Dairesi Baskanliginca yurutuldugu belirtilmektedir.\n\nDayanak: [Kaynak 1] Eczacılık Fakültesi Hizmet Standartları; [Kaynak 2] T.C.; [Kaynak 3] MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS",
+      "answer": "Sayin ogrencimiz,\nKaynakta askerlik tecil islemlerinin Rektorluk Ogrenci Isleri Dairesi Baskanliginca yurutuldugu belirtilmektedir.\n\nDayanak: [Kaynak 1] Eczacılık Fakültesi Hizmet Standartları; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 3] MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS",
       "sources": [
         "Eczacılık Fakültesi Hizmet Standartları",
-        "T.C.",
+        "Öğrenci Belgesi ve Transkript İşlemleri",
         "MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS"
       ],
       "flags": []
@@ -760,65 +788,64 @@
     {
       "group": "Belgeler ve Idari Konular",
       "question": "CAP basvurusu icin ortalama sarti nedir?",
-      "answer": "Sayin ogrencimiz,\nCift anadal basvurusu icin kaynakta genel not ortalamasinin en az 2,72 olmasi gerektigi belirtilmektedir. Ayrica basvuru yariyilinda sinif basari siralamasinda en ust %20 icinde bulunma kosulu vardir; bu kosulun istisnasi olarak ilgili programin taban puan sartini saglayan ogrenciler icin farkli degerlendirme yapilabilir.\n\nDayanak: [Kaynak 1] Düzce Üniversitesi Çift Anadal Programı Yönergesi; [Kaynak 2] CAP ve Yandal; [Kaynak 3] Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Not Ortalaması, Önlisans-Lisans)",
+      "answer": "Sayin ogrencimiz,\nCift anadal basvurusu icin kaynakta genel not ortalamasinin en az 2,72 olmasi gerektigi belirtilmektedir. Ayrica basvuru yariyilinda sinif basari siralamasinda en ust %20 icinde bulunma kosulu vardir; bu kosulun istisnasi olarak ilgili programin taban puan sartini saglayan ogrenciler icin farkli degerlendirme yapilabilir.\n\nDayanak: [Kaynak 1] Düzce Üniversitesi Çift Anadal Programı Yönergesi; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme; [Kaynak 3] CAP ve Yandal",
       "sources": [
         "Düzce Üniversitesi Çift Anadal Programı Yönergesi",
-        "CAP ve Yandal",
-        "Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Not Ortalaması, Önlisans-Lisans)"
-      ],
-      "flags": []
-    },
-    {
-      "group": "Belgeler ve Idari Konular",
-      "question": "Cift anadal basvurusu yapmak icin genel not ortalamam kac olmali, ayrica basari siralamasi sarti var mi?",
-      "answer": "Sayin ogrencimiz,\nCift anadal basvurusu icin kaynakta genel not ortalamasinin en az 2,72 olmasi gerektigi belirtilmektedir. Ayrica basvuru yariyilinda sinif basari siralamasinda en ust %20 icinde bulunma kosulu vardir; bu kosulun istisnasi olarak ilgili programin taban puan sartini saglayan ogrenciler icin farkli degerlendirme yapilabilir.\n\nDayanak: [Kaynak 1] Düzce Üniversitesi Çift Anadal Programı Yönergesi; [Kaynak 2] CAP ve Yandal; [Kaynak 3] CAP ve Yandal",
-      "sources": [
-        "Düzce Üniversitesi Çift Anadal Programı Yönergesi",
-        "CAP ve Yandal",
+        "Ders Kayıt ve Kayıt Yenileme",
         "CAP ve Yandal"
       ],
       "flags": []
     },
     {
       "group": "Belgeler ve Idari Konular",
+      "question": "Cift anadal basvurusu yapmak icin genel not ortalamam kac olmali, ayrica basari siralamasi sarti var mi?",
+      "answer": "Sayin ogrencimiz,\nCift anadal basvurusu icin kaynakta genel not ortalamasinin en az 2,72 olmasi gerektigi belirtilmektedir. Ayrica basvuru yariyilinda sinif basari siralamasinda en ust %20 icinde bulunma kosulu vardir; bu kosulun istisnasi olarak ilgili programin taban puan sartini saglayan ogrenciler icin farkli degerlendirme yapilabilir.\n\nDayanak: [Kaynak 1] Düzce Üniversitesi Çift Anadal Programı Yönergesi; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
+      "sources": [
+        "Düzce Üniversitesi Çift Anadal Programı Yönergesi",
+        "Öğrenci Belgesi ve Transkript İşlemleri",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "flags": []
+    },
+    {
+      "group": "Belgeler ve Idari Konular",
       "question": "Yandal basvurusu icin hangi sartlar aranir?",
-      "answer": "Sayin ogrencimiz,\nCift anadal basvurusu icin kaynakta genel not ortalamasinin en az 2,72 olmasi gerektigi belirtilmektedir. Ayrica basvuru yariyilinda sinif basari siralamasinda en ust %20 icinde bulunma kosulu vardir; bu kosulun istisnasi olarak ilgili programin taban puan sartini saglayan ogrenciler icin farkli degerlendirme yapilabilir.\n\nDayanak: [Kaynak 1] CAP ve Yandal; [Kaynak 2] Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans); [Kaynak 3] Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans)",
+      "answer": "Sayin ogrencimiz,\nCift anadal basvurusu icin kaynakta genel not ortalamasinin en az 2,72 olmasi gerektigi belirtilmektedir. Ayrica basvuru yariyilinda sinif basari siralamasinda en ust %20 icinde bulunma kosulu vardir; bu kosulun istisnasi olarak ilgili programin taban puan sartini saglayan ogrenciler icin farkli degerlendirme yapilabilir.\n\nDayanak: [Kaynak 1] CAP ve Yandal; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme; [Kaynak 3] Öğrenci Belgesi ve Transkript İşlemleri",
       "sources": [
         "CAP ve Yandal",
-        "Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans)",
-        "Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans)"
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Öğrenci Belgesi ve Transkript İşlemleri"
       ],
       "flags": []
     },
     {
       "group": "Belgeler ve Idari Konular",
       "question": "Yatay gecis basvurulari ne zaman?",
-      "answer": "Sayin ogrencimiz,\nYatay gecis basvuru tarihleri yil ve takvime gore degisir. Kesin tarih icin ilgili egitim-ogretim yilinin akademik takvimi veya yatay gecis duyurusu gerekir.\n\nDayanak: [Kaynak 1] Akademik Takvim; [Kaynak 2] Akademik Takvim; [Kaynak 3] Akademik Takvim",
+      "answer": "Sayin ogrencimiz,\nYatay gecis basvuru tarihleri yil ve takvime gore degisir. Kesin tarih icin ilgili egitim-ogretim yilinin akademik takvimi veya yatay gecis duyurusu gerekir.\n\nDayanak: [Kaynak 1] DUZCE UNIVERSITESI KURUM ICI VE KURUMLAR ARASI YATAY GECIS ESASLARI; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme; [Kaynak 3] Azami Öğrenim Süresi Sonu Sınav Duyurusu",
       "sources": [
-        "Akademik Takvim",
-        "Akademik Takvim",
-        "Akademik Takvim"
+        "DUZCE UNIVERSITESI KURUM ICI VE KURUMLAR ARASI YATAY GECIS ESASLARI",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Azami Öğrenim Süresi Sonu Sınav Duyurusu"
       ],
       "flags": []
     },
     {
       "group": "Belgeler ve Idari Konular",
       "question": "Kurum ici yatay gecis ve kurumlar arasi yatay gecis basvurulari nereden takip edilir?",
-      "answer": "Sayin ogrencimiz,\nYatay gecis basvuru tarihleri yil ve takvime gore degisir. Kesin tarih icin ilgili egitim-ogretim yilinin akademik takvimi veya yatay gecis duyurusu gerekir.\n\nDayanak: [Kaynak 1] Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans); [Kaynak 2] Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans); [Kaynak 3] Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans)",
+      "answer": "Sayin ogrencimiz,\nYatay gecis basvuru tarihleri yil ve takvime gore degisir. Kesin tarih icin ilgili egitim-ogretim yilinin akademik takvimi veya yatay gecis duyurusu gerekir.\n\nDayanak: [Kaynak 1] DUZCE UNIVERSITESI KURUM ICI VE KURUMLAR ARASI YATAY GECIS ESASLARI; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Yatay Geçiş",
       "sources": [
-        "Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans)",
-        "Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans)",
-        "Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans)"
+        "DUZCE UNIVERSITESI KURUM ICI VE KURUMLAR ARASI YATAY GECIS ESASLARI",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Yatay Geçiş"
       ],
       "flags": []
     },
     {
       "group": "Belgeler ve Idari Konular",
       "question": "Disiplin islemleriyle ilgili mevzuata nereden ulasabilirim?",
-      "answer": "Sayin ogrencimiz,\nDisiplin islemleriyle ilgili mevzuat icin kaynaklarda 2547 sayili Yuksekogretim Kanununun 54. maddesine dayanan disiplin sureci belgeleri yer almaktadir.\n\nDayanak: [Kaynak 1] Yükseköğretim Kurumlarında kayıtlı öğrencilerinin disiplin işleri aşağıda verilen; [Kaynak 2] 2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE; [Kaynak 3] 2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE",
+      "answer": "Sayin ogrencimiz,\nDisiplin islemleriyle ilgili mevzuat icin kaynaklarda 2547 sayili Yuksekogretim Kanununun 54. maddesine dayanan disiplin sureci belgeleri yer almaktadir.\n\nDayanak: [Kaynak 1] Yükseköğretim Kurumlarında kayıtlı öğrencilerinin disiplin işleri aşağıda verilen; [Kaynak 2] 2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE",
       "sources": [
         "Yükseköğretim Kurumlarında kayıtlı öğrencilerinin disiplin işleri aşağıda verilen",
-        "2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE",
         "2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE"
       ],
       "flags": []
@@ -833,9 +860,8 @@
     {
       "group": "Belgeler ve Idari Konular",
       "question": "Ogrenci isleri ile nasil iletisime gecebilirim?",
-      "answer": "Sayin ogrencimiz,\nBelge islemleri icin once e-Devlet Kapisi kullanilmalidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken belgeler icin ilgili fakulte/birim Ogrenci Isleri Burosuna basvurulabilir. Elimizdeki kaynakta uzakta olan ogrenciler icin imzali belge talep formunun ogrenciisleri.ef@duzce.edu.tr adresine iletilebilecegi belirtilmektedir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri",
+      "answer": "Sayin ogrencimiz,\nBelge islemleri icin once e-Devlet Kapisi kullanilmalidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken belgeler icin ilgili fakulte/birim Ogrenci Isleri Burosuna basvurulabilir. Elimizdeki kaynakta uzakta olan ogrenciler icin imzali belge talep formunun ogrenciisleri.ef@duzce.edu.tr adresine iletilebilecegi belirtilmektedir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
       "sources": [
-        "Öğrenci Belgesi ve Transkript İşlemleri",
         "Öğrenci Belgesi ve Transkript İşlemleri"
       ],
       "flags": []
@@ -843,9 +869,8 @@
     {
       "group": "Belgeler ve Idari Konular",
       "question": "Belge basvurularinda hangi birime e-posta atabilirim?",
-      "answer": "Sayin ogrencimiz,\nBelge islemleri icin once e-Devlet Kapisi kullanilmalidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken belgeler icin ilgili fakulte/birim Ogrenci Isleri Burosuna basvurulabilir. Elimizdeki kaynakta uzakta olan ogrenciler icin imzali belge talep formunun ogrenciisleri.ef@duzce.edu.tr adresine iletilebilecegi belirtilmektedir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri",
+      "answer": "Sayin ogrencimiz,\nBelge islemleri icin once e-Devlet Kapisi kullanilmalidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken belgeler icin ilgili fakulte/birim Ogrenci Isleri Burosuna basvurulabilir. Elimizdeki kaynakta uzakta olan ogrenciler icin imzali belge talep formunun ogrenciisleri.ef@duzce.edu.tr adresine iletilebilecegi belirtilmektedir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
       "sources": [
-        "Öğrenci Belgesi ve Transkript İşlemleri",
         "Öğrenci Belgesi ve Transkript İşlemleri"
       ],
       "flags": []
@@ -853,52 +878,44 @@
     {
       "group": "Karma Orta-Zor Sorular",
       "question": "Bilgisayar muhendisligi ogrencisiyim, stajimi yapmadim ve tek dersim kaldi; tek/cift ders sinavina girebilir miyim?",
-      "answer": "Sayin ogrencimiz,\nTek/çift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Devam sartini yerine getirmedigi icin DVZ alan veya hic almadigi dersler icin tek/çift ders sinav hakki verilmez.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Muhendisligi - Staj; [Kaynak 3] Bilgisayar Mühendisliği - Staj",
+      "answer": "Sayin ogrencimiz,\nTek/cift ders sinavi icin kaynakta, her yariyil basinda en cok iki dersi kalan ogrencinin donem sonunda bolum baskanligina basvurarak sinava girebilecegi belirtilmektedir. Staj dersine hic kayitlanmadiysaniz tek/cift ders sinavina girme hakkiniz yoktur. Ancak staj dersini daha once alip YZ notu aldiysaniz tek/cift ders sinavina basvurabilirsiniz.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS",
       "sources": [
-        "Bilgisayar Mühendisliği - Staj SSS",
-        "Bilgisayar Muhendisligi - Staj",
-        "Bilgisayar Mühendisliği - Staj"
+        "Bilgisayar Mühendisliği - Staj SSS"
       ],
       "flags": []
     },
     {
       "group": "Karma Orta-Zor Sorular",
       "question": "Staj raporumu gec yuklersem direkt reddedilir mi yoksa duzeltme veya degerlendirme sureci var mi?",
-      "answer": "Sayın öğrencimiz,\nBilgisayar Mühendisliği Staj SSS kaynağına göre staj raporu, imza ve kaşe işlemleri tamamlandıktan sonra taranarak SBS'ye yüklenir. Aynı kaynakta, sistem yüklemesi için sabit bir son tarih bulunmadığı belirtilmektedir. Yaz stajı için raporun, yeni güz dönemi başladıktan sonra yaklaşık 30 gün içinde yüklenebileceği ve değerlendirmenin staj komisyonu toplandıktan sonra yapılacağı ifade edilmektedir. Mezun durumundaysanız ve stajlar dışında dersiniz yoksa, raporu yükledikten sonra bölüm staj komisyonuna e-posta ile değerlendirme talebi iletmeniz gerektiği belirtilmiştir. Genel staj yönergesinde, komisyon düzeltme isterse bu düzeltmenin en fazla 1 ay içinde yapılması gerektiği; aksi durumda stajın reddedilmiş sayılacağı belirtilmektedir. Kaynaklarda geç teslim için otomatik burs kesintisi veya ayrı bir disiplin cezası şeklinde açık bir yaptırım yer almamaktadır.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi; [Kaynak 3] Amaç",
-      "sources": [
-        "Bilgisayar Mühendisliği - Staj SSS",
-        "Düzce Üniversitesi Mühendislik ve Teknoloji Fakülteleri Staj Yönergesi",
-        "Amaç"
-      ],
+      "answer": "Sayın öğrencimiz,\nBu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.",
+      "sources": [],
       "flags": []
     },
     {
       "group": "Karma Orta-Zor Sorular",
       "question": "Baska universiteden yaz okulunda ders alirsam hem esdegerlik hem devam acisindan neye dikkat etmeliyim?",
-      "answer": "Sayin ogrencimiz,\nYaz Okulu Uygulama Esaslarina gore yaz okulunda basari degerlendirmesinde devam durumu dikkate alinir. Ancak universite disinda yaz okulunda ders alip esdeger ders icin devam kosulunu sagladigini belgeleyen ogrenciler icin devam zorunlulugu aranmaz.\n\nDayanak: [Kaynak 1] Yaz Okulu Yönergesi; [Kaynak 2] Bilgisayar Mühendisliği - Yaz Okulu",
+      "answer": "Sayin ogrencimiz,\nYaz Okulu Uygulama Esaslarina gore yaz okulunda basari degerlendirmesinde devam durumu dikkate alinir. Ancak universite disinda yaz okulunda ders alip esdeger ders icin devam kosulunu sagladigini belgeleyen ogrenciler icin devam zorunlulugu aranmaz.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Yaz Okulu; [Kaynak 2] Yaz Okulu Yönergesi",
       "sources": [
-        "Yaz Okulu Yönergesi",
-        "Bilgisayar Mühendisliği - Yaz Okulu"
+        "Bilgisayar Mühendisliği - Yaz Okulu",
+        "Yaz Okulu Yönergesi"
       ],
       "flags": []
     },
     {
       "group": "Karma Orta-Zor Sorular",
       "question": "Kayit yenileme ve ekle-sil tarihlerini kacirirsam ders ekleme sansim olur mu?",
-      "answer": "Sayin ogrencimiz,\n2025-2026 bahar yariyili icin ekle-sil haftasi 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] 11 Mayıs 2025 PAZAR; [Kaynak 2] YABANCI DİL HAZIRLIK SINIFI; [Kaynak 3] DÜZCE ÜNİVERSİTESİ TIP FAKÜLTESİ EĞİTİM",
+      "answer": "Sayin ogrencimiz,\n2025-2026 bahar yariyili icin ekle-sil haftasi 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Akademik Takvim",
       "sources": [
-        "11 Mayıs 2025 PAZAR",
-        "YABANCI DİL HAZIRLIK SINIFI",
-        "DÜZCE ÜNİVERSİTESİ TIP FAKÜLTESİ EĞİTİM"
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Akademik Takvim"
       ],
       "flags": []
     },
     {
       "group": "Karma Orta-Zor Sorular",
       "question": "Hem ogrenci belgesi hem transkript gerekiyorsa ikisini de e-Devlet'ten almam yeterli mi?",
-      "answer": "Sayin ogrencimiz,\nOgrenci belgesi ve transkript/not durum belgesi oncelikle e-Devlet Kapisi uzerinden temin edilmelidir. Kaynakta e-Devlet uzerinden alinan belgelerin kamu kurumlari tarafindan kabul edilmesi gerektigi belirtilmektedir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken durumlarda ilgili birimin Ogrenci Isleri Burosuna basvurulabilir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri",
+      "answer": "Sayin ogrencimiz,\nOgrenci belgesi ve transkript/not durum belgesi oncelikle e-Devlet Kapisi uzerinden temin edilmelidir. Kaynakta e-Devlet uzerinden alinan belgelerin kamu kurumlari tarafindan kabul edilmesi gerektigi belirtilmektedir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken durumlarda ilgili birimin Ogrenci Isleri Burosuna basvurulabilir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
       "sources": [
-        "Öğrenci Belgesi ve Transkript İşlemleri",
         "Öğrenci Belgesi ve Transkript İşlemleri"
       ],
       "flags": []
@@ -906,39 +923,40 @@
     {
       "group": "Karma Orta-Zor Sorular",
       "question": "Staj dersini daha once almadim ama mezun durumundayim; raporu yukledikten sonra kime yazmaliyim?",
-      "answer": "Sayin ogrencimiz,\nMezun durumundaysaniz ve stajlar disinda dersiniz yoksa, staj raporunuzu sisteme yukledikten sonra bolum staj komisyonuna e-posta ile degerlendirme talebinizi iletmeniz gerekir.\n\nDayanak: [Kaynak 1] ’yi başarıyla; [Kaynak 2] ORMAN FAKÜLTESİ; [Kaynak 3] Akademik Takvim",
-      "sources": [
-        "’yi başarıyla",
-        "ORMAN FAKÜLTESİ",
-        "Akademik Takvim"
-      ],
-      "flags": []
-    },
-    {
-      "group": "Karma Orta-Zor Sorular",
-      "question": "Mazeret sinavina basvuru suresi ile raporlu devamsizlik ayni sey mi?",
-      "answer": "Sayin ogrencimiz,\nMazeret sinavi basvurusu icin kaynakta belirtilen sure 3 gundur. Basvurunun mazereti belgeleyen evrakla birlikte yapilmasi gerekir.",
+      "answer": "Sayın öğrencimiz,\nBu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.",
       "sources": [],
       "flags": []
     },
     {
       "group": "Karma Orta-Zor Sorular",
+      "question": "Mazeret sinavina basvuru suresi ile raporlu devamsizlik ayni sey mi?",
+      "answer": "Sayin ogrencimiz,\nMazeret sinavi basvurusu icin kaynakta belirtilen sure 3 is gunudur. Basvurunun mazereti belgeleyen rapor/evrakla birlikte bu sure icinde yapilmasi gerekir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] Akademik Takvim; [Kaynak 3] YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME",
+      "sources": [
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Akademik Takvim",
+        "YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME"
+      ],
+      "flags": []
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
       "question": "Cift anadal icin hem ortalama hem basari siralamasi sartini birlikte saglamam gerekiyor mu?",
-      "answer": "Sayin ogrencimiz,\nCift anadal basvurusu icin kaynakta genel not ortalamasinin en az 2,72 olmasi gerektigi belirtilmektedir. Ayrica basvuru yariyilinda sinif basari siralamasinda en ust %20 icinde bulunma kosulu vardir; bu kosulun istisnasi olarak ilgili programin taban puan sartini saglayan ogrenciler icin farkli degerlendirme yapilabilir.\n\nDayanak: [Kaynak 1] Düzce Üniversitesi Çift Anadal Programı Yönergesi; [Kaynak 2] CAP ve Yandal; [Kaynak 3] CAP ve Yandal",
+      "answer": "Sayin ogrencimiz,\nCift anadal basvurusu icin kaynakta genel not ortalamasinin en az 2,72 olmasi gerektigi belirtilmektedir. Ayrica basvuru yariyilinda sinif basari siralamasinda en ust %20 icinde bulunma kosulu vardir; bu kosulun istisnasi olarak ilgili programin taban puan sartini saglayan ogrenciler icin farkli degerlendirme yapilabilir.\n\nDayanak: [Kaynak 1] Düzce Üniversitesi Çift Anadal Programı Yönergesi; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
       "sources": [
         "Düzce Üniversitesi Çift Anadal Programı Yönergesi",
-        "CAP ve Yandal",
-        "CAP ve Yandal"
+        "Öğrenci Belgesi ve Transkript İşlemleri",
+        "Ders Kayıt ve Kayıt Yenileme"
       ],
       "flags": []
     },
     {
       "group": "Karma Orta-Zor Sorular",
       "question": "Ders kaydi yapmayan bir ogrenci tek/cift ders sinavina basvurabilir mi?",
-      "answer": "Sayin ogrencimiz,\nTek/çift ders SSS kaynagina gore donem basinda ders kaydi yapmayan ve katki payi/ogrenim ucretini odemeyen ogrenciler, ilgili bolum baskanligina basvurup ilgili yonetim kurulu karariyla gerekli odemeyi yapmak suretiyle donem sonunda tek/çift ders sinavina girebilirler.\n\nDayanak: [Kaynak 1] Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih); [Kaynak 2] DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK",
+      "answer": "Sayin ogrencimiz,\nTek/çift ders SSS kaynagina gore donem basinda ders kaydi yapmayan ve katki payi/ogrenim ucretini odemeyen ogrenciler, ilgili bolum baskanligina basvurup ilgili yonetim kurulu karariyla gerekli odemeyi yapmak suretiyle donem sonunda tek/çift ders sinavina girebilirler.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
       "sources": [
-        "Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih)",
-        "DÜZCE ÜNİVERSİTESİ AZAMİ ÖĞRENİM SÜRESİ SONUNDA YAPILACAK"
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kayıt ve Kayıt Yenileme"
       ],
       "flags": []
     },
@@ -948,6 +966,57 @@
       "answer": "Sayin ogrencimiz,\nMezuniyet icin temel kosul, ogretim programinda yer alan derslerin ve ilgili mevzuatta ongorulen diger akademik yukumluluklerin tamamlanmis olmasidir. Baska bir ifadeyle, mezuniyet icin yalnizca dersleri gecmek degil, programin tum resmi sartlarini yerine getirmek gerekir.\n\nDayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi",
       "sources": [
         "Diploma ve Mezuniyet Belgeleri Yönergesi"
+      ],
+      "flags": []
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Bilgisayar muhendisligi ogrencisiyim; 2. sinif yazinda staj yaptim ama 3. sinif guzde staj dersini secmeyi unuttum. Bu staji sonra saydirabilir miyim?",
+      "answer": "Sayın öğrencimiz,\nBilgisayar Mühendisliği kaynağına göre yaz döneminde yapılan staj için stajı takip eden yarıyılda ilgili staj dersinin OBS'de alınması gerekir. Dersi seçmeyi unuttuysanız, stajın sayılması için sonraki uygun dönemde ilgili staj dersini almanız ve bölümün staj değerlendirme sürecini takip etmeniz gerekir; staj dersini hiç almadan doğrudan saydırma yapılamaz. Dersi daha önce OBS'de almadıysanız, stajın değerlendirilebilmesi için ilgili staj dersine kayıtlanmanız gerekir.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj",
+      "sources": [
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Bilgisayar Mühendisliği - Staj"
+      ],
+      "flags": []
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Yaz okulunda baska universiteden aldigim dersi saydirmak istiyorum; ders icerikleri benziyor ama AKTS farkliysa ne olur?",
+      "answer": "Sayin ogrencimiz,\nYaz Okulu Uygulama Esaslarina gore baska universitelerden yaz okulu dersi alinabilmesi mumkundur. Ancak dersin esdeger sayilabilmesi icin ders icerigi ve AKTS/kredi uyumu ilgili bolum baskanligi tarafindan uygun gorulmelidir. Icerik benzer olsa bile AKTS farki varsa net karar bolumun esdegerlik degerlendirmesine baglidir.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Yaz Okulu; [Kaynak 2] Yaz Okulu Yönergesi",
+      "sources": [
+        "Bilgisayar Mühendisliği - Yaz Okulu",
+        "Yaz Okulu Yönergesi"
+      ],
+      "flags": []
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Mazeret sinavina basvururken raporumu 3 is gunu icinde veremedim; yine de sinava girme hakkim olur mu?",
+      "answer": "Sayin ogrencimiz,\nMazeret sinavi basvurusu icin kaynakta belirtilen sure 3 is gunudur. Basvurunun mazereti belgeleyen rapor/evrakla birlikte bu sure icinde yapilmasi gerekir.\n\nDayanak: [Kaynak 1] Final Mazeret Sınavı Başvurusu Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Öğrenci İşleri Sıkça Sorulan Sorular",
+      "sources": [
+        "Final Mazeret Sınavı Başvurusu Duyurusu",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Öğrenci İşleri Sıkça Sorulan Sorular"
+      ],
+      "flags": []
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Mezuniyet icin tum derslerimi gectim ama zorunlu stajim eksik. Gecici mezuniyet belgesi alabilir miyim?",
+      "answer": "Sayin ogrencimiz,\nHayir. Mezuniyet icin yalnizca derslerin degil, ilgili mevzuatta yer alan tum akademik yukumluluklerin de tamamlanmis olmasi gerekir. Bu nedenle staj yukumlulugu eksikse gecici mezuniyet belgesi veya diploma islemleri tamamlanmis sayilmaz.\n\nDayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi",
+      "sources": [
+        "Diploma ve Mezuniyet Belgeleri Yönergesi"
+      ],
+      "flags": []
+    },
+    {
+      "group": "Karma Orta-Zor Sorular",
+      "question": "Ders kaydimi yaptim ama danisman onayi verilmeden ekle-sil haftasi bitti. Kaydim gecerli sayilir mi?",
+      "answer": "Sayin ogrencimiz,\nDers kaydi surecinde danisman onayi takip edilmelidir. Danisman onayi verilmeden sure bittiyse kaydin kesinlesip kesinlesmedigi ogrencinin OBS durumuna ve ilgili birimin ders kayit duyurusuna gore degerlendirilir. Bu durumda kaydinizi OBS'den kontrol edip danismaniniza veya ilgili akademik biriminize gecikmeden basvurmaniz gerekir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme; [Kaynak 3] Akademik Takvim",
+      "sources": [
+        "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "Akademik Takvim"
       ],
       "flags": []
     }
@@ -967,10 +1036,11 @@
         },
         {
           "question": "Peki kac kere yapmaliyim?",
-          "answer": "Sayın öğrencimiz,\nBilgisayar Mühendisliği bölümünde 2 zorunlu staj bulunmaktadır. Bunlar Staj I (BM399) ve Staj II'dir (BM499).\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj",
+          "answer": "Sayın öğrencimiz,\nBilgisayar Mühendisliği bölümünde 2 zorunlu staj bulunmaktadır. Bunlar Staj I (BM399) ve Staj II'dir (BM499).\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj; [Kaynak 3] Öğrenci Belgesi ve Transkript İşlemleri",
           "sources": [
             "Bilgisayar Mühendisliği - Staj SSS",
-            "Bilgisayar Mühendisliği - Staj"
+            "Bilgisayar Mühendisliği - Staj",
+            "Öğrenci Belgesi ve Transkript İşlemleri"
           ],
           "flags": []
         },
@@ -999,10 +1069,8 @@
       "messages": [
         {
           "question": "Mezun durumundaysam staj raporumu yukledikten sonra ne yapmam gerekiyor?",
-          "answer": "Sayin ogrencimiz,\nMezun durumundaysaniz ve stajlar disinda dersiniz yoksa, staj raporunuzu sisteme yukledikten sonra bolum staj komisyonuna e-posta ile degerlendirme talebinizi iletmeniz gerekir.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS",
-          "sources": [
-            "Bilgisayar Mühendisliği - Staj SSS"
-          ],
+          "answer": "Sayın öğrencimiz,\nBu bilgi bölüm veya fakülteye göre değişebilmektedir. Lütfen bölüm/program belirterek tekrar sorunuz.",
+          "sources": [],
           "flags": []
         },
         {
@@ -1047,9 +1115,9 @@
         },
         {
           "question": "Devam zorunlulugu konusunda neye dikkat etmeliyim?",
-          "answer": "Sayin ogrencimiz,\nIlk defa alinan derslerde teorik bolum icin %70, uygulama bolumu icin %80 devam zorunlulugu vardir. Kaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir.\n\nDayanak: [Kaynak 1] T.C.; [Kaynak 2] YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME",
+          "answer": "Sayin ogrencimiz,\nIlk defa alinan derslerde teorik bolum icin %70, uygulama bolumu icin %80 devam zorunlulugu vardir. Kaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME",
           "sources": [
-            "T.C.",
+            "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
             "YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME"
           ],
           "flags": []
@@ -1069,16 +1137,16 @@
         },
         {
           "question": "Transkript icin de ayni yol gecerli mi?",
-          "answer": "Sayin ogrencimiz,\nOgrenci belgesi ve transkript/not durum belgesi oncelikle e-Devlet Kapisi uzerinden temin edilmelidir. Kaynakta e-Devlet uzerinden alinan belgelerin kamu kurumlari tarafindan kabul edilmesi gerektigi belirtilmektedir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken durumlarda ilgili birimin Ogrenci Isleri Burosuna basvurulabilir.",
-          "sources": [],
+          "answer": "Sayin ogrencimiz,\nOgrenci belgesi ve transkript/not durum belgesi oncelikle e-Devlet Kapisi uzerinden temin edilmelidir. Kaynakta e-Devlet uzerinden alinan belgelerin kamu kurumlari tarafindan kabul edilmesi gerektigi belirtilmektedir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken durumlarda ilgili birimin Ogrenci Isleri Burosuna basvurulabilir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
+          "sources": [
+            "Öğrenci Belgesi ve Transkript İşlemleri"
+          ],
           "flags": []
         },
         {
           "question": "E-Devlet'ten alamazsam nereye basvurayim?",
-          "answer": "Sayin ogrencimiz,\nBelge islemleri icin once e-Devlet Kapisi kullanilmalidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken belgeler icin ilgili fakulte/birim Ogrenci Isleri Burosuna basvurulabilir. Elimizdeki kaynakta uzakta olan ogrenciler icin imzali belge talep formunun ogrenciisleri.ef@duzce.edu.tr adresine iletilebilecegi belirtilmektedir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 2] Düzce Üniversitesi Mevzuat Komisyonu; [Kaynak 3] Öğrenci Belgesi ve Transkript İşlemleri",
+          "answer": "Sayin ogrencimiz,\nBelge islemleri icin once e-Devlet Kapisi kullanilmalidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken belgeler icin ilgili fakulte/birim Ogrenci Isleri Burosuna basvurulabilir. Elimizdeki kaynakta uzakta olan ogrenciler icin imzali belge talep formunun ogrenciisleri.ef@duzce.edu.tr adresine iletilebilecegi belirtilmektedir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
           "sources": [
-            "Öğrenci Belgesi ve Transkript İşlemleri",
-            "Düzce Üniversitesi Mevzuat Komisyonu",
             "Öğrenci Belgesi ve Transkript İşlemleri"
           ],
           "flags": []
@@ -1090,28 +1158,30 @@
       "messages": [
         {
           "question": "2025-2026 bahar doneminde ders kaydi ne zaman?",
-          "answer": "Sayin ogrencimiz,\n2025-2026 bahar yariyili icin ders kayitlari 4 Subat 2026 - 13 Subat 2026 arasinda yapilir. Danisman onaylari 4 Subat 2026 - 15 Subat 2026, ekle-sil haftasi ise 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] 2025-2026 Akademik Takvim; [Kaynak 2] Akademik Takvim; [Kaynak 3] Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Not Ortalaması, Önlisans-Lisans)",
+          "answer": "Sayin ogrencimiz,\nAkademik takvim/duyuruya gore 2025-2026 bahar yariyili icin ders kayitlari 4 Subat 2026 - 13 Subat 2026 arasinda yapilir. Danisman onaylari 4 Subat 2026 - 15 Subat 2026, ekle-sil haftasi ise 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
           "sources": [
-            "2025-2026 Akademik Takvim",
-            "Akademik Takvim",
-            "Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Not Ortalaması, Önlisans-Lisans)"
+            "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+            "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+            "Ders Kayıt ve Kayıt Yenileme"
           ],
           "flags": []
         },
         {
           "question": "Ekle-sil haftasi hangi tarihlerde?",
-          "answer": "Sayin ogrencimiz,\n2025-2026 bahar yariyili icin ekle-sil haftasi 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] 11 Mayıs 2025 PAZAR",
+          "answer": "Sayin ogrencimiz,\n2025-2026 bahar yariyili icin ekle-sil haftasi 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme; [Kaynak 3] Akademik Takvim",
           "sources": [
-            "11 Mayıs 2025 PAZAR"
+            "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+            "Ders Kayıt ve Kayıt Yenileme",
+            "Akademik Takvim"
           ],
           "flags": []
         },
         {
           "question": "Danisman onayi gerekiyor mu?",
-          "answer": "Sayin ogrencimiz,\nEvet. Ders kaydi surecinde danisman onayi takip edilmelidir. 2025-2026 bahar yariyili duyurusunda danisman onaylari 4 Subat 2026 - 15 Subat 2026 arasi olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih); [Kaynak 2] 11 Mayıs 2025 PAZAR",
+          "answer": "Sayin ogrencimiz,\nDers kaydinin kesinlesmesi icin danisman onayi sureci takip edilmelidir. 2025-2026 bahar yariyili duyurusunda danisman onaylari 4 Subat 2026 - 15 Subat 2026 arasi olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme",
           "sources": [
-            "Yeni Öğrenci Asıl Aday Kesin Kayıtları ( Elektronik Kayıt ) (Yök’ün Belirleyeceği Tarih)",
-            "11 Mayıs 2025 PAZAR"
+            "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+            "Ders Kayıt ve Kayıt Yenileme"
           ],
           "flags": []
         }

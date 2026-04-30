@@ -1,0 +1,169 @@
+{
+  "description": "Manual regression raporundaki cevaplari beklenen temel bilgiler acisindan denetleyen hafif factual check seti. Metinler normalize edilerek karsilastirilir.",
+  "expectations": [
+    {
+      "id": "bm_staj_suresi_25_is_gunu",
+      "question_contains": ["zorunlu staj kac gun"],
+      "required_all": ["25", "is gunu"],
+      "source_title_any": ["Bilgisayar Muhendisligi - Staj", "Bilgisayar Muhendisligi - Staj SSS"],
+      "forbidden": ["20 is gunu", "3-6 ay"]
+    },
+    {
+      "id": "bm_staj_sayisi_iki",
+      "question_contains": ["kac zorunlu staj"],
+      "required_all": ["2"],
+      "required_any_groups": [["Staj 1", "BM399"], ["Staj 2", "BM499"]],
+      "source_title_any": ["Bilgisayar Muhendisligi - Staj", "Bilgisayar Muhendisligi - Staj SSS"]
+    },
+    {
+      "id": "bm_staj_takip_yariyil",
+      "question_contains": ["bilgisayar", "2. sinif yazinda staj", "3. sinif guz"],
+      "required_any_groups": [["takip eden yariyil", "3. sinif guz", "ilgili staj dersi"], ["OBS", "staj dersi"]],
+      "source_title_any": ["Bilgisayar Muhendisligi - Staj", "Bilgisayar Muhendisligi - Staj SSS"]
+    },
+    {
+      "id": "bm_staj_gec_teslim_surec",
+      "question_contains": ["zamaninda teslim etmezsem"],
+      "required_any_groups": [["sabit bir son tarih bulunmadigi", "yaklasik 30 gun"], ["staj komisyonu"], ["gec teslim icin otomatik", "acikca belirtilmiyor"]],
+      "source_title_any": ["Bilgisayar Muhendisligi - Staj SSS"]
+    },
+    {
+      "id": "bm_staj_sigorta_zorunlu",
+      "question_contains": ["staj sigortasini kim yapiyor"],
+      "required_any_groups": [["okul tarafindan", "universite tarafindan"], ["zorunlu staj"]],
+      "source_title_any": ["Bilgisayar Muhendisligi - Staj SSS", "Bilgisayar Muhendisligi - Staj"]
+    },
+    {
+      "id": "bm_gonullu_staj_sigorta_yok",
+      "question_contains": ["bilgisayar", "gonullu staj"],
+      "required_any_groups": [["okul tarafindan sigorta yapilmaz", "okul tarafindan sigorta yapilmadigi"], ["zorunlu stajlardan ayri"]],
+      "source_title_any": ["Bilgisayar Muhendisligi - Staj SSS", "Bilgisayar Muhendisligi - Staj"]
+    },
+    {
+      "id": "bm_tek_cift_staj_yz",
+      "question_contains": ["hic kayitlanmadiysam", "tek/cift ders sinavina girebilir miyim"],
+      "required_any_groups": [["hic kayitlanmadiysaniz", "hakkiniz yoktur"], ["YZ", "daha once alip"]],
+      "source_title_any": ["Bilgisayar Muhendisligi - Staj SSS", "Bilgisayar Muhendisligi - Staj"]
+    },
+    {
+      "id": "bm_tek_cift_staj_genel",
+      "question_contains": ["stajimi yapmadim", "tek/cift ders sinavina girebilir miyim"],
+      "required_any_groups": [["tek/cift ders sinavi"], ["hic kayitlanmadiysaniz", "hic almadigi", "hakkiniz yoktur", "hakki verilmez"]],
+      "source_title_any": ["Bilgisayar Muhendisligi - Staj SSS", "Bilgisayar Muhendisligi - Staj"]
+    },
+    {
+      "id": "yaz_okulu_devam",
+      "question_contains": ["yaz okulunda devam zorunlulugu"],
+      "required_any_groups": [["devam durumu dikkate alinir", "devam zorunlulugu"], ["universite disinda", "devam kosulu"]],
+      "source_title_any": ["Yaz Okulu Yonergesi", "Bilgisayar Muhendisligi - Yaz Okulu"]
+    },
+    {
+      "id": "yaz_okulu_baska_universite",
+      "question_contains": ["baska universiteden ders alabilir miyim"],
+      "required_any_groups": [["baska universitelerden", "alinabilmesi mumkundur"], ["bolum baskanliginin uygun gormesi", "esdegerlik"]],
+      "source_title_any": ["Yaz Okulu Yonergesi", "Bilgisayar Muhendisligi - Yaz Okulu"]
+    },
+    {
+      "id": "yaz_okulu_esdegerlik_onay",
+      "question_contains": ["sayilmasi icin hangi sartlar"],
+      "required_any_groups": [["bolum baskanliginin uygun gormesi", "ilgili esdegerlik sartlari"], ["esdeger"]],
+      "source_title_any": ["Yaz Okulu Yonergesi", "Bilgisayar Muhendisligi - Yaz Okulu"]
+    },
+    {
+      "id": "ders_kaydi_tarih_bahar_2026",
+      "question_contains": ["2025-2026 bahar doneminde ders kaydimi"],
+      "required_any_groups": [["akademik takvim"], ["kesin tarih", "tarih", "4 Subat 2026", "16 Subat 2026"]],
+      "source_title_any": ["Akademik Takvim", "Ders Kayit ve Kayit Yenileme"]
+    },
+    {
+      "id": "danisman_onayi",
+      "question_contains": ["danisman onayi"],
+      "required_any_groups": [["danisman onayi"], ["OBS", "kayit"]],
+      "source_title_any": ["Ders Kayit ve Kayit Yenileme", "Bahar Ders Kayit", "Akademik Takvim"]
+    },
+    {
+      "id": "harc_ders_kaydi",
+      "question_contains": ["harc yatirmadan"],
+      "required_any_groups": [["katki payi", "ogrenim ucreti", "harc"], ["ders kaydi", "kayit yenileme"]],
+      "source_title_any": ["Ders Kayit ve Kayit Yenileme", "Bahar Ders Kayit", "Lisans Egitim Ogretim ve Sinav Yonetmeligi"]
+    },
+    {
+      "id": "devamsizlik_teorik_uygulama",
+      "question_contains": ["devamsizlik siniri"],
+      "required_any_groups": [["%70", "yuzde 70"], ["%80", "yuzde 80"]],
+      "source_title_any": []
+    },
+    {
+      "id": "raporlu_devamsizlik",
+      "question_contains": ["raporlu oldugum gunler"],
+      "required_any_groups": [["raporlu", "devamsizlik"], ["sayilir", "sayildigi", "dusulmez"]],
+      "source_title_any": []
+    },
+    {
+      "id": "mazeret_uc_is_gunu",
+      "question_contains": ["mazeret sinavi", "3 is gunu"],
+      "required_any_groups": [["3", "uc"], ["is gunu"], ["belge", "evrak"]],
+      "source_title_any": ["Mazeret Sinavi", "Ogrenci Isleri SSS", "Lisans Egitim Ogretim ve Sinav Yonetmeligi"]
+    },
+    {
+      "id": "sinav_programi_yeri",
+      "question_contains": ["sinav programi nerede"],
+      "required_any_groups": [["bolum", "fakulte"], ["duyuru", "web"], ["OBS"]],
+      "forbidden": ["9 kasim 2016", "11 mayis 2025"]
+    },
+    {
+      "id": "cap_ortalama_siralama",
+      "question_contains": ["cift anadal", "basari siralamasi"],
+      "required_any_groups": [["2,72", "2.72"], ["ust %20", "ilk %20", "basari siralamasi"]],
+      "source_title_any": ["CAP ve Yandal", "Cift Anadal Programi Yonergesi", "Duzce Universitesi Cift Anadal Programi Yonergesi"]
+    },
+    {
+      "id": "ogrenci_belgesi_e_devlet",
+      "question_contains": ["ogrenci belgesi", "e-Devlet"],
+      "required_any_groups": [["e-Devlet"], ["ogrenci isleri", "ogrenci isleri burosu"], ["islak imzali", "onayli", "barkodlu"]],
+      "source_title_any": ["Ogrenci Isleri", "Ogrenci Formlari", "Ogrenci Belgesi ve Transkript"]
+    },
+    {
+      "id": "mezuniyet_staj_eksik",
+      "question_contains": ["staj eksikse"],
+      "required_any_groups": [["Hayir", "mezun olamaz", "diploma islemleri tamamlanmis sayilmaz"], ["akademik yukumluluk"]],
+      "source_title_any": ["Diploma ve Mezuniyet Belgeleri Yonergesi", "Lisans Egitim Ogretim ve Sinav Yonetmeligi"]
+    },
+    {
+      "id": "mezuniyet_sadece_ders_yeterli_degil",
+      "question_contains": ["sadece dersleri gecmek"],
+      "required_any_groups": [["yalnizca dersleri gecmek", "sadece dersleri gecmek"], ["tum resmi sartlari", "akademik yukumluluk"]],
+      "source_title_any": ["Diploma ve Mezuniyet Belgeleri Yonergesi", "Lisans Egitim Ogretim ve Sinav Yonetmeligi"]
+    },
+    {
+      "id": "bm_staj_dersi_secimi_unutuldu",
+      "question_contains": ["2. sinif yazinda staj yaptim", "staj dersini secmeyi unuttum"],
+      "required_any_groups": [["ilgili staj dersi", "OBS"], ["takip eden yariyil"], ["daha once", "aldiysaniz", "tekrar almaniz gerekmez"]],
+      "source_title_any": ["Bilgisayar Muhendisligi - Staj", "Bilgisayar Muhendisligi - Staj SSS"]
+    },
+    {
+      "id": "yaz_okulu_akts_esdegerlik",
+      "question_contains": ["baska universiteden aldigim dersi", "AKTS farkliysa"],
+      "required_any_groups": [["bolum baskanliginin uygun gormesi", "esdegerlik"], ["AKTS", "icerik"], ["uygun", "sayilabilir", "net karar"]],
+      "source_title_any": ["Yaz Okulu Yonergesi", "Bilgisayar Muhendisligi - Yaz Okulu"]
+    },
+    {
+      "id": "mazeret_rapor_gec_teslim",
+      "question_contains": ["raporumu 3 is gunu icinde veremedim"],
+      "required_any_groups": [["3", "is gunu"], ["belge", "evrak", "rapor"], ["sure", "basvuru"]],
+      "source_title_any": ["Mazeret Sinavi", "Ogrenci Isleri SSS", "Lisans Egitim Ogretim ve Sinav Yonetmeligi"]
+    },
+    {
+      "id": "gecici_mezuniyet_staj_eksik",
+      "question_contains": ["zorunlu stajim eksik", "gecici mezuniyet belgesi"],
+      "required_any_groups": [["Hayir", "alamaz", "verilmez"], ["tum akademik yukumluluk", "resmi sart"], ["staj"]],
+      "source_title_any": ["Diploma ve Mezuniyet Belgeleri Yonergesi", "Lisans Egitim Ogretim ve Sinav Yonetmeligi"]
+    },
+    {
+      "id": "danisman_onaysiz_ekle_sil_bitti",
+      "question_contains": ["danisman onayi verilmeden", "ekle-sil haftasi bitti"],
+      "required_any_groups": [["danisman onayi"], ["ekle-sil", "ders kaydi", "kayit"], ["akademik takvim", "ilgili birim", "ogrenci isleri"]],
+      "source_title_any": ["Ders Kayit ve Kayit Yenileme", "Bahar Ders Kayit", "Akademik Takvim"]
+    }
+  ]
+}

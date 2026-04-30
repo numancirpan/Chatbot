@@ -1,0 +1,68 @@
+{
+  "description": "Kucuk sohbet ve kapsam disi mesajlar icin emniyet testi. Bu set RAG hedefinden sapmadan, casual katmanin resmi cevaplari bozmamasini denetler.",
+  "cases": [
+    {
+      "id": "casual_greeting_001",
+      "query": "Merhaba",
+      "required_any": ["ogrenci isleri", "yardimci olabilirim"],
+      "forbidden": ["Dayanak:", "resmi belgelerde bilgiye"],
+      "expect_no_sources": true
+    },
+    {
+      "id": "casual_greeting_002",
+      "query": "Selam, nasilsin?",
+      "required_any": ["ogrenci isleri", "yardimci olabilirim"],
+      "forbidden": ["Dayanak:", "resmi belgelerde bilgiye"],
+      "expect_no_sources": true
+    },
+    {
+      "id": "casual_thanks_001",
+      "query": "Tesekkur ederim",
+      "required_any": ["rica ederim", "her zaman"],
+      "forbidden": ["Dayanak:", "resmi belgelerde bilgiye"],
+      "expect_no_sources": true
+    },
+    {
+      "id": "casual_identity_001",
+      "query": "Sen kimsin?",
+      "required_any": ["yapay zeka asistan", "ogrenci isleri"],
+      "forbidden": ["Dayanak:", "resmi belgelerde bilgiye"],
+      "expect_no_sources": true
+    },
+    {
+      "id": "casual_empathy_001",
+      "query": "Moralim bozuk",
+      "required_any": ["zor", "beraber", "ogrenci isleri"],
+      "forbidden": ["Dayanak:", "resmi belgelerde bilgiye"],
+      "expect_no_sources": true
+    },
+    {
+      "id": "casual_off_topic_001",
+      "query": "Bugun hava nasil?",
+      "required_any": ["kapsamimin disinda", "ogrenci isleri"],
+      "forbidden": ["Dayanak:", "resmi belgelerde bilgiye"],
+      "expect_no_sources": true
+    },
+    {
+      "id": "casual_off_topic_002",
+      "query": "Python nedir?",
+      "required_any": ["kapsamimin disinda", "ogrenci isleri"],
+      "forbidden": ["Dayanak:", "resmi belgelerde bilgiye"],
+      "expect_no_sources": true
+    },
+    {
+      "id": "academic_not_casual_001",
+      "query": "Bilgisayar muhendisligi staj kac gun?",
+      "required_any": ["25", "is gunu"],
+      "forbidden": ["kapsamimin disinda"],
+      "expect_sources": true
+    },
+    {
+      "id": "academic_scope_guard_001",
+      "query": "Staj kac gun?",
+      "required_any": ["bolum", "program"],
+      "forbidden": ["20 is gunu", "25 is gunu", "kapsamimin disinda"],
+      "expect_no_sources": true
+    }
+  ]
+}

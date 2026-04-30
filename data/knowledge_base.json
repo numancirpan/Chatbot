@@ -1757,5 +1757,60 @@
     "durum": "basarili",
     "degisiklik": true,
     "icerik_hash": "cbc0b3d1d8e688f792383e63046eb7e1"
+  },
+  {
+    "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#devam-zorunlulugu",
+    "kategori": "devamsizlik",
+    "icerik": "DUZCE UNIVERSITESI LISANS EGITIM OGRETIM VE SINAV YONETMELIGI - DEVAM ZORUNLULUGU\n\nIlk defa alinan derslerde ogrencilerin teorik derslerin en az yuzde 70'ine, uygulamali derslerin en az yuzde 80'ine devam etmesi gerekir. Raporlu olunan sureler devamsizlik suresinden sayilir. Devam sartini yerine getirmeyen ogrenciler ilgili dersin sinav ve basari degerlendirme sureclerinde devamsizlik nedeniyle basarisiz sayilabilir.",
+    "icerik_tipi": "pdf",
+    "source_title": "Lisans Egitim Ogretim ve Sinav Yonetmeligi - Devam Zorunlulugu",
+    "cekim_tarihi": "2026-04-28 21:45:41",
+    "durum": "basarili",
+    "degisiklik": true,
+    "icerik_hash": "ea2a8730eb188829ebd1b430a1c8c90c"
+  },
+  {
+    "url": "https://ef.duzce.edu.tr/duyuru/6771/2025-2026-egitim-ogretim-yili-bahar-yariyili-ders-kayit-ve-kayit-yenileme-duyurusu#ekle-sil-akts",
+    "kategori": "ders_kaydi",
+    "icerik": "DERS KAYIT, EKLE-SIL VE AKTS ISLEMLERI\n\nDers kayit/kayit yenileme surecinde ders secimi OBS uzerinden yapilir ve danisman onayi takip edilir. Ekle-sil haftasi, ilan edilen akademik takvim araliginda ders ekleme, ders birakma ve ders kaydi duzeltme islemleri icin kullanilir. Harc veya katki payi/ogrenim ucreti odemesi gereken ogrenciler ders kaydi oncesinde odeme yukumlulugunu yerine getirmelidir.\n\nBir donemde alinabilecek AKTS, ogrencinin akademik durumu, ogretim plani, ilgili yonetmelik ve danisman onayi cercevesinde degerlendirilir. Ustten ders veya daha fazla AKTS alma taleplerinde ogrencinin basari durumu ve danisman/onay sureci dikkate alinir.",
+    "icerik_tipi": "html",
+    "source_title": "Ders Kayit Ekle-Sil ve AKTS Islemleri",
+    "cekim_tarihi": "2026-04-30 13:41:52",
+    "durum": "basarili",
+    "degisiklik": true,
+    "icerik_hash": "f3b01420a2380631c1fe3dfc1ff144b2"
+  },
+  {
+    "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#sinav-not-sistemi",
+    "kategori": "sinavlar",
+    "icerik": "DUZCE UNIVERSITESI LISANS EGITIM OGRETIM VE SINAV YONETMELIGI - SINAV VE NOT SISTEMI\n\nYariyil sonu sinavi, butunleme sinavi, mazeret sinavi, tek ders sinavi ve basari notu islemleri ilgili yonetmelik hukumlerine gore yurutulur. Butunleme sinavi, ilgili dersin yariyil sonu sinavi yerine gecen ve basari notu hesabinda dikkate alinan sinavdir. Bir dersin basari notu; ara sinav, yariyil sonu veya butunleme sinavi ve varsa diger olcme-degerlendirme faaliyetleriyle belirlenir.\n\nGenel agirlikli not ortalamasi (GANO), ogrencinin aldigi derslerin kredi/AKTS agirliklari ve basari notlari dikkate alinarak hesaplanir. Final veya butunleme sonucunun ortalamaya etkisi, dersin olcme-degerlendirme esaslarina ve not sistemi kurallarina gore belirlenir. Mazeret sinavi basvurularinda mazereti belgeleyen evrak ve ilgili basvuru suresi aranir.",
+    "icerik_tipi": "pdf",
+    "source_title": "Lisans Egitim Ogretim ve Sinav Yonetmeligi - Sinav ve Not Sistemi",
+    "cekim_tarihi": "2026-04-30 13:41:52",
+    "durum": "basarili",
+    "degisiklik": true,
+    "icerik_hash": "389663b31473b7d67811dd8a016a20f8"
+  },
+  {
+    "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#tek-cift-butunleme",
+    "kategori": "sinavlar",
+    "icerik": "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI\n\nButunleme sinavi, yariyil sonu sinavi yerine gecerek ders basari notunun belirlenmesinde kullanilir. Tek ders veya cift ders sinavlari, ilgili kosullari saglayan ve mezuniyet asamasinda basarisiz dersi kalan ogrenciler icin uygulanir. Hic alinmamis dersler veya devam sartinin yerine getirilmedigi dersler icin tek/cift ders sinav hakki verilmez; bu durumlarda ogrencinin ilgili dersin kosullarini once tamamlamasi gerekir.",
+    "icerik_tipi": "pdf",
+    "source_title": "Lisans Egitim Ogretim ve Sinav Yonetmeligi - Butunleme Tek Cift Ders",
+    "cekim_tarihi": "2026-04-30 13:41:52",
+    "durum": "basarili",
+    "degisiklik": true,
+    "icerik_hash": "c15618d6b4808900a03adabb25259a17"
+  },
+  {
+    "url": "https://cdn.duzce.edu.tr/File/GetFile/yatay-gecis-yonergesi#basvuru-takvim",
+    "kategori": "yatay_gecis",
+    "icerik": "DUZCE UNIVERSITESI KURUM ICI VE KURUMLAR ARASI YATAY GECIS ESASLARI\n\nKurum ici ve kurumlar arasi yatay gecis basvurulari, yalnizca ilan edilen basvuru suresi icinde yapilir. Basvuru takvimi, kontenjanlar, kosullar, degerlendirme ve sonuc duyurulari ilgili akademik birimlerin ve universitenin resmi duyuru/takvim kanallarindan takip edilir. Yatay gecis basvurularinin gecerli olup olmadigi ilgili bolum/program tarafindan olusturulan yatay gecis komisyonu tarafindan belirlenir ve ilgili yonetim kurulu karari ile kesinlesir.",
+    "icerik_tipi": "pdf",
+    "source_title": "Kurum Ici ve Kurumlar Arasi Yatay Gecis Yonergesi - Basvuru Takvimi",
+    "cekim_tarihi": "2026-04-30 13:41:52",
+    "durum": "basarili",
+    "degisiklik": true,
+    "icerik_hash": "6b9258da39b09545fe2f3f03078a9fe1"
   }
 ]

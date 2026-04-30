@@ -1,0 +1,961 @@
+{
+  "generated_at": "2026-04-30T15:47:46",
+  "summary": {
+    "total_cases": 16,
+    "passed_cases": 16,
+    "total_queries": 32,
+    "passed_queries": 32
+  },
+  "cases": [
+    {
+      "id": "staj_scope_duration",
+      "expected_topic": "staj",
+      "passed": true,
+      "results": [
+        {
+          "query": "Staj kaç gün?",
+          "topic": "staj",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "bilgisayar muhendisligi zorunlu staj suresi 25 is gunu",
+            "zorunlu staj bm399 bm499 staj i staj ii",
+            "staj 5 ve 7 yariyillarda 25 is gunu"
+          ],
+          "marker_groups": [
+            [
+              "staj",
+              "25 is gunu"
+            ],
+            [
+              "bm399",
+              "bm499"
+            ],
+            [
+              "zorunlu staj",
+              "25"
+            ]
+          ]
+        },
+        {
+          "query": "Bilgisayar mühendisliği zorunlu staj kaç gün?",
+          "topic": "staj",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "bilgisayar muhendisligi zorunlu staj suresi 25 is gunu",
+            "zorunlu staj bm399 bm499 staj i staj ii",
+            "staj 5 ve 7 yariyillarda 25 is gunu"
+          ],
+          "marker_groups": [
+            [
+              "staj",
+              "25 is gunu"
+            ],
+            [
+              "bm399",
+              "bm499"
+            ],
+            [
+              "zorunlu staj",
+              "25"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "staj_late_upload",
+      "expected_topic": "staj",
+      "passed": true,
+      "results": [
+        {
+          "query": "Stajımı zamanında teslim etmezsem bilgisayar mühendisliği için süreç nasıl işler?",
+          "topic": "staj",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "staj raporu sbs yukleme imza kase onayi",
+            "staj raporu guz donemi basladiktan yaklasik 30 gun sonra yuklenebilir",
+            "gec teslim staj komisyonu duzeltme bir ay icinde"
+          ],
+          "marker_groups": [
+            [
+              "staj raporu",
+              "sbs"
+            ],
+            [
+              "staj raporu",
+              "30 gun"
+            ],
+            [
+              "gec teslim",
+              "staj"
+            ]
+          ]
+        },
+        {
+          "query": "Staj raporu SBS'ye ne zaman yüklenmeli?",
+          "topic": "staj",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "staj raporu sbs yukleme imza kase onayi",
+            "staj raporu guz donemi basladiktan yaklasik 30 gun sonra yuklenebilir",
+            "gec teslim staj komisyonu duzeltme bir ay icinde"
+          ],
+          "marker_groups": [
+            [
+              "staj raporu",
+              "sbs"
+            ],
+            [
+              "staj raporu",
+              "30 gun"
+            ],
+            [
+              "gec teslim",
+              "staj"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "staj_insurance",
+      "expected_topic": "staj",
+      "passed": true,
+      "results": [
+        {
+          "query": "Bilgisayar mühendisliği için staj sigortasını kim yapıyor?",
+          "topic": "staj",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "zorunlu staj sigorta islemleri okul tarafindan yurutulur",
+            "gonullu staj sigorta zorunlu stajdan ayri",
+            "staj sigortasi basvuru sirasinda beyan"
+          ],
+          "marker_groups": [
+            [
+              "staj",
+              "sigorta"
+            ],
+            [
+              "gonullu staj",
+              "sigorta"
+            ],
+            [
+              "zorunlu staj",
+              "sigorta"
+            ]
+          ]
+        },
+        {
+          "query": "Zorunlu staj dışında gönüllü staj yaparsam sigortamı okul yapar mı?",
+          "topic": "staj",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "zorunlu staj sigorta islemleri okul tarafindan yurutulur",
+            "gonullu staj sigorta zorunlu stajdan ayri",
+            "staj sigortasi basvuru sirasinda beyan"
+          ],
+          "marker_groups": [
+            [
+              "staj",
+              "sigorta"
+            ],
+            [
+              "gonullu staj",
+              "sigorta"
+            ],
+            [
+              "zorunlu staj",
+              "sigorta"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "registration_calendar",
+      "expected_topic": "ders_kaydi",
+      "passed": true,
+      "results": [
+        {
+          "query": "2025-2026 bahar döneminde ders kaydımı ne zaman yapmalıyım ve ekle-sil haftası hangi tarihlerde?",
+          "topic": "ders_kaydi",
+          "expansion_count": 4,
+          "marker_group_count": 4,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "ders kayit kayit yenileme obs danisman onayi",
+            "ders kayit tarihleri ekle sil haftasi",
+            "katki payi ogrenim ucreti ders kaydi oncesinde odeme",
+            "ders secimi obs uzerinden yapilir danisman onayi takip edilir"
+          ],
+          "marker_groups": [
+            [
+              "ders kayit",
+              "danisman onay"
+            ],
+            [
+              "ekle sil",
+              "ders kayit"
+            ],
+            [
+              "katki payi",
+              "ogrenim ucreti"
+            ],
+            [
+              "obs",
+              "ders secimi"
+            ]
+          ]
+        },
+        {
+          "query": "Ders kaydı ne zaman başlıyor?",
+          "topic": "ders_kaydi",
+          "expansion_count": 4,
+          "marker_group_count": 4,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "ders kayit kayit yenileme obs danisman onayi",
+            "ders kayit tarihleri ekle sil haftasi",
+            "katki payi ogrenim ucreti ders kaydi oncesinde odeme",
+            "ders secimi obs uzerinden yapilir danisman onayi takip edilir"
+          ],
+          "marker_groups": [
+            [
+              "ders kayit",
+              "danisman onay"
+            ],
+            [
+              "ekle sil",
+              "ders kayit"
+            ],
+            [
+              "katki payi",
+              "ogrenim ucreti"
+            ],
+            [
+              "obs",
+              "ders secimi"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "registration_advisor_approval",
+      "expected_topic": "ders_kaydi",
+      "passed": true,
+      "results": [
+        {
+          "query": "Ders kaydımı yaptım ama danışman onayı verilmeden ekle-sil haftası bitti. Kaydım geçerli sayılır mı?",
+          "topic": "ders_kaydi",
+          "expansion_count": 4,
+          "marker_group_count": 4,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "ders kayit kayit yenileme obs danisman onayi",
+            "ders kayit tarihleri ekle sil haftasi",
+            "katki payi ogrenim ucreti ders kaydi oncesinde odeme",
+            "ders secimi obs uzerinden yapilir danisman onayi takip edilir"
+          ],
+          "marker_groups": [
+            [
+              "ders kayit",
+              "danisman onay"
+            ],
+            [
+              "ekle sil",
+              "ders kayit"
+            ],
+            [
+              "katki payi",
+              "ogrenim ucreti"
+            ],
+            [
+              "obs",
+              "ders secimi"
+            ]
+          ]
+        },
+        {
+          "query": "Danışman onayı olmadan ders kaydım tamamlanır mı?",
+          "topic": "ders_kaydi",
+          "expansion_count": 4,
+          "marker_group_count": 4,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "ders kayit kayit yenileme obs danisman onayi",
+            "ders kayit tarihleri ekle sil haftasi",
+            "katki payi ogrenim ucreti ders kaydi oncesinde odeme",
+            "ders secimi obs uzerinden yapilir danisman onayi takip edilir"
+          ],
+          "marker_groups": [
+            [
+              "ders kayit",
+              "danisman onay"
+            ],
+            [
+              "ekle sil",
+              "ders kayit"
+            ],
+            [
+              "katki payi",
+              "ogrenim ucreti"
+            ],
+            [
+              "obs",
+              "ders secimi"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "makeup_exam_deadline",
+      "expected_topic": "sinavlar",
+      "passed": true,
+      "results": [
+        {
+          "query": "Mazeret sınavına başvururken raporumu 3 iş günü içinde veremedim; yine de sınava girme hakkım olur mu?",
+          "topic": "sinavlar",
+          "expansion_count": 4,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "mazeret sinavi basvurusu 3 is gunu mazeret belgeleri",
+            "saglik raporu mazeret sinavi basvuru suresi",
+            "ara sinav mazeret sinavi yonetim kurulu",
+            "yariyil sonu sinavi mazeret butunleme"
+          ],
+          "marker_groups": [
+            [
+              "mazeret sinavi",
+              "3 is gunu"
+            ],
+            [
+              "mazeret belgeleri",
+              "ogrenci isleri"
+            ],
+            [
+              "ara sinav",
+              "mazeret sinavi"
+            ]
+          ]
+        },
+        {
+          "query": "Mazeret sınavı için kaç gün içinde başvuru yapılmalı?",
+          "topic": "sinavlar",
+          "expansion_count": 4,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "mazeret sinavi basvurusu 3 is gunu mazeret belgeleri",
+            "saglik raporu mazeret sinavi basvuru suresi",
+            "ara sinav mazeret sinavi yonetim kurulu",
+            "yariyil sonu sinavi mazeret butunleme"
+          ],
+          "marker_groups": [
+            [
+              "mazeret sinavi",
+              "3 is gunu"
+            ],
+            [
+              "mazeret belgeleri",
+              "ogrenci isleri"
+            ],
+            [
+              "ara sinav",
+              "mazeret sinavi"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attendance_reported_absence",
+      "expected_topic": "devamsizlik",
+      "passed": true,
+      "results": [
+        {
+          "query": "İlk kez aldığım bir uygulamalı derste devam zorunluluğu kaçtır ve raporlu olduğum günler devamsızlıktan sayılır mı?",
+          "topic": "devamsizlik",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "devam zorunlulugu teorik yuzde 70 uygulamali yuzde 80",
+            "raporlu olunan sure devamsizlik suresinden sayilir",
+            "devamsizlik devam sartini yerine getirmeyen ogrenci"
+          ],
+          "marker_groups": [
+            [
+              "devam zorunlulugu",
+              "yuzde 70"
+            ],
+            [
+              "uygulamali",
+              "yuzde 80"
+            ],
+            [
+              "raporlu",
+              "devamsizlik"
+            ]
+          ]
+        },
+        {
+          "query": "Uygulamalı derslerde devam zorunluluğu kaçtır?",
+          "topic": "devamsizlik",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "devam zorunlulugu teorik yuzde 70 uygulamali yuzde 80",
+            "raporlu olunan sure devamsizlik suresinden sayilir",
+            "devamsizlik devam sartini yerine getirmeyen ogrenci"
+          ],
+          "marker_groups": [
+            [
+              "devam zorunlulugu",
+              "yuzde 70"
+            ],
+            [
+              "uygulamali",
+              "yuzde 80"
+            ],
+            [
+              "raporlu",
+              "devamsizlik"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "summer_school_external_equivalence",
+      "expected_topic": "yaz_okulu",
+      "passed": true,
+      "results": [
+        {
+          "query": "Yaz okulunda başka üniversiteden aldığım dersi saydırmak istiyorum; ders içerikleri benziyor ama AKTS farklıysa ne olur?",
+          "topic": "yaz_okulu",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "yaz okulunda baska universiteden ders alma bolum baskanligi uygun gormesi",
+            "yaz okulu esdegerlik sartlari ders icerigi akts onay",
+            "universitemiz disinda yaz okulu dersi saydirma"
+          ],
+          "marker_groups": [
+            [
+              "yaz okulu",
+              "esdeger"
+            ],
+            [
+              "yaz okulu",
+              "baska universite"
+            ],
+            [
+              "yaz okulu",
+              "bolum baskanligi"
+            ]
+          ]
+        },
+        {
+          "query": "Başka üniversiteden alacağım yaz okulu dersinin sayılması için hangi şartlar gerekir?",
+          "topic": "yaz_okulu",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "yaz okulunda baska universiteden ders alma bolum baskanligi uygun gormesi",
+            "yaz okulu esdegerlik sartlari ders icerigi akts onay",
+            "universitemiz disinda yaz okulu dersi saydirma"
+          ],
+          "marker_groups": [
+            [
+              "yaz okulu",
+              "esdeger"
+            ],
+            [
+              "yaz okulu",
+              "baska universite"
+            ],
+            [
+              "yaz okulu",
+              "bolum baskanligi"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graduation_staj_missing",
+      "expected_topic": "mezuniyet",
+      "passed": true,
+      "results": [
+        {
+          "query": "Mezuniyet için tüm derslerimi geçtim ama zorunlu stajım eksik. Geçici mezuniyet belgesi alabilir miyim?",
+          "topic": "mezuniyet",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "mezuniyet icin dersler ve tum akademik yukumlulukler tamamlanmalidir",
+            "diploma mezuniyet belgeleri mezun olmaya hak kazanir",
+            "staj yukumlulugu eksikse diploma islemleri tamamlanmis sayilmaz"
+          ],
+          "marker_groups": [
+            [
+              "mezuniyet",
+              "akademik yukumluluk"
+            ],
+            [
+              "diploma",
+              "mezun"
+            ],
+            [
+              "mezun",
+              "butun calismalari"
+            ]
+          ]
+        },
+        {
+          "query": "Bilgisayar mühendisliği öğrencisi mezuniyet için staj eksikse diplomasını alabilir mi?",
+          "topic": "mezuniyet",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "mezuniyet icin dersler ve tum akademik yukumlulukler tamamlanmalidir",
+            "diploma mezuniyet belgeleri mezun olmaya hak kazanir",
+            "staj yukumlulugu eksikse diploma islemleri tamamlanmis sayilmaz"
+          ],
+          "marker_groups": [
+            [
+              "mezuniyet",
+              "akademik yukumluluk"
+            ],
+            [
+              "diploma",
+              "mezun"
+            ],
+            [
+              "mezun",
+              "butun calismalari"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "single_double_exam_staj",
+      "expected_topic": "sinavlar",
+      "passed": true,
+      "results": [
+        {
+          "query": "Bilgisayar mühendisliği öğrencisiyim; staj dersine daha önce hiç kayıtlanmadıysam tek/çift ders sınavına girebilir miyim?",
+          "topic": "sinavlar",
+          "expansion_count": 6,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "tek cift ders sinavi staj dersi hic kayitlanmamis hakki yoktur",
+            "staj dersini alip yz notu almis ogrenci tek cift ders sinavina basvurabilir",
+            "tek dersi ve bahar yariyilindan staji kalan ogrenci sadece dersten girebilir",
+            "tek cift ders sinavi basvuru kosullari",
+            "hic alinmamis dersler icin tek cift ders sinav hakki verilmez",
+            "devam sartini yerine getirmeyen ogrenci tek cift ders sinavina alinmaz"
+          ],
+          "marker_groups": [
+            [
+              "tek",
+              "cift",
+              "staj"
+            ],
+            [
+              "staj dersi",
+              "yz"
+            ],
+            [
+              "kayitlanmamis",
+              "hakki yoktur"
+            ]
+          ]
+        },
+        {
+          "query": "Tek ders sınavına girmek için stajımı tamamlamış olmam gerekir mi?",
+          "topic": "sinavlar",
+          "expansion_count": 6,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "tek cift ders sinavi staj dersi hic kayitlanmamis hakki yoktur",
+            "staj dersini alip yz notu almis ogrenci tek cift ders sinavina basvurabilir",
+            "tek dersi ve bahar yariyilindan staji kalan ogrenci sadece dersten girebilir",
+            "tek cift ders sinavi basvuru kosullari",
+            "hic alinmamis dersler icin tek cift ders sinav hakki verilmez",
+            "devam sartini yerine getirmeyen ogrenci tek cift ders sinavina alinmaz"
+          ],
+          "marker_groups": [
+            [
+              "tek",
+              "cift",
+              "staj"
+            ],
+            [
+              "staj dersi",
+              "yz"
+            ],
+            [
+              "kayitlanmamis",
+              "hakki yoktur"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "documents_transcript",
+      "expected_topic": "ogrenci_belgesi_transkript",
+      "passed": true,
+      "results": [
+        {
+          "query": "Öğrenci belgesi veya transkript almam gerekirse önce nereden almalıyım, e-Devlet belgesi yeterli olur mu?",
+          "topic": "ogrenci_belgesi_transkript",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "ogrenci belgesi transkript e devlet kapisi",
+            "islak imzali onayli belge ogrenci isleri burosu",
+            "not durum belgesi transkript e devlet"
+          ],
+          "marker_groups": [
+            [
+              "ogrenci belgesi",
+              "e devlet"
+            ],
+            [
+              "transkript",
+              "e devlet"
+            ],
+            [
+              "islak imzali",
+              "ogrenci isleri"
+            ]
+          ]
+        },
+        {
+          "query": "Transkript nereden alınır?",
+          "topic": "ogrenci_belgesi_transkript",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "ogrenci belgesi transkript e devlet kapisi",
+            "islak imzali onayli belge ogrenci isleri burosu",
+            "not durum belgesi transkript e devlet"
+          ],
+          "marker_groups": [
+            [
+              "ogrenci belgesi",
+              "e devlet"
+            ],
+            [
+              "transkript",
+              "e devlet"
+            ],
+            [
+              "islak imzali",
+              "ogrenci isleri"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cap_yandal_conditions",
+      "expected_topic": "cap_yandal",
+      "passed": true,
+      "results": [
+        {
+          "query": "Çift anadal başvurusu yapmak için genel not ortalamam kaç olmalı, ayrıca başarı sıralaması şartı var mı?",
+          "topic": "cap_yandal",
+          "expansion_count": 2,
+          "marker_group_count": 2,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "cift anadal basvuru genel not ortalamasi 2,72 en ust yuzde 20",
+            "cift anadal programi basvuru kosullari basari siralamasi"
+          ],
+          "marker_groups": [
+            [
+              "cift anadal",
+              "2 72"
+            ],
+            [
+              "cift anadal",
+              "yuzde 20"
+            ]
+          ]
+        },
+        {
+          "query": "ÇAP başvurusu için ortalama şartı nedir?",
+          "topic": "cap_yandal",
+          "expansion_count": 2,
+          "marker_group_count": 2,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "cift anadal basvuru genel not ortalamasi 2,72 en ust yuzde 20",
+            "cift anadal programi basvuru kosullari basari siralamasi"
+          ],
+          "marker_groups": [
+            [
+              "cift anadal",
+              "2 72"
+            ],
+            [
+              "cift anadal",
+              "yuzde 20"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yatay_gecis_calendar",
+      "expected_topic": "yatay_gecis",
+      "passed": true,
+      "results": [
+        {
+          "query": "Yatay geçiş başvuruları ne zaman yapılır?",
+          "topic": "yatay_gecis",
+          "expansion_count": 2,
+          "marker_group_count": 2,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "yatay gecis basvuru tarihleri akademik takvim duyuru",
+            "kurum ici kurumlar arasi yatay gecis basvuru"
+          ],
+          "marker_groups": [
+            [
+              "yatay gecis",
+              "basvuru"
+            ],
+            [
+              "yatay gecis",
+              "akademik takvim"
+            ]
+          ]
+        },
+        {
+          "query": "Kurum içi yatay geçiş için takvimi nereden takip etmeliyim?",
+          "topic": "yatay_gecis",
+          "expansion_count": 2,
+          "marker_group_count": 2,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "yatay gecis basvuru tarihleri akademik takvim duyuru",
+            "kurum ici kurumlar arasi yatay gecis basvuru"
+          ],
+          "marker_groups": [
+            [
+              "yatay gecis",
+              "basvuru"
+            ],
+            [
+              "yatay gecis",
+              "akademik takvim"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "discipline_scholarship",
+      "expected_topic": "disiplin",
+      "passed": true,
+      "results": [
+        {
+          "query": "Disiplin cezası alan öğrenci bursunu kaybeder mi?",
+          "topic": "disiplin",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "ogrenci disiplin yonetmeligi disiplin cezasi",
+            "disiplin cezasi burs kaybi uzaklastirma burs",
+            "2547 sayili kanun 54 madde disiplin"
+          ],
+          "marker_groups": [
+            [
+              "disiplin",
+              "2547"
+            ],
+            [
+              "disiplin",
+              "burs"
+            ],
+            [
+              "disiplin",
+              "ceza"
+            ]
+          ]
+        },
+        {
+          "query": "Disiplin işlemleriyle ilgili mevzuata nereden ulaşabilirim?",
+          "topic": "disiplin",
+          "expansion_count": 3,
+          "marker_group_count": 3,
+          "casual_response": false,
+          "errors": [],
+          "passed": true,
+          "expansions": [
+            "ogrenci disiplin yonetmeligi disiplin cezasi",
+            "disiplin cezasi burs kaybi uzaklastirma burs",
+            "2547 sayili kanun 54 madde disiplin"
+          ],
+          "marker_groups": [
+            [
+              "disiplin",
+              "2547"
+            ],
+            [
+              "disiplin",
+              "burs"
+            ],
+            [
+              "disiplin",
+              "ceza"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "casual_greeting",
+      "expected_topic": "casual",
+      "passed": true,
+      "results": [
+        {
+          "query": "Merhaba nasılsın?",
+          "topic": "genel",
+          "expansion_count": 0,
+          "marker_group_count": 0,
+          "casual_response": true,
+          "errors": [],
+          "passed": true,
+          "expansions": [],
+          "marker_groups": []
+        },
+        {
+          "query": "Teşekkür ederim.",
+          "topic": "genel",
+          "expansion_count": 0,
+          "marker_group_count": 0,
+          "casual_response": true,
+          "errors": [],
+          "passed": true,
+          "expansions": [],
+          "marker_groups": []
+        }
+      ]
+    },
+    {
+      "id": "casual_off_topic",
+      "expected_topic": "casual",
+      "passed": true,
+      "results": [
+        {
+          "query": "Bugün hava nasıl?",
+          "topic": "genel",
+          "expansion_count": 0,
+          "marker_group_count": 0,
+          "casual_response": true,
+          "errors": [],
+          "passed": true,
+          "expansions": [],
+          "marker_groups": []
+        },
+        {
+          "query": "Python nedir?",
+          "topic": "genel",
+          "expansion_count": 0,
+          "marker_group_count": 0,
+          "casual_response": true,
+          "errors": [],
+          "passed": true,
+          "expansions": [],
+          "marker_groups": []
+        }
+      ]
+    }
+  ]
+}
