@@ -8,6 +8,7 @@ Amac, veri kalitesini tartisilabilir olmaktan cikarip olculebilir hale getirmekt
 import argparse
 import json
 import os
+import sqlite3
 import sys
 from collections import Counter
 from statistics import mean
@@ -21,6 +22,7 @@ except ImportError:
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT_DIR, "data")
+DB_DIR = os.path.join(ROOT_DIR, "db", "chroma_db")
 KB_FILE = os.path.join(DATA_DIR, "knowledge_base.json")
 CHUNKS_FILE = os.path.join(DATA_DIR, "chunks.json")
 
@@ -28,13 +30,6 @@ if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
 from core.chatbot import enrich_chunk_metadata
-from core.vector_db_utils import (
-    resolve_vector_db_dir,
-    sqlite_embedding_count,
-    subprocess_vector_store_health,
-)
-
-DB_DIR = resolve_vector_db_dir(ROOT_DIR)
 
 NOISE_MARKERS = [
     "anasayfa",
@@ -92,32 +87,31 @@ def print_counter(title: str, counter: Counter, limit: int = 10):
 
 
 def chroma_counts(db_dir: str = DB_DIR):
-    sqlite_count = sqlite_embedding_count(db_dir)
-    if isinstance(sqlite_count, int) and sqlite_count > 0:
-        return {"langchain": sqlite_count, "_source": "sqlite_primary"}
     if chromadb is None:
-        sqlite_count = sqlite_embedding_count(db_dir)
-        if sqlite_count is None:
+        sqlite_path = os.path.join(db_dir, "chroma.sqlite3")
+        if not os.path.exists(sqlite_path):
             return None
-        return {"langchain": sqlite_count, "_source": "sqlite"}
+        try:
+            with sqlite3.connect(sqlite_path) as conn:
+                cur = conn.cursor()
+                cur.execute("SELECT COUNT(*) FROM embeddings")
+                return {"langchain": int(cur.fetchone()[0])}
+        except Exception as exc:
+            return {"ERROR": str(exc)}
     if not os.path.exists(db_dir) or not os.listdir(db_dir):
         return {}
     try:
         client = chromadb.PersistentClient(path=db_dir)
         counts = {collection.name: collection.count() for collection in client.list_collections()}
         if sum(counts.values()) == 0:
-            sqlite_count = sqlite_embedding_count(db_dir)
-            if sqlite_count is not None:
-                return {"langchain": sqlite_count, "_source": "sqlite_zero_fallback"}
+            sqlite_path = os.path.join(db_dir, "chroma.sqlite3")
+            if os.path.exists(sqlite_path):
+                with sqlite3.connect(sqlite_path) as conn:
+                    cur = conn.cursor()
+                    cur.execute("SELECT COUNT(*) FROM embeddings")
+                    return {"langchain": int(cur.fetchone()[0])}
         return counts
     except Exception as exc:
-        sqlite_count = sqlite_embedding_count(db_dir)
-        if sqlite_count is not None:
-            return {
-                "langchain": sqlite_count,
-                "_source": "sqlite_error_fallback",
-                "_warning": str(exc),
-            }
         return {"ERROR": str(exc)}
 
 
@@ -138,7 +132,6 @@ def main():
     print(f"Ham kayit sayisi: {len(kb)}")
     print(f"Chunk sayisi: {len(chunks)}")
     print(f"Benzersiz kaynak sayisi: {len({item.get('source_url', '') for item in enriched_chunks})}")
-    print(f"Aktif DB yolu: {DB_DIR}")
 
     counts = chroma_counts()
     if counts is None:
@@ -146,13 +139,8 @@ def main():
     elif "ERROR" in counts:
         print(f"ChromaDB kayit sayisi: kontrol hatasi ({counts['ERROR']})")
     else:
-        count_values = [value for key, value in counts.items() if not key.startswith("_")]
-        total_chroma = sum(count_values)
+        total_chroma = sum(counts.values())
         print(f"ChromaDB kayit sayisi: {total_chroma}")
-        if counts.get("_source"):
-            print(f"Not: sayim kaynagi = {counts['_source']}")
-        if counts.get("_warning"):
-            print(f"Not: Chroma istemci uyarisi = {counts['_warning']}")
         if total_chroma != len(chunks):
             print(f"UYARI: ChromaDB ({total_chroma}) ve chunks.json ({len(chunks)}) sayilari esit degil.")
 
