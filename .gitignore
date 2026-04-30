@@ -11,3 +11,14 @@ logs/
 
 data/chroma_db/
 db/chroma_db/
+db/chroma_store_live/
+db/chroma_store_staging/
+db/chroma_store_backup/
+db/chroma_db_candidate/
+db/probe_*/
+db/test_chroma_manual/
+tmp_chroma_probe/
+tmp_db_sizes/
+tmp_langchain_full/
+data/local_vector_index.npy
+data/local_vector_index_meta.json
