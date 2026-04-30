@@ -2,17 +2,15 @@ import json
 import hashlib
 import os
 import re
+import sqlite3
 import unicodedata
 from collections import Counter
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional, Set
 
 import requests
-from langchain_chroma import Chroma
 from langchain_core.chat_history import InMemoryChatMessageHistory
 from langchain_core.messages import AIMessage, HumanMessage
-from langchain_huggingface import HuggingFaceEmbeddings
 from rank_bm25 import BM25Okapi
-from sentence_transformers import CrossEncoder
 
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
@@ -47,6 +45,7 @@ DB_DIR = os.path.join(ROOT_DIR, "db", "chroma_db")
 MAX_MEMORY_TURNS = 5
 COLLECTION_NAME = "langchain"
 EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
+ENABLE_RERANKER = os.getenv("CHATBOT_ENABLE_RERANKER", "1").strip().lower() not in {"0", "false", "no"}
 DEFAULT_PROGRAM_SCOPE = ""
 GENERAL_SCOPE = "genel"
 OTHER_SCOPE = "diger_birim"
@@ -1408,7 +1407,11 @@ def build_query_variants(query: str) -> List[str]:
             continue
         seen.add(normalized_variant)
         unique_variants.append(variant)
-    return unique_variants
+    if is_short_factual_query(query):
+        return unique_variants[:2]
+    if infer_query_topic(query) != "genel":
+        return unique_variants[:3]
+    return unique_variants[:2]
 
 
 def build_intent_query_expansions(query: str) -> List[str]:
@@ -1652,25 +1655,44 @@ class BM25Search:
         self.chunks = chunks
         self.bm25 = BM25Okapi([tokenize(chunk["content"]) for chunk in chunks])
 
-    def search(self, query: str, k: int = 5) -> List[Dict]:
+    def search(self, query: str, k: int = 5, allowed_indexes: Optional[Set[int]] = None) -> List[Dict]:
         query_tokens = tokenize(query)
         if not query_tokens:
             return []
         scores = self.bm25.get_scores(query_tokens)
-        return [self.chunks[i] for i in scores.argsort()[-k:][::-1]]
+        if allowed_indexes:
+            ranked_indexes = sorted(allowed_indexes, key=lambda i: scores[i], reverse=True)
+        else:
+            ranked_indexes = scores.argsort()[::-1].tolist()
+
+        results = []
+        for index in ranked_indexes:
+            if len(results) >= k:
+                break
+            if scores[index] <= 0 and results:
+                break
+            results.append(self.chunks[index])
+        return results
 
 
 class Reranker:
     def __init__(self):
-        self.model = CrossEncoder(
-            "cross-encoder/ms-marco-MiniLM-L-6-v2",
-            max_length=512,
-            local_files_only=True,
-        )
+        self.model: Optional[Any] = None
+
+    def _ensure_model(self):
+        if self.model is None:
+            from sentence_transformers import CrossEncoder
+
+            self.model = CrossEncoder(
+                "cross-encoder/ms-marco-MiniLM-L-6-v2",
+                max_length=512,
+                local_files_only=True,
+            )
 
     def rerank(self, query: str, chunks: List[Dict], k: int = 5) -> List[Dict]:
         if not chunks:
             return []
+        self._ensure_model()
         scores = self.model.predict([[query, chunk["content"]] for chunk in chunks])
         ranked = sorted(zip(chunks, scores), key=lambda item: item[1], reverse=True)
         return [chunk for chunk, _ in ranked[:k]]
@@ -1703,16 +1725,13 @@ class RAGChatbot:
             self.raw_records.append(enrich_chunk_metadata(mapped))
 
         self.bm25_search = BM25Search(self.chunks)
-        self.reranker = Reranker()
-        self.vector_store = Chroma(
-            collection_name=COLLECTION_NAME,
-            persist_directory=DB_DIR,
-            embedding_function=HuggingFaceEmbeddings(
-                model_name=EMBEDDING_MODEL_NAME,
-                model_kwargs={"local_files_only": True},
-            ),
-        )
-        self.vector_count = self._vector_store_count()
+        self.chunk_indexes_by_topic = self._build_topic_index(self.chunks)
+        self.chunk_indexes_by_scope = self._build_scope_index(self.chunks)
+        self.enable_reranker = ENABLE_RERANKER
+        self.reranker = Reranker() if self.enable_reranker else None
+        self.embedding_function: Optional[Any] = None
+        self.vector_store: Optional[Any] = None
+        self.vector_count = self._read_vector_store_count()
         self.message_history = InMemoryChatMessageHistory()
         self.conversation_state = {
             "program_scope": self.program_scope or "",
@@ -1727,7 +1746,57 @@ class RAGChatbot:
         else:
             print("UYARI: ChromaDB bos veya okunamiyor. Arama BM25 uzerinden devam edecek.")
             print("DB'yi yenilemek icin: python pipeline/create_vector_db.py --rebuild")
-        print("BM25 + Reranker + ChromaDB + sohbet hafizasi hazir")
+        search_stack = "BM25 + ChromaDB + sohbet hafizasi hazir"
+        if self.enable_reranker:
+            search_stack = "BM25 + Reranker + ChromaDB + sohbet hafizasi hazir"
+        print(search_stack)
+
+    def _build_topic_index(self, chunks: List[Dict]) -> Dict[str, Set[int]]:
+        index: Dict[str, Set[int]] = {}
+        for i, chunk in enumerate(chunks):
+            topic = chunk.get("topic", infer_topic(chunk)) or "genel"
+            index.setdefault(topic, set()).add(i)
+        return index
+
+    def _build_scope_index(self, chunks: List[Dict]) -> Dict[str, Set[int]]:
+        index: Dict[str, Set[int]] = {}
+        for i, chunk in enumerate(chunks):
+            scope = chunk.get("program_scope", infer_chunk_scope(chunk)) or GENERAL_SCOPE
+            index.setdefault(scope, set()).add(i)
+        return index
+
+    def _read_vector_store_count(self) -> int:
+        sqlite_path = os.path.join(DB_DIR, "chroma.sqlite3")
+        if not os.path.exists(sqlite_path):
+            return 0
+        try:
+            with sqlite3.connect(sqlite_path) as conn:
+                cur = conn.cursor()
+                cur.execute("SELECT COUNT(*) FROM embeddings")
+                return int(cur.fetchone()[0])
+        except Exception:
+            return 0
+
+    def _get_embedding_function(self):
+        if self.embedding_function is None:
+            from langchain_huggingface import HuggingFaceEmbeddings
+
+            self.embedding_function = HuggingFaceEmbeddings(
+                model_name=EMBEDDING_MODEL_NAME,
+                model_kwargs={"local_files_only": True},
+            )
+        return self.embedding_function
+
+    def _get_vector_store(self):
+        if self.vector_store is None and self.vector_count > 0:
+            from langchain_chroma import Chroma
+
+            self.vector_store = Chroma(
+                collection_name=COLLECTION_NAME,
+                persist_directory=DB_DIR,
+                embedding_function=self._get_embedding_function(),
+            )
+        return self.vector_store
 
     def _resolve_program_scope(self, query: str) -> str:
         return (
@@ -1818,23 +1887,86 @@ class RAGChatbot:
 
     def _ollama_kontrol(self):
         try:
-            requests.get("http://localhost:11434", timeout=3)
+            requests.get("http://localhost:11434", timeout=0.5)
             print(f"Ollama calisiyor (model: {self.model_name})")
         except requests.exceptions.ConnectionError:
             print("Ollama bulunamadi! 'ollama serve' komutunu calistirin.")
+        except requests.exceptions.Timeout:
+            print("Ollama kontrolu zaman asimina ugradi, islem devam ediyor.")
 
-    def _vector_store_count(self) -> int:
-        try:
-            return int(self.vector_store._collection.count())
-        except Exception:
-            return 0
+    def _candidate_index_pool(self, query: str) -> Optional[Set[int]]:
+        index_pool: Optional[Set[int]] = None
+        effective_topic = self._resolve_topic(query)
+        effective_scope = self._resolve_program_scope(query)
+
+        if effective_topic and effective_topic != "genel":
+            topic_indexes = set(self.chunk_indexes_by_topic.get(effective_topic, set()))
+            topic_indexes.update(self.chunk_indexes_by_topic.get("genel", set()))
+            if topic_indexes:
+                index_pool = topic_indexes
+
+        if is_program_specific_query(query) and effective_scope:
+            scope_indexes = set(self.chunk_indexes_by_scope.get(effective_scope, set()))
+            scope_indexes.update(self.chunk_indexes_by_scope.get(GENERAL_SCOPE, set()))
+            if scope_indexes:
+                index_pool = scope_indexes if index_pool is None else index_pool & scope_indexes
+
+        if index_pool is not None and len(index_pool) < 24:
+            return None
+        return index_pool
+
+    def _iter_specialized_pool(self, query: str) -> List[Dict]:
+        effective_topic = self._resolve_topic(query)
+        effective_scope = self._resolve_program_scope(query)
+        pool = self.chunks + self.raw_records
+
+        if effective_topic and effective_topic != "genel":
+            filtered = [
+                chunk for chunk in pool
+                if chunk.get("topic", infer_topic(chunk)) in {effective_topic, "genel", ""}
+            ]
+            if filtered:
+                pool = filtered
+
+        if is_program_specific_query(query) and effective_scope:
+            filtered = [
+                chunk for chunk in pool
+                if chunk.get("program_scope", infer_chunk_scope(chunk)) in {effective_scope, GENERAL_SCOPE, ""}
+            ]
+            if filtered:
+                pool = filtered
+
+        return pool
+
+    def _should_use_vector_search(self, query: str) -> bool:
+        if is_short_factual_query(query):
+            return False
+        if (
+            asks_staj_timing(query)
+            or asks_staj_course_registration(query)
+            or asks_staj_count(query)
+            or asks_staj_missed_period(query)
+            or asks_staj_report_submission(query)
+            or asks_yaz_okulu_duration(query)
+            or asks_yaz_okulu_start(query)
+            or asks_yaz_staji_schedule(query)
+            or asks_registration_date_or_process(query)
+            or asks_max_akts(query)
+            or asks_attendance_limit(query)
+            or asks_excuse_exam(query)
+            or asks_student_document(query)
+            or asks_transcript_document(query)
+        ):
+            return False
+        return True
 
     def _specialized_candidates(self, query: str) -> List[Dict]:
         normalized_query = normalize_text(query)
         candidates = []
+        candidate_pool = self._iter_specialized_pool(query)
 
         if "yaz okulu" in normalized_query:
-            for chunk in self.chunks + self.raw_records:
+            for chunk in candidate_pool:
                 content = chunk.get("content", "")
                 normalized_content = normalize_text(content)
                 kategori = chunk.get("kategori", "")
@@ -1851,7 +1983,7 @@ class RAGChatbot:
                     candidates.append(chunk)
 
         if asks_yaz_staji_schedule(query):
-            for chunk in self.chunks + self.raw_records:
+            for chunk in candidate_pool:
                 content = chunk.get("content", "")
                 normalized_content = normalize_text(content)
                 if any(
@@ -1863,7 +1995,7 @@ class RAGChatbot:
                     candidates.append(chunk)
 
         if asks_staj_count(query):
-            for chunk in self.chunks + self.raw_records:
+            for chunk in candidate_pool:
                 normalized_content = normalize_text(chunk.get("content", ""))
                 if "staj" not in normalized_content:
                     continue
@@ -1883,7 +2015,7 @@ class RAGChatbot:
                     candidates.append(chunk)
 
         if asks_staj_report_submission(query):
-            for chunk in self.chunks + self.raw_records:
+            for chunk in candidate_pool:
                 normalized_content = normalize_text(chunk.get("content", ""))
                 if "staj" not in normalized_content:
                     continue
@@ -1901,7 +2033,7 @@ class RAGChatbot:
                     candidates.append(chunk)
 
         if asks_makeup_exam_with_missing_internship(query):
-            for chunk in self.chunks + self.raw_records:
+            for chunk in candidate_pool:
                 normalized_content = normalize_text(chunk.get("content", ""))
                 if "tek cift" not in normalized_content:
                     continue
@@ -1917,7 +2049,7 @@ class RAGChatbot:
                     candidates.append(chunk)
 
         if asks_disciplinary_scholarship_loss(query):
-            for chunk in self.chunks + self.raw_records:
+            for chunk in candidate_pool:
                 normalized_content = normalize_text(chunk.get("content", ""))
                 if "burs" in normalized_content and any(
                     marker in normalized_content for marker in ["disiplin", "ceza", "uzaklastirma"]
@@ -1925,7 +2057,7 @@ class RAGChatbot:
                     candidates.append(chunk)
 
         if asks_exam_schedule_location(query):
-            for chunk in self.chunks + self.raw_records:
+            for chunk in candidate_pool:
                 normalized_content = normalize_text(chunk.get("content", ""))
                 if "sinav program" in normalized_content and any(
                     marker in normalized_content for marker in ["duyuru", "yayin", "takip", "guncelleme"]
@@ -1933,7 +2065,7 @@ class RAGChatbot:
                     candidates.append(chunk)
 
         for marker_group in intent_candidate_markers(query):
-            for chunk in self.chunks + self.raw_records:
+            for chunk in candidate_pool:
                 normalized_content = normalize_text(chunk.get("content", ""))
                 if all(marker in normalized_content for marker in marker_group):
                     candidates.append(chunk)
@@ -1952,14 +2084,37 @@ class RAGChatbot:
     def hybrid_search(self, query: str, k: int = 5) -> List[Dict]:
         candidate_k = max(k * 4, 12)
         bm25_results: List[Dict] = []
-        vector_results: List[Dict] = []
         specialized_candidates = self._specialized_candidates(query)
+        candidate_index_pool = self._candidate_index_pool(query)
+        query_variants = build_query_variants(query)
 
-        for variant in build_query_variants(query):
-            bm25_results.extend(self.bm25_search.search(variant, k=candidate_k))
-            if self.vector_count > 0:
+        for i, variant in enumerate(query_variants):
+            bm25_results.extend(self.bm25_search.search(variant, k=candidate_k, allowed_indexes=candidate_index_pool))
+
+        bm25_results.extend(specialized_candidates)
+
+        seen, unique = set(), []
+        for result in bm25_results:
+            content = result.get("content", "").strip()
+            if not content:
+                continue
+            fingerprint = hashlib.md5(content.encode("utf-8")).hexdigest()
+            if fingerprint in seen:
+                continue
+            seen.add(fingerprint)
+            unique.append(result)
+
+        unique = self._filter_candidates_by_scope(query, unique)
+        unique = self._filter_candidates_by_topic(query, unique)
+        scored = sorted(unique, key=lambda item: self._candidate_score(query, item), reverse=True)
+        top_candidates = scored[: max(candidate_k, 16)]
+
+        if self.vector_count > 0 and self._should_use_vector_search(query):
+            vector_results: List[Dict] = []
+            vector_store = self._get_vector_store()
+            if vector_store is not None:
                 try:
-                    vector_docs = self.vector_store.similarity_search(variant, k=candidate_k)
+                    vector_docs = vector_store.similarity_search(query_variants[0], k=candidate_k)
                 except Exception:
                     vector_docs = []
                 vector_results.extend(
@@ -1979,24 +2134,19 @@ class RAGChatbot:
                         for doc in vector_docs
                     ]
                 )
-
-        bm25_results.extend(specialized_candidates)
-
-        seen, unique = set(), []
-        for result in bm25_results + vector_results:
-            content = result.get("content", "").strip()
-            if not content:
-                continue
-            fingerprint = hashlib.md5(content.encode("utf-8")).hexdigest()
-            if fingerprint in seen:
-                continue
-            seen.add(fingerprint)
-            unique.append(result)
-
-        unique = self._filter_candidates_by_scope(query, unique)
-        unique = self._filter_candidates_by_topic(query, unique)
-        scored = sorted(unique, key=lambda item: self._candidate_score(query, item), reverse=True)
-        top_candidates = scored[: max(candidate_k, 16)]
+            for result in vector_results:
+                content = result.get("content", "").strip()
+                if not content:
+                    continue
+                fingerprint = hashlib.md5(content.encode("utf-8")).hexdigest()
+                if fingerprint in seen:
+                    continue
+                seen.add(fingerprint)
+                unique.append(result)
+            unique = self._filter_candidates_by_scope(query, unique)
+            unique = self._filter_candidates_by_topic(query, unique)
+            scored = sorted(unique, key=lambda item: self._candidate_score(query, item), reverse=True)
+            top_candidates = scored[: max(candidate_k, 16)]
 
         if asks_makeup_exam_with_missing_internship(query) or asks_staj_report_submission(query):
             prioritized = []
@@ -2024,6 +2174,8 @@ class RAGChatbot:
             or asks_yaz_staji_schedule(query)
         ):
             return top_candidates[:k]
+        if len(top_candidates) <= k or not self.enable_reranker or self.reranker is None:
+            return top_candidates
         return self.reranker.rerank(query, top_candidates, k=k)
 
     def _filter_candidates_by_scope(self, query: str, candidates: List[Dict]) -> List[Dict]:

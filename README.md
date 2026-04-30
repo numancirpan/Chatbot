@@ -79,6 +79,16 @@ Alternatif olarak HTTP API servisini başlatmak için:
 uvicorn api:app --reload
 ```
 
+Dusuk donanimda daha hizli calistirmak icin istege bagli olarak reranker'i kapatabilirsiniz:
+
+```bash
+$env:CHATBOT_ENABLE_RERANKER=0
+streamlit run chatbot_interface.py
+```
+
+Bu modda sistem BM25 + ChromaDB ile calisir; cevaplar biraz daha az hassas olabilir ama
+acilis ve zor sorgu gecikmesi belirgin sekilde azalir.
+
 ### 5. Dataset Audit Çalıştır
 ```bash
 python pipeline/dataset_audit.py
