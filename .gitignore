@@ -11,3 +11,8 @@ logs/
 
 data/chroma_db/
 db/chroma_db/
+
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
