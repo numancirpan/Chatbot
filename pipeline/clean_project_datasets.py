@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import json
 import re
@@ -11,11 +11,11 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from core.chatbot import normalize_text
-from pipeline.evaluate_golden import case_turns
+from pipeline.evaluate_cases import case_turns
 
 DATA_DIR = ROOT_DIR / "data"
 CHUNKS_PATH = DATA_DIR / "chunks.json"
-GOLDEN_PATH = DATA_DIR / "golden_questions.json"
+EVALUATION_PATH = DATA_DIR / "evaluation_cases.json"
 RETRIEVAL_PATH = DATA_DIR / "retrieval_finetune_data.json"
 GENERATION_PATH = DATA_DIR / "generation_finetune_data.json"
 
@@ -175,9 +175,9 @@ def canonical_source_url(record: Dict) -> str:
     return suggested or source_url
 
 
-def cleanup_golden(golden: List[Dict]) -> List[Dict]:
+def cleanup_evaluation(evaluation: List[Dict]) -> List[Dict]:
     cleaned = []
-    for record in golden:
+    for record in evaluation:
         clone = dict(record)
         override = RECORD_OVERRIDES.get(str(clone.get("id", "")).strip(), {})
         if override:
@@ -194,32 +194,32 @@ def cleanup_golden(golden: List[Dict]) -> List[Dict]:
     return cleaned
 
 
-def build_gold_map(golden: List[Dict]) -> Dict[str, Dict]:
-    return {str(record.get("id", "")).strip(): record for record in golden}
+def build_evaluation_map(evaluation: List[Dict]) -> Dict[str, Dict]:
+    return {str(record.get("id", "")).strip(): record for record in evaluation}
 
 
 def cleanup_retrieval(
     retrieval: List[Dict],
     chunks_by_url: Dict[str, List[Dict]],
     chunks_by_id: Dict[str, Dict],
-    golden_by_id: Dict[str, Dict],
+    evaluation_by_id: Dict[str, Dict],
 ) -> List[Dict]:
     cleaned = []
     for record in retrieval:
         record_id = str(record.get("id", "")).strip()
-        golden_record = golden_by_id.get(record_id, {})
-        query = str(record.get("query", "")).strip() or str(golden_record.get("query", "")).strip() or " ".join(case_turns(record))
-        terms = record_terms(golden_record, query)
+        evaluation_record = evaluation_by_id.get(record_id, {})
+        query = str(record.get("query", "")).strip() or str(evaluation_record.get("query", "")).strip() or " ".join(case_turns(record))
+        terms = record_terms(evaluation_record, query)
         used_ids: set[str] = set()
         clone = {
             "id": record_id,
-            "topic": record.get("topic") or golden_record.get("topic"),
+            "topic": record.get("topic") or evaluation_record.get("topic"),
             "query": query,
             "conversation": record.get("conversation", case_turns(record)),
         }
 
         positives = []
-        positive_url = str(golden_record.get("source_url", "")).strip()
+        positive_url = str(evaluation_record.get("source_url", "")).strip()
         if positive_url:
             override_chunk_id = POSITIVE_CHUNK_OVERRIDES.get(record_id, "")
             chunk = chunks_by_id.get(override_chunk_id) if override_chunk_id else None
@@ -295,20 +295,20 @@ def assistant_text(source_title: str, expected_points: List[str], follow_up: boo
     )
 
 
-def cleanup_generation(generation: List[Dict], golden_by_id: Dict[str, Dict]) -> List[Dict]:
+def cleanup_generation(generation: List[Dict], evaluation_by_id: Dict[str, Dict]) -> List[Dict]:
     cleaned = []
     for record in generation:
         record_id = str(record.get("id", "")).strip()
         base_id = record_id.split("_dialog_")[0]
-        golden_record = golden_by_id.get(base_id, {})
-        source_url = str(golden_record.get("source_url", "")).strip()
-        source_title = str(golden_record.get("source_title", "")).strip() or infer_title(source_url, "")
-        expected_points = list(golden_record.get("expected_points", record.get("expected_points", record.get("expected_answer_terms", []))))
+        evaluation_record = evaluation_by_id.get(base_id, {})
+        source_url = str(evaluation_record.get("source_url", "")).strip()
+        source_title = str(evaluation_record.get("source_title", "")).strip() or infer_title(source_url, "")
+        expected_points = list(evaluation_record.get("expected_points", record.get("expected_points", record.get("expected_answer_terms", []))))
         messages = record.get("messages", [])
         follow_up = "_dialog_" in record_id or len([m for m in messages if m.get("role") == "user"]) > 1
         clone = {
             "id": record_id,
-            "topic": record.get("topic") or golden_record.get("topic"),
+            "topic": record.get("topic") or evaluation_record.get("topic"),
             "messages": messages,
             "assistant": assistant_text(source_title, expected_points, follow_up),
             "sources": [{"title": source_title, "url": source_url}] if source_url else [normalize_source_item(source) for source in record.get("sources", [])],
@@ -337,19 +337,19 @@ def main() -> int:
     chunks_by_url = build_chunks_by_url(chunks)
     chunks_by_id = build_chunks_by_id(chunks)
 
-    golden = cleanup_golden(load_json(GOLDEN_PATH))
-    golden_by_id = build_gold_map(golden)
-    retrieval = cleanup_retrieval(load_json(RETRIEVAL_PATH), chunks_by_url, chunks_by_id, golden_by_id)
-    generation = cleanup_generation(load_json(GENERATION_PATH), golden_by_id)
+    evaluation = cleanup_evaluation(load_json(EVALUATION_PATH))
+    evaluation_by_id = build_evaluation_map(evaluation)
+    retrieval = cleanup_retrieval(load_json(RETRIEVAL_PATH), chunks_by_url, chunks_by_id, evaluation_by_id)
+    generation = cleanup_generation(load_json(GENERATION_PATH), evaluation_by_id)
 
-    dump_json(GOLDEN_PATH, golden)
+    dump_json(EVALUATION_PATH, evaluation)
     dump_json(RETRIEVAL_PATH, retrieval)
     dump_json(GENERATION_PATH, generation)
 
     print(
         json.dumps(
             {
-                "golden_records": len(golden),
+                "evaluation_records": len(evaluation),
                 "retrieval_records": len(retrieval),
                 "generation_records": len(generation),
             },
@@ -362,3 +362,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

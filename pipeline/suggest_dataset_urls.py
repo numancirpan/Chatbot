@@ -131,7 +131,7 @@ def top_candidates(record: Dict, chunks: List[Dict], limit: int = 5) -> List[Dic
     return candidates
 
 
-def patch_golden(records: List[Dict], chunks: List[Dict]) -> List[Dict]:
+def patch_evaluation(records: List[Dict], chunks: List[Dict]) -> List[Dict]:
     patched = []
     for record in records:
         clone = dict(record)
@@ -193,7 +193,7 @@ def patch_generation(records: List[Dict], chunks: List[Dict]) -> List[Dict]:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--golden", required=True)
+    parser.add_argument("--evaluation", required=True)
     parser.add_argument("--retrieval", required=True)
     parser.add_argument("--generation", required=True)
     parser.add_argument("--suffix", default="_url_suggestions")
@@ -205,35 +205,35 @@ def main() -> int:
     args = parser.parse_args()
 
     chunks = load_json(CHUNKS_PATH)
-    golden_path = Path(args.golden)
+    evaluation_path = Path(args.evaluation)
     retrieval_path = Path(args.retrieval)
     generation_path = Path(args.generation)
 
-    golden = load_json(golden_path)
+    evaluation = load_json(evaluation_path)
     retrieval = load_json(retrieval_path)
     generation = load_json(generation_path)
 
-    golden_out = golden_path.with_name(golden_path.stem + args.suffix + golden_path.suffix)
+    evaluation_out = evaluation_path.with_name(evaluation_path.stem + args.suffix + evaluation_path.suffix)
     retrieval_out = retrieval_path.with_name(retrieval_path.stem + args.suffix + retrieval_path.suffix)
     generation_out = generation_path.with_name(generation_path.stem + args.suffix + generation_path.suffix)
 
-    patched_golden = patch_golden(golden, chunks)
+    patched_evaluation = patch_evaluation(evaluation, chunks)
     patched_retrieval = patch_retrieval(retrieval, chunks)
     patched_generation = patch_generation(generation, chunks)
 
-    dump_json(golden_out, patched_golden)
+    dump_json(evaluation_out, patched_evaluation)
     dump_json(retrieval_out, patched_retrieval)
     dump_json(generation_out, patched_generation)
 
     if args.apply:
-        dump_json(golden_path, patched_golden)
+        dump_json(evaluation_path, patched_evaluation)
         dump_json(retrieval_path, patched_retrieval)
         dump_json(generation_path, patched_generation)
 
     print(
         json.dumps(
             {
-                "golden_output": str(golden_out),
+                "evaluation_output": str(evaluation_out),
                 "retrieval_output": str(retrieval_out),
                 "generation_output": str(generation_out),
                 "applied_to_inputs": args.apply,

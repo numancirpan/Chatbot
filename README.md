@@ -1,4 +1,4 @@
-# TEZ4 — Düzce Üniversitesi Öğrenci İşleri RAG Chatbot
+﻿# TEZ4 — Düzce Üniversitesi Öğrenci İşleri RAG Chatbot
 
 ## 📁 Klasör Yapısı
 
@@ -87,14 +87,14 @@ python pipeline/dataset_audit.py
 Bu komut ham kayıt, chunk ve ChromaDB kayıt sayılarını birlikte gösterir. ChromaDB sayısı
 `chunks.json` sayısından farklıysa vektör veritabanını yeniden oluşturun.
 
-### 6. Golden Evaluation Çalıştır
+### 6. Evaluation Calistir
 ```bash
-python pipeline/evaluate_golden.py
+python pipeline/evaluate_cases.py
 ```
 
-`data/golden_questions.json` gerçek kullanıcı sorularından oluşan küçük bir regresyon setidir.
-Bu test modeli eğitmez; cevapların beklenen bilgi, yasaklı ifade ve kaynak şartlarını sağlayıp
-sağlamadığını kontrol eder. Hızlı kontrol için:
+`data/evaluation_cases.json` gerçek kullanıcı sorularından oluşan küçük bir regresyon/test setidir.
+Bu dosya fine-tune eğitiminde kullanılmaz; cevapların beklenen bilgi, yasaklı ifade ve kaynak
+şartlarını sağlayıp sağlamadığını kontrol eder. Hızlı kontrol için:
 
 ```bash
 python pipeline/rag_smoke_test.py
@@ -106,8 +106,9 @@ Fine-tune veri setlerinin güncel durumunu özetlemek için:
 python pipeline/finetune_dataset_audit.py
 ```
 
-`build_finetune_datasets.py` veri üretimini Ollama'ya bağlı olmadan offline yapar; soru
-varyantları ve takip soruları kullanılarak daha geniş retrieval/generation örnekleri üretir.
+`build_finetune_datasets.py` veri üretimini Ollama'ya bağlı olmadan offline yapar. Fine-tune
+örnekleri `evaluation_cases.json` dosyasından değil, doğrudan `data/chunks.json` içindeki resmi
+kaynak chunk'larından üretilir ve deterministik `train` / `validation` / `test` ayrımı taşır.
 
 Fine-tune export dosyalarini olusturmak icin:
 
@@ -121,13 +122,13 @@ alanlari bulunur.
 
 ### 7. Disaridan Hazirlanan Fine-Tune JSON URL'lerini Duzelt
 
-Masaustunde veya baska bir klasorde hazirladiginiz `golden_questions.json`,
+Masaustunde veya baska bir klasorde hazirladiginiz `evaluation_cases.json`,
 `retrieval_finetune_data.json` ve `generation_finetune_data.json` dosyalarindaki
 ornek/fake URL'leri, projedeki `data/chunks.json` ile eslestirerek duzeltebilirsiniz:
 
 ```bash
 python pipeline/suggest_dataset_urls.py ^
-  --golden "C:\Users\Esra Kılıç\Desktop\Tübitak\golden_questions.json" ^
+  --evaluation "C:\Users\Esra Kılıç\Desktop\Tübitak\evaluation_cases.json" ^
   --retrieval "C:\Users\Esra Kılıç\Desktop\Tübitak\retrieval_finetune_data.json" ^
   --generation "C:\Users\Esra Kılıç\Desktop\Tübitak\generation_finetune_data.json"
 ```
@@ -137,7 +138,7 @@ Eger dogrudan kendi dosyalarinizin ustune yazmak isterseniz `--apply` ekleyin:
 
 ```bash
 python pipeline/suggest_dataset_urls.py ^
-  --golden "C:\Users\Esra Kılıç\Desktop\Tübitak\golden_questions.json" ^
+  --evaluation "C:\Users\Esra Kılıç\Desktop\Tübitak\evaluation_cases.json" ^
   --retrieval "C:\Users\Esra Kılıç\Desktop\Tübitak\retrieval_finetune_data.json" ^
   --generation "C:\Users\Esra Kılıç\Desktop\Tübitak\generation_finetune_data.json" ^
   --apply
@@ -171,3 +172,4 @@ veriyi gereksiz yere daraltmayin.
 # İlk 10 chunk'ı puanla
 python pipeline/veri_kalite_test.py 10
 ```
+
