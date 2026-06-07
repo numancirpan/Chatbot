@@ -1,0 +1,2787 @@
+{
+  "passed": 38,
+  "total": 106,
+  "results": [
+    {
+      "id": "staj_001",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj",
+        "Bilgisayar Mühendisliği - Staj",
+        "Staj"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nBilgisayar Muhendisligi ogrencileri icin zorunlu stajlar BM399 ve BM499 kodlariyla yurur; her zorunlu staj 25 is gunudur.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Bilgisayar Mühendisliği - Staj",
+      "sources": [
+        {
+          "kategori": "fakulte_bolum",
+          "baslik": "Bilgisayar Mühendisliği - Staj SSS",
+          "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
+        },
+        {
+          "kategori": "staj",
+          "baslik": "Bilgisayar Mühendisliği - Staj",
+          "url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj"
+        }
+      ]
+    },
+    {
+      "id": "staj_002",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular",
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Staj"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBaşvurunuzun çevrimiçi olup olmadığını sormaktan memnuniyet duyarım. Ulusal Staj Programı başvurusu 6 Ocak 2026 tarihi itibarıyla ulusalstajprogrami.iskur.gov.tr adresinden yapılabilir ve başvuru süresi 31 Mart 2026 saat 23:59'ya kadar uzatılmıştır [Kaynak 2], [Kaynak 3].\nBu süreçte herhangi bir sorun yaşarsanız veya daha fazla bilgiye ihtiyaç duyuyorsanız, lütfen Öğrenci İşleri Birimimize başvurunuz.\n[Qwen]\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri",
+      "sources": [
+        {
+          "kategori": "staj",
+          "baslik": "Bilgisayar Mühendisliği - Staj SSS",
+          "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
+        },
+        {
+          "kategori": "staj",
+          "baslik": "Öğrenci Belgesi ve Transkript İşlemleri",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/a771c727-6a6f-4522-aa5a-b441617eaf33"
+        }
+      ]
+    },
+    {
+      "id": "staj_003",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular",
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Staj"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nBilgisayar Muhendisligi staj sayfasinda FR22 Staj Kabul ve Sozlesme, FR23 Staj Sicil Fisi, isveren degerlendirme anketi ve ogrenci staj degerlendirme anketi formlarinin yer aldigi belirtilmektedir. Basvuru formundaki imza/kase alanlari eksiksiz tamamlandiktan sonra taranmis belgeler Staj Bilgi Sistemine yuklenmelidir.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 2] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 3] Bilgisayar Mühendisliği - Staj",
+      "sources": [
+        {
+          "kategori": "fakulte_bolum",
+          "baslik": "Bilgisayar Mühendisliği - Staj SSS",
+          "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
+        },
+        {
+          "kategori": "staj",
+          "baslik": "Öğrenci Belgesi ve Transkript İşlemleri",
+          "url": "https://mf.duzce.edu.tr/sayfa/8a10/ders-kayitlari-esnasinda-sikca-sorulan-sorular-ve-cevaplari"
+        },
+        {
+          "kategori": "staj",
+          "baslik": "Bilgisayar Mühendisliği - Staj",
+          "url": "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj"
+        }
+      ]
+    },
+    {
+      "id": "ders_kaydi_001",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kaydı / Kayıt Yenileme"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kaydı / Kayıt Yenileme"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nYabancı uyruklu öğrencilerin harç ödemesi zorunludur. Ödeme tutarı EYK teklifi ve Üniversite Yönetim Kurulu kararıyla belirlenir [Kaynak 1].\nEğer daha fazla bilgiye ihtiyacınız varsa, lütfen Öğrenci İşleri birimimize ulaşabilirsiniz.\n\nDayanak: [Kaynak 1] YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ; [Kaynak 2] DÜZCE ÜNİVERSİTESİ İKİNCİ ÖĞRETİMDE İLK YÜZDE ONA GİREN",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "DÜZCE ÜNİVERSİTESİ İKİNCİ ÖĞRETİMDE İLK YÜZDE ONA GİREN",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745"
+        }
+      ]
+    },
+    {
+      "id": "ders_kaydi_002",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+        "Akademik Takvim",
+        "Ders Kaydı / Kayıt Yenileme",
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "https://cdn.duzce.edu.tr/File/GetFile/1ed55517-ee0c-431a-a214-7a41d74eaa70",
+        "Ders Kayıt ve Kayıt Yenileme"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nDers kaydi/kayit yenileme tarihleri her egitim-ogretim yili icin akademik takvimde belirlenir. Kesin tarih icin ilgili yilin akademik takvim kaydina bakilmalidir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme",
+      "sources": [
+        {
+          "kategori": "merkezi_mevzuat",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943"
+        },
+        {
+          "kategori": "akademik_takvim",
+          "baslik": "Ders Kayıt ve Kayıt Yenileme",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/1ed55517-ee0c-431a-a214-7a41d74eaa70"
+        }
+      ]
+    },
+    {
+      "id": "ders_kaydi_003",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kaydı / Kayıt Yenileme"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kaydı / Kayıt Yenileme"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nMinimum kredi sınırı konusunda resmi belgelerde açık bir değil olduğuna göre, bu konuda resmi belgelerden bilgiye ulaşamadık. Lütfen Öğrenci İşleri Birimi ile iletişime geçiniz.\nBu konu hakkında daha fazla bilgi almak isteyebilirseniz veya özel durumlarınızı paylaşabilirseniz, size en uygun çözüm sunmaya çalışacağız. Saygılarımla,\n[Duyurunuzdan]\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Staj SSS",
+      "sources": [
+        {
+          "kategori": "staj",
+          "baslik": "Bilgisayar Mühendisliği - Staj SSS",
+          "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
+        }
+      ]
+    },
+    {
+      "id": "add_drop_001",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+        "2024-2025 Eğitim-Öğretim Yılı Akademik Takvimi",
+        "Add-Drop"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+        "2024-2025 Eğitim-Öğretim Yılı Akademik Takvimi",
+        "Add-Drop"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nSorunuzda belirtilen son günde hangi tarihten bahsettiğini merak ediyorum. Eğer dönem sonu sınavları veya tez savunma gibi genel bir konuda sorularınızı ortaya koymaktaydsanız, 2026-2027 Eğitim-Yönetim Yılı için belgelerdeki tarihler şu şekildedir:\n- Dönem Sonu Sınavları: 16.01.2026 - 26.01.2026\n- Yüksek Lisans Tez Savunma Tarihi (Lisansüstü Öğrenciler İçin): 01.06.2026 - 12.06.2026\nEğer başka bir konuda sorularınız varsa, lütfen detayları belirtiniz.\nDüzce Üniversitesi Öğrenci İşleri Daire Başkanlığı\n\nDayanak: [Kaynak 1] Yatay Geçiş",
+      "sources": [
+        {
+          "kategori": "yatay_gecis",
+          "baslik": "Yatay Geçiş",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/8c0c9acc-09db-4c71-bfac-8aeec6768d6d"
+        }
+      ]
+    },
+    {
+      "id": "add_drop_002",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Add-Drop"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nDers kaydinin kesinlesmesi icin danisman onayi sureci takip edilmelidir. 2025-2026 bahar yariyili duyurusunda danisman onaylari 4 Subat 2026 - 15 Subat 2026 arasi olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
+      "sources": [
+        {
+          "kategori": "duyuru",
+          "baslik": "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+          "url": "https://ef.duzce.edu.tr/duyuru/6771/2025-2026-egitim-ogretim-yili-bahar-yariyili-ders-kayit-ve-kayit-yenileme-duyurusu#ekle-sil-akts"
+        },
+        {
+          "kategori": "merkezi_mevzuat",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943"
+        },
+        {
+          "kategori": "akademik_takvim",
+          "baslik": "Ders Kayıt ve Kayıt Yenileme",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/1ed55517-ee0c-431a-a214-7a41d74eaa70"
+        }
+      ]
+    },
+    {
+      "id": "add_drop_003",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Add-Drop"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Add-Drop"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "devamsizlik_001",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Devamsızlık"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nUygulama dersleri için en az yuzde 80'ine devam etmeniz gerekmektedir. Bu durum teorik derslerin %70'sinin aksine belirlenmiştir.\nBu konuda daha fazla bilgiye ihtiyacınız olursa, lütfen Öğrenci İşleri Birimi ile iletişime geçiniz.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "sources": [
+        {
+          "kategori": "devamsizlik",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#devam-zorunlulugu"
+        }
+      ]
+    },
+    {
+      "id": "devamsizlik_002",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Devamsızlık"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBütün dersleri tamamlamamanız veya AGNO’yu sağlayamamanız durumunda azami süre sonu sınavlarına katılabilirsiniz. Ancak, bu süreçte bazı şartlar bulunmaktadır:\n1. Mezuniyet için gerekli AGNO’yu sağlayamayan ve azami süresini tamamladığınız öğrenciler; öncelikle “DD” veya “DC” harf notu aldıkları derslerden başlamak şartıyla, istedikleri ders için azami süre sonu sınavına katılabilirsiniz [Kaynak 1].\n2. Hiç almadığı veya devam koşulunu yerine getirmediği derslerden de azami süre sonu sınavlarına katılabilirsiniz [Kaynak 2].\n3. Azami süresini tamamladığınız ancak birinci ve ikinci azami süre sonu sınavlarından başarısız olan öğrenciler, bu dersleri için yapılacak ikinci azami süre sonu sınava katılabilirler [Kaynak 5].\n4. Birinci azami süre sonu sınavına girmeyen veya girmekle beraber sınavdan başarısız olan öğrenciler, bu dersler için yapılacak ikinci azami süre sonu sınava katılabileceklerdir.\n5. Azami süresini tamamladığınız ancak birinci ve ikinci azami süre sonu sınavlarına katılmayan öğrenciler; daha sonraki dönemlerdeki azami süre sınavlarına katılma hakkına sahip değildir [Kaynak 4].\n6. Ayrıca, mazeret sınavları yapılmazken (MADDE 6), bu durumunuzda mazeret sınavı olmamaktadır.\n\nDayanak: [Kaynak 1] Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d"
+        }
+      ]
+    },
+    {
+      "id": "devamsizlik_003",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da",
+        "Kayıt Yenileme İşlemleri",
+        "Devamsızlık"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da",
+        "Kayıt Yenileme İşlemleri",
+        "Devamsızlık"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "sinavlar_001",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Sınavlar"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Sınavlar"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBaşvuru süresi içinde belgelerden herhangi biri eksik olan adayların başvuruları 3 gün içerisinde tamamlanması gerekmektedir [Kaynak 1].\nEğer sorunuz veya ihtiyacınız varsa, lütfen Öğrenci İşleri Daire Başkanlığı ile iletişime geçiniz. Size yardımcı olmaktan memnuniyet duyarım.\n\nDayanak: [Kaynak 1] Bu belge,güvenli elektronik imza ile imzalanmıştır.",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Bu belge,güvenli elektronik imza ile imzalanmıştır.",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/06193c82-1968-4c61-9891-d55538ef9528"
+        }
+      ]
+    },
+    {
+      "id": "sinavlar_002",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/0070ab4a-559e-41a3-b1c7-1c28b68f0514",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Sınavlar"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBütünleme sınavı, ilgili dersin yarıyıl sonu sınavının yerini alarak basari notunun hesabında değerlendirilir. Bu konuda resmi belgelerde bilgiye ulaşıldı.\n[Kaynak 2]\nDüzce Üniversitesi Öğrenci İşleri Daire Başkanlığı\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] Bu belge,güvenli elektronik imza ile imzalanmıştır.",
+      "sources": [
+        {
+          "kategori": "sinavlar",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#sinav-not-sistemi"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Bu belge,güvenli elektronik imza ile imzalanmıştır.",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/06193c82-1968-4c61-9891-d55538ef9528"
+        }
+      ]
+    },
+    {
+      "id": "sinavlar_003",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+        "2024-2025 Eğitim-Öğretim Yılı Akademik Takvimi",
+        "Sınavlar"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+        "2024-2025 Eğitim-Öğretim Yılı Akademik Takvimi",
+        "Sınavlar"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nFinal sınavları için belirli tarihler genellikle akademik takvim ve ilgili birim/Oğrenci İşleri Daire Başkanlığı duyuruları üzerinden bilgilendirilir. Bu nedenle, final sınavlarının tarihleri hakkında güncel ve kesin bilgi alabilmek için her yılın akademik takvimi veya Uluslararası Öğrenci Birimi (OBS) sinav programını kontrol etmeniz önerilir.\n\nDayanak: [Kaynak 1] Bu belge,güvenli elektronik imza ile imzalanmıştır.",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Bu belge,güvenli elektronik imza ile imzalanmıştır.",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/06193c82-1968-4c61-9891-d55538ef9528"
+        }
+      ]
+    },
+    {
+      "id": "not_sistemi_ortalama_001",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Not Sistemi / Ortalama"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nEvet. Butunleme sinavina girildiginde basari notu hesaplanirken final/yil sonu genel sinav notu yerine butunleme sinav notu esas alinir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI; [Kaynak 3] Akademik Takvim",
+      "sources": [
+        {
+          "kategori": "sinavlar",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#sinav-not-sistemi"
+        },
+        {
+          "kategori": "mezuniyet",
+          "baslik": "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#tek-cift-butunleme"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Akademik Takvim",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/7aa0f18d-5d69-46f8-a518-3ea6a49203d9"
+        }
+      ]
+    },
+    {
+      "id": "not_sistemi_ortalama_002",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Not Sistemi / Ortalama"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Not Sistemi / Ortalama"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "not_sistemi_ortalama_003",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/06193c82-1968-4c61-9891-d55538ef9528",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Not Sistemi / Ortalama"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/06193c82-1968-4c61-9891-d55538ef9528",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Not Sistemi / Ortalama"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBütten giriş hakkınız için aşağıdaki koşullardan birini karşılamalısınız:\n1. Mezuniyetleri için gerekli AGNO’yu sağlayamayan ve azami süresini tamamlayan öğrenciler, öncelikle “DD” veya “DC” harf notu aldıkları derslerden başlamak şartıyla istedikleri ders için azami süre sonu sınavına girilebilir. [Kaynak 1]\n2. Hiç almadığı veya devam koşulunu yerine getirmediği derslerden azami süre sonu sınavına girebilirsiniz. [Kaynak 2]\n3. Azami süre sonu sınavları ile ek süre sınavlarının mazeret sınavları yapılmaz. [Kaynak 6]\n4. Birinci ve ikinci azami süre sonu sınavlarına katılamayan öğrenciler, daha sonraki dönemlerdeki azami süresi sınavlarına giremezler. [Kaynak 4]\nBu koşullardan birini karşılayamıyorsa, bu konuda resmi belgelerde bilgiye ulaşılmadı. Lütfen Öğrenci İşleri Birimi ile iletişime geçiniz.\n\nDayanak: [Kaynak 1] Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d"
+        }
+      ]
+    },
+    {
+      "id": "mezuniyet_001",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/0bf859f9-969c-4171-b6ae-356555f8dd99",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Mezuniyet",
+        "https://panel.duzce.edu.tr//Dosya/GetFile/476cb2d7-5847-4c3c-8c6d-2b48cc126705",
+        "MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS",
+        "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+        "Diploma ve Mezuniyet Belgeleri Yönergesi"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nResmi kaynaklarda yer alan ilgili bilgi asagidadir:\n- alı Ders Hakkında Bilgilendirme Formlar Akademik Birim Formları Öğrenci Formları Öğretim Programı Değişikliği Formları Mezun Memnuniyet Anketi Üniversitemiz Kariyer Geliştirme ve Mezun İzleme Uygulama Araştırma Merkezi tarafından üniversitemizden mezun olan öğrencilerimize yönelik anket çalışması başlatılmıştır.\n- MADDE 1- Bu yönetmeliğin amacı, meslek yüksekokulları ve açıköğretim ön lisans programlarından mezun olan başarılı öğrencilerin örgün öğretim ve açıköğretim lisans programlarına dikey geçiş yapmaları ve yerleştirilmeleriyle ilgili esas ve usulleri belirlemektir. Kapsam\n- mezun olanların diplomalarında, ikinci öğretim veya çift anadal programlarından mezun\nKesin uygulama icin ilgili resmi kaynak metni esas alinmalidir.\n\nDayanak: [Kaynak 1] MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS; [Kaynak 2] Diploma ve Mezuniyet Belgeleri Yönergesi",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/476cb2d7-5847-4c3c-8c6d-2b48cc126705"
+        },
+        {
+          "kategori": "mezuniyet",
+          "baslik": "Diploma ve Mezuniyet Belgeleri Yönergesi",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff"
+        }
+      ]
+    },
+    {
+      "id": "mezuniyet_002",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Mezuniyet"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Mezuniyet"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nTüm derslerinizi geçmiş olması zorunludur. Başvuruda bulunan öğrencinin başvurusu sırasında genel not ortalamasının en az 3.00 olması ve anadal programının öğrenci başarı sıralamasında en üst %20 içinde bulunması gerekmektedir [Kaynak 2].\nBu koşulların yanı sıra, pedagojik formasyon derslerinizin de 40 AKTS ile değerlendirilmesi ve toplam akademik krediniz (AKTS) 300’ün altında olması önemlidir. Pedagojik formasyon dersleri alarak en az 280 AKTS elde etmeniz gerekmektedir [Kaynak 1].\nHer iyi çalışmalarınızı takdir ederim ve her sorunuzda yardımcı olmaktan memnuniyet duyarım.\n\nDayanak: [Kaynak 1] Düzce Üniversitesi Mevzuat Komisyonu; [Kaynak 2] CAP ve Yandal",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Düzce Üniversitesi Mevzuat Komisyonu",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/7772123f-c7c5-4552-b300-7147262a5377"
+        },
+        {
+          "kategori": "cap_yandal",
+          "baslik": "CAP ve Yandal",
+          "url": "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal"
+        }
+      ]
+    },
+    {
+      "id": "mezuniyet_003",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+        "Öğrenci İşleri Duyuruları",
+        "Mezuniyet",
+        "https://cdn.duzce.edu.tr/File/GetFile/2f6646d7-707e-496b-b2ae-8084e63b54cd",
+        "Akademik Takvim",
+        "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e",
+        "YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nYabancı Uyruklu Öğrenci Adaylarının Lisansüstü Programlarına başvurusunda belirtilen başvuru tarihleri resmi belgelerde bulunmamaktadır. Bu nedenle, size daha net ve doğru bilgi verebilmesi için Öğrenci İşleri Birimi ile iletişime geçmeniz tavsiye edilir.\n\nDayanak: [Kaynak 1] Akademik Takvim; [Kaynak 2] YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ",
+      "sources": [
+        {
+          "kategori": "mezuniyet",
+          "baslik": "Akademik Takvim",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/2f6646d7-707e-496b-b2ae-8084e63b54cd"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e"
+        }
+      ]
+    },
+    {
+      "id": "cap_yandal_001",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+        "ÇAP ve Yandal Başvuru Esasları",
+        "ÇAP / Yandal",
+        "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+        "DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ",
+        "https://cdn.duzce.edu.tr/File/GetFile/cd218698-9e13-4d5b-911a-deeb096326de",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nÇağrı ve Akademik Programlar (CAP) veya yandal programına başvuru tarihleri genel olarak Üniversitenin akademik takviminde belirlenir. Bu süreçte başvurular, gerekli belgeler ile birlikte ilgili anadal programının bağlı olduğu bölüm başkanlıklarına yapılır.\nBaşvuru ve değerlendirme sürecinin detaylarını ve gereken belgeleri kontrol etmek için Düzce Üniversitesi Öğrenci İşleri Daire Başkanlığı'na başvurmanız önerilir. Bu süreçle ilgili daha fazla bilgi alabilmek isterseniz, lütfen Öğrenci İşleri Daire Başkanlığı ile iletişime geçiniz.\n[Dijital Asistan]\n\nDayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "sources": [
+        {
+          "kategori": "cap_yandal",
+          "baslik": "DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337"
+        },
+        {
+          "kategori": "cap_yandal",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/cd218698-9e13-4d5b-911a-deeb096326de"
+        }
+      ]
+    },
+    {
+      "id": "cap_yandal_002",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+        "ÇAP ve Yandal Başvuru Esasları",
+        "ÇAP / Yandal"
+      ],
+      "acceptable_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+        "ÇAP ve Yandal Başvuru Esasları",
+        "ÇAP / Yandal"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "cap_yandal_003",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+        "ÇAP ve Yandal Başvuru Esasları",
+        "ÇAP / Yandal",
+        "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+        "DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ",
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nDüzce Üniversitesi Öğrenci İşleri Daire Başkanlığı'na başvurularınız, son başvurunun kabul edileceği günden en az 15 gün önce Düzce Üniversitesi web sayfasında duyurulan tarihte yapılacaktır.\nBu konuda daha fazla bilgiye ihtiyacınız olursa veya başka sorularınız varsa, lütfen Öğrenci İşleri Daire Başkanlığı'na başvurunuz.\n[Qwen]\n\nDayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "sources": [
+        {
+          "kategori": "cap_yandal",
+          "baslik": "DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337"
+        },
+        {
+          "kategori": "cap_yandal",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a"
+        }
+      ]
+    },
+    {
+      "id": "yatay_gecis_001",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/cd218698-9e13-4d5b-911a-deeb096326de",
+        "Yatay Geçiş Başvuru Esasları",
+        "Yatay Geçiş",
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "https://cdn.duzce.edu.tr/File/GetFile/c515a04b-f396-41e4-92fe-a9029fd963b4",
+        "Ders Kayıt ve Kayıt Yenileme",
+        "https://cdn.duzce.edu.tr/File/GetFile/a44682bb-4437-4908-aaf0-c6020e1fc991",
+        "2025-2026 Akademik Takvim"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nYatay gecis basvuru tarihleri yil ve takvime gore degisir. Kesin tarih icin ilgili egitim-ogretim yilinin akademik takvimi veya yatay gecis duyurusu gerekir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme; [Kaynak 3] 2025-2026 Akademik Takvim",
+      "sources": [
+        {
+          "kategori": "merkezi_mevzuat",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943"
+        },
+        {
+          "kategori": "cap_yandal",
+          "baslik": "Ders Kayıt ve Kayıt Yenileme",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/c515a04b-f396-41e4-92fe-a9029fd963b4"
+        },
+        {
+          "kategori": "yatay_gecis",
+          "baslik": "2025-2026 Akademik Takvim",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/a44682bb-4437-4908-aaf0-c6020e1fc991"
+        }
+      ]
+    },
+    {
+      "id": "yatay_gecis_002",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+        "Yatay Geçiş Başvuru Esasları",
+        "Yatay Geçiş"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nKontenjan şartları konusunda resmi belgelerde açıkça belirtilmemektedir. Bu nedenle size daha spesifik bilgi vermeden önce Öğrenci İşleri birimiyle iletişime geçmenizi öneririm.\nBu konuda size yardımcı olabileceğim başka noktalar varsa lütfen sorunuzu paylaşın. Saygılarımla,\n\nDayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ; [Kaynak 2] YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ",
+      "sources": [
+        {
+          "kategori": "cap_yandal",
+          "baslik": "DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e"
+        }
+      ]
+    },
+    {
+      "id": "yatay_gecis_003",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+        "Yatay Geçiş Başvuru Esasları",
+        "Yatay Geçiş"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+        "Yatay Geçiş Başvuru Esasları",
+        "Yatay Geçiş"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nTranskript/not durum belgesi oncelikle e-Devlet Kapisi uzerinden temin edilmelidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken durumlarda ilgili birimin Ogrenci Isleri Burosuna basvurulabilir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Öğrenci Belgesi ve Transkript İşlemleri",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e"
+        }
+      ]
+    },
+    {
+      "id": "harc_ucret_001",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745",
+        "Katkı Payı ve Öğrenim Ücreti",
+        "Harç / Ücret"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745",
+        "Katkı Payı ve Öğrenim Ücreti",
+        "Harç / Ücret"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "harc_ucret_002",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745",
+        "Katkı Payı ve Öğrenim Ücreti",
+        "Harç / Ücret"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745",
+        "Katkı Payı ve Öğrenim Ücreti",
+        "Harç / Ücret"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "harc_ucret_003",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://mf.duzce.edu.tr/sayfa/8a10/ders-kayitlari-esnasinda-sikca-sorulan-sorular-ve-cevaplari",
+        "Ders Kayıtları Esnasında Sıkça Sorulan Sorular ve Cevapları",
+        "Harç / Ücret"
+      ],
+      "acceptable_source_terms": [
+        "https://mf.duzce.edu.tr/sayfa/8a10/ders-kayitlari-esnasinda-sikca-sorulan-sorular-ve-cevaplari",
+        "Ders Kayıtları Esnasında Sıkça Sorulan Sorular ve Cevapları",
+        "Harç / Ücret"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nDers kaydinin kesinlesmesi icin danisman onayi sureci takip edilmelidir. 2025-2026 bahar yariyili duyurusunda danisman onaylari 4 Subat 2026 - 15 Subat 2026 arasi olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme",
+      "sources": [
+        {
+          "kategori": "merkezi_mevzuat",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943"
+        },
+        {
+          "kategori": "akademik_takvim",
+          "baslik": "Ders Kayıt ve Kayıt Yenileme",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/1ed55517-ee0c-431a-a214-7a41d74eaa70"
+        }
+      ]
+    },
+    {
+      "id": "burs_001",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/22a1f570-c7f7-4dd8-8598-616f2ae00e21",
+        "Burs Başvuru Duyuruları",
+        "Burs"
+      ],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/22a1f570-c7f7-4dd8-8598-616f2ae00e21",
+        "Burs Başvuru Duyuruları",
+        "Burs"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "burs_002",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e",
+        "Burs Başvuru Duyuruları",
+        "Burs"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e",
+        "Burs Başvuru Duyuruları",
+        "Burs"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "burs_003",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/22a1f570-c7f7-4dd8-8598-616f2ae00e21",
+        "Burs Başvuru Duyuruları",
+        "Burs"
+      ],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/22a1f570-c7f7-4dd8-8598-616f2ae00e21",
+        "Burs Başvuru Duyuruları",
+        "Burs"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nİşyeri Eğitimine devam etmek zorunludur ve izinli/raporlu olduğu günler haricinde devamsızlık hakları yoktur. Bu durum, Düzce Üniversitesi Mühendislik Fakültesi İşyeri Eğitimi ile ilgili resmi belgede [Kaynak 1] açıkça belirtilmiştir.\nDevamsızlıkların etkilerine dair bilgiye ulasamazsak ve bu konuda resmi belgelerde bilgiye ulaşamadığımız için, Öğrenci İşleri birimimize başvurmanızı öneririm. Bu durumun detaylarına bakmak ve gerekli önlemleri alabilmek için size yardımcı olabileceklerini unutmayın.\n\nDayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ İŞYERİ EĞİTİMİ; [Kaynak 2] TEKNOLOJİ FAKÜLTESİ; [Kaynak 3] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "DÜZCE ÜNİVERSİTESİ MÜHENDİSLİK FAKÜLTESİ İŞYERİ EĞİTİMİ",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "TEKNOLOJİ FAKÜLTESİ",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/9ee3f7a1-9046-4384-8562-209a701cd98c"
+        },
+        {
+          "kategori": "devamsizlik",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#devam-zorunlulugu"
+        }
+      ]
+    },
+    {
+      "id": "ogrenci_belgesi_transkript_001",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Öğrenci Belgesi / Transkript"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Öğrenci Belgesi / Transkript"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nÜcretli olmayan bir durum söz konusudur. Pedagojik formasyon derslerinin alındığı dönemde MEB'e bağlı okullarda ücretli öğretmenlik yapma imkanı bulunmamaktadır.\nEğer tek/cift ders sınavlarına katılmanız gerekiyorsa, ilgili bölüm başkanına başvurabilir ve yeterlilik durumunuz doğrultusunda bir karar alınıp alınacaktır. Bu süreçte katki payınız veya öğrenim ücretiniz ödenmesi şart olabilir.\nHerhangi bir soru ya da detay için Öğrenci İşleri Daire Başkanlığı ile iletişime geçebilirsiniz.\n\nDayanak: [Kaynak 1] Ayrıca, pedagojik formasyon derslerinin alındığı dönemde MEB'e bağlı okullarda ücretli öğretmenlik, özel; [Kaynak 2] Tek/Çift Ders Sınavları Hakkında SSS",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Ayrıca, pedagojik formasyon derslerinin alındığı dönemde MEB'e bağlı okullarda ücretli öğretmenlik, özel",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458"
+        },
+        {
+          "kategori": "harc_ucret",
+          "baslik": "Tek/Çift Ders Sınavları Hakkında SSS",
+          "url": "https://tarih.fef.duzce.edu.tr/sayfa/0594/tekcift-ders-sinavlari-hakkinda-sss"
+        }
+      ]
+    },
+    {
+      "id": "ogrenci_belgesi_transkript_002",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da",
+        "Kayıt Yenileme İşlemleri",
+        "Öğrenci Belgesi / Transkript"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da",
+        "Kayıt Yenileme İşlemleri",
+        "Öğrenci Belgesi / Transkript"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nOgrenci belgesi ve transkript/not durum belgesi oncelikle e-Devlet Kapisi uzerinden temin edilmelidir. Kaynakta e-Devlet uzerinden alinan belgelerin kamu kurumlari tarafindan kabul edilmesi gerektigi belirtilmektedir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken durumlarda ilgili birimin Ogrenci Isleri Burosuna basvurulabilir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
+      "sources": [
+        {
+          "kategori": "cap_yandal",
+          "baslik": "Öğrenci Belgesi ve Transkript İşlemleri",
+          "url": "https://mf.duzce.edu.tr/sayfa/8955/cift-anadal-programlari"
+        }
+      ]
+    },
+    {
+      "id": "ogrenci_belgesi_transkript_003",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Öğrenci Belgesi / Transkript"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Öğrenci Belgesi / Transkript"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "askerlik_tecili_001",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+        "Askerlik Tecil İşlemleri",
+        "Askerlik Tecili"
+      ],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+        "Askerlik Tecil İşlemleri",
+        "Askerlik Tecili"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "askerlik_tecili_002",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+        "Askerlik Tecil İşlemleri",
+        "Askerlik Tecili"
+      ],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+        "Askerlik Tecil İşlemleri",
+        "Askerlik Tecili"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nOgrenci belgesi oncelikle e-Devlet Kapisi uzerinden temin edilmelidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gerekli olan belgeler icin ilgili birimin Ogrenci Isleri Burosuna basvurulabilir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Öğrenci Belgesi ve Transkript İşlemleri",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e"
+        }
+      ]
+    },
+    {
+      "id": "askerlik_tecili_003",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+        "Askerlik Tecil İşlemleri",
+        "Askerlik Tecili"
+      ],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+        "Askerlik Tecil İşlemleri",
+        "Askerlik Tecili"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "disiplin_islemleri_001",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/a3dc4e5a-a9d6-45f0-8ec8-0b6d8293987c",
+        "Öğrenci Disiplin Yönetmeliği",
+        "Disiplin İşlemleri"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nUyarı ve kınama arasındaki temel farklar hakkında bilgi vermek için resmi belgelerimize başvurduk. Belgelere göre:\n- Kınama: Öğrenciye öğrencilikle ilgili kusurlu davranışlarından dolayı kınandığının yazılı olarak bildirilmesidir.\nBu konuda daha fazla ayrıntıya girmek için resmi belgelerde bulunmadığından, lütfen Öğrenci İşleri birimi ile iletişime geçiniz. Bu bilgiyi size sağlayacakları için teşekkür ederiz.\nSaygılarımızla,\nDüzce Üniversitesi Öğrenci İşleri Daire Başkanlığı\n\nDayanak: [Kaynak 1] Yükseköğretim Kurumlarında kayıtlı öğrencilerinin disiplin işleri aşağıda verilen; [Kaynak 2] DÜZCE ÜNİVERSİTESİ TEKNOLOJİ FAKÜLTESİ; [Kaynak 3] 2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Yükseköğretim Kurumlarında kayıtlı öğrencilerinin disiplin işleri aşağıda verilen",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/a3dc4e5a-a9d6-45f0-8ec8-0b6d8293987c"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "DÜZCE ÜNİVERSİTESİ TEKNOLOJİ FAKÜLTESİ",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/f8f894c3-b779-466b-9054-c0bd90c74b05"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/672fbe98-7a69-4fa4-905e-dd79db4244a3"
+        }
+      ]
+    },
+    {
+      "id": "disiplin_islemleri_002",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864",
+        "Öğrenci Disiplin Yönetmeliği",
+        "Disiplin İşlemleri"
+      ],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864",
+        "Öğrenci Disiplin Yönetmeliği",
+        "Disiplin İşlemleri"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nSavunma hakkınız bulunmaktadır. Yükseköğretim Kanunu 54.maddesine göre, disiplin soruşturması başlatılan öğrenciye isnat edilen suçun neden ibaret olduğu ve savunmasını yapacağı tarihten en az yedi gün önce yazılı olarak bildirilmesi gerekmektedir.\nBu süreçte:\n1. Savunma daveti yazısı, öğrencinin bilgi sistemi üzerinden veya elektronik posta ile de gönderilebilir.\n2. Soruşturmacı tarafından savunma istemizin tebliğ edildiği gün hesaba katılmadan en az 7 günlük süre öğrenciye verilmesi gerekir.\nBu süreç, öğrencinin haklarını korumak ve adil bir sürecin gerçekleştirilmesini sağlamak amacıyla belirlenmiştir. Eğer soruşturmanız başlatılmışsa, lütfen bilgi sisteminize veya elektronik posta kutunuz kontrol ediniz; savunma daveti alabilirsiniz.\nDüzce Üniversitesi Öğrenci İşleri Daire Başkanlığı\n\nDayanak: [Kaynak 1] Yükseköğretim Kurumlarında kayıtlı öğrencilerinin disiplin işleri aşağıda verilen; [Kaynak 2] 2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Yükseköğretim Kurumlarında kayıtlı öğrencilerinin disiplin işleri aşağıda verilen",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/a3dc4e5a-a9d6-45f0-8ec8-0b6d8293987c"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/393d1bfd-1e64-4f0f-8c91-9f040cbbf0fa"
+        }
+      ]
+    },
+    {
+      "id": "disiplin_islemleri_003",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Disiplin İşlemleri"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Disiplin İşlemleri"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nSoruşturmacı tarafından soruşturma istemi yazısı tebliğ edildiği güne kadar en az 7 gün süre verilmelidir. Bu süre sonunda savunma yapılmamışsa, durum değerlendirilerek yeni bir tarih belirlenmesi beklenmektedir.\nBu konuda resmi belgelerde bu şekilde bildirilmiş olup, size daha fazla bilgi için Öğrenci İşleri Birimi ile iletişime geçmeniz tavsiye edilmektedir.\nDüzce Üniversitesi Öğrenci İşleri Daire Başkanlığı\n\nDayanak: [Kaynak 1] 2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE; [Kaynak 2] Yükseköğretim Kurumlarında kayıtlı öğrencilerinin disiplin işleri aşağıda verilen",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/672fbe98-7a69-4fa4-905e-dd79db4244a3"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Yükseköğretim Kurumlarında kayıtlı öğrencilerinin disiplin işleri aşağıda verilen",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/a3dc4e5a-a9d6-45f0-8ec8-0b6d8293987c"
+        }
+      ]
+    },
+    {
+      "id": "akademik_takvim_duyurular_001",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://ogrenciisleri.duzce.edu.tr/duyurular",
+        "Akademik Takvim",
+        "Akademik Takvim / Duyurular"
+      ],
+      "acceptable_source_terms": [
+        "https://ogrenciisleri.duzce.edu.tr/duyurular",
+        "Akademik Takvim",
+        "Akademik Takvim / Duyurular"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nFinal sinavi tarihleri akademik takvim ve ilgili birim/OBS duyurulari uzerinden ilan edilir. Kesin tarih ders ve egitim-ogretim yilina gore degistigi icin ilgili yilin akademik takvimi veya OBS sinav programi kontrol edilmelidir.\n\nDayanak: [Kaynak 1] 2025 2026 Egitim Ogretim Yili Guz Yariyili Final Programi; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Bu belge,güvenli elektronik imza ile imzalanmıştır.",
+      "sources": [
+        {
+          "kategori": "duyuru",
+          "baslik": "2025 2026 Egitim Ogretim Yili Guz Yariyili Final Programi",
+          "url": "https://biyomedikal.mf.duzce.edu.tr/duyuru/3776/2025-2026-egitim-ogretim-yili-guz-yariyili-final-programi"
+        },
+        {
+          "kategori": "sinavlar",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#sinav-not-sistemi"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Bu belge,güvenli elektronik imza ile imzalanmıştır.",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/06193c82-1968-4c61-9891-d55538ef9528"
+        }
+      ]
+    },
+    {
+      "id": "akademik_takvim_duyurular_002",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://ogrenciisleri.duzce.edu.tr/duyurular",
+        "Öğrenci İşleri Duyuruları",
+        "Akademik Takvim / Duyurular"
+      ],
+      "acceptable_source_terms": [
+        "https://ogrenciisleri.duzce.edu.tr/duyurular",
+        "Öğrenci İşleri Duyuruları",
+        "Akademik Takvim / Duyurular"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nEski duyuruları takip etmek istiyorsanız, www.duzce.edu.tr adresinden resmi web sitesini ziyaret edebilirsiniz. Bu platformda geçmiş akademik ve idari duyurular yer almaktadır.\nEk olarak, Öğrenci İşleri Daire Başkanlığı'nın arşivinde de eski duyurular saklanmaktadır. Arşiv bilgilerine ulaşmak için Öğrenci İşleri Dairesi'ne başvurusu yapabilirsiniz veya birimimize doğrudan iletişime geçebilir, bu sayede size daha spesifik ve güncel bilgi verebilir hale geleceksiniz.\n[Dijital Asistan]\n\nDayanak: [Kaynak 1] DUZCE UNIVERSITESI KURUM ICI VE KURUMLAR ARASI YATAY GECIS ESASLARI; [Kaynak 2] Akademik Takvim",
+      "sources": [
+        {
+          "kategori": "yatay_gecis",
+          "baslik": "DUZCE UNIVERSITESI KURUM ICI VE KURUMLAR ARASI YATAY GECIS ESASLARI",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/yatay-gecis-yonergesi#basvuru-takvim"
+        },
+        {
+          "kategori": "staj",
+          "baslik": "Akademik Takvim",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/0070ab4a-559e-41a3-b1c7-1c28b68f0514"
+        }
+      ]
+    },
+    {
+      "id": "akademik_takvim_duyurular_003",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://ogrenciisleri.duzce.edu.tr/duyurular",
+        "Akademik Takvim",
+        "Akademik Takvim / Duyurular"
+      ],
+      "acceptable_source_terms": [
+        "https://ogrenciisleri.duzce.edu.tr/duyurular",
+        "Akademik Takvim",
+        "Akademik Takvim / Duyurular"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "yaz_okulu_001",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Yaz Okulu"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nAkademik takvimde yaz okulunun başlangıcı 06.08.2024 olarak görünmektedir.\n\nDayanak: [Kaynak 1] Ders Kayıt ve Kayıt Yenileme; [Kaynak 2] Akademik Takvim",
+      "sources": [
+        {
+          "kategori": "akademik_takvim",
+          "baslik": "Ders Kayıt ve Kayıt Yenileme",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/1ed55517-ee0c-431a-a214-7a41d74eaa70"
+        },
+        {
+          "kategori": "yaz_okulu",
+          "baslik": "Akademik Takvim",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19"
+        }
+      ]
+    },
+    {
+      "id": "yaz_okulu_002",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Yaz Okulu"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Yaz Okulu"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "yaz_okulu_003",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Yaz Okulu"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nYaz Okulu Yönergesine göre, bahar yarıyılı bütünleme sınav tarihlerini izleyen hafta içinde ilgili birimlerde ilan edilir. Bu ilanların bölüme göre değişmeyeceği genellikle belirlenen kurallara uymaktadır.\nEğer herhangi bir durumunuz olursa veya daha fazla bilgiye ihtiyacınız varsa, lütfen Öğrenci İşleri Daire Başkanlığı ile iletişime geçiniz. Saygılarımla,\n\nDayanak: [Kaynak 1] Yaz Okulu Yönergesi",
+      "sources": [
+        {
+          "kategori": "yaz_okulu",
+          "baslik": "Yaz Okulu Yönergesi",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19"
+        }
+      ]
+    },
+    {
+      "id": "muafiyet_intibak_001",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Muafiyet / İntibak"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Muafiyet / İntibak"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBaşvurunuz için belirtilen süre, Düzce Üniversitesi Öğrenci İşleri Daire Başkanlığı tarafından belirlenen başvuru kabul edileceği günden en az 15 gün önce olmalıdır. Bu sürenin tam olarak kaç gün olduğu resmi duyuran bir bilgi bulunmamaktadır.\nBu konuda daha fazla bilgiye ulasabilmek için lütfen Öğrenci İşleri Daire Başkanlığı ile iletişime geçiniz.\n\nDayanak: [Kaynak 1] Azami Öğrenim Süresi Sonu Sınav Duyurusu; [Kaynak 2] ORMAN FAKÜLTESİ; [Kaynak 3] Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans)",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d"
+        },
+        {
+          "kategori": "staj",
+          "baslik": "ORMAN FAKÜLTESİ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/a771c727-6a6f-4522-aa5a-b441617eaf33"
+        },
+        {
+          "kategori": "cap_yandal",
+          "baslik": "Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans)",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/162cf224-c95a-4393-828f-5f2930500da7"
+        }
+      ]
+    },
+    {
+      "id": "muafiyet_intibak_002",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Muafiyet / İntibak"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Muafiyet / İntibak"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "muafiyet_intibak_003",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Muafiyet / İntibak"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Muafiyet / İntibak"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nTranskript/not durum belgesi oncelikle e-Devlet Kapisi uzerinden temin edilmelidir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken durumlarda ilgili birimin Ogrenci Isleri Burosuna basvurulabilir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Öğrenci Belgesi ve Transkript İşlemleri",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e"
+        }
+      ]
+    },
+    {
+      "id": "staj_004",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular",
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Staj",
+        "https://cdn.duzce.edu.tr/File/GetFile/f591c7d8-79f5-42cc-bb2c-04e874fbe41d",
+        "SİGORTA",
+        "https://cdn.duzce.edu.tr/File/GetFile/a771c727-6a6f-4522-aa5a-b441617eaf33",
+        "ORMAN FAKÜLTESİ",
+        "https://cdn.duzce.edu.tr/File/GetFile/8300f768-ca8f-41d4-82e7-2aa1b98b7130",
+        "Akademik Takvim"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nBilgisayar Muhendisligi Staj SSS kaynagina gore zorunlu stajlarda sigorta islemleri okul tarafindan yurutulur. Basvuru sirasinda okulun sigorta islemini yapabilmesi icin gerekli beyanin dogru sekilde verilmesi gerekir. Buna karsilik zorunlu stajlardan ayri yapilan gonullu staj, staj uzatma veya ilan edilen donemler disindaki stajlarda okul tarafindan sigorta yapilmadigi belirtilmektedir.\n\nDayanak: [Kaynak 1] SİGORTA; [Kaynak 2] ORMAN FAKÜLTESİ; [Kaynak 3] Akademik Takvim",
+      "sources": [
+        {
+          "kategori": "staj",
+          "baslik": "SİGORTA",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/f591c7d8-79f5-42cc-bb2c-04e874fbe41d"
+        },
+        {
+          "kategori": "staj",
+          "baslik": "ORMAN FAKÜLTESİ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/a771c727-6a6f-4522-aa5a-b441617eaf33"
+        },
+        {
+          "kategori": "staj",
+          "baslik": "Akademik Takvim",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/8300f768-ca8f-41d4-82e7-2aa1b98b7130"
+        }
+      ]
+    },
+    {
+      "id": "staj_005",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular",
+        "Bilgisayar Mühendisliği - Staj SSS",
+        "Staj"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nStaj raporları ve evraklarının teslim edilmesi konusunda belirtildiği gibi, lerini staj bitim tarihinden itibaren 15 iş günü içerisinde Bölüm Staj Uygulama Komisyonuna doğrudan ulaştırmanız gerekmektedir. Bu süre her bölüm için genel olarak uygulanır ve değişmez.\n\nDayanak: [Kaynak 1] lerini staj bitim; [Kaynak 2] Bilgisayar Mühendisliği - Staj SSS; [Kaynak 3] de 28- Staj raporlarının incelenmesi sonucunda staj evrakında ve belgelerinde tahribat",
+      "sources": [
+        {
+          "kategori": "staj",
+          "baslik": "lerini staj bitim",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/6d432759-f8c4-4746-b089-8fd755716e9f"
+        },
+        {
+          "kategori": "staj",
+          "baslik": "Bilgisayar Mühendisliği - Staj SSS",
+          "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
+        },
+        {
+          "kategori": "staj",
+          "baslik": "de 28- Staj raporlarının incelenmesi sonucunda staj evrakında ve belgelerinde tahribat",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/fe6ec879-f28d-46d0-9d46-6b9013c448bb"
+        }
+      ]
+    },
+    {
+      "id": "staj_006",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj",
+        "Bilgisayar Mühendisliği - Staj",
+        "Staj",
+        "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular",
+        "Bilgisayar Mühendisliği - Staj SSS"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nStaj derslerinizi sonucuyla birlikte takip eden dönemlerde seçmenize olanak tanırız. Ancak staja katılmadan önce veya sırasında raporunuzu tamamlamanız önerilir, çünkü bu size daha iyi planlama fırsatı sağlar ve notunuz için daha fazla destek sunar.\nDayanak: [Kaynak 5]\nDüzce Üniversitesi Öğrenci İşleri Daire Başkanlığı",
+      "sources": [
+        {
+          "kategori": "staj",
+          "baslik": "Bilgisayar Mühendisliği - Staj SSS",
+          "url": "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular"
+        }
+      ]
+    },
+    {
+      "id": "ders_kaydi_004",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kaydı / Kayıt Yenileme"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kaydı / Kayıt Yenileme"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nDers secimi OBS uzerinden yapilir ve danisman onayi sureci takip edilir. Harc/katki payi odemesi gereken ogrenciler ders kaydi oncesinde odemelerini tamamlamalidir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme; [Kaynak 3] Akademik Takvim",
+      "sources": [
+        {
+          "kategori": "duyuru",
+          "baslik": "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+          "url": "https://ef.duzce.edu.tr/duyuru/6771/2025-2026-egitim-ogretim-yili-bahar-yariyili-ders-kayit-ve-kayit-yenileme-duyurusu#ekle-sil-akts"
+        },
+        {
+          "kategori": "akademik_takvim",
+          "baslik": "Ders Kayıt ve Kayıt Yenileme",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/1ed55517-ee0c-431a-a214-7a41d74eaa70"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Akademik Takvim",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/f8f894c3-b779-466b-9054-c0bd90c74b05"
+        }
+      ]
+    },
+    {
+      "id": "ders_kaydi_005",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+        "Akademik Takvim",
+        "Ders Kaydı / Kayıt Yenileme"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+        "Akademik Takvim",
+        "Ders Kaydı / Kayıt Yenileme"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nKaynakta kisa sureli sinavlar ve yeterlik sinavlari icin mazeret sinavi yapilmayacagi; ara sinavlar ve yil sonu genel sinavi icin mazeret sinavi bulundugu belirtilmektedir.\n\nDayanak: [Kaynak 1] Final Mazeret Sınavı Başvurusu Duyurusu; [Kaynak 2] Öğrenci İşleri Sıkça Sorulan Sorular; [Kaynak 3] Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+      "sources": [
+        {
+          "kategori": "duyuru",
+          "baslik": "Final Mazeret Sınavı Başvurusu Duyurusu",
+          "url": "https://ef.duzce.edu.tr/duyuru/83e6/2025-2026-guz-donemi-final-mazeret-sinav-basvurusu-hakkinda"
+        },
+        {
+          "kategori": "sinavlar",
+          "baslik": "Öğrenci İşleri Sıkça Sorulan Sorular",
+          "url": "https://ogrenciisleri.duzce.edu.tr/Sayfa/af7f/s_s_s_"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d"
+        }
+      ]
+    },
+    {
+      "id": "ders_kaydi_006",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Ders Kaydı / Kayıt Yenileme"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nDers kaydinin kesinlesmesi icin danisman onayi sureci takip edilmelidir. 2025-2026 bahar yariyili duyurusunda danisman onaylari 4 Subat 2026 - 15 Subat 2026 arasi olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme",
+      "sources": [
+        {
+          "kategori": "merkezi_mevzuat",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943"
+        },
+        {
+          "kategori": "akademik_takvim",
+          "baslik": "Ders Kayıt ve Kayıt Yenileme",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/1ed55517-ee0c-431a-a214-7a41d74eaa70"
+        }
+      ]
+    },
+    {
+      "id": "add_drop_004",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+        "2024-2025 Eğitim-Öğretim Yılı Akademik Takvimi",
+        "Add-Drop"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+        "2024-2025 Eğitim-Öğretim Yılı Akademik Takvimi",
+        "Add-Drop"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nSon gün ve saatin belirlenmesine ilişkin resmi bilgilerde açık bir süre veya sınır bulunmamaktadır. Ancak genel olarak sistem üzerinden girilen tüm işlemler için geçerli olan en az 15 dakika süresi vardır.\nBu konuda daha fazla bilgiye ihtiyacınız olursa, lütfen Öğrenci İşleri Daire Başkanlığı ile iletişime geçiniz. Saygılarımla,\n[Dijital Asistan]\n\nDayanak: [Kaynak 1] Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans)",
+      "sources": [
+        {
+          "kategori": "cap_yandal",
+          "baslik": "Kurumlararası ve Kurumiçi Yatay Geçiş Başvuruları (Önlisans-Lisans)",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/daf5f5c5-7834-41a5-9267-325b69b3ed05"
+        }
+      ]
+    },
+    {
+      "id": "add_drop_005",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Add-Drop"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nDers ekleme/birakma islemleri akademik takvimde belirtilen ders kaydi veya ekle-sil sureleri icinde, danisman onayiyla yurutulur. 2025-2026 bahar yariyili icin ekle-sil haftasi 16 Subat 2026 - 18 Subat 2026 olarak ilan edilmistir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
+      "sources": [
+        {
+          "kategori": "duyuru",
+          "baslik": "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+          "url": "https://ef.duzce.edu.tr/duyuru/6771/2025-2026-egitim-ogretim-yili-bahar-yariyili-ders-kayit-ve-kayit-yenileme-duyurusu#ekle-sil-akts"
+        },
+        {
+          "kategori": "merkezi_mevzuat",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943"
+        },
+        {
+          "kategori": "yatay_gecis",
+          "baslik": "Ders Kayıt ve Kayıt Yenileme",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/0530c05a-5f21-47dc-8573-7453f66d78ce"
+        }
+      ]
+    },
+    {
+      "id": "add_drop_006",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Add-Drop"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Add-Drop"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nÜstten ders alınma durumu, genel olarak belgelerde açıkça açıklanmamaktadır. Ancak, programda aldığı dersleri öngörülen öğrenim süresi içinde başaramamış olan öğrenciler için Düzce Üniversitesi Ön lisans ve Lisans Öğretim ve Sınav Yönetmeliği hükümleri uygulanabilir [Kaynak 5]. Bu kapsamda durumunuzla ilgili daha spesifik bilgiye ulaşmak isterseniz, öğrenci işleri birimi ile iletişime geçmenizi öneririz.\nDüzce Üniversitesi Öğrenci İşleri Daire Başkanlığı\n\nDayanak: [Kaynak 1] 3D303694 Adc7 4872 B09F Aa9B2Fbb8458",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "3D303694 Adc7 4872 B09F Aa9B2Fbb8458",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458"
+        }
+      ]
+    },
+    {
+      "id": "devamsizlik_004",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Devamsızlık"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Devamsızlık"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "devamsizlik_005",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Devamsızlık"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Devamsızlık"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nOBS'de devamsız görünmek durumunda, lütfen Öğrenci İşleri Daire Başkanlığı'na başvurun ve ilgili belgelerinizi sunarak durumu açıklayınız. Bu süreçte size yardımcı olmak için buradayım.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Ders Kayıt ve Kayıt Yenileme",
+      "sources": [
+        {
+          "kategori": "duyuru",
+          "baslik": "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+          "url": "https://ef.duzce.edu.tr/duyuru/6771/2025-2026-egitim-ogretim-yili-bahar-yariyili-ders-kayit-ve-kayit-yenileme-duyurusu#ekle-sil-akts"
+        },
+        {
+          "kategori": "akademik_takvim",
+          "baslik": "Ders Kayıt ve Kayıt Yenileme",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/1ed55517-ee0c-431a-a214-7a41d74eaa70"
+        }
+      ]
+    },
+    {
+      "id": "devamsizlik_006",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Devamsızlık"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nIlk defa alinan derslerde teorik bolum icin %70, uygulama bolumu icin %80 devam zorunlulugu vardir. Kaynakta raporlu olunan surenin de devamsizlik suresinden sayildigi belirtilmektedir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] Akademik Takvim; [Kaynak 3] YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME",
+      "sources": [
+        {
+          "kategori": "devamsizlik",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#devam-zorunlulugu"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Akademik Takvim",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/f8f894c3-b779-466b-9054-c0bd90c74b05"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "YÜKSEKÖĞRETİM KURUMLARINDA UZAKTAN ÖĞRETİME",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/325c88cc-9289-418d-bae2-523ac88ed506"
+        }
+      ]
+    },
+    {
+      "id": "sinavlar_004",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Sınavlar",
+        "https://ogrenciisleri.duzce.edu.tr/Sayfa/af7f/s_s_s_",
+        "Öğrenci İşleri Sıkça Sorulan Sorular",
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#sinav-not-sistemi",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBaşvuru süreleri genel olarak belgelerde açıkça belirtilmemektedir. Ancak mazeretinizi bildirmenize ve gerekli dokümanları teslim etmenizin 10 gün içinde yapılması gerekmektedir.\nSaglık, doğal afet veya ilgili yönetim kurulunca kabul edilen diğer mazeretler nedeniyle bir dersin ara sınavına giremediğiniz durumda, gerekli raporları ve belgeleri elden 10 gün içinde fakülte/yüksekokul/meslek yüksekokulu sekreterliğine teslim etmeniz gerekmektedir. Posta ile teslim edilen belgeler ise bir hafta içerisinde teslim edilmelidir.\nBu sürelerin herhangi bir değişikliğine dair resmi bilgiye ulaşılmadıktan dolayı, Öğrenci İşleri Birimi ile iletişime geçmeniz önerilir. Saygılarımla.\n\nDayanak: [Kaynak 1] Öğrenci İşleri Sıkça Sorulan Sorular; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "sources": [
+        {
+          "kategori": "sinavlar",
+          "baslik": "Öğrenci İşleri Sıkça Sorulan Sorular",
+          "url": "https://ogrenciisleri.duzce.edu.tr/Sayfa/af7f/s_s_s_"
+        },
+        {
+          "kategori": "sinavlar",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#sinav-not-sistemi"
+        }
+      ]
+    },
+    {
+      "id": "sinavlar_005",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/0070ab4a-559e-41a3-b1c7-1c28b68f0514",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Sınavlar",
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#sinav-not-sistemi",
+        "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#tek-cift-butunleme",
+        "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+        "https://ogrenciisleri.duzce.edu.tr/Sayfa/af7f/s_s_s_",
+        "Öğrenci İşleri Sıkça Sorulan Sorular"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nButunleme sinavlari akademik takvimde ilan edilen sinav surecine gore yapilir. Kesin tarih icin ilgili egitim-ogretim yilinin akademik takvimine bakilmalidir.\n\nDayanak: [Kaynak 1] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 2] BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI; [Kaynak 3] Öğrenci İşleri Sıkça Sorulan Sorular",
+      "sources": [
+        {
+          "kategori": "sinavlar",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#sinav-not-sistemi"
+        },
+        {
+          "kategori": "sinavlar",
+          "baslik": "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#tek-cift-butunleme"
+        },
+        {
+          "kategori": "sinavlar",
+          "baslik": "Öğrenci İşleri Sıkça Sorulan Sorular",
+          "url": "https://ogrenciisleri.duzce.edu.tr/Sayfa/af7f/s_s_s_"
+        }
+      ]
+    },
+    {
+      "id": "sinavlar_006",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+        "2024-2025 Eğitim-Öğretim Yılı Akademik Takvimi",
+        "Sınavlar",
+        "https://ogrenciisleri.duzce.edu.tr/Sayfa/af7f/s_s_s_",
+        "Öğrenci İşleri Sıkça Sorulan Sorular",
+        "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+        "Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+        "https://bm.mf.duzce.edu.tr/sayfa/15e0/yeterlilik-sinavi-hakk",
+        "rda Uyulması Gereken Kurallar"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nKaynakta kisa sureli sinavlar ve yeterlik sinavlari icin mazeret sinavi yapilmayacagi; ara sinavlar ve yil sonu genel sinavi icin mazeret sinavi bulundugu belirtilmektedir.\n\nDayanak: [Kaynak 1] Öğrenci İşleri Sıkça Sorulan Sorular; [Kaynak 2] Azami Öğrenim Süresi Sonu Sınav Duyurusu; [Kaynak 3] rda Uyulması Gereken Kurallar",
+      "sources": [
+        {
+          "kategori": "sinavlar",
+          "baslik": "Öğrenci İşleri Sıkça Sorulan Sorular",
+          "url": "https://ogrenciisleri.duzce.edu.tr/Sayfa/af7f/s_s_s_"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d"
+        },
+        {
+          "kategori": "fakulte_bolum",
+          "baslik": "rda Uyulması Gereken Kurallar",
+          "url": "https://bm.mf.duzce.edu.tr/sayfa/15e0/yeterlilik-sinavi-hakk"
+        }
+      ]
+    },
+    {
+      "id": "not_sistemi_ortalama_004",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Not Sistemi / Ortalama"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+        "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+        "Not Sistemi / Ortalama"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nDönem ortalamaları jüri üyelerinin ayrı ayrı verdikleri notların ortalamasından elde edilir. Bu bilgi [Kaynak 1] sayesinde doğrudan belgeden alınıyor.\nEğer daha fazla sorunuz varsa, lütfen bize bildiriniz. Yardımcılığımız için memnuniyetle bakıyoruz.\n[Qwen Asistanı]\n\nDayanak: [Kaynak 1] DÜZCE ÜNİVERSİTESİ ORMAN FAKÜLTESİ",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "DÜZCE ÜNİVERSİTESİ ORMAN FAKÜLTESİ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/4a2f99cf-bc06-4a37-9746-f847178d0117"
+        }
+      ]
+    },
+    {
+      "id": "not_sistemi_ortalama_005",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Not Sistemi / Ortalama"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Not Sistemi / Ortalama"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "not_sistemi_ortalama_006",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/06193c82-1968-4c61-9891-d55538ef9528",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Not Sistemi / Ortalama"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/06193c82-1968-4c61-9891-d55538ef9528",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Not Sistemi / Ortalama"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "mezuniyet_004",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/0bf859f9-969c-4171-b6ae-356555f8dd99",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Mezuniyet",
+        "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+        "Diploma ve Mezuniyet Belgeleri Yönergesi"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nMezuniyet icin temel kosul, ogretim programinda yer alan derslerin ve ilgili mevzuatta ongorulen diger akademik yukumluluklerin tamamlanmis olmasidir. Baska bir ifadeyle, mezuniyet icin yalnizca dersleri gecmek degil, programin tum resmi sartlarini yerine getirmek gerekir.\n\nDayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi",
+      "sources": [
+        {
+          "kategori": "mezuniyet",
+          "baslik": "Diploma ve Mezuniyet Belgeleri Yönergesi",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff"
+        }
+      ]
+    },
+    {
+      "id": "mezuniyet_005",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Mezuniyet"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Mezuniyet"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBölüm bazlı final sinavları için program her zaman belirlenen takvim ve düzenlemeler çerçevesinde oluşturulur. Ancak, dersin acildığı bölüm arası farklılıklar olabilir; bu nedenle duyuruların düzenli olarak kontrol edilmesi önemlidir [Kaynak 1].\nTüm ilgili bilgilere erişmek için lütfen bölümünüzdeki duyuru sayfalarını ziyaret etmenizi ve gerekirse Öğrenci İşleri Daire Başkanlığı ile iletişime geçmeniz önerilir.",
+      "sources": []
+    },
+    {
+      "id": "mezuniyet_006",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+        "Öğrenci İşleri Duyuruları",
+        "Mezuniyet"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nGecici mezuniyet belgesi, mezuniyet islemleri tamamlanip diploma henuz hazir degilken ilgili mevzuat ve birim surecine gore duzenlenir. Belgenin kesin verilme zamani ogrencinin mezuniyet onay surecine baglidir; bu nedenle diploma/mezuniyet islemleri tamamlanmadan kesin tarih soylemek dogru olmaz.\n\nDayanak: [Kaynak 1] Diploma ve Mezuniyet Belgeleri Yönergesi; [Kaynak 2] BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+      "sources": [
+        {
+          "kategori": "mezuniyet",
+          "baslik": "Diploma ve Mezuniyet Belgeleri Yönergesi",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff"
+        },
+        {
+          "kategori": "mezuniyet",
+          "baslik": "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#tek-cift-butunleme"
+        }
+      ]
+    },
+    {
+      "id": "cap_yandal_004",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+        "ÇAP ve Yandal Başvuru Esasları",
+        "ÇAP / Yandal"
+      ],
+      "acceptable_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+        "ÇAP ve Yandal Başvuru Esasları",
+        "ÇAP / Yandal"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nResmi kaynaklarda yer alan ilgili bilgi asagidadir:\n- Uluslararası işbirliği ile gerçekleştirilecek projelerin duyuru, başvuru ve yürütme işlerinin sekretaryasını sağlamak. Koordinatörlüğün faaliyet alanları\nKesin uygulama icin ilgili resmi kaynak metni esas alinmalidir.\n\nDayanak: [Kaynak 1] 5D784293 4Abb 4Bc9 8A53 F15Dddaee6E9",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "5D784293 4Abb 4Bc9 8A53 F15Dddaee6E9",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/5d784293-4abb-4bc9-8a53-f15dddaee6e9"
+        }
+      ]
+    },
+    {
+      "id": "cap_yandal_005",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+        "ÇAP ve Yandal Başvuru Esasları",
+        "ÇAP / Yandal",
+        "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+        "DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ",
+        "https://panel.duzce.edu.tr//Dosya/GetFile/e6ac6d2e-d9b1-4be9-9eff-98b7b04dcbb7",
+        "CAP ve Yandal",
+        "https://cdn.duzce.edu.tr/File/GetFile/a40f9bfd-0852-44d9-ade0-1c543f4fee6b",
+        "YABANCI DİL HAZIRLIK SINIFI"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nOrtalama şartının her iki durumda da geçerli olabileceğini belirtmek mümkün. Ancak, bu konuda daha spesifik bilgiye sahip olduğunuzdan emin olmak için Öğrenci İşleri biriminize başvurmanızı öneririm.\n[Kaynak 4] ve [Kaynak 6]'ya dayanarak, ortalamaların hesaplanmasında kullanılacak sınavların türü hakkında daha ayrıntılı bilgiye ulaşabilirsiniz. Ayrıca, yatay geçişlerin nasıl yönetildiği konusunda da kapsamlı bilgiler bulabilirsiniz.\nDüzce Üniversitesi Öğrenci İşleri Daire Başkanlığı\n\nDayanak: [Kaynak 1] CAP ve Yandal; [Kaynak 2] DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ; [Kaynak 3] YABANCI DİL HAZIRLIK SINIFI",
+      "sources": [
+        {
+          "kategori": "cap_yandal",
+          "baslik": "CAP ve Yandal",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/e6ac6d2e-d9b1-4be9-9eff-98b7b04dcbb7"
+        },
+        {
+          "kategori": "cap_yandal",
+          "baslik": "DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337"
+        },
+        {
+          "kategori": "muafiyet_intibak",
+          "baslik": "YABANCI DİL HAZIRLIK SINIFI",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/a40f9bfd-0852-44d9-ade0-1c543f4fee6b"
+        }
+      ]
+    },
+    {
+      "id": "cap_yandal_006",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+        "ÇAP ve Yandal Başvuru Esasları",
+        "ÇAP / Yandal",
+        "https://cdn.duzce.edu.tr/File/GetFile/06f2f463-8316-44a2-9593-a1f9fe1b0739",
+        "Akademik Takvim",
+        "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+        "DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ",
+        "https://cdn.duzce.edu.tr/File/GetFile/cd218698-9e13-4d5b-911a-deeb096326de",
+        "CAP ve Yandal"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBaşvurunuz için gerekli olan süre ve süreçleri belirtmek isteyebilirsiniz. Öğrenci İşleri Daire Başkanlığı'na başvuran durumlar genellikle başvuru sahibinin kayıtlı olduğu yükseköğretim kurumuyla danışmanlık sürecinden sonra gerçekleştirilir.\nÖzel öğrenci olarak ders almak istediğiniz program veya fakülteye göre, belirlenen süreler ve süreçler değişebilir. Örneğin:\n- Diğer üniversitelerden özel öğrenci başvurusu için başvuru en geç kayıtlı olduğunuz yükseköğretim kurumunun ilgili kurullarınca alınan karara 15 gün öncesine kadar Düzce Üniversitesi Öğrenci İşleri Daire Başkanlığı'na yapılır.\n- Tıp Fakültesi öğrencilerinin staj başvurusu için ise en geç staj başlangıç tarihinden 15 gün öncesinde Tıp Fakültesi Dekanlığına başvurulmalıdır.\nBu süreçlerle ilgili daha fazla bilgi almak isterseniz, Öğrenci İşleri Daire Başkanlığı'ndan doğrudan iletişime geçebilirsiniz. Saygılarımla,\n[Dijital Asistan]\n\nDayanak: [Kaynak 1] Akademik Takvim; [Kaynak 2] DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ; [Kaynak 3] CAP ve Yandal",
+      "sources": [
+        {
+          "kategori": "cap_yandal",
+          "baslik": "Akademik Takvim",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/06f2f463-8316-44a2-9593-a1f9fe1b0739"
+        },
+        {
+          "kategori": "cap_yandal",
+          "baslik": "DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337"
+        },
+        {
+          "kategori": "cap_yandal",
+          "baslik": "CAP ve Yandal",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/cd218698-9e13-4d5b-911a-deeb096326de"
+        }
+      ]
+    },
+    {
+      "id": "yatay_gecis_004",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/cd218698-9e13-4d5b-911a-deeb096326de",
+        "Yatay Geçiş Başvuru Esasları",
+        "Yatay Geçiş"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/cd218698-9e13-4d5b-911a-deeb096326de",
+        "Yatay Geçiş Başvuru Esasları",
+        "Yatay Geçiş"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nResmi kaynaklarda yer alan ilgili bilgi asagidadir:\n- Sonuçlar geri bildirimler doğrultusunda stratejik çerçeve sürekli güncellenerek, hedeﬂenen değişimin kalıcı ve etkili bir biçimde kurumsal kültüre entegre edilmesi sağlanmaktadır.\n- Uluslararası işbirliği ile gerçekleştirilecek projelerin duyuru, başvuru ve yürütme işlerinin sekretaryasını sağlamak. Koordinatörlüğün faaliyet alanları\n- MADDE 15 – (1) Öğrenci konseyi yönetim kurulu, öğrenci konseyi genel kurulu üyelerinin, kendi aralarından,\nKesin uygulama icin ilgili resmi kaynak metni esas alinmalidir.\n\nDayanak: [Kaynak 1] AKREDİTASYON, AKADEMİK DEĞERLENDİRME; [Kaynak 2] 13 Haziran 2020 CUMARTESİ; [Kaynak 3] 5D784293 4Abb 4Bc9 8A53 F15Dddaee6E9",
+      "sources": [
+        {
+          "kategori": "akademik_takvim",
+          "baslik": "AKREDİTASYON, AKADEMİK DEĞERLENDİRME",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/7d4fa754-666a-46fb-8a45-97f53181c02f"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "13 Haziran 2020 CUMARTESİ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/0e367049-d3e0-4b95-9a17-7a417d928fe0"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "5D784293 4Abb 4Bc9 8A53 F15Dddaee6E9",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/5d784293-4abb-4bc9-8a53-f15dddaee6e9"
+        }
+      ]
+    },
+    {
+      "id": "yatay_gecis_005",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+        "Yatay Geçiş Başvuru Esasları",
+        "Yatay Geçiş"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nResmi kaynaklarda yer alan ilgili bilgi asagidadir:\n- MADDE 12- (1) Üniversitede %100 yabancı dilde eğitim veren programlara kayıt hakkı kazanan adaylar hariç eğitim-öğretime başlamak için Türkçe yeterlik şartı aranır. (2) Kayıt hakkı kazanan adaylardan a. Yurt içinde veya yurt dışında %100 Türk dilinde eğitim veren bir yükseköğretim diploma programından (ön lisans, lisans, yüksek lisans) mezun olanlardan Türkçe yeterlik şartı aranmaz. (3) Türkçe hazırlık eğitimi sür...\n- itibarıyla geçmek istediği diploma programı için geçerli olan puan türünde aldığı merkezi yerleştirme puanının, geçmek istediği diploma programına eşdeğer yurt içindeki diğer üniversitelerin diploma programlarının en düşük taban puanından az olmaması şartı aranır. (6) Yetenek sınavı ile öğrenci alan diploma programlarına kurum içi yatay geçişlerde diğer şartların yanı sıra yetenek sınavında da başarılı olma şartı...\n- (5) Üniversite bünyesindeki aynı düzeyde fakat farklı merkezi yerleştirme puan türü ile öğrenci kabul eden diploma programları arasında yatay geçiş başvurusu yapılabilmesi için, öğrencinin merkezi sınava girdiği yıl itibarıyla geçmek istediği diploma programı için geçerli olan puan türünde aldığı merkezi yerleştirme puanının, geçmek istediği diploma programına eşdeğer yurt içindeki diğer üniversitelerin diploma pr...\nKesin uygulama icin ilgili resmi kaynak metni esas alinmalidir.\n\nDayanak: [Kaynak 1] YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ; [Kaynak 2] DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ; [Kaynak 3] CAP ve Yandal",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e"
+        },
+        {
+          "kategori": "cap_yandal",
+          "baslik": "DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337"
+        },
+        {
+          "kategori": "cap_yandal",
+          "baslik": "CAP ve Yandal",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/e6ac6d2e-d9b1-4be9-9eff-98b7b04dcbb7"
+        }
+      ]
+    },
+    {
+      "id": "yatay_gecis_006",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+        "Yatay Geçiş Başvuru Esasları",
+        "Yatay Geçiş"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+        "Yatay Geçiş Başvuru Esasları",
+        "Yatay Geçiş"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "harc_ucret_004",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745",
+        "Katkı Payı ve Öğrenim Ücreti",
+        "Harç / Ücret"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745",
+        "Katkı Payı ve Öğrenim Ücreti",
+        "Harç / Ücret"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nKayit yenileme islemleri akademik takvimde belirtilen surelerde yapilir. Islem genellikle OBS uzerinden ders secimi ve danisman onayi surecini kapsar; kesin adimlar icin ilgili yilin duyurusu gerekir.\n\nDayanak: [Kaynak 1] 2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Ders Kayıt ve Kayıt Yenileme",
+      "sources": [
+        {
+          "kategori": "duyuru",
+          "baslik": "2025-2026 Bahar Ders Kayıt ve Kayıt Yenileme Duyurusu",
+          "url": "https://ef.duzce.edu.tr/duyuru/6771/2025-2026-egitim-ogretim-yili-bahar-yariyili-ders-kayit-ve-kayit-yenileme-duyurusu#ekle-sil-akts"
+        },
+        {
+          "kategori": "merkezi_mevzuat",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943"
+        },
+        {
+          "kategori": "akademik_takvim",
+          "baslik": "Ders Kayıt ve Kayıt Yenileme",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/1ed55517-ee0c-431a-a214-7a41d74eaa70"
+        }
+      ]
+    },
+    {
+      "id": "harc_ucret_005",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745",
+        "Katkı Payı ve Öğrenim Ücreti",
+        "Harç / Ücret"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu sorunuz için resmi belgelerde öğrenci işleri personelinin görev alanına ait bilgiye ulaşılamadı. Lütfen Öğrenci İşleri birimiyle iletişime geçiniz ve detaylı bilgilere ulaşabilirsiniz.\n\nDayanak: [Kaynak 1] ÖĞRENCİ KATKI PAYLARININ DEVLETÇE KARŞILANMASINA İLİŞKİN; [Kaynak 2] Tek/Çift Ders Sınavları Hakkında SSS",
+      "sources": [
+        {
+          "kategori": "harc_ucret",
+          "baslik": "ÖĞRENCİ KATKI PAYLARININ DEVLETÇE KARŞILANMASINA İLİŞKİN",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/8c6780e0-c53b-4440-a090-4e9d0b5ee340"
+        },
+        {
+          "kategori": "harc_ucret",
+          "baslik": "Tek/Çift Ders Sınavları Hakkında SSS",
+          "url": "https://tarih.fef.duzce.edu.tr/sayfa/0594/tekcift-ders-sinavlari-hakkinda-sss"
+        }
+      ]
+    },
+    {
+      "id": "harc_ucret_006",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://mf.duzce.edu.tr/sayfa/8a10/ders-kayitlari-esnasinda-sikca-sorulan-sorular-ve-cevaplari",
+        "Ders Kayıtları Esnasında Sıkça Sorulan Sorular ve Cevapları",
+        "Harç / Ücret"
+      ],
+      "acceptable_source_terms": [
+        "https://mf.duzce.edu.tr/sayfa/8a10/ders-kayitlari-esnasinda-sikca-sorulan-sorular-ve-cevaplari",
+        "Ders Kayıtları Esnasında Sıkça Sorulan Sorular ve Cevapları",
+        "Harç / Ücret"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nMazeretli ders kaydı başvurusunda bulunmuş olan öğrenci, durumu değiştirmez. Bu tür başvurular sonucunda belirlenen şartlara uyması ve onaylanması gerekmektedir.\nBu konuda resmi belgelerde bu bilgi bulunmaktadır: [Kaynak 1], [Kaynak 2] ve [Kaynak 3].\n\nDayanak: [Kaynak 1] Ders Kayıt ve Kayıt Yenileme; [Kaynak 2] Akademik Takvim",
+      "sources": [
+        {
+          "kategori": "cap_yandal",
+          "baslik": "Ders Kayıt ve Kayıt Yenileme",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/c515a04b-f396-41e4-92fe-a9029fd963b4"
+        },
+        {
+          "kategori": "yaz_okulu",
+          "baslik": "Akademik Takvim",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19"
+        }
+      ]
+    },
+    {
+      "id": "burs_004",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/22a1f570-c7f7-4dd8-8598-616f2ae00e21",
+        "Burs Başvuru Duyuruları",
+        "Burs"
+      ],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/22a1f570-c7f7-4dd8-8598-616f2ae00e21",
+        "Burs Başvuru Duyuruları",
+        "Burs"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBaşvuru süresinde eksik bir belgenin sunulması durumunda başvurunuz değerlendirilmeye alınmayacaktır. Bu nedenle eksik belgeleri tamamlamak ve tekrar başvuru yapmak gereklidir.\nBu konuda daha fazla bilgiye ihtiyacınız olursa Öğrenci İşleri Daire Başkanlığı ile iletişime geçebilirsiniz.\n\nDayanak: [Kaynak 1] Düzce Üniversitesi Mevzuat Komisyonu; [Kaynak 2] Bu belge,güvenli elektronik imza ile imzalanmıştır.; [Kaynak 3] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Düzce Üniversitesi Mevzuat Komisyonu",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/7772123f-c7c5-4552-b300-7147262a5377"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Bu belge,güvenli elektronik imza ile imzalanmıştır.",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/06193c82-1968-4c61-9891-d55538ef9528"
+        },
+        {
+          "kategori": "cap_yandal",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a"
+        }
+      ]
+    },
+    {
+      "id": "burs_005",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e",
+        "Burs Başvuru Duyuruları",
+        "Burs"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e",
+        "Burs Başvuru Duyuruları",
+        "Burs"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "burs_006",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/22a1f570-c7f7-4dd8-8598-616f2ae00e21",
+        "Burs Başvuru Duyuruları",
+        "Burs"
+      ],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/22a1f570-c7f7-4dd8-8598-616f2ae00e21",
+        "Burs Başvuru Duyuruları",
+        "Burs"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nResmi kaynaklarda yer alan ilgili bilgi asagidadir:\n- f) Yemek, ulaşım, barınma, kafeterya, kulüp, burs, eğitim, sanat, kültür ve spor alanlarında çalışma grupları\n- MADDE 16 – (1) Öğrenci konseyi yönetim kurulunun görevleri şunlardır\n- a) Çalışmalarına ilişkin üyeleri arasında iş bölümü ve görev dağılımını yapmak.\nKesin uygulama icin ilgili resmi kaynak metni esas alinmalidir.\n\nDayanak: [Kaynak 1] 13 Haziran 2020 CUMARTESİ",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "13 Haziran 2020 CUMARTESİ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/0e367049-d3e0-4b95-9a17-7a417d928fe0"
+        }
+      ]
+    },
+    {
+      "id": "ogrenci_belgesi_transkript_004",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Öğrenci Belgesi / Transkript"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Öğrenci Belgesi / Transkript"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "ogrenci_belgesi_transkript_005",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Öğrenci Belgesi / Transkript"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Öğrenci Belgesi / Transkript"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "ogrenci_belgesi_transkript_006",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da",
+        "Kayıt Yenileme İşlemleri",
+        "Öğrenci Belgesi / Transkript"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da",
+        "Kayıt Yenileme İşlemleri",
+        "Öğrenci Belgesi / Transkript"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nOgrenci belgesi ve transkript/not durum belgesi oncelikle e-Devlet Kapisi uzerinden temin edilmelidir. Kaynakta e-Devlet uzerinden alinan belgelerin kamu kurumlari tarafindan kabul edilmesi gerektigi belirtilmektedir. E-Devlet uzerinden temin edilemeyen veya islak imzali/onayli gereken durumlarda ilgili birimin Ogrenci Isleri Burosuna basvurulabilir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
+      "sources": [
+        {
+          "kategori": "cap_yandal",
+          "baslik": "Öğrenci Belgesi ve Transkript İşlemleri",
+          "url": "https://mf.duzce.edu.tr/sayfa/8955/cift-anadal-programlari"
+        }
+      ]
+    },
+    {
+      "id": "askerlik_tecili_004",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+        "Askerlik Tecil İşlemleri",
+        "Askerlik Tecili"
+      ],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+        "Askerlik Tecil İşlemleri",
+        "Askerlik Tecili"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "askerlik_tecili_005",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+        "Askerlik Tecil İşlemleri",
+        "Askerlik Tecili"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nKaynakta askerlik tecil islemlerinin Rektorluk Ogrenci Isleri Dairesi Baskanliginca yurutuldugu belirtilmektedir.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 2] MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Öğrenci Belgesi ve Transkript İşlemleri",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/476cb2d7-5847-4c3c-8c6d-2b48cc126705"
+        }
+      ]
+    },
+    {
+      "id": "askerlik_tecili_006",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+        "Askerlik Tecil İşlemleri",
+        "Askerlik Tecili"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nPrograma kayıtlı olmak, erkek öğrencilerin askerlik tecil işlemleri için bir gerekçe oluşturmaz. Ancak, programı tamamlamadan askere alınan öğrenciler, askerlik hizmetinden sonra terhislerini izleyen ilk iki yıl içinde Üniversitemiz Pedagojik Formasyon Sertifika programına kaldıkları yerden devam edebilirler.\nBu konuda resmi belgelerde bilgiye ulaşıldı. Lütfen bu bilgilere dikkat etmediniz mi? Herhangi bir sorunuz veya ihtiyacınız olursa, lütfen Öğrenci İşleri Birimi ile iletişime geçebilirsiniz.\n\nDayanak: [Kaynak 1] 3D303694 Adc7 4872 B09F Aa9B2Fbb8458; [Kaynak 2] MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "3D303694 Adc7 4872 B09F Aa9B2Fbb8458",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/476cb2d7-5847-4c3c-8c6d-2b48cc126705"
+        }
+      ]
+    },
+    {
+      "id": "disiplin_islemleri_004",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/a3dc4e5a-a9d6-45f0-8ec8-0b6d8293987c",
+        "Öğrenci Disiplin Yönetmeliği",
+        "Disiplin İşlemleri"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/a3dc4e5a-a9d6-45f0-8ec8-0b6d8293987c",
+        "Öğrenci Disiplin Yönetmeliği",
+        "Disiplin İşlemleri"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nResmi kaynaklarda yer alan ilgili bilgi asagidadir:\n- e) DGS: Ölçme, Seçme ve Yerleştirme Merkezi tarafından yapılan dikey geçiş sınavını, f) Ek süre sonu sınavları: Ek süre sonunda başarısız dersi bulunan öğrencilerin gireceği sınavları, g) Ek süre: Azami öğrenim süresi sonunda veya azami süre sonu sınavlarına girerek başarısız ders sayısını beş ya da daha aza indiren öğrencilere tanınan süreyi, ğ) Öğrenci: Düzce Üniversitesine bağlı fakülte/yüksekokul/meslek yüksek...\n- kitapçığı ya da soru kâğıdı 16 – 18 punto ya da daha büyük puntolarda basılmış olarak hazırlanır.\n- ğ) İhtiyaç duyulması halinde özel gereksinimli öğrencilerin sınavlara ilaç, tıbbi malzeme ya da sıvı ile (insulin pompası vb.) girmelerine izin verilir, h) İhtiyaç duyulması halinde özel gereksinimli öğrencilerin sınav sırasında sınav görevlisi nezaretinde tuvalet – lavabo ihtiyacını karşılamasına izin verilir, ı) Okuyucu-işaretleyici/yazıcı ya da büyük puntolu soru kağıdı ya da kitapçığı ile sına va giren görme e...\nKesin uygulama icin ilgili resmi kaynak metni esas alinmalidir.\n\nDayanak: [Kaynak 1] Azami Öğrenim Süresi Sonu Sınav Duyurusu; [Kaynak 2] ÖZEL GEREKSİNİMLİ ÖĞRENCİLER İÇİN EĞİTİMDE FIRSAT EŞİTLİĞİ",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "ÖZEL GEREKSİNİMLİ ÖĞRENCİLER İÇİN EĞİTİMDE FIRSAT EŞİTLİĞİ",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/024ef66a-d5d2-472f-86df-443989aaf1d1"
+        }
+      ]
+    },
+    {
+      "id": "disiplin_islemleri_005",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864",
+        "Öğrenci Disiplin Yönetmeliği",
+        "Disiplin İşlemleri"
+      ],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864",
+        "Öğrenci Disiplin Yönetmeliği",
+        "Disiplin İşlemleri"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nYazılı veya sözlü olmak üzere farklı türlerde savunma imkanları bulunmaktadır. Ancak, disiplin soruşturması açıldığı durumda, hakkındaki ceza verilmeden önce savunma imkânı tanınmamaktadır [Kaynak 1].\nSavunma hakkında daha fazla bilgiye ihtiyacınız olursa veya belirli bir durumdan sorumluluk almak isteyebilirseniz, Öğrenci İşleri Daire Başkanlığı ile iletişime geçebilirsiniz. Saygılarımla,\n[Kaynak 1] 2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE\n\nDayanak: [Kaynak 1] 2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "2547 SAYILI YÜKSEKÖĞRETİM KANUNUNUN 54 ÜNCÜ MADDESİNE GÖRE",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/672fbe98-7a69-4fa4-905e-dd79db4244a3"
+        }
+      ]
+    },
+    {
+      "id": "disiplin_islemleri_006",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864",
+        "Öğrenci Disiplin Yönetmeliği",
+        "Disiplin İşlemleri"
+      ],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864",
+        "Öğrenci Disiplin Yönetmeliği",
+        "Disiplin İşlemleri"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "akademik_takvim_duyurular_004",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://ogrenciisleri.duzce.edu.tr/duyurular",
+        "Akademik Takvim",
+        "Akademik Takvim / Duyurular"
+      ],
+      "acceptable_source_terms": [
+        "https://ogrenciisleri.duzce.edu.tr/duyurular",
+        "Akademik Takvim",
+        "Akademik Takvim / Duyurular"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nHer fakülте için sınav/tanımlanan meziyet sınavlarına göre kabul edilecek puanlar ve taban puanları aynı değildir. Her bölüm veya program için farklı bir giriş puanı hesaplanır, bu da Tablo 1 ve Tablo 2’ye dayanarak belirlenir.\nBu konuda daha fazla bilgi almak isterseniz lütfen Öğrenci İşleri Birimi ile iletişime geçiniz. Saygılarımla,\n\nDayanak: [Kaynak 1] Bu belge,güvenli elektronik imza ile imzalanmıştır.",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Bu belge,güvenli elektronik imza ile imzalanmıştır.",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/06193c82-1968-4c61-9891-d55538ef9528"
+        }
+      ]
+    },
+    {
+      "id": "akademik_takvim_duyurular_005",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://ogrenciisleri.duzce.edu.tr/duyurular",
+        "Öğrenci İşleri Duyuruları",
+        "Akademik Takvim / Duyurular"
+      ],
+      "acceptable_source_terms": [
+        "https://ogrenciisleri.duzce.edu.tr/duyurular",
+        "Öğrenci İşleri Duyuruları",
+        "Akademik Takvim / Duyurular"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBölüm duyurularını düzenli olarak takip etmeniz önemlidir. Bölüm duyuru sayfaları genellikle bölüm özel durumları, staj bilgileri ve diğer bölüme özgü bilgilere odaklanır [Kaynak 3]. Bu nedenle, akademik takvimde yer alan genel ders saatleri ve sınavlar gibi temel bilgilerin yanı sıra, bölümün belirli gereksinimlerini de göz önünde bulundurmanız önemlidir.\nDüzenli olarak \"Duyuru\" bölümüne bakmayı unutmayın. Her iki kaynakta da duyuruların düzenli kontrolünün akademik başarılarınızı desteklediğini vurgulanmıştır [Kaynak 1], [Kaynak 5].\nSaygılarımızla,\n\nDayanak: [Kaynak 1] im, Staj ve Uygulamalı Ders Hakkında Bilgilendirme; [Kaynak 2] DUZCE UNIVERSITESI KURUM ICI VE KURUMLAR ARASI YATAY GECIS ESASLARI; [Kaynak 3] ORMAN FAKÜLTESİ",
+      "sources": [
+        {
+          "kategori": "staj",
+          "baslik": "im, Staj ve Uygulamalı Ders Hakkında Bilgilendirme",
+          "url": "https://ogrenciisleri.duzce.edu.tr/sayfa/a13c/ogretim-programi-degisikligi-formlari"
+        },
+        {
+          "kategori": "yatay_gecis",
+          "baslik": "DUZCE UNIVERSITESI KURUM ICI VE KURUMLAR ARASI YATAY GECIS ESASLARI",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/yatay-gecis-yonergesi#basvuru-takvim"
+        },
+        {
+          "kategori": "staj",
+          "baslik": "ORMAN FAKÜLTESİ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/a771c727-6a6f-4522-aa5a-b441617eaf33"
+        }
+      ]
+    },
+    {
+      "id": "akademik_takvim_duyurular_006",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://ogrenciisleri.duzce.edu.tr/duyurular",
+        "Akademik Takvim",
+        "Akademik Takvim / Duyurular"
+      ],
+      "acceptable_source_terms": [
+        "https://ogrenciisleri.duzce.edu.tr/duyurular",
+        "Akademik Takvim",
+        "Akademik Takvim / Duyurular"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "yaz_okulu_004",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Yaz Okulu"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Yaz Okulu"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nUygulamalı derslerin devamsızlığı zorunluluğu hakkında soru sormaktan memnuniyet duyarım. Öğrenci belgesinde ve transkript işlemlerinden bilgi edinebiliriz ki, uygulama bölümüne %80'ye kadar devam etmek zorundasınız [Kaynak 1].\nBu durum değişmez bir kurallıdır ve her ders için geçerlidir. Ancak, belgede durumunuzda özel bir durum söz konusu olduğunda veya bu kuralın uygulanmasında sorun yaşarsanız, Öğrenci İşleri Daire Başkanlığı ile iletişime geçmek size yardımcı olabilir.\n[Asistan]\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği; [Kaynak 3] Amaç",
+      "sources": [
+        {
+          "kategori": "mezuniyet",
+          "baslik": "Öğrenci Belgesi ve Transkript İşlemleri",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da"
+        },
+        {
+          "kategori": "devamsizlik",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#devam-zorunlulugu"
+        },
+        {
+          "kategori": "staj",
+          "baslik": "Amaç",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/8baa2513-ea98-4920-b5e8-d7ac77145b43"
+        }
+      ]
+    },
+    {
+      "id": "yaz_okulu_005",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Yaz Okulu"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Yaz Okulu"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "yaz_okulu_006",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Yaz Okulu"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Yaz Okulu"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nDüzce Üniversitesi Öğrenci İşleri Daire Başkanlığı olarak size muafiyet ve intibak işlemlerine ilişkin bilgi sunmaktan memnuniyet duyarım.\nÖncelikle, lisans programına başvuran öğrencilerin yabancı dillerde yapılan derslerden muafiyet alabilmeleri için üniversitenin yapacağı yabancı dil muafiyet sınavını geçmeli veya zorunlu yabancı dil hazırlık sınıfına devam etmesi gerekmektedir. Bu durum, yabancı dille öğretim yapılan programlarda ve zorunlu yabancı dil hazırlık sınıfı bulunan programlarda geçerlidir.\nDikey geçişlerde veya diğer yükseköğretim kurumlarından gelen öğrencilerin muafiyet işlemlerine ilişkin bilgiler ise Düzce Üniversitesi Mevzuat Komisyonu tarafından belirlenmiş esaslara dayanır. Bu esaslar, öğrencinin daha önce alıp başarılı olduğu derslerden muafiyeti ve intibaklarıyla ilgilidir.\nÖğrenci isimli formasyon eğitimi seçmeli dersleri paket program ve eğitim bilimlerinden alınması gereken derslere sahip olmasa da, bu durumun muafiyet işlemine yol açmadığını belirtmektedir. Bu nedenle, öğrencinin alması gereken derslere göre programa kaydı yapılarak eğitime devam hakkı verilir.\nBu konuda daha fazla bilgiye ihtiyaç duyduğunuzda Öğrenci İşleri birimimize başvurabilirsiniz. Saygılarımla,\n\nDayanak: [Kaynak 1] MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS; [Kaynak 2] Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS",
+          "url": "https://panel.duzce.edu.tr//Dosya/GetFile/476cb2d7-5847-4c3c-8c6d-2b48cc126705"
+        },
+        {
+          "kategori": "cap_yandal",
+          "baslik": "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a"
+        }
+      ]
+    },
+    {
+      "id": "muafiyet_intibak_004",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Muafiyet / İntibak"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Muafiyet / İntibak"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "muafiyet_intibak_005",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Muafiyet / İntibak"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Muafiyet / İntibak"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nSonuçlar genellikle Öğrenci İşleri Daire Başkanlığı tarafından duyuru platformlarında veya resmi web sitesinde duyurulmaktadır. Bu süreçlerin detayları ve takvim bilgileri de öğrenci konseyi yönetim kurulu tarafından belirlenir.\nBu konuda daha fazla bilgiye ihtiyacınız olursa, lütfen Öğrenci İşleri Daire Başkanlığı ile iletişime geçiniz.\nSaygılarımızla,\n[Dijital Asistan]\n\nDayanak: [Kaynak 1] 13 Haziran 2020 CUMARTESİ",
+      "sources": [
+        {
+          "kategori": "belge_pdf",
+          "baslik": "13 Haziran 2020 CUMARTESİ",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/0e367049-d3e0-4b95-9a17-7a417d928fe0"
+        }
+      ]
+    },
+    {
+      "id": "muafiyet_intibak_006",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Muafiyet / İntibak"
+      ],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+        "Ders Muafiyeti ve İntibak Esasları",
+        "Muafiyet / İntibak"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nBu konuda resmi belgelerde bilgiye ulasilamadi. Lutfen Ogrenci Isleri birimi ile iletisime geciniz.",
+      "sources": []
+    },
+    {
+      "id": "staj_007",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj",
+        "Bilgisayar Mühendisliği - Staj",
+        "Staj",
+        "https://cdn.duzce.edu.tr/File/GetFile/a771c727-6a6f-4522-aa5a-b441617eaf33",
+        "Öğrenci Belgesi ve Transkript İşlemleri"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nDaha önce alındığı ve devam koşulu yerine getirildiği bir dersin tekrarında devam zorunluluğunun aranıp aranmamasına ilişkin karara, bölümün fiziki kapasitesi, öğretim elemanı ve öğrenci sayısı gibi faktörler de dahil olmak üzere, ders sorumlusunun uygun görüşü ve bölüm başkanlığının önerisi ile ilgili yönetim kurulu tarafından verilecektir. Bu konuda daha fazla bilgiye ihtiyacınız varsa Öğrenci İşleri Birimi ile iletişime geçebilirsiniz.\n\nDayanak: [Kaynak 1] Öğrenci Belgesi ve Transkript İşlemleri",
+      "sources": [
+        {
+          "kategori": "staj",
+          "baslik": "Öğrenci Belgesi ve Transkript İşlemleri",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/a771c727-6a6f-4522-aa5a-b441617eaf33"
+        }
+      ]
+    },
+    {
+      "id": "mezuniyet_007",
+      "passed": false,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/0bf859f9-969c-4171-b6ae-356555f8dd99",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Mezuniyet"
+      ],
+      "acceptable_source_terms": [
+        "https://panel.duzce.edu.tr//Dosya/GetFile/0bf859f9-969c-4171-b6ae-356555f8dd99",
+        "Lisans Eğitim Öğretim Yönetmeliği",
+        "Mezuniyet"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nGenel not ortalaması şartları hakkında bilgi vermek için aşağıdaki noktaları göz önünde bulundurun:\n- Çift anadal programını tamamlamak isteyen öğrenci, mezuniyet not ortalamasına (anadal ve yandal) göre farklı derecelerde hak kazanabilir. [Kaynak 1]\nBu bilgilerle ilgili daha fazla soru olursa lütfen Öğrenci İşleri birimimize ulaşın.\n\nDayanak: [Kaynak 1] CAP ve Yandal; [Kaynak 2] Düzce Üniversitesi Mevzuat Komisyonu",
+      "sources": [
+        {
+          "kategori": "cap_yandal",
+          "baslik": "CAP ve Yandal",
+          "url": "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal"
+        },
+        {
+          "kategori": "belge_pdf",
+          "baslik": "Düzce Üniversitesi Mevzuat Komisyonu",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/7772123f-c7c5-4552-b300-7147262a5377"
+        }
+      ]
+    },
+    {
+      "id": "yaz_okulu_007",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Yaz Okulu"
+      ],
+      "source_error": false,
+      "answer": "Sayin ogrencimiz,\nYaz Okulu Uygulama Esaslarina gore yaz okulunda basari degerlendirmesinde devam durumu dikkate alinir. Ancak universite disinda yaz okulunda ders alip esdeger ders icin devam kosulunu sagladigini belgeleyen ogrenciler icin devam zorunlulugu aranmaz.\n\nDayanak: [Kaynak 1] Bilgisayar Mühendisliği - Yaz Okulu; [Kaynak 2] Yaz Okulu Yönergesi",
+      "sources": [
+        {
+          "kategori": "yaz_okulu",
+          "baslik": "Bilgisayar Mühendisliği - Yaz Okulu",
+          "url": "https://bm.mf.duzce.edu.tr/sayfa/17ac/yaz-okulu"
+        },
+        {
+          "kategori": "yaz_okulu",
+          "baslik": "Yaz Okulu Yönergesi",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19"
+        }
+      ]
+    },
+    {
+      "id": "yaz_okulu_008",
+      "passed": true,
+      "missing_answer_terms": [],
+      "forbidden_answer_terms": [],
+      "missing_source_terms": [],
+      "acceptable_source_terms": [
+        "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+        "Yaz Okulu Uygulama Esasları",
+        "Yaz Okulu"
+      ],
+      "source_error": false,
+      "answer": "Sayın öğrencimiz,\nEşdeğerlik talep edilen dersin AKTS’sinin eşdeğerlik talep edilen dersin AKTS’sine en az yüzde seksen oranında eşdeğer olması ve ders içeriğinin de uygun olduğuna bakılarak belirlenir. Ancak, adın, AKTS’sının ve içeriğinin birebir aynı olmasına gerek yoktur.\nBu konuda daha fazla bilgiye ihtiyacınız varsa veya sorularınız varsa, lütfen Öğrenci İşleri birimimize ulaşabilirsiniz. Size yardımcı olmaktan memnuniyet duyarız.\n\nDayanak: [Kaynak 1] Yaz Okulu Yönergesi",
+      "sources": [
+        {
+          "kategori": "yaz_okulu",
+          "baslik": "Yaz Okulu Yönergesi",
+          "url": "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19"
+        }
+      ]
+    }
+  ]
+}

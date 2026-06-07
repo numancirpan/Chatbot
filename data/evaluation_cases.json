@@ -23,6 +23,11 @@
       "staj süresi",
       "iş günü bilgisi",
       "bölüm bazlı açıklama"
+    ],
+    "acceptable_source_terms": [
+      "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj",
+      "Bilgisayar Mühendisliği - Staj",
+      "Staj"
     ]
   },
   {
@@ -48,6 +53,11 @@
       "başvuru süreci",
       "başvuru birimi",
       "adımlar"
+    ],
+    "acceptable_source_terms": [
+      "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular",
+      "Bilgisayar Mühendisliği - Staj SSS",
+      "Staj"
     ]
   },
   {
@@ -71,6 +81,11 @@
     "expected_points": [
       "gerekli evraklar",
       "teslim yöntemi"
+    ],
+    "acceptable_source_terms": [
+      "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular",
+      "Bilgisayar Mühendisliği - Staj SSS",
+      "Staj"
     ]
   },
   {
@@ -96,6 +111,11 @@
       "kayıt yenileme adımları",
       "ders seçimi",
       "onay süreci"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "Ders Kaydı / Kayıt Yenileme"
     ]
   },
   {
@@ -120,6 +140,15 @@
       "başlangıç tarihi",
       "bitiş tarihi",
       "takvim referansı"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+      "Akademik Takvim",
+      "Ders Kaydı / Kayıt Yenileme",
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "https://cdn.duzce.edu.tr/File/GetFile/1ed55517-ee0c-431a-a214-7a41d74eaa70",
+      "Ders Kayıt ve Kayıt Yenileme"
     ]
   },
   {
@@ -143,6 +172,11 @@
     "expected_points": [
       "maksimum kredi",
       "koşullar"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "Ders Kaydı / Kayıt Yenileme"
     ]
   },
   {
@@ -166,6 +200,11 @@
     "expected_points": [
       "tarih aralığı",
       "takvim referansı"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+      "2024-2025 Eğitim-Öğretim Yılı Akademik Takvimi",
+      "Add-Drop"
     ]
   },
   {
@@ -188,6 +227,11 @@
     "expected_points": [
       "ders ekleme işlemi",
       "onay gerekliliği"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "Add-Drop"
     ]
   },
   {
@@ -210,6 +254,11 @@
     "expected_points": [
       "ders bırakma işlemi",
       "koşullar"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "Add-Drop"
     ]
   },
   {
@@ -233,6 +282,11 @@
     "expected_points": [
       "devamsızlık sınırı",
       "uygulama türü"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "Devamsızlık"
     ]
   },
   {
@@ -255,6 +309,11 @@
     "expected_points": [
       "başarısızlık sonucu",
       "sınav hakkı ilişkisi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+      "Lisans Eğitim Öğretim Yönetmeliği",
+      "Devamsızlık"
     ]
   },
   {
@@ -277,6 +336,11 @@
     "expected_points": [
       "uygulamalı ders devam koşulu",
       "hesaplama mantığı"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da",
+      "Kayıt Yenileme İşlemleri",
+      "Devamsızlık"
     ]
   },
   {
@@ -300,6 +364,11 @@
     "expected_points": [
       "uygun mazeret koşulları",
       "başvuru gerekliliği"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+      "Yaz Okulu Uygulama Esasları",
+      "Sınavlar"
     ]
   },
   {
@@ -322,6 +391,11 @@
     "expected_points": [
       "bütünleme durumu",
       "not ilişkisi"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/0070ab4a-559e-41a3-b1c7-1c28b68f0514",
+      "Lisans Eğitim Öğretim Yönetmeliği",
+      "Sınavlar"
     ]
   },
   {
@@ -344,6 +418,11 @@
     "expected_points": [
       "tarih bilgisi",
       "takvim referansı"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+      "2024-2025 Eğitim-Öğretim Yılı Akademik Takvimi",
+      "Sınavlar"
     ]
   },
   {
@@ -366,6 +445,11 @@
     "expected_points": [
       "ağırlıklı ortalama",
       "kredi ve not ilişkisi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "Not Sistemi / Ortalama"
     ]
   },
   {
@@ -388,6 +472,11 @@
     "expected_points": [
       "koşullu geçme",
       "ortalama etkisi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+      "Lisans Eğitim Öğretim Yönetmeliği",
+      "Not Sistemi / Ortalama"
     ]
   },
   {
@@ -410,6 +499,11 @@
     "expected_points": [
       "başarısızlık durumu",
       "tekrar veya bütünleme"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/06193c82-1968-4c61-9891-d55538ef9528",
+      "Lisans Eğitim Öğretim Yönetmeliği",
+      "Not Sistemi / Ortalama"
     ]
   },
   {
@@ -434,6 +528,15 @@
       "ders tamamlama",
       "kredi tamamlama",
       "ortalama şartı"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/0bf859f9-969c-4171-b6ae-356555f8dd99",
+      "Lisans Eğitim Öğretim Yönetmeliği",
+      "Mezuniyet",
+      "https://panel.duzce.edu.tr//Dosya/GetFile/476cb2d7-5847-4c3c-8c6d-2b48cc126705",
+      "MESLEK YÜKSEKOKULLARI VE AÇIKÖĞRETİM ÖN LİSANS PROGRAMLARI MEZUNLARININ LİSANS",
+      "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+      "Diploma ve Mezuniyet Belgeleri Yönergesi"
     ]
   },
   {
@@ -456,6 +559,11 @@
     "expected_points": [
       "minimum ortalama",
       "ek mezuniyet şartları"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+      "Lisans Eğitim Öğretim Yönetmeliği",
+      "Mezuniyet"
     ]
   },
   {
@@ -478,6 +586,15 @@
     "expected_points": [
       "başvuru süreci",
       "başvuru tarihi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+      "Öğrenci İşleri Duyuruları",
+      "Mezuniyet",
+      "https://cdn.duzce.edu.tr/File/GetFile/2f6646d7-707e-496b-b2ae-8084e63b54cd",
+      "Akademik Takvim",
+      "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e",
+      "YABANCI UYRUKLU ÖĞRENCİ ADAYLARININ LİSANSÜSTÜ"
     ]
   },
   {
@@ -500,6 +617,15 @@
     "expected_points": [
       "başvuru adımları",
       "başvuru yeri"
+    ],
+    "acceptable_source_terms": [
+      "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+      "ÇAP ve Yandal Başvuru Esasları",
+      "ÇAP / Yandal",
+      "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+      "DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ",
+      "https://cdn.duzce.edu.tr/File/GetFile/cd218698-9e13-4d5b-911a-deeb096326de",
+      "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği"
     ]
   },
   {
@@ -522,6 +648,11 @@
     "expected_points": [
       "ortalama şartı",
       "ek başvuru koşulları"
+    ],
+    "acceptable_source_terms": [
+      "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+      "ÇAP ve Yandal Başvuru Esasları",
+      "ÇAP / Yandal"
     ]
   },
   {
@@ -544,6 +675,15 @@
     "expected_points": [
       "ortalama şartı",
       "başvuru koşulları"
+    ],
+    "acceptable_source_terms": [
+      "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+      "ÇAP ve Yandal Başvuru Esasları",
+      "ÇAP / Yandal",
+      "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+      "DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ",
+      "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+      "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği"
     ]
   },
   {
@@ -566,6 +706,17 @@
     "expected_points": [
       "başvuru süreci",
       "başvuru kanalı"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/cd218698-9e13-4d5b-911a-deeb096326de",
+      "Yatay Geçiş Başvuru Esasları",
+      "Yatay Geçiş",
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "https://cdn.duzce.edu.tr/File/GetFile/c515a04b-f396-41e4-92fe-a9029fd963b4",
+      "Ders Kayıt ve Kayıt Yenileme",
+      "https://cdn.duzce.edu.tr/File/GetFile/a44682bb-4437-4908-aaf0-c6020e1fc991",
+      "2025-2026 Akademik Takvim"
     ]
   },
   {
@@ -588,6 +739,11 @@
     "expected_points": [
       "başvuru şartları",
       "ortalama ve kontenjan"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+      "Yatay Geçiş Başvuru Esasları",
+      "Yatay Geçiş"
     ]
   },
   {
@@ -610,6 +766,11 @@
     "expected_points": [
       "gerekli evraklar",
       "başvuru dosyası"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+      "Yatay Geçiş Başvuru Esasları",
+      "Yatay Geçiş"
     ]
   },
   {
@@ -632,6 +793,11 @@
     "expected_points": [
       "ödeme tarih aralığı",
       "duyuru/takvim referansı"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745",
+      "Katkı Payı ve Öğrenim Ücreti",
+      "Harç / Ücret"
     ]
   },
   {
@@ -654,6 +820,11 @@
     "expected_points": [
       "ücret bilgisi",
       "hesaplama veya program farkı"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745",
+      "Katkı Payı ve Öğrenim Ücreti",
+      "Harç / Ücret"
     ]
   },
   {
@@ -676,6 +847,11 @@
     "expected_points": [
       "ödeme gerekliliği",
       "ders kaydı ilişkisi"
+    ],
+    "acceptable_source_terms": [
+      "https://mf.duzce.edu.tr/sayfa/8a10/ders-kayitlari-esnasinda-sikca-sorulan-sorular-ve-cevaplari",
+      "Ders Kayıtları Esnasında Sıkça Sorulan Sorular ve Cevapları",
+      "Harç / Ücret"
     ]
   },
   {
@@ -698,6 +874,15 @@
     "expected_points": [
       "başvuru süreci",
       "başvuru tarihi"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/22a1f570-c7f7-4dd8-8598-616f2ae00e21",
+      "Burs Başvuru Duyuruları",
+      "Burs"
+    ],
+    "expect_no_sources": true,
+    "expected_answer_terms": [
+      "bilgiye ulasilamadi"
     ]
   },
   {
@@ -720,6 +905,15 @@
     "expected_points": [
       "başvuru şartları",
       "uygunluk koşulları"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e",
+      "Burs Başvuru Duyuruları",
+      "Burs"
+    ],
+    "expect_no_sources": true,
+    "expected_answer_terms": [
+      "bilgiye ulasilamadi"
     ]
   },
   {
@@ -742,6 +936,11 @@
     "expected_points": [
       "bursun kesilme nedenleri",
       "devam/başarı ilişkisi"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/22a1f570-c7f7-4dd8-8598-616f2ae00e21",
+      "Burs Başvuru Duyuruları",
+      "Burs"
     ]
   },
   {
@@ -764,6 +963,11 @@
     "expected_points": [
       "alma yöntemi",
       "online veya fiziksel seçenek"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+      "Ders Muafiyeti ve İntibak Esasları",
+      "Öğrenci Belgesi / Transkript"
     ]
   },
   {
@@ -786,6 +990,11 @@
     "expected_points": [
       "alma yöntemi",
       "sistem veya birim bilgisi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da",
+      "Kayıt Yenileme İşlemleri",
+      "Öğrenci Belgesi / Transkript"
     ]
   },
   {
@@ -808,6 +1017,11 @@
     "expected_points": [
       "ingilizce belge durumu",
       "başvuru yöntemi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+      "Ders Muafiyeti ve İntibak Esasları",
+      "Öğrenci Belgesi / Transkript"
     ]
   },
   {
@@ -830,6 +1044,11 @@
     "expected_points": [
       "tecil süreci",
       "ilgili kurum veya belge"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+      "Askerlik Tecil İşlemleri",
+      "Askerlik Tecili"
     ]
   },
   {
@@ -852,6 +1071,11 @@
     "expected_points": [
       "gerekli belgeler",
       "teslim bilgisi"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+      "Askerlik Tecil İşlemleri",
+      "Askerlik Tecili"
     ]
   },
   {
@@ -874,6 +1098,11 @@
     "expected_points": [
       "öğrenci işleri rolü",
       "öğrenci yükümlülüğü"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+      "Askerlik Tecil İşlemleri",
+      "Askerlik Tecili"
     ]
   },
   {
@@ -896,6 +1125,11 @@
     "expected_points": [
       "ceza türleri",
       "ceza sınıfları"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/a3dc4e5a-a9d6-45f0-8ec8-0b6d8293987c",
+      "Öğrenci Disiplin Yönetmeliği",
+      "Disiplin İşlemleri"
     ]
   },
   {
@@ -918,6 +1152,11 @@
     "expected_points": [
       "soruşturma süreci",
       "savunma hakkı"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864",
+      "Öğrenci Disiplin Yönetmeliği",
+      "Disiplin İşlemleri"
     ]
   },
   {
@@ -940,6 +1179,11 @@
     "expected_points": [
       "itiraz hakkı",
       "başvuru süresi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+      "Ders Muafiyeti ve İntibak Esasları",
+      "Disiplin İşlemleri"
     ]
   },
   {
@@ -962,6 +1206,11 @@
     "expected_points": [
       "takvim bağlantısı",
       "yayınlandığı yer"
+    ],
+    "acceptable_source_terms": [
+      "https://ogrenciisleri.duzce.edu.tr/duyurular",
+      "Akademik Takvim",
+      "Akademik Takvim / Duyurular"
     ]
   },
   {
@@ -984,6 +1233,11 @@
     "expected_points": [
       "duyuru sayfası",
       "güncel bilgi vurgusu"
+    ],
+    "acceptable_source_terms": [
+      "https://ogrenciisleri.duzce.edu.tr/duyurular",
+      "Öğrenci İşleri Duyuruları",
+      "Akademik Takvim / Duyurular"
     ]
   },
   {
@@ -1006,6 +1260,11 @@
     "expected_points": [
       "ders başlangıç tarihi",
       "takvim referansı"
+    ],
+    "acceptable_source_terms": [
+      "https://ogrenciisleri.duzce.edu.tr/duyurular",
+      "Akademik Takvim",
+      "Akademik Takvim / Duyurular"
     ]
   },
   {
@@ -1028,6 +1287,11 @@
     "expected_points": [
       "başvuru süreci",
       "takvim bilgisi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+      "Yaz Okulu Uygulama Esasları",
+      "Yaz Okulu"
     ]
   },
   {
@@ -1050,6 +1314,11 @@
     "expected_points": [
       "ders sayısı sınırı",
       "kredi sınırı"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+      "Yaz Okulu Uygulama Esasları",
+      "Yaz Okulu"
     ]
   },
   {
@@ -1072,6 +1341,11 @@
     "expected_points": [
       "ücret hesaplama mantığı",
       "program farkı"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+      "Yaz Okulu Uygulama Esasları",
+      "Yaz Okulu"
     ]
   },
   {
@@ -1094,6 +1368,11 @@
     "expected_points": [
       "başvuru yöntemi",
       "başvuru süresi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+      "Ders Muafiyeti ve İntibak Esasları",
+      "Muafiyet / İntibak"
     ]
   },
   {
@@ -1116,6 +1395,11 @@
     "expected_points": [
       "değerlendirme ölçütü",
       "karar mercii"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+      "Ders Muafiyeti ve İntibak Esasları",
+      "Muafiyet / İntibak"
     ]
   },
   {
@@ -1138,6 +1422,11 @@
     "expected_points": [
       "gerekli belgeler",
       "belge niteliği"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+      "Ders Muafiyeti ve İntibak Esasları",
+      "Muafiyet / İntibak"
     ]
   },
   {
@@ -1162,6 +1451,17 @@
       "sigorta işlemleri",
       "sorumlu birim",
       "başvuru süreci"
+    ],
+    "acceptable_source_terms": [
+      "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular",
+      "Bilgisayar Mühendisliği - Staj SSS",
+      "Staj",
+      "https://cdn.duzce.edu.tr/File/GetFile/f591c7d8-79f5-42cc-bb2c-04e874fbe41d",
+      "SİGORTA",
+      "https://cdn.duzce.edu.tr/File/GetFile/a771c727-6a6f-4522-aa5a-b441617eaf33",
+      "ORMAN FAKÜLTESİ",
+      "https://cdn.duzce.edu.tr/File/GetFile/8300f768-ca8f-41d4-82e7-2aa1b98b7130",
+      "Akademik Takvim"
     ]
   },
   {
@@ -1186,6 +1486,11 @@
       "teslim süresi",
       "SBS yükleme",
       "değerlendirme süreci"
+    ],
+    "acceptable_source_terms": [
+      "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular",
+      "Bilgisayar Mühendisliği - Staj SSS",
+      "Staj"
     ]
   },
   {
@@ -1210,6 +1515,13 @@
       "yarıyıl bilgisi",
       "staj dönemleri",
       "bölüm bazlı açıklama"
+    ],
+    "acceptable_source_terms": [
+      "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj",
+      "Bilgisayar Mühendisliği - Staj",
+      "Staj",
+      "https://bm.mf.duzce.edu.tr/sayfa/878b/stajlar-hakkinda-sikca-sorulan-sorular",
+      "Bilgisayar Mühendisliği - Staj SSS"
     ]
   },
   {
@@ -1234,6 +1546,11 @@
       "danışman onayı",
       "OBS süreci",
       "kayıt tamamlanması"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "Ders Kaydı / Kayıt Yenileme"
     ]
   },
   {
@@ -1258,6 +1575,11 @@
       "mazeretli kayıt tarihi",
       "akademik takvim",
       "başvuru koşulu"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+      "Akademik Takvim",
+      "Ders Kaydı / Kayıt Yenileme"
     ]
   },
   {
@@ -1282,6 +1604,11 @@
       "üstten ders alma",
       "kredi sınırı",
       "koşullar"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "Ders Kaydı / Kayıt Yenileme"
     ]
   },
   {
@@ -1306,6 +1633,11 @@
       "bitiş tarihi",
       "akademik takvim",
       "add-drop dönemi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+      "2024-2025 Eğitim-Öğretim Yılı Akademik Takvimi",
+      "Add-Drop"
     ]
   },
   {
@@ -1330,6 +1662,11 @@
       "danışman onayı",
       "ders ekleme/silme",
       "OBS süreci"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "Add-Drop"
     ]
   },
   {
@@ -1354,6 +1691,11 @@
       "kredi sınırı",
       "add-drop kuralı",
       "koşullar"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "Add-Drop"
     ]
   },
   {
@@ -1378,6 +1720,11 @@
       "teorik ders",
       "uygulamalı ders",
       "devam zorunluluğu"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "Devamsızlık"
     ]
   },
   {
@@ -1402,6 +1749,11 @@
       "final hakkı",
       "devamsızlıktan kalma",
       "sınav durumu"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+      "Lisans Eğitim Öğretim Yönetmeliği",
+      "Devamsızlık"
     ]
   },
   {
@@ -1426,6 +1778,11 @@
       "sağlık raporu",
       "devam zorunluluğu",
       "mazeret ayrımı"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "Devamsızlık"
     ]
   },
   {
@@ -1450,6 +1807,15 @@
       "başvuru süreci",
       "mazeret belgesi",
       "süre"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+      "Yaz Okulu Uygulama Esasları",
+      "Sınavlar",
+      "https://ogrenciisleri.duzce.edu.tr/Sayfa/af7f/s_s_s_",
+      "Öğrenci İşleri Sıkça Sorulan Sorular",
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#sinav-not-sistemi",
+      "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği"
     ]
   },
   {
@@ -1474,6 +1840,17 @@
       "bütünleme notu",
       "final notu",
       "geçerli not"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/0070ab4a-559e-41a3-b1c7-1c28b68f0514",
+      "Lisans Eğitim Öğretim Yönetmeliği",
+      "Sınavlar",
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#sinav-not-sistemi",
+      "Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943#tek-cift-butunleme",
+      "BUTUNLEME, TEK DERS VE CIFT DERS SINAVLARI",
+      "https://ogrenciisleri.duzce.edu.tr/Sayfa/af7f/s_s_s_",
+      "Öğrenci İşleri Sıkça Sorulan Sorular"
     ]
   },
   {
@@ -1498,6 +1875,17 @@
       "yaz okulu",
       "bütünleme sınavı",
       "uygulama esasları"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/264a1c72-d5aa-4885-961e-75e0ba94acd5",
+      "2024-2025 Eğitim-Öğretim Yılı Akademik Takvimi",
+      "Sınavlar",
+      "https://ogrenciisleri.duzce.edu.tr/Sayfa/af7f/s_s_s_",
+      "Öğrenci İşleri Sıkça Sorulan Sorular",
+      "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+      "Azami Öğrenim Süresi Sonu Sınav Duyurusu",
+      "https://bm.mf.duzce.edu.tr/sayfa/15e0/yeterlilik-sinavi-hakk",
+      "rda Uyulması Gereken Kurallar"
     ]
   },
   {
@@ -1522,6 +1910,11 @@
       "AGNO/GANO",
       "ortalama türü",
       "hesaplama mantığı"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/e61c395b-bd05-4300-b312-0753ab748943",
+      "Düzce Üniversitesi Lisans Eğitim-Öğretim ve Sınav Yönetmeliği",
+      "Not Sistemi / Ortalama"
     ]
   },
   {
@@ -1546,6 +1939,11 @@
       "DD/DC",
       "koşullu geçiş",
       "ortalama koşulu"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/3fde6de1-6503-4417-b064-65c06de89f1d",
+      "Lisans Eğitim Öğretim Yönetmeliği",
+      "Not Sistemi / Ortalama"
     ]
   },
   {
@@ -1570,6 +1968,11 @@
       "ders tekrarı",
       "not yükseltme",
       "geçerli not"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/06193c82-1968-4c61-9891-d55538ef9528",
+      "Lisans Eğitim Öğretim Yönetmeliği",
+      "Not Sistemi / Ortalama"
     ]
   },
   {
@@ -1594,6 +1997,13 @@
       "ders tamamlama",
       "mezuniyet şartı",
       "tek ders durumu"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/0bf859f9-969c-4171-b6ae-356555f8dd99",
+      "Lisans Eğitim Öğretim Yönetmeliği",
+      "Mezuniyet",
+      "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+      "Diploma ve Mezuniyet Belgeleri Yönergesi"
     ]
   },
   {
@@ -1618,6 +2028,11 @@
       "staj şartı",
       "mezuniyet koşulu",
       "tamamlama zorunluluğu"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+      "Lisans Eğitim Öğretim Yönetmeliği",
+      "Mezuniyet"
     ]
   },
   {
@@ -1642,6 +2057,11 @@
       "diploma süreci",
       "teslim",
       "geçici mezuniyet belgesi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/2b51265c-b4f6-4ba4-b61d-7a8f4c6dd0ff",
+      "Öğrenci İşleri Duyuruları",
+      "Mezuniyet"
     ]
   },
   {
@@ -1666,6 +2086,11 @@
       "başvuru tarihi",
       "duyuru",
       "çap takvimi"
+    ],
+    "acceptable_source_terms": [
+      "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+      "ÇAP ve Yandal Başvuru Esasları",
+      "ÇAP / Yandal"
     ]
   },
   {
@@ -1690,6 +2115,17 @@
       "çap",
       "yandal",
       "birlikte yürütme"
+    ],
+    "acceptable_source_terms": [
+      "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+      "ÇAP ve Yandal Başvuru Esasları",
+      "ÇAP / Yandal",
+      "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+      "DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ",
+      "https://panel.duzce.edu.tr//Dosya/GetFile/e6ac6d2e-d9b1-4be9-9eff-98b7b04dcbb7",
+      "CAP ve Yandal",
+      "https://cdn.duzce.edu.tr/File/GetFile/a40f9bfd-0852-44d9-ade0-1c543f4fee6b",
+      "YABANCI DİL HAZIRLIK SINIFI"
     ]
   },
   {
@@ -1714,6 +2150,17 @@
       "programdan ayrılma",
       "başvuru",
       "ana program etkisi"
+    ],
+    "acceptable_source_terms": [
+      "https://bm.mf.duzce.edu.tr/sayfa/fdcb/cift-anadal-ve-yandal",
+      "ÇAP ve Yandal Başvuru Esasları",
+      "ÇAP / Yandal",
+      "https://cdn.duzce.edu.tr/File/GetFile/06f2f463-8316-44a2-9593-a1f9fe1b0739",
+      "Akademik Takvim",
+      "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+      "DÜZCE ÜNİVERSİTESİ KURUM İÇİ VE KURUMLAR ARASI YATAY GEÇİŞ",
+      "https://cdn.duzce.edu.tr/File/GetFile/cd218698-9e13-4d5b-911a-deeb096326de",
+      "CAP ve Yandal"
     ]
   },
   {
@@ -1738,6 +2185,11 @@
       "başvuru takvimi",
       "duyuru",
       "ilan"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/cd218698-9e13-4d5b-911a-deeb096326de",
+      "Yatay Geçiş Başvuru Esasları",
+      "Yatay Geçiş"
     ]
   },
   {
@@ -1762,6 +2214,11 @@
       "hazırlık sınıfı",
       "yatay geçiş koşulu",
       "başvuru durumu"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+      "Yatay Geçiş Başvuru Esasları",
+      "Yatay Geçiş"
     ]
   },
   {
@@ -1786,6 +2243,11 @@
       "online başvuru",
       "evrak yükleme",
       "başvuru sistemi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/5f02abd3-26b9-499e-9719-bb7062f10337",
+      "Yatay Geçiş Başvuru Esasları",
+      "Yatay Geçiş"
     ]
   },
   {
@@ -1810,6 +2272,11 @@
       "son ödeme tarihi",
       "akademik takvim",
       "kayıt yenileme ilişkisi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745",
+      "Katkı Payı ve Öğrenim Ücreti",
+      "Harç / Ücret"
     ]
   },
   {
@@ -1834,6 +2301,11 @@
       "iade süreci",
       "dilekçe",
       "ilgili birim"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/c4035fe1-0ea7-42b8-a7dc-8929456f9745",
+      "Katkı Payı ve Öğrenim Ücreti",
+      "Harç / Ücret"
     ]
   },
   {
@@ -1858,6 +2330,11 @@
       "ödeme zorunluluğu",
       "ders seçimi",
       "kayıt engeli"
+    ],
+    "acceptable_source_terms": [
+      "https://mf.duzce.edu.tr/sayfa/8a10/ders-kayitlari-esnasinda-sikca-sorulan-sorular-ve-cevaplari",
+      "Ders Kayıtları Esnasında Sıkça Sorulan Sorular ve Cevapları",
+      "Harç / Ücret"
     ]
   },
   {
@@ -1882,6 +2359,11 @@
       "gerekli belgeler",
       "başvuru evrakı",
       "yükleme/teslim"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/22a1f570-c7f7-4dd8-8598-616f2ae00e21",
+      "Burs Başvuru Duyuruları",
+      "Burs"
     ]
   },
   {
@@ -1906,6 +2388,11 @@
       "sonuç tarihi",
       "duyuru",
       "ilan yöntemi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/6ed94076-f5da-44ae-aa4a-244b58ad825e",
+      "Burs Başvuru Duyuruları",
+      "Burs"
     ]
   },
   {
@@ -1930,6 +2417,11 @@
       "başarı şartı",
       "burs kesilmesi",
       "burs türü farkı"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/22a1f570-c7f7-4dd8-8598-616f2ae00e21",
+      "Burs Başvuru Duyuruları",
+      "Burs"
     ]
   },
   {
@@ -1954,6 +2446,11 @@
       "e-Devlet",
       "öğrenci belgesi",
       "barkod/ıslak imza"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+      "Ders Muafiyeti ve İntibak Esasları",
+      "Öğrenci Belgesi / Transkript"
     ]
   },
   {
@@ -1978,6 +2475,11 @@
       "İngilizce transkript",
       "ücret",
       "talep süreci"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+      "Ders Muafiyeti ve İntibak Esasları",
+      "Öğrenci Belgesi / Transkript"
     ]
   },
   {
@@ -2002,6 +2504,11 @@
       "onaylı transkript",
       "başvuru birimi",
       "belge türü"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/5c5910a2-7cf3-475c-86ff-83539c7b73da",
+      "Kayıt Yenileme İşlemleri",
+      "Öğrenci Belgesi / Transkript"
     ]
   },
   {
@@ -2026,6 +2533,11 @@
       "tecil süresi",
       "öğrencilik durumu",
       "bitiş"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+      "Askerlik Tecil İşlemleri",
+      "Askerlik Tecili"
     ]
   },
   {
@@ -2050,6 +2562,11 @@
       "mezuniyet sonrası",
       "tecil durumu",
       "askerlik şubesi"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+      "Askerlik Tecil İşlemleri",
+      "Askerlik Tecili"
     ]
   },
   {
@@ -2074,6 +2591,11 @@
       "ilişik kesme",
       "tecil iptali",
       "bildirim"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/3d303694-adc7-4872-b09f-aa9b2fbb8458",
+      "Askerlik Tecil İşlemleri",
+      "Askerlik Tecili"
     ]
   },
   {
@@ -2098,6 +2620,11 @@
       "kınama cezası",
       "fiiller",
       "disiplin türleri"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/a3dc4e5a-a9d6-45f0-8ec8-0b6d8293987c",
+      "Öğrenci Disiplin Yönetmeliği",
+      "Disiplin İşlemleri"
     ]
   },
   {
@@ -2122,6 +2649,11 @@
       "savunma hakkı",
       "süreç",
       "öğrenci hakkı"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864",
+      "Öğrenci Disiplin Yönetmeliği",
+      "Disiplin İşlemleri"
     ]
   },
   {
@@ -2146,6 +2678,11 @@
       "itiraz süresi",
       "başvuru mercii",
       "disiplin kararı"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/d1618f0a-1e79-4d1b-9995-3c9dc779a864",
+      "Öğrenci Disiplin Yönetmeliği",
+      "Disiplin İşlemleri"
     ]
   },
   {
@@ -2170,6 +2707,11 @@
       "kayıt yenileme",
       "akademik takvim",
       "mazeretli kayıt"
+    ],
+    "acceptable_source_terms": [
+      "https://ogrenciisleri.duzce.edu.tr/duyurular",
+      "Akademik Takvim",
+      "Akademik Takvim / Duyurular"
     ]
   },
   {
@@ -2194,6 +2736,11 @@
       "duyuru sayfası",
       "resmi takip",
       "bölüm duyuruları"
+    ],
+    "acceptable_source_terms": [
+      "https://ogrenciisleri.duzce.edu.tr/duyurular",
+      "Öğrenci İşleri Duyuruları",
+      "Akademik Takvim / Duyurular"
     ]
   },
   {
@@ -2218,6 +2765,11 @@
       "sınav tarihleri",
       "akademik takvim",
       "final/bütünleme"
+    ],
+    "acceptable_source_terms": [
+      "https://ogrenciisleri.duzce.edu.tr/duyurular",
+      "Akademik Takvim",
+      "Akademik Takvim / Duyurular"
     ]
   },
   {
@@ -2242,6 +2794,11 @@
       "devam zorunluluğu",
       "yaz okulu",
       "uygulama"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+      "Yaz Okulu Uygulama Esasları",
+      "Yaz Okulu"
     ]
   },
   {
@@ -2266,6 +2823,11 @@
       "AKTS sınırı",
       "ders sayısı",
       "yaz okulu limiti"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+      "Yaz Okulu Uygulama Esasları",
+      "Yaz Okulu"
     ]
   },
   {
@@ -2290,6 +2852,11 @@
       "başka üniversite",
       "ön onay",
       "saydırma/intibak"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+      "Yaz Okulu Uygulama Esasları",
+      "Yaz Okulu"
     ]
   },
   {
@@ -2314,6 +2881,11 @@
       "başvuru tarihi",
       "muafiyet dönemi",
       "geç başvuru"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+      "Ders Muafiyeti ve İntibak Esasları",
+      "Muafiyet / İntibak"
     ]
   },
   {
@@ -2338,6 +2910,11 @@
       "intibak sonucu",
       "duyuru/takip",
       "kurul kararı"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+      "Ders Muafiyeti ve İntibak Esasları",
+      "Muafiyet / İntibak"
     ]
   },
   {
@@ -2362,6 +2939,11 @@
       "AKTS/kredi",
       "eşdeğerlik",
       "kurul değerlendirmesi"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/b67441bf-8724-4f5a-b340-a963f8354d6a",
+      "Ders Muafiyeti ve İntibak Esasları",
+      "Muafiyet / İntibak"
     ]
   },
   {
@@ -2386,6 +2968,13 @@
       "takip eden yarıyıl",
       "OBS staj dersi",
       "saydırma süreci"
+    ],
+    "acceptable_source_terms": [
+      "https://bm.mf.duzce.edu.tr/sayfa/4a82/staj",
+      "Bilgisayar Mühendisliği - Staj",
+      "Staj",
+      "https://cdn.duzce.edu.tr/File/GetFile/a771c727-6a6f-4522-aa5a-b441617eaf33",
+      "Öğrenci Belgesi ve Transkript İşlemleri"
     ]
   },
   {
@@ -2410,6 +2999,11 @@
       "mezuniyet şartları",
       "derslerin tamamlanması",
       "ilgili mevzuat koşulları"
+    ],
+    "acceptable_source_terms": [
+      "https://panel.duzce.edu.tr//Dosya/GetFile/0bf859f9-969c-4171-b6ae-356555f8dd99",
+      "Lisans Eğitim Öğretim Yönetmeliği",
+      "Mezuniyet"
     ]
   },
   {
@@ -2434,6 +3028,11 @@
       "yaz okulu",
       "devam zorunluluğu",
       "istisna koşulu"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+      "Yaz Okulu Uygulama Esasları",
+      "Yaz Okulu"
     ]
   },
   {
@@ -2458,6 +3057,11 @@
       "başka üniversite",
       "bölüm onayı",
       "eşdeğerlik koşulu"
+    ],
+    "acceptable_source_terms": [
+      "https://cdn.duzce.edu.tr/File/GetFile/0a10d86d-7915-4164-b60b-2e4d3ac59f19",
+      "Yaz Okulu Uygulama Esasları",
+      "Yaz Okulu"
     ]
   }
 ]

@@ -47,6 +47,7 @@ class SourceItem(BaseModel):
     kategori: str
     baslik: str
     url: str
+    guven_skoru: float | None = None
 
 
 class ChatResponse(BaseModel):

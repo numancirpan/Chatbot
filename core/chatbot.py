@@ -153,6 +153,22 @@ TOPIC_LABELS = {
     "yaz_okulu": "Yaz Okulu",
     "muafiyet_intibak": "Muafiyet / Intibak",
 }
+TOPIC_SOURCE_HINTS = {
+    "akademik_takvim_duyurular": ["akademik takvim", "ogrenciisleri duzce edu tr duyurular", "duyuru"],
+    "burs": ["burs basvuru", "burs duyuru", "burs sart", "burs kesil"],
+    "muafiyet_intibak": ["muafiyet", "intibak", "ders muafiyeti"],
+    "ogrenci_belgesi_transkript": ["ogrenci belgesi", "transkript", "not dokum", "e devlet"],
+    "disiplin": ["disiplin", "2547 sayili yuksekogretim kanununun 54"],
+    "harc_ucret": ["harc", "katki payi", "ogrenim ucreti"],
+    "not_sistemi": ["not sistemi", "agno", "gano", "harf notu", "basari notu"],
+    "add_drop": ["ekle sil", "add drop", "ders birak", "ders ekle"],
+    "ders_kaydi": ["ders kayit", "kayit yenileme", "danisman onay", "obs"],
+    "devamsizlik": ["devam zorunlulugu", "devamsizlik", "yuzde 70", "yuzde 80"],
+    "askerlik_tecili": ["askerlik tecil islemleri", "ogrenci isleri dairesi", "rektorluk ogrenci isleri"],
+    "yaz_okulu": ["yaz okulu", "yaz okulu yonergesi", "yaz okulu uygulama esaslari", "24 akts"],
+    "yatay_gecis": ["yatay gecis", "kurum ici", "kurumlar arasi"],
+    "mezuniyet": ["mezuniyet", "diploma", "lisans egitim ogretim"],
+}
 SOURCE_STOPWORDS = {
     "sayin",
     "ogrencimiz",
@@ -489,6 +505,10 @@ def asks_disciplinary_scholarship_loss(query: str) -> bool:
     return "burs" in normalized and any(marker in normalized for marker in ["disiplin", "ceza", "uzaklastirma"])
 
 
+def asks_scholarship_query(query: str) -> bool:
+    return "burs" in normalize_text(query)
+
+
 def asks_makeup_exam_with_missing_internship(query: str) -> bool:
     normalized = normalize_text(query)
     exam_markers = [
@@ -520,6 +540,19 @@ def asks_yaz_okulu_duration(query: str) -> bool:
     normalized = normalize_text(query)
     return "yaz okulu" in normalized and any(
         marker in normalized for marker in ["kac hafta", "ne kadar sur", "sure", "suresi"]
+    )
+
+
+def asks_yaz_okulu_max_load(query: str) -> bool:
+    normalized = normalize_text(query)
+    if "yaz okulu" not in normalized:
+        return False
+    if any(marker in normalized for marker in ["en fazla", "maksimum", "kac"]) and any(
+        marker in normalized for marker in ["akts", "ders", "kredi"]
+    ):
+        return True
+    return "akts" in normalized and "ders" in normalized and any(
+        marker in normalized for marker in ["sinir", "s n r", "ders say", "kredi"]
     )
 
 
@@ -807,7 +840,11 @@ def asks_single_course_exam(query: str) -> bool:
 
 def asks_military_deferral(query: str) -> bool:
     normalized = normalize_text(query)
-    return "askerlik" in normalized and any(marker in normalized for marker in ["tecil", "ertele", "ne yap"])
+    if "askerlik" in normalized and any(marker in normalized for marker in ["tecil", "ertele", "ne yap"]):
+        return True
+    return "tecil" in normalized and any(
+        marker in normalized for marker in ["ogrenci isleri", "belge", "belgeler", "yapiyor", "yapar", "islem"]
+    )
 
 
 def asks_period_count(query: str) -> bool:
@@ -1262,7 +1299,33 @@ def is_follow_up_query(query: str) -> bool:
         "o belge",
         "ya",
     ]
-    if any(normalized.startswith(marker) for marker in follow_up_markers):
+    for marker in follow_up_markers:
+        if marker == "ya":
+            if normalized == "ya" or normalized.startswith("ya "):
+                return True
+            continue
+        if normalized.startswith(marker):
+            return True
+    explicit_topic_markers = [
+        "staj",
+        "yaz okulu",
+        "askerlik",
+        "burs",
+        "devamsizlik",
+        "ders kaydi",
+        "transkript",
+        "ogrenci belgesi",
+        "yatay gecis",
+        "muafiyet",
+        "intibak",
+    ]
+    if any(marker in normalized for marker in explicit_topic_markers):
+        return False
+    if any(marker in normalized for marker in ["ayni sey", "ayn ey", "ayni mi", "degisir mi", "de i ir mi"]):
+        return True
+    if len(tokenize(query)) <= 8 and "akts" in normalized and "ders" in normalized and "mi" in normalized:
+        return True
+    if len(tokenize(query)) <= 8 and any(marker in normalized for marker in ["universiteden", "niversiteden"]) and "mi" in normalized:
         return True
     if len(tokenize(query)) <= 5 and any(
         marker in normalized
@@ -1271,9 +1334,20 @@ def is_follow_up_query(query: str) -> bool:
             "hangi donemde",
             "ne zaman",
             "nasil",
+            "basvur",
+            "basvuru",
+            "belge",
             "belgeler",
             "evraklar",
             "neler",
+            "sart",
+            "ortalama",
+            "kredi",
+            "sinir",
+            "fark",
+            "yuzde",
+            "hesaplan",
+            "belirtilir",
             "tek sefer",
             "ikiye bolun",
             "bolunebilir",
@@ -1583,6 +1657,9 @@ def intent_candidate_markers(query: str) -> List[List[str]]:
     if asks_staj_report_submission(query) or asks_post_upload_graduation(query):
         marker_groups.extend([["staj raporu", "sbs"], ["staj raporu", "30 gun"], ["gec teslim", "staj"]])
 
+    if asks_yaz_okulu_max_load(query):
+        marker_groups.extend([["yaz okulu", "24 akts"], ["yaz ogretiminde", "24 akts"], ["yaz okulunda", "akts"]])
+
     if asks_registration_date_or_process(query) or asks_max_akts(query) or asks_upper_course_with_failed_course(query):
         marker_groups.extend(
             [
@@ -1642,6 +1719,9 @@ def intent_candidate_markers(query: str) -> List[List[str]]:
 
     if asks_transfer_dates(query):
         marker_groups.extend([["yatay gecis", "basvuru"], ["yatay gecis", "akademik takvim"]])
+
+    if asks_military_deferral(query):
+        marker_groups.extend([["askerlik tecil islemleri", "ogrenci isleri"], ["askerlik tecil", "rektorluk"]])
 
     if asks_discipline_regulation_access(query) or asks_disciplinary_scholarship_loss(query):
         marker_groups.extend([["disiplin", "2547"], ["disiplin", "burs"], ["disiplin", "ceza"]])
@@ -1852,7 +1932,10 @@ class RAGChatbot:
                 content = chunk.get("content", "")
                 normalized_content = normalize_text(content)
                 kategori = chunk.get("kategori", "")
-                if asks_yaz_okulu_duration(query):
+                if asks_yaz_okulu_max_load(query):
+                    if "yaz okulu" in normalized_content and ("24 akts" in normalized_content or "akts" in normalized_content):
+                        candidates.append(chunk)
+                elif asks_yaz_okulu_duration(query):
                     if "yaz okulu" in normalized_content and ("hafta" in normalized_content or kategori == "akademik_takvim"):
                         candidates.append(chunk)
                 elif asks_yaz_okulu_start(query):
@@ -1936,6 +2019,20 @@ class RAGChatbot:
                 if "burs" in normalized_content and any(
                     marker in normalized_content for marker in ["disiplin", "ceza", "uzaklastirma"]
                 ):
+                    candidates.append(chunk)
+
+        if asks_scholarship_query(query) and not asks_disciplinary_scholarship_loss(query):
+            for chunk in self.chunks + self.raw_records:
+                normalized_content = normalize_text(chunk.get("content", ""))
+                if "burs" not in normalized_content:
+                    continue
+                if any(marker in normalized_content for marker in ["basvuru", "sart", "kosul", "kesil", "kyk", "kredi ve yurtlar"]):
+                    candidates.append(chunk)
+
+        if asks_military_deferral(query):
+            for chunk in self.chunks + self.raw_records:
+                normalized_content = normalize_text(chunk.get("content", ""))
+                if "askerlik tecil islemleri" in normalized_content and "ogrenci isleri" in normalized_content:
                     candidates.append(chunk)
 
         if asks_exam_schedule_location(query):
@@ -2033,6 +2130,7 @@ class RAGChatbot:
             or asks_staj_count(query)
             or asks_staj_missed_period(query)
             or asks_staj_report_submission(query)
+            or asks_yaz_okulu_max_load(query)
             or asks_yaz_okulu_duration(query)
             or asks_yaz_okulu_start(query)
             or asks_yaz_staji_schedule(query)
@@ -2119,6 +2217,15 @@ class RAGChatbot:
         if any(marker in normalized_query for marker in ["harc", "katki payi", "ogrenim ucreti", "ucret"]):
             if any(marker in normalized_content for marker in ["katki payi", "ogrenim ucreti"]):
                 score += 18
+        if asks_scholarship_query(query):
+            if "burs" in normalized_content:
+                score += 8
+            else:
+                score -= 24
+            if any(marker in normalized_content for marker in ["burs basvuru", "burs sart", "burs kosul", "burs kesil", "kyk"]):
+                score += 18
+            if any(marker in normalized_content for marker in ["katki payi", "ogrenim ucreti"]) and "burs" not in normalized_content:
+                score -= 18
         if any(marker in normalized_query for marker in ["muafiyet", "intibak"]):
             if any(marker in normalized_content for marker in ["muafiyet", "intibak"]):
                 score += 24
@@ -2134,6 +2241,16 @@ class RAGChatbot:
                 score += 12
             elif candidate_topic not in {"", "genel"}:
                 score -= 10
+            topic_source_hints = TOPIC_SOURCE_HINTS.get(effective_topic, [])
+            source_haystack = f"{source_title} {normalize_text(source_url)} {normalized_content[:900]}"
+            if any(hint in source_haystack for hint in topic_source_hints):
+                score += 18
+            if source_title.startswith("bu belge guvenli elektronik imza"):
+                score -= 18
+            if effective_topic not in {"staj", "mezuniyet"} and any(
+                marker in source_title for marker in ["orman fakultesi", "teknoloji fakultesi", "muhendislik fakultesi isyeri egitimi"]
+            ):
+                score -= 12
         if asks_graduation_with_incomplete_internship(query) or asks_graduation_requirements(query):
             if _is_graduation_whitelisted_source(candidate):
                 score += 20
@@ -2276,6 +2393,13 @@ class RAGChatbot:
                 score += 24
             if "devam kosulunu yerine getirilen bir dersin tekrari" in normalized_content:
                 score += 18
+        if asks_yaz_okulu_max_load(query):
+            if "yaz okulu" in normalized_content and "24 akts" in normalized_content:
+                score += 34
+            if "en cok 24 akts" in normalized_content or "toplam 24 akts yi asmamak" in normalized_content:
+                score += 28
+            if "yaz staji" in normalized_content and "yaz okulu" not in normalized_content:
+                score -= 20
         if asks_external_summer_school_course(query):
             if any(
                 marker in normalized_content
@@ -2325,6 +2449,13 @@ class RAGChatbot:
                 score += 16
             if candidate_topic == "ogrenci_belgesi_transkript":
                 score += 12
+        if asks_military_deferral(query):
+            if "askerlik tecil islemleri" in normalized_content:
+                score += 30
+            if "ogrenci isleri dairesi baskanliginca yurutulmektedir" in normalized_content:
+                score += 30
+            if any(marker in normalized_content for marker in ["pedagojik formasyon", "acikogretim lisans", "dikey gecis"]):
+                score -= 18
 
         if asks_yaz_staji_schedule(query):
             if "yaz staji" in normalized_content:
@@ -2590,6 +2721,11 @@ class RAGChatbot:
                 score += 24.0
             elif "yaz okulu" in normalized_content:
                 score -= 10.0
+        if asks_yaz_okulu_max_load(query):
+            if "yaz okulu" in normalized_content and "24 akts" in normalized_content:
+                score += 34.0
+            if "en cok 24 akts" in normalized_content or "toplam 24 akts yi asmamak" in normalized_content:
+                score += 28.0
         if asks_external_summer_school_course(query):
             if any(
                 marker in normalized_content
@@ -2642,6 +2778,16 @@ class RAGChatbot:
                 score += 18.0
             if "e devlet" in normalized_content:
                 score += 16.0
+        if asks_scholarship_query(query):
+            if "burs" not in normalized_content:
+                score -= 30.0
+            elif any(marker in normalized_content for marker in ["basvuru", "sart", "kosul", "kesil", "kyk"]):
+                score += 18.0
+        if asks_military_deferral(query):
+            if "askerlik tecil islemleri" in normalized_content:
+                score += 30.0
+            if "ogrenci isleri dairesi baskanliginca yurutulmektedir" in normalized_content:
+                score += 30.0
 
         return score
 
@@ -2703,6 +2849,7 @@ class RAGChatbot:
                     "kategori": result.get("kategori", "Genel"),
                     "baslik": title,
                     "url": result.get("source_url", ""),
+                    "guven_skoru": max(0.0, min(100.0, round(float(item["score"]), 1))),
                 }
             )
             if len(sources) >= limit:
@@ -3973,6 +4120,24 @@ class RAGChatbot:
         joined = " ve ".join(f"{week} hafta" for week in ordered)
         return f"Sayın öğrencimiz,\nAkademik takvime göre yaz okulu {joined} olarak uygulanabilmektedir."
 
+    def _extract_yaz_okulu_max_load_answer(self, query: str, context: List[Dict]) -> Optional[str]:
+        if not asks_yaz_okulu_max_load(query):
+            return None
+
+        for chunk in context + self.chunks + self.raw_records:
+            content = chunk.get("content", "")
+            normalized_content = normalize_text(content)
+            if "yaz okulu" not in normalized_content or "24 akts" not in normalized_content:
+                continue
+            if "en cok 24 akts" in normalized_content or "toplam 24 akts yi asmamak" in normalized_content:
+                self.last_answer_context = [chunk]
+                return (
+                    "Sayin ogrencimiz,\n"
+                    "Yaz okulunda alınabilecek yük 24 AKTS'yi aşmamalıdır. Ders sayısı, seçilen derslerin AKTS toplamına göre değişir; bu nedenle kural ders adedi değil 24 AKTS üst sınırı üzerinden uygulanır."
+                )
+
+        return None
+
     def _extract_yaz_okulu_start_answer(self, query: str, context: List[Dict]) -> Optional[str]:
         if not asks_yaz_okulu_start(query):
             return None
@@ -4260,6 +4425,10 @@ class RAGChatbot:
         if direct_answer:
             return direct_answer
 
+        direct_answer = self._extract_yaz_okulu_max_load_answer(working_query, context)
+        if direct_answer:
+            return direct_answer
+
         direct_answer = self._extract_registration_answer(working_query, context)
         if direct_answer:
             return direct_answer
@@ -4457,6 +4626,14 @@ class RAGChatbot:
         normalized = normalize_text(query)
         if asks_yaz_okulu_attendance(query):
             return "attendance"
+        if asks_practical_course_attendance(query) or asks_attendance_limit(query):
+            return "attendance"
+        if asks_yaz_okulu_max_load(query):
+            return "numeric"
+        if asks_military_deferral(query):
+            return "process"
+        if asks_scholarship_query(query):
+            return "scholarship"
         if asks_staj_insurance(query):
             return "insurance"
         if asks_external_summer_school_course(query):
@@ -4545,6 +4722,11 @@ class RAGChatbot:
                 marker in snippet_tokens
                 for marker in ["basvuru", "teslim", "onay", "yukle", "islem", "itiraz", "duyuru", "obs", "sbs"]
             )
+        if focus_type == "scholarship":
+            return "burs" in snippet_tokens and any(
+                marker in normalized_snippet
+                for marker in ["basvuru", "sart", "kosul", "kesil", "kayb", "kyk", "kredi ve yurtlar"]
+            )
         return True
 
     def _evidence_score(self, query: str, snippet: str, source: Dict) -> float:
@@ -4587,6 +4769,8 @@ class RAGChatbot:
             score += 18.0
         if asks_yaz_okulu_duration(query) and "yaz okulu" in normalized_snippet and "hafta" in normalized_snippet:
             score += 18.0
+        if asks_yaz_okulu_max_load(query) and "yaz okulu" in normalized_snippet and "24 akts" in normalized_snippet:
+            score += 32.0
         if asks_staj_duration(query) and "staj" in normalized_snippet and "is gunu" in normalized_snippet:
             score += 18.0
         if asks_staj_report_submission(query) and any(
@@ -4612,6 +4796,18 @@ class RAGChatbot:
             marker in normalized_snippet for marker in ["basvuru", "takvim", "ilan edilen"]
         ):
             score += 24.0
+        if asks_scholarship_query(query):
+            if "burs" not in normalized_snippet:
+                score -= 30.0
+            elif any(marker in normalized_snippet for marker in ["basvuru", "sart", "kosul", "kesil", "kayb", "kyk"]):
+                score += 18.0
+        if asks_military_deferral(query):
+            if "askerlik tecil islemleri" in normalized_snippet:
+                score += 26.0
+            if "ogrenci isleri dairesi baskanliginca yurutulmektedir" in normalized_snippet:
+                score += 30.0
+            if "ogrenci isleri" in normalized_snippet:
+                score += 8.0
 
         if normalized_snippet.startswith("baskanligimiz hakkimizda") or "kalite komisyon" in normalized_snippet:
             score -= 20.0
@@ -4632,6 +4828,10 @@ class RAGChatbot:
             marker_groups.extend([["sinav ve not sistemi"], ["gano", "akts"], ["butunleme", "basari notu"]])
         if asks_transfer_dates(query):
             marker_groups.extend([["yatay gecis", "basvuru"], ["yatay gecis", "takvim"], ["yatay gecis", "ilan edilen"]])
+        if asks_yaz_okulu_max_load(query):
+            marker_groups.extend([["yaz okulu", "24 akts"], ["yaz ogretiminde", "24 akts"], ["yaz okulunda", "akts"]])
+        if asks_military_deferral(query):
+            marker_groups.extend([["askerlik tecil islemleri", "ogrenci isleri"], ["askerlik tecil", "rektorluk"]])
 
         if not marker_groups:
             return []

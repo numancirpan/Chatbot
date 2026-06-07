@@ -23,30 +23,53 @@ function createSession() {
   };
 }
 
+const PROGRAM_OPTIONS = [
+  { value: "", label: "Genel" },
+  { value: "bilgisayar_muhendisligi", label: "Bilgisayar Mühendisliği" },
+  { value: "orman_muhendisligi", label: "Orman Mühendisliği" },
+  { value: "insaat_muhendisligi", label: "İnşaat Mühendisliği" },
+  { value: "mimarlik", label: "Mimarlık" },
+  { value: "isletme", label: "İşletme" },
+];
+
+function isBlankSession(session) {
+  return (
+    session?.title === "Yeni sohbet" &&
+    !session?.programScope &&
+    !session?.messages?.length
+  );
+}
+
 function readSessions() {
   try {
     const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-    if (Array.isArray(stored) && stored.length > 0) {
-      return stored;
+    if (Array.isArray(stored)) {
+      return stored.filter((session) => !isBlankSession(session));
     }
   } catch {
     localStorage.removeItem(STORAGE_KEY);
   }
 
-  return [createSession()];
+  return [];
+}
+
+function initializeSessions() {
+  return [createSession(), ...readSessions()];
 }
 
 function persistSessions(nextSessions) {
-  const serializable = nextSessions.map(({ loading, error, ...session }) => ({
-    ...session,
-    loading: false,
-    error: error || "",
-  }));
+  const serializable = nextSessions
+    .filter((session) => !isBlankSession(session))
+    .map(({ loading, error, ...session }) => ({
+      ...session,
+      loading: false,
+      error: error || "",
+    }));
   localStorage.setItem(STORAGE_KEY, JSON.stringify(serializable));
 }
 
 export function useChatSessions() {
-  const [sessions, setSessions] = useState(readSessions);
+  const [sessions, setSessions] = useState(initializeSessions);
   const [activeSessionId, setActiveSessionId] = useState(() => sessions[0]?.id);
   const activeSession = useMemo(
     () => sessions.find((session) => session.id === activeSessionId) || sessions[0],
@@ -63,7 +86,7 @@ export function useChatSessions() {
 
   const createNewSession = () => {
     const session = createSession();
-    updateSessions((current) => [session, ...current]);
+    updateSessions((current) => [session, ...current.filter((item) => !isBlankSession(item))]);
     setActiveSessionId(session.id);
   };
 
@@ -110,6 +133,45 @@ export function useChatSessions() {
     );
   };
 
+  const setSessionProgramScope = (sessionId, programScope) => {
+    updateSessions((current) =>
+      current.map((session) =>
+        session.id === sessionId
+          ? { ...session, programScope, updatedAt: new Date().toISOString() }
+          : session,
+      ),
+    );
+  };
+
+  const clearSessionMessages = (sessionId) => {
+    updateSessions((current) =>
+      current.map((session) =>
+        session.id === sessionId
+          ? {
+              ...session,
+              title: "Yeni sohbet",
+              messages: [],
+              loading: false,
+              error: "",
+              updatedAt: new Date().toISOString(),
+            }
+          : session,
+      ),
+    );
+  };
+
+  const deleteSession = (sessionId) => {
+    updateSessions((current) => {
+      const next = current.filter((session) => session.id !== sessionId);
+      return next.length ? next : [createSession()];
+    });
+    setActiveSessionId((currentId) => {
+      if (currentId !== sessionId) return currentId;
+      const remaining = sessions.filter((session) => session.id !== sessionId);
+      return remaining[0]?.id;
+    });
+  };
+
   return {
     sessions,
     activeSession,
@@ -120,5 +182,9 @@ export function useChatSessions() {
     renameSessionFromMessage,
     setSessionLoading,
     setSessionError,
+    setSessionProgramScope,
+    clearSessionMessages,
+    deleteSession,
+    programOptions: PROGRAM_OPTIONS,
   };
 }

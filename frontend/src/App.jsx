@@ -1,11 +1,12 @@
+import { useEffect, useState } from "react";
 import ChatLayout from "./components/ChatLayout.jsx";
 import { useChatSessions } from "./hooks/useChatSessions.js";
-import { checkHealth, sendChatMessage } from "./services/chatApi.js";
-import { useEffect, useState } from "react";
+import { checkHealth, resetSessionMemory, sendChatMessage } from "./services/chatApi.js";
 
 export default function App() {
   const chat = useChatSessions();
   const [health, setHealth] = useState({ status: "checking", message: "" });
+  const [toast, setToast] = useState(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -32,6 +33,13 @@ export default function App() {
       isMounted = false;
     };
   }, []);
+
+  useEffect(() => {
+    if (!toast) return undefined;
+
+    const timeoutId = window.setTimeout(() => setToast(null), 2800);
+    return () => window.clearTimeout(timeoutId);
+  }, [toast]);
 
   const handleSend = async (text) => {
     const session = chat.activeSession;
@@ -72,5 +80,37 @@ export default function App() {
     }
   };
 
-  return <ChatLayout chat={chat} health={health} onSend={handleSend} />;
+  const handleClearSession = async () => {
+    const session = chat.activeSession;
+    if (!session) return;
+
+    chat.clearSessionMessages(session.id);
+    try {
+      await resetSessionMemory(session.id);
+      setToast({ type: "success", message: "Sohbet temizlendi." });
+    } catch {
+      const message = "Sohbet temizlendi, ancak backend hafızası sıfırlanamadı.";
+      chat.setSessionError(session.id, message);
+      setToast({ type: "warning", message });
+    }
+  };
+
+  return (
+    <>
+      <ChatLayout
+        chat={chat}
+        health={health}
+        onSend={handleSend}
+        onClearSession={handleClearSession}
+      />
+      {toast ? (
+        <div className={`toast ${toast.type}`} role="status">
+          <span>{toast.message}</span>
+          <button type="button" onClick={() => setToast(null)} aria-label="Bildirimi kapat">
+            x
+          </button>
+        </div>
+      ) : null}
+    </>
+  );
 }

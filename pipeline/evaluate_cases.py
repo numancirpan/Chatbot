@@ -67,11 +67,31 @@ def case_expected_source_terms(case: dict) -> list[str]:
     return []
 
 
+def case_acceptable_source_terms(case: dict) -> list[str]:
+    terms = case.get("acceptable_source_terms")
+    if isinstance(terms, list) and terms:
+        return [str(term).strip() for term in terms if str(term).strip()]
+    return case_expected_source_terms(case)
+
+
 def normalized_case(case: dict) -> dict:
     clone = dict(case)
     clone["turns"] = case_turns(case)
     clone["expected_source_terms"] = case_expected_source_terms(case)
+    clone["acceptable_source_terms"] = case_acceptable_source_terms(case)
     return clone
+
+
+def source_terms_satisfied(source_blob: str, terms: list[str]) -> bool:
+    if not terms:
+        return True
+    normalized_blob = normalize_text(source_blob)
+    lowercase_blob = source_blob.lower()
+    return any(
+        term.lower() in lowercase_blob or normalize_text(term) in normalized_blob
+        for term in terms
+        if str(term).strip()
+    )
 
 
 def run_case(bot: RAGChatbot, case: dict) -> dict:
@@ -95,10 +115,13 @@ def run_case(bot: RAGChatbot, case: dict) -> dict:
     forbidden_answer_terms = [
         term for term in case.get("forbidden_answer_terms", []) if normalized_contains(answer, term)
     ]
-    missing_source_terms = [
-        term for term in case.get("expected_source_terms", []) if term.lower() not in source_blob.lower()
-    ]
+    acceptable_source_terms = case.get("acceptable_source_terms", [])
     source_error = bool(case.get("expect_no_sources")) and bool(sources)
+    missing_source_terms = (
+        []
+        if case.get("expect_no_sources") or source_terms_satisfied(source_blob, acceptable_source_terms)
+        else acceptable_source_terms
+    )
 
     passed = not any(
         [
@@ -115,6 +138,7 @@ def run_case(bot: RAGChatbot, case: dict) -> dict:
         "missing_answer_terms": missing_answer_terms,
         "forbidden_answer_terms": forbidden_answer_terms,
         "missing_source_terms": missing_source_terms,
+        "acceptable_source_terms": acceptable_source_terms,
         "source_error": source_error,
         "answer": answer,
         "sources": sources,

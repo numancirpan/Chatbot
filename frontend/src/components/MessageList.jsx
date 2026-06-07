@@ -4,8 +4,12 @@ export default function MessageList({ messages }) {
   if (!messages.length) {
     return (
       <div className="empty-state">
-        <h2>Merhaba, nasıl yardımcı olabilirim?</h2>
-        <p>Staj, ders kaydı, sınavlar, yaz okulu veya öğrenci işleri süreçleri hakkında soru sorabilirsiniz.</p>
+        <p className="eyebrow">Düzce Üniversitesi Öğrenci İşleri</p>
+        <h2>Resmi kaynaklara dayalı soru-cevap asistanı</h2>
+        <p>
+          Staj, ders kaydı, sınavlar, yaz okulu ve belge işlemleri için konu
+          başlığı seçebilir ya da doğrudan sorunuzu yazabilirsiniz.
+        </p>
       </div>
     );
   }
